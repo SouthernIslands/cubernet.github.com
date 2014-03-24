@@ -16,7 +16,7 @@ icon: file-o
 [github链接](https://github.com/Cubernet/EasyEvaluation)
 
 <!-- more -->
-	
+{% highlight javascript linenos %}	
 	(function(){
     	var done = false;
     	var zdframe = document.getElementById("iframeautoheight");
@@ -52,3 +52,4 @@ icon: file-o
         	console.log("Oppos...There's something wrong!");
     	}
 	})();
+{% endhighlight %}

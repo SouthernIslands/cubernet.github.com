@@ -28,7 +28,7 @@ icon: file-o
 
 最简单的，向特定url发送get请求，获取网页内容：
 
-{% highlight java linenos %}
+{% highlight python linenos %}
 	import urllib2
 	def readsrc(src):
     #    获取src网址对应的html代码
@@ -43,6 +43,7 @@ icon: file-o
   
 有时候服务器会通过http报文的header来判断你是不是一个真正的‘human’，所以需要给你的发送的报文添加一个浏览器标示，来简单的迷惑服务器。同时，很多情况下我们需要通过发送post请求来传递更多的数据，那么可以这么写：
 
+{% highlight python linenos %}
 	from urllib import urlopen
 	import urllib2
 
@@ -53,10 +54,12 @@ icon: file-o
 	req = urllib2.Request(geturl2, data, headers)    
 	response = urllib2.urlopen(req)    
 	web_page = response.read() 
+{% endhighlight %}
 	
 	
 如果你的爬虫想爬取的网站需要先登录才可以继续浏览，这个时候你就需要通过处理cookies等字段来维持爬虫保持`登录`状态。
 
+{% highlight python linenos %}
 	import urllib    
 	import urllib2  
 	import cookielib  
@@ -78,6 +81,7 @@ icon: file-o
 	   
 	#访问该链接#  
 	result = opener.open(req）
+{% endhighlight %}
 
 
 ---
