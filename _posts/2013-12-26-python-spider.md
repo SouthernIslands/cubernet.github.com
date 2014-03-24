@@ -27,7 +27,8 @@ icon: file-o
 #### 首先，我们要知道如何使用Python获取特定url对应的网页内容。
 
 最简单的，向特定url发送get请求，获取网页内容：
-	
+
+{% highlight java linenos %}
 	import urllib2
 	def readsrc(src):
     #    获取src网址对应的html代码
@@ -37,6 +38,7 @@ icon: file-o
     	except URLError,e:
         	print e.code
         	return None
+{% endhighlight %}
         	
   
 有时候服务器会通过http报文的header来判断你是不是一个真正的‘human’，所以需要给你的发送的报文添加一个浏览器标示，来简单的迷惑服务器。同时，很多情况下我们需要通过发送post请求来传递更多的数据，那么可以这么写：
