@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Cubernet" />
+    <title>Python应用の简单的爬虫 | Cubernet</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="/feed/" rel="alternate" title="Cubernet" type="application/atom+xml" />
+    <link rel="stylesheet" href="/media/css/style.css">
+    <link rel="stylesheet" href="/media/css/highlight.css">
+  </head>
+  
+  <body onLoad="setInterval(setTimeSpan,1000);">
+    <div id="container">
+      <div id="main" role="main">
+        <header>
+        <h1>Python应用の简单的爬虫</h1>
+        </header>
+        <nav>
+        <span><a title="home page" class="" href="/">Home</a></span>
+        <span><a title="about" class="" href="/about/">About</a></span>
+        <span><a title="guestbook" class="" href="/guestbook/">Guestbook</a></span>
+        <span><a title="categories" class="" href="/categories/">Categories</a></span>
+        <span><a title="tags" class="" href="/tags/">Tags</a></span>
+        <span><a title="links" class="" href="/links/">Links</a></span>
+        <span><a title="subscribe by RSS" class="" href="/feed/">Subscribe</a></span>
+        </nav>
+        <article class="content">
+        <section class="post">
+<p>如果想实现一个简单的爬虫，我想Python一定是最容易上手的。这里就介绍一下如何用Python实现一个简单的爬虫。</p>
+
+<p><img src="/assets/images/2013-12-26-python-spider.jpg" alt="image" /></p>
+
+<p>爬虫最主要的处理对象就是url，其通常的工作流程就是通过给定的入口url爬取网页内容，然后从得到的网页中寻找下一级的url，接着继续重复以上的工作，直到达到包含所需内容的页面，提取到我们关心的数据。</p>
+
+<blockquote><p>网络蜘蛛（Web spider）也叫网络爬虫（Web crawler），指的是“自动化浏览网络”的程序，是网络机器人的一种。这样的电脑程序是为了自动从网络截取特定的数据，或为了组织网络上的数据，所设计的“‘自动浏览网络’的程序”。——维基百科</p></blockquote>
+
+<p>所以，我们需要用到哪些知识就很显而易见了。</p>
+
+<!-- more -->
+
+
+<hr />
+
+<h4>首先，我们要知道如何使用Python获取特定url对应的网页内容。</h4>
+
+<p>最简单的，向特定url发送get请求，获取网页内容：</p>
+
+<div class="highlight"><pre><code class="python"><span class="lineno"> 1</span>     <span class="kn">import</span> <span class="nn">urllib2</span>
+<span class="lineno"> 2</span>  <span class="k">def</span> <span class="nf">readsrc</span><span class="p">(</span><span class="n">src</span><span class="p">):</span>
+<span class="lineno"> 3</span>     <span class="c">#    获取src网址对应的html代码</span>
+<span class="lineno"> 4</span>      <span class="k">try</span><span class="p">:</span>
+<span class="lineno"> 5</span>          <span class="n">content</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">src</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="lineno"> 6</span>          <span class="k">return</span> <span class="n">content</span>
+<span class="lineno"> 7</span>      <span class="k">except</span> <span class="n">URLError</span><span class="p">,</span><span class="n">e</span><span class="p">:</span>
+<span class="lineno"> 8</span>          <span class="k">print</span> <span class="n">e</span><span class="o">.</span><span class="n">code</span>
+<span class="lineno"> 9</span>          <span class="k">return</span> <span class="bp">None</span>
+<span class="lineno">10</span>          
+</code></pre></div>
+
+
+<p>有时候服务器会通过http报文的header来判断你是不是一个真正的‘human’，所以需要给你的发送的报文添加一个浏览器标示，来简单的迷惑服务器。同时，很多情况下我们需要通过发送post请求来传递更多的数据，那么可以这么写：</p>
+
+<div class="highlight"><pre><code class="python"><span class="lineno"> 1</span>     <span class="kn">from</span> <span class="nn">urllib</span> <span class="kn">import</span> <span class="n">urlopen</span>
+<span class="lineno"> 2</span>  <span class="kn">import</span> <span class="nn">urllib2</span>
+<span class="lineno"> 3</span> 
+<span class="lineno"> 4</span>  <span class="n">user_agent</span> <span class="o">=</span> <span class="s">&#39;Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)&#39;</span> 
+<span class="lineno"> 5</span>  <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span> <span class="s">&#39;User-Agent&#39;</span> <span class="p">:</span> <span class="n">user_agent</span><span class="p">,</span> <span class="s">&#39;Accept-Language&#39;</span><span class="p">:</span> <span class="s">&#39;:zh-CN,zh;q=0.8,en;q=0.6&#39;</span> <span class="p">}</span> 
+<span class="lineno"> 6</span>  <span class="n">data</span> <span class="o">=</span> <span class="s">&#39;&#39;</span> 
+<span class="lineno"> 7</span>  
+<span class="lineno"> 8</span>  <span class="n">req</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">geturl2</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>    
+<span class="lineno"> 9</span>  <span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>    
+<span class="lineno">10</span>  <span class="n">web_page</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> 
+<span class="lineno">11</span>  
+</code></pre></div>
+
+
+<p>如果你的爬虫想爬取的网站需要先登录才可以继续浏览，这个时候你就需要通过处理cookies等字段来维持爬虫保持<code>登录</code>状态。</p>
+
+<div class="highlight"><pre><code class="python"><span class="lineno"> 1</span>     <span class="kn">import</span> <span class="nn">urllib</span>    
+<span class="lineno"> 2</span>  <span class="kn">import</span> <span class="nn">urllib2</span>  
+<span class="lineno"> 3</span>  <span class="kn">import</span> <span class="nn">cookielib</span>  
+<span class="lineno"> 4</span>   
+<span class="lineno"> 5</span>  <span class="n">cookie</span> <span class="o">=</span> <span class="n">cookielib</span><span class="o">.</span><span class="n">CookieJar</span><span class="p">()</span>    
+<span class="lineno"> 6</span>  <span class="n">opener</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">HTTPCookieProcessor</span><span class="p">(</span><span class="n">cookie</span><span class="p">))</span>  
+<span class="lineno"> 7</span>   
+<span class="lineno"> 8</span>  <span class="c">#需要POST的数据#  </span>
+<span class="lineno"> 9</span>  <span class="n">postdata</span><span class="o">=</span><span class="n">urllib</span><span class="o">.</span><span class="n">urlencode</span><span class="p">({</span>    
+<span class="lineno">10</span>  <span class="s">&#39;name&#39;</span><span class="p">:</span><span class="s">&#39;Cubernet&#39;</span><span class="p">,</span>    
+<span class="lineno">11</span>  <span class="s">&#39;pwd&#39;</span><span class="p">:</span><span class="s">&#39;Oppos...&#39;</span>    
+<span class="lineno">12</span>  <span class="p">})</span>  
+<span class="lineno">13</span>    
+<span class="lineno">14</span>  <span class="c">#自定义一个请求#  </span>
+<span class="lineno">15</span>  <span class="n">req</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span>    
+<span class="lineno">16</span>  <span class="n">url</span> <span class="o">=</span> <span class="s">&#39;http://cubernet.me/login.php&#39;</span><span class="p">,</span>    
+<span class="lineno">17</span>  <span class="n">data</span> <span class="o">=</span> <span class="n">postdata</span>  
+<span class="lineno">18</span>  <span class="p">)</span> 
+<span class="lineno">19</span>     
+<span class="lineno">20</span>  <span class="c">#访问该链接#  </span>
+<span class="lineno">21</span>  <span class="n">result</span> <span class="o">=</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">req</span><span class="err">）</span>
+<span class="lineno">22</span>  
+</code></pre></div>
+
+
+<hr />
+
+<h4>Http异常处理</h4>
+
+<p>服务器上每一个HTTP的应答对象response都包含一个数字"状态码"。上面例1中的代码如果出现异常，则会把http异常的状态码答应出来，常见的404等。</p>
+
+<p>HTTP状态码通常分为5种类型，分别以1～5五个数字开头，由3位整数组成：</p>
+
+<pre><code>200：请求成功      处理方式：获得响应的内容，进行处理 
+201：请求完成，结果是创建了新资源。新创建资源的URI可在响应的实体中得到      处理方式：爬虫中不会遇到 
+202：请求被接受，但处理尚未完成    处理方式：阻塞等待 
+204：服务器端已经实现了请求，但是没有返回新的信 息。如果客户是用户代理，则无须为此更新自身的文档视图。    处理方式：丢弃
+300：该状态码不被HTTP/1.0的应用程序直接使用， 只是作为3XX类型回应的默认解释。存在多个可用的被请求资源。    处理方式：若程序中能够处理，则进行进一步处理，如果程序中不能处理，则丢弃
+301：请求到的资源都会分配一个永久的URL，这样就可以在将来通过该URL来访问此资源    处理方式：重定向到分配的URL
+302：请求到的资源在一个不同的URL处临时保存     处理方式：重定向到临时的URL 
+304 请求的资源未更新     处理方式：丢弃 
+400 非法请求     处理方式：丢弃 
+401 未授权     处理方式：丢弃 
+403 禁止     处理方式：丢弃 
+404 没有找到     处理方式：丢弃 
+5XX 回应代码以“5”开头的状态码表示服务器端发现自己出现错误，不能继续执行请求    处理方式：丢弃
+</code></pre>
+
+<hr />
+
+<h4>知道了如何获取网页内容，接下来需要做的工作就是如何从爬取到的网页代码中找到自己需要的下级url。</h4>
+
+<p>很显然，这里我们需要用到<code>正则表达式</code>这个神奇的工具。</p>
+
+<p>很多时候我们可能觉得正则很鸡肋，学起来知识点比较琐碎，但又没有很明显的用武之地。网上对正则有一个很形象的比喻，“匕首”。所谓匕首，即它不像十八般武器那么炫酷，但是在关键时刻却能起到意想不到的效果。</p>
+
+<p>这里只介绍Python正则表达式中最常用最简单的一种，想更进一步了解的同学可以查阅一下资料，网上有很多总结的不错，我这里就不赘述啦：）</p>
+
+<p><code>re.compile(strPattern[, flag]):</code></p>
+
+<p>这个方法是Pattern类的工厂方法，用于将字符串形式的正则表达式编译为Pattern对象。</p>
+
+<p>第二个参数flag是匹配模式，取值可以使用按位或运算符'|'表示同时生效，比如re.I | re.M。</p>
+
+<p>另外，也可以在regex字符串中指定模式。比如<code>re.compile('pattern', re.I | re.M)</code>与<code>re.compile('(?im)pattern')</code>是等价的。可选值有：</p>
+
+<pre><code>re.I(IGNORECASE)        忽略大小写
+re.M(MULTILINE)         多行模式
+re.S(DOTALL)            点任意匹配模式
+re.L(LOCALE)            使预定字符类 \w \W \b \B \s \S 取决于当前区域设定
+re.U(UNICODE)           使预定字符类 \w \W \b \B \s \S \d \D 取决于unicode定义的字符属性
+re.X(VERBOSE)           详细模式。这个模式下正则表达式可以是多行，忽略空白字符，并可以加入注释。
+</code></pre>
+
+<hr />
+
+<p>最后，想要让你的爬虫足够机智，你必须赋予它灵活的逻辑判断和高效的正则表达式。个人认为赋予爬虫什么样的逻辑才是一个写爬虫真正的精华和难点所在。而这些又是只能依靠个人经验去提升和摸索的。所以还是要多写多练手。</p>
+
+<p>当然，你可以通过增加代理、设置超时、伪装浏览器、反“盗链”等多种手段来提升爬虫的战斗力，但，逻辑依然是它的灵魂所在。</p>
+
+</section>
+<section class="meta">
+
+<br/>
+<br/>
+<span>
+	<a  href="http://cubernet.cn/2013/12/26/easy-evaluation/" class="pageNav"  >Previous</a>
+	&nbsp;&nbsp;&nbsp;
+	<a  href="http://cubernet.cn/2013/12/27/Django/" class="pageNav"  >Next</a>
+</span>
+<hr>
+<span class="author">
+  <a href="http://webfrogs.github.com">Cubernet</a>
+</span>
+<span class="time">
+  /
+  <time datetime="2013-12-26">2013-12-26</time>
+</span>
+<br />
+<span class="license">
+  Published under <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">(CC) BY-NC-SA</a>
+</span>
+
+<span class="categories">
+  in categories
+  
+  <a href="/categories/#python" title="python">python</a>&nbsp;
+  
+  <a href="/categories/#code" title="code">code</a>&nbsp;
+  
+</span>
+
+
+<span class="tags">
+  tagged with 
+  
+  <a href="/tags/#python" title="python">python</a>&nbsp;
+  
+</span>
+
+</section>
+<!-- Duoshuo Comment BEGIN -->
+	<div class="ds-thread"></div>
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"cubernetgithub"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- Duoshuo Comment END -->
+<!--
+<script type="text/javascript">
+$(function(){
+  $(document).keydown(function(e) {
+    var url = false;
+        if (e.which == 37 || e.which == 74) {  // Left arrow and J
+            
+        url = 'http://cubernet.cn/2013/12/26/easy-evaluation/';
+        
+        }
+        else if (e.which == 39 || e.which == 75) {  // Right arrow and K
+            
+        url = 'http://cubernet.cn/2013/12/27/Django/';
+        
+        }
+        if (url) {
+            window.location = url;
+        }
+  });
+})
+</script>
+-->
+
+
+        </article>
+      </div>
+
+    <footer>
+        <p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> & <a href="http://pages.github.com">GitHub</a> | Copyright 2013 - 2014 Thanks to <a href="http://webfrogs.me/about/">webfrogs</a> | <span class="label label-info" id="timeSpan"></span></small></p>
+    </footer>
+
+    </div>
+        <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=4&amp;pos=right&amp;uid=541841" ></script>
+		<script type="text/javascript" id="bdshell_js"></script>
+		<script type="text/javascript">
+		var bds_config={"bdTop":170};
+		document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+
+        
+        function setTimeSpan(){
+            var date = new Date();
+            timeSpan.innerText=date.format('yyyy-MM-dd hh:mm:ss');
+        }
+        
+        Date.prototype.format = function(format)
+            {
+        var o =
+            {
+                "M+" : this.getMonth()+1, //month
+                "d+" : this.getDate(),    //day
+                "h+" : this.getHours(),   //hour
+                "m+" : this.getMinutes(), //minute
+                "s+" : this.getSeconds(), //second
+                "q+" : Math.floor((this.getMonth()+3)/3),  //quarter
+                "S" : this.getMilliseconds() //millisecond
+            }
+            if(/(y+)/.test(format))
+            format=format.replace(RegExp.$1,(this.getFullYear()+"").substr(4 - RegExp.$1.length));
+            for(var k in o)
+            if(new RegExp("("+ k +")").test(format))
+            format = format.replace(RegExp.$1,RegExp.$1.length==1 ? o[k] : ("00"+ o[k]).substr((""+ o[k]).length));
+            return format;
+            }
+
+
+		</script>
+        <div class="analysis">
+            <script type="text/javascript">
+                var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fcbf651a0c9c199e73857441cc83b3884' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+        </div>
+
+  </body>
+</html>

@@ -49,7 +49,7 @@ icon: file-o
     	}
     	catch(e){
         	done = true;
-        	console.log("Oppos...There's something wrong!");
+        	console.log("Ooops...There's something wrong!");
     	}
 	})();
 {% endhighlight %}
