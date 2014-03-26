@@ -63,15 +63,14 @@
 <span class="lineno"> 4</span>  <span class="kn">import</span> <span class="nn">cookielib</span>
 <span class="lineno"> 5</span>  
 <span class="lineno"> 6</span>  <span class="k">def</span> <span class="nf">getRandomMail</span><span class="p">():</span>
-<span class="lineno"> 7</span>      <span class="n">posturl</span> <span class="o">=</span> <span class="s">&quot;http://mail.bccto.me/renew.php&quot;</span>
-<span class="lineno"> 8</span>      <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="lineno"> 9</span>      <span class="n">req</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">posturl</span><span class="p">)</span>
-<span class="lineno">10</span>      <span class="n">data</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlencode</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="lineno">11</span>      <span class="c">#enable cookie</span>
-<span class="lineno">12</span>      <span class="n">opener</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">HTTPCookieProcessor</span><span class="p">())</span>
-<span class="lineno">13</span>      <span class="n">response</span> <span class="o">=</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
-<span class="lineno">14</span>      <span class="k">return</span>  <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">())[</span><span class="s">&#39;mail&#39;</span><span class="p">]</span>
-<span class="lineno">15</span>      
+<span class="lineno"> 7</span>  <span class="n">posturl</span> <span class="o">=</span> <span class="s">&quot;http://mail.bccto.me/renew.php&quot;</span>
+<span class="lineno"> 8</span>  <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="lineno"> 9</span>  <span class="n">req</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">posturl</span><span class="p">)</span>
+<span class="lineno">10</span>  <span class="n">data</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlencode</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="lineno">11</span>  <span class="c">#enable cookie</span>
+<span class="lineno">12</span>  <span class="n">opener</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">HTTPCookieProcessor</span><span class="p">())</span>
+<span class="lineno">13</span>  <span class="n">response</span> <span class="o">=</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="lineno">14</span>  <span class="k">return</span>  <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">())[</span><span class="s">&#39;mail&#39;</span><span class="p">]</span>        
 </code></pre></div>
 
 
@@ -108,7 +107,7 @@
 
     <footer>
         <p><small>
-            <a href="http://github.com/Cubernet/_posts" target="_blank" title="撰写文章">Po</a>wer<a href="http://github.com/Cubernet/_posts/2013-05-23-mail.md" target="_blank" title="编辑页面">ed</a> by <a href="http://jekyllrb.com" target="_blank">Jekyll</a> @ <a href="http://github.com/Cubernet" target="_blank" title="项目主页">GitHub</a>
+            Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a> @ <a href="http://github.com/cubernet" target="_blank" title="项目主页">GitHub</a>
              | <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/cn/" target="_blank" title="许可协议">©</a> 2013 - 2014 <a href="/about/">Cubernet</a>
              | <script type="text/javascript">var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fcbf651a0c9c199e73857441cc83b3884' type='text/javascript'%3E%3C/script%3E"));
              </script>

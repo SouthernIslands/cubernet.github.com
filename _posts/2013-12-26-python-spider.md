@@ -30,15 +30,15 @@ icon: file-o
 
 {% highlight python linenos %}
 
-	import urllib2
-	def readsrc(src):
-    #    获取src网址对应的html代码
-    	try:
-        	content = urllib2.urlopen(src).read()
-        	return content
-    	except URLError,e:
-        	print e.code
-        	return None
+import urllib2
+def readsrc(src):
+#获取src网址对应的html代码
+    try:
+        content = urllib2.urlopen(src).read()
+        return content
+    except URLError,e:
+        print e.code
+        return None
         	
 {% endhighlight %}
         	
@@ -47,16 +47,16 @@ icon: file-o
 
 {% highlight python linenos %}
 
-	from urllib import urlopen
-	import urllib2
+from urllib import urlopen
+import urllib2
 
-	user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)' 
-	headers = { 'User-Agent' : user_agent, 'Accept-Language': ':zh-CN,zh;q=0.8,en;q=0.6' } 
-	data = '' 
+user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)' 
+headers = { 'User-Agent' : user_agent, 'Accept-Language': ':zh-CN,zh;q=0.8,en;q=0.6' } 
+data = '' 
 	
-	req = urllib2.Request(geturl2, data, headers)    
-	response = urllib2.urlopen(req)    
-	web_page = response.read() 
+req = urllib2.Request(geturl2, data, headers)    
+response = urllib2.urlopen(req)    
+web_page = response.read() 
 	
 {% endhighlight %}
 	
@@ -65,27 +65,27 @@ icon: file-o
 
 {% highlight python linenos %}
 
-	import urllib    
-	import urllib2  
-	import cookielib  
+import urllib    
+import urllib2  
+import cookielib  
   
-	cookie = cookielib.CookieJar()    
-	opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookie))  
+cookie = cookielib.CookieJar()    
+opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookie))  
   
-	#需要POST的数据#  
-	postdata=urllib.urlencode({    
-	'name':'Cubernet',    
-	'pwd':'Oppos...'    
-	})  
+#需要POST的数据#  
+postdata=urllib.urlencode({    
+'name':'Cubernet',    
+'pwd':'Oppos...'    
+})  
 	  
-	#自定义一个请求#  
-	req = urllib2.Request(    
-	url = 'http://cubernet.me/login.php',    
-	data = postdata  
-	) 
+#自定义一个请求#  
+req = urllib2.Request(    
+url = 'http://cubernet.me/login.php',    
+data = postdata  
+) 
 	   
-	#访问该链接#  
-	result = opener.open(req）
+#访问该链接#  
+result = opener.open(req）
 	
 {% endhighlight %}
 
