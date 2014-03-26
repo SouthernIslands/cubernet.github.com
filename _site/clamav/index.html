@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Cubernet" />
+    <title>ClamAV相关</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link href="/feed/" rel="alternate" title="Cubernet" type="application/atom+xml" />
+    <link rel="stylesheet" href="/media/css/style.css" />
+    <link rel="stylesheet" href="/media/css/highlight.css" />
+    <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="main" role="main">
+        <header>
+        <h1>ClamAV相关</h1>
+        </header>
+        <nav>
+        <span><a title="网站首页" class="" href="/">首页</a></span>
+        <span><a title="文章分类" class="" href="/categories/">分类</a></span>
+        <span><a title="标签索引" class="" href="/tags/">标签</a></span>
+        <!--<span><a title="友情链接" class="" href="/links/">链接</a></span>-->
+        <span><a title="留言交流" class="" href="/guestbook/">留言</a></span>
+        <span><a title="关于站长" class="" href="/about/">关于</a></span>
+        <span><a title="种子订阅" class="" href="/feed/" target="_blank">订阅</a></span>
+        </nav>
+        <article class="content">
+        <section class="meta">
+<span class="time">
+  <time datetime="2014-01-23">2014-01-23</time>
+</span>
+
+ | 
+<span class="categories">
+  分类
+  
+  <a href="/categories/#learning" title="learning">learning</a>&nbsp;
+  
+</span>
+
+
+ | 
+<span class="tags">
+  标签
+  
+  <a href="/tags/#clamav" title="clamav">clamav</a>&nbsp;
+  
+</span>
+
+</section>
+<section class="post">
+<p><img src="/assets/images/2014-1-23-clamav.jpg" alt="image" /></p>
+
+<p>填写这篇博文的日期时发现时间已经是2014年了，占坑留了好久的新年博文终究没有写，新年的第一篇文章就留给clamav吧。:)</p>
+
+<p>本以为寒假回家可以轻松过个年，没想到项目加急，于是掀开了在家办公的序幕。这个项目和ClamAV相关，目前项目暂时告一段落，在这里做个简单记录。</p>
+
+<blockquote><p>Clam AntiVirus（ClamAV）是免费而且开放源代码的杀毒软件，软件与病毒码的更新皆由社区免费发布。目前ClamAV主要是使用在由Linux、FreeBSD等Unix-like系统架设的邮件服务器上，提供电子邮件的病毒扫描服务。ClamAV本身是在文字接口下运作，但也有许多图形接口的前端工具（GUI front-end）可用，另外由于其开放源代码的特性，在Windows与Mac OS X平台都有其移植版。——维基百科</p></blockquote>
+
+<!-- more -->
+
+
+<p>从维基百科中可以看到，最初的ClamAV是用来提供电子邮件病毒扫描服务的工具。不过现在ClamAV的功能已经远不止此，它可以扫描包括电子邮件在内的各种文件格式，并且它的病毒库也在实时更新。</p>
+
+<hr />
+
+<h3>安装及配置</h3>
+
+<p>ClamAV是一套开源的杀毒软件，所以你可以从它的官网上下载到它的源码，按照自己的意愿对其修改之后，即可编译生成可执行文件。我在windows和Linux上均测试编译成功。</p>
+
+<p>下面以Windows上的配置为例：</p>
+
+<p><img src="/assets/images/2014-1-23-clamav-1.png" alt="image" /></p>
+
+<p>安装完成后将出现上面这些exe。其中常用到的只有三个，分别是clamscan.exe、freshclam.exe和sigtool.exe。<em> Clamscan.exe是用来扫描文件或者目录的（支持递归以及压缩文件等）</em> Freshclam.exe是用来更新病毒库的* Sigtool.exe是用来新增病毒的。在安装完成后，首先需要从conf_example中将配置文件拷贝出来，然后将配置文件中的example字段注释掉。根据当前环境修改配置文件中的参数，如日志文件保存地址等。正确配置以后，先执行freshclam来下载最新的病毒库。然后就可以扫描文件了。扫描命令： clamscan –r [需要递归扫描的路径] –l [日志文件保存的路径]扫描结果：
+没有发现病毒的：
+<img src="/assets/images/2014-1-23-clamav-2.png" alt="image" />
+发现病毒的：
+<img src="/assets/images/2014-1-23-clamav-3.png" alt="image" />
+对应的日志文件：</p>
+
+<h2><img src="/assets/images/2014-1-23-clamav-4.png" alt="image" /></h2>
+
+<h3>配置文件实例：</h3>
+
+<div class="highlight"><pre><code class="java"><span class="lineno"> 1</span>   <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">clamd</span><span class="o">.</span><span class="na">conf</span>
+<span class="lineno"> 2</span>  <span class="n">LogFile</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">clamd</span><span class="o">.</span><span class="na">log</span><span class="err">日志文件</span>
+<span class="lineno"> 3</span>  <span class="n">LogFileMaxSize</span> <span class="mi">0</span> <span class="err">日志文件最大体积</span>
+<span class="lineno"> 4</span>  <span class="n">LogTime</span> <span class="n">yes</span> <span class="err">是否在日志文件中记录时间</span>
+<span class="lineno"> 5</span>  <span class="n">LogVerbose</span> <span class="n">yes</span> <span class="err">是否详细记录日志</span>
+<span class="lineno"> 6</span>  <span class="n">PidFile</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">clamav</span><span class="o">/</span><span class="n">clamd</span><span class="o">.</span><span class="na">pid</span> <span class="err">进程文件</span>
+<span class="lineno"> 7</span>  <span class="n">TemporaryDirectory</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">tmp</span> <span class="err">扫描时的临时目录</span>
+<span class="lineno"> 8</span>  <span class="n">DatabaseDirectory</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">clamav</span> <span class="err">病毒库目录</span>
+<span class="lineno"> 9</span>  <span class="n">LocalSocket</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">clamav</span><span class="o">/</span><span class="n">clamd</span><span class="o">.</span><span class="na">sock</span> <span class="err">本地通讯的</span><span class="n">socket</span><span class="err">文件</span>
+<span class="lineno">10</span>  <span class="err">#</span><span class="n">TCPSocket</span> <span class="mi">3310</span> <span class="n">TCPSocket</span><span class="err">端口（与</span><span class="n">LocalSocket</span><span class="err">不可并存）</span>
+<span class="lineno">11</span>  <span class="n">FixStaleSocket</span> <span class="n">yes</span>
+<span class="lineno">12</span>  <span class="n">User</span> <span class="n">clamav</span>
+<span class="lineno">13</span>  <span class="n">ScanOLE2</span> <span class="err">扫描</span><span class="n">office</span><span class="err">文档</span>
+<span class="lineno">14</span>  <span class="n">ScanMail</span> <span class="err">扫描邮件</span>
+<span class="lineno">15</span>  <span class="n">ScanArchive</span> <span class="err">扫描压缩包</span>
+<span class="lineno">16</span>  <span class="n">ScanRAR</span> <span class="err">扫描</span><span class="n">RAR</span><span class="err">压缩包</span>
+<span class="lineno">17</span>  <span class="n">ArchiveMaxFileSize</span> <span class="mi">10</span><span class="n">M</span> <span class="err">最大扫描压缩包文件为</span><span class="mi">10</span><span class="err">兆</span>
+<span class="lineno">18</span>  <span class="n">ArchiveMaxRecursion</span> <span class="mi">9</span> <span class="err">扫描压缩包</span><span class="mi">9</span><span class="err">层</span>
+<span class="lineno">19</span>  <span class="n">ArchiveMaxFiles</span> <span class="mi">1000</span> <span class="err">最多扫描压缩包内</span><span class="mi">1500</span><span class="err">个文件</span>
+<span class="lineno">20</span>  <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">freshclam</span><span class="o">.</span><span class="na">conf</span>
+<span class="lineno">21</span>  <span class="n">DatabaseDirectory</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">clamav</span> <span class="err">病毒库目录</span>
+<span class="lineno">22</span>  <span class="n">UpdateLogFile</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">freshclam</span><span class="o">.</span><span class="na">log</span> <span class="err">更新日志</span>
+<span class="lineno">23</span>  <span class="n">LogVerbose</span> <span class="n">yes</span> <span class="err">是否详细记录日志</span>
+<span class="lineno">24</span>  <span class="n">PidFile</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">clamav</span><span class="o">/</span><span class="n">freshclam</span><span class="o">.</span><span class="na">pid</span> <span class="err">进程文件</span>
+<span class="lineno">25</span>  <span class="n">DatabaseOwner</span> <span class="n">clamav</span> <span class="err">病毒库用户</span>
+<span class="lineno">26</span>  <span class="n">DatabaseMirror</span> <span class="n">db</span><span class="o">.</span><span class="na">cn</span><span class="o">.</span><span class="na">clamav</span><span class="o">.</span><span class="na">net</span> <span class="err">病毒库的镜像地址（可以多个）</span>
+<span class="lineno">27</span>  <span class="n">DatabaseMirror</span> <span class="n">database</span><span class="o">.</span><span class="na">clamav</span><span class="o">.</span><span class="na">net</span>
+<span class="lineno">28</span> 
+<span class="lineno">29</span>  
+</code></pre></div>
+
+
+<hr />
+
+<p>除了调用clamscan等现有的工具，ClamAV还提供了一些更底层的API接口供那些有特殊需求的开发者使用，详细的介绍可以查看ClamAV官方文档的最后章节。</p>
+
+</section>
+<section align="right">
+<br/>
+<span>
+	<a  href="/Metasploit-6/" class="pageNav"  >上一篇</a>
+	&nbsp;&nbsp;&nbsp;
+	<a  href="/iPhoneJailbreak/" class="pageNav"  >下一篇</a>
+</span>
+</section>
+
+	
+	<div class="ds-thread" />
+		
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"cubernetgithub"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+
+
+        </article>
+      </div>
+
+    <footer>
+        <p><small>
+            <a href="http://github.com/Cubernet/_posts" target="_blank" title="撰写文章">Po</a>wer<a href="http://github.com/Cubernet/_posts/2014-1-23-clamav.md" target="_blank" title="编辑页面">ed</a> by <a href="http://jekyllrb.com" target="_blank">Jekyll</a> @ <a href="http://github.com/Cubernet" target="_blank" title="项目主页">GitHub</a>
+             | <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/cn/" target="_blank" title="许可协议">©</a> 2013 - 2014 <a href="/about/">Cubernet</a>
+             | <script type="text/javascript">var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fcbf651a0c9c199e73857441cc83b3884' type='text/javascript'%3E%3C/script%3E"));
+             </script>
+         </small></p>
+    </footer>
+    </div>
+  </body>
+</html>

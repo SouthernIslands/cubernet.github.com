@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Cubernet" />
+    <title>临时邮箱地址获取脚本</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link href="/feed/" rel="alternate" title="Cubernet" type="application/atom+xml" />
+    <link rel="stylesheet" href="/media/css/style.css" />
+    <link rel="stylesheet" href="/media/css/highlight.css" />
+    <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="main" role="main">
+        <header>
+        <h1>临时邮箱地址获取脚本</h1>
+        </header>
+        <nav>
+        <span><a title="网站首页" class="" href="/">首页</a></span>
+        <span><a title="文章分类" class="" href="/categories/">分类</a></span>
+        <span><a title="标签索引" class="" href="/tags/">标签</a></span>
+        <!--<span><a title="友情链接" class="" href="/links/">链接</a></span>-->
+        <span><a title="留言交流" class="" href="/guestbook/">留言</a></span>
+        <span><a title="关于站长" class="" href="/about/">关于</a></span>
+        <span><a title="种子订阅" class="" href="/feed/" target="_blank">订阅</a></span>
+        </nav>
+        <article class="content">
+        <section class="meta">
+<span class="time">
+  <time datetime="2013-05-23">2013-05-23</time>
+</span>
+
+ | 
+<span class="categories">
+  分类
+  
+  <a href="/categories/#python" title="python">python</a>&nbsp;
+  
+</span>
+
+
+ | 
+<span class="tags">
+  标签
+  
+  <a href="/tags/#Python" title="Python">Python</a>&nbsp;
+  
+</span>
+
+</section>
+<section class="post">
+<p><img src="/assets/images/2013-05-23-mail.jpeg" alt="image" /></p>
+
+<p>临时邮箱——注册非重要资源专用
+现在注册各种论坛、网站的时候都要填邮箱地址，注册完之后经常会发现不久之后垃圾邮件就塞满了你的邮箱。如何摆脱垃圾邮件的骚扰？找一个临时邮箱或一次性邮箱不失为一个很不错的方法。</p>
+
+<p>另外，当你需要注册许多马甲账号的时候，还需要马上获取到许多临时邮箱地址，下面这段python脚本帮你实现。</p>
+
+<div class="highlight"><pre><code class="python"><span class="lineno"> 1</span>     <span class="kn">import</span> <span class="nn">urllib2</span>
+<span class="lineno"> 2</span>  <span class="kn">import</span> <span class="nn">urllib</span>
+<span class="lineno"> 3</span>  <span class="kn">import</span> <span class="nn">json</span>
+<span class="lineno"> 4</span>  <span class="kn">import</span> <span class="nn">cookielib</span>
+<span class="lineno"> 5</span>  
+<span class="lineno"> 6</span>  <span class="k">def</span> <span class="nf">getRandomMail</span><span class="p">():</span>
+<span class="lineno"> 7</span>      <span class="n">posturl</span> <span class="o">=</span> <span class="s">&quot;http://mail.bccto.me/renew.php&quot;</span>
+<span class="lineno"> 8</span>      <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="lineno"> 9</span>      <span class="n">req</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">posturl</span><span class="p">)</span>
+<span class="lineno">10</span>      <span class="n">data</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlencode</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="lineno">11</span>      <span class="c">#enable cookie</span>
+<span class="lineno">12</span>      <span class="n">opener</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">HTTPCookieProcessor</span><span class="p">())</span>
+<span class="lineno">13</span>      <span class="n">response</span> <span class="o">=</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="lineno">14</span>      <span class="k">return</span>  <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">())[</span><span class="s">&#39;mail&#39;</span><span class="p">]</span>
+<span class="lineno">15</span>      
+</code></pre></div>
+
+
+
+
+</section>
+<section align="right">
+<br/>
+<span>
+	<a  href="/bestmeet/" class="pageNav"  >上一篇</a>
+	&nbsp;&nbsp;&nbsp;
+	<a  href="/100days/" class="pageNav"  >下一篇</a>
+</span>
+</section>
+
+	
+	<div class="ds-thread" />
+		
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"cubernetgithub"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+
+
+        </article>
+      </div>
+
+    <footer>
+        <p><small>
+            <a href="http://github.com/Cubernet/_posts" target="_blank" title="撰写文章">Po</a>wer<a href="http://github.com/Cubernet/_posts/2013-05-23-mail.md" target="_blank" title="编辑页面">ed</a> by <a href="http://jekyllrb.com" target="_blank">Jekyll</a> @ <a href="http://github.com/Cubernet" target="_blank" title="项目主页">GitHub</a>
+             | <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/cn/" target="_blank" title="许可协议">©</a> 2013 - 2014 <a href="/about/">Cubernet</a>
+             | <script type="text/javascript">var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fcbf651a0c9c199e73857441cc83b3884' type='text/javascript'%3E%3C/script%3E"));
+             </script>
+         </small></p>
+    </footer>
+    </div>
+  </body>
+</html>
