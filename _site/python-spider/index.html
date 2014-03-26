@@ -71,58 +71,58 @@
 
 <p>最简单的，向特定url发送get请求，获取网页内容：</p>
 
-<div class="highlight"><pre><code class="python"><span class="lineno"> 1</span>     <span class="kn">import</span> <span class="nn">urllib2</span>
-<span class="lineno"> 2</span>  <span class="k">def</span> <span class="nf">readsrc</span><span class="p">(</span><span class="n">src</span><span class="p">):</span>
-<span class="lineno"> 3</span>     <span class="c">#    获取src网址对应的html代码</span>
-<span class="lineno"> 4</span>      <span class="k">try</span><span class="p">:</span>
-<span class="lineno"> 5</span>          <span class="n">content</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">src</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="lineno"> 6</span>          <span class="k">return</span> <span class="n">content</span>
-<span class="lineno"> 7</span>      <span class="k">except</span> <span class="n">URLError</span><span class="p">,</span><span class="n">e</span><span class="p">:</span>
-<span class="lineno"> 8</span>          <span class="k">print</span> <span class="n">e</span><span class="o">.</span><span class="n">code</span>
-<span class="lineno"> 9</span>          <span class="k">return</span> <span class="bp">None</span>
+<div class="highlight"><pre><code class="python"><span class="lineno"> 1</span> <span class="kn">import</span> <span class="nn">urllib2</span>
+<span class="lineno"> 2</span> <span class="k">def</span> <span class="nf">readsrc</span><span class="p">(</span><span class="n">src</span><span class="p">):</span>
+<span class="lineno"> 3</span> <span class="c">#获取src网址对应的html代码</span>
+<span class="lineno"> 4</span>     <span class="k">try</span><span class="p">:</span>
+<span class="lineno"> 5</span>         <span class="n">content</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">src</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="lineno"> 6</span>         <span class="k">return</span> <span class="n">content</span>
+<span class="lineno"> 7</span>     <span class="k">except</span> <span class="n">URLError</span><span class="p">,</span><span class="n">e</span><span class="p">:</span>
+<span class="lineno"> 8</span>         <span class="k">print</span> <span class="n">e</span><span class="o">.</span><span class="n">code</span>
+<span class="lineno"> 9</span>         <span class="k">return</span> <span class="bp">None</span>
 <span class="lineno">10</span>          
 </code></pre></div>
 
 
 <p>有时候服务器会通过http报文的header来判断你是不是一个真正的‘human’，所以需要给你的发送的报文添加一个浏览器标示，来简单的迷惑服务器。同时，很多情况下我们需要通过发送post请求来传递更多的数据，那么可以这么写：</p>
 
-<div class="highlight"><pre><code class="python"><span class="lineno"> 1</span>     <span class="kn">from</span> <span class="nn">urllib</span> <span class="kn">import</span> <span class="n">urlopen</span>
-<span class="lineno"> 2</span>  <span class="kn">import</span> <span class="nn">urllib2</span>
+<div class="highlight"><pre><code class="python"><span class="lineno"> 1</span> <span class="kn">from</span> <span class="nn">urllib</span> <span class="kn">import</span> <span class="n">urlopen</span>
+<span class="lineno"> 2</span> <span class="kn">import</span> <span class="nn">urllib2</span>
 <span class="lineno"> 3</span> 
-<span class="lineno"> 4</span>  <span class="n">user_agent</span> <span class="o">=</span> <span class="s">&#39;Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)&#39;</span> 
-<span class="lineno"> 5</span>  <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span> <span class="s">&#39;User-Agent&#39;</span> <span class="p">:</span> <span class="n">user_agent</span><span class="p">,</span> <span class="s">&#39;Accept-Language&#39;</span><span class="p">:</span> <span class="s">&#39;:zh-CN,zh;q=0.8,en;q=0.6&#39;</span> <span class="p">}</span> 
-<span class="lineno"> 6</span>  <span class="n">data</span> <span class="o">=</span> <span class="s">&#39;&#39;</span> 
+<span class="lineno"> 4</span> <span class="n">user_agent</span> <span class="o">=</span> <span class="s">&#39;Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)&#39;</span> 
+<span class="lineno"> 5</span> <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span> <span class="s">&#39;User-Agent&#39;</span> <span class="p">:</span> <span class="n">user_agent</span><span class="p">,</span> <span class="s">&#39;Accept-Language&#39;</span><span class="p">:</span> <span class="s">&#39;:zh-CN,zh;q=0.8,en;q=0.6&#39;</span> <span class="p">}</span> 
+<span class="lineno"> 6</span> <span class="n">data</span> <span class="o">=</span> <span class="s">&#39;&#39;</span> 
 <span class="lineno"> 7</span>  
-<span class="lineno"> 8</span>  <span class="n">req</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">geturl2</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>    
-<span class="lineno"> 9</span>  <span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>    
-<span class="lineno">10</span>  <span class="n">web_page</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> 
+<span class="lineno"> 8</span> <span class="n">req</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">geturl2</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>    
+<span class="lineno"> 9</span> <span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>    
+<span class="lineno">10</span> <span class="n">web_page</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> 
 <span class="lineno">11</span>  
 </code></pre></div>
 
 
 <p>如果你的爬虫想爬取的网站需要先登录才可以继续浏览，这个时候你就需要通过处理cookies等字段来维持爬虫保持<code>登录</code>状态。</p>
 
-<div class="highlight"><pre><code class="python"><span class="lineno"> 1</span>     <span class="kn">import</span> <span class="nn">urllib</span>    
-<span class="lineno"> 2</span>  <span class="kn">import</span> <span class="nn">urllib2</span>  
-<span class="lineno"> 3</span>  <span class="kn">import</span> <span class="nn">cookielib</span>  
+<div class="highlight"><pre><code class="python"><span class="lineno"> 1</span> <span class="kn">import</span> <span class="nn">urllib</span>    
+<span class="lineno"> 2</span> <span class="kn">import</span> <span class="nn">urllib2</span>  
+<span class="lineno"> 3</span> <span class="kn">import</span> <span class="nn">cookielib</span>  
 <span class="lineno"> 4</span>   
-<span class="lineno"> 5</span>  <span class="n">cookie</span> <span class="o">=</span> <span class="n">cookielib</span><span class="o">.</span><span class="n">CookieJar</span><span class="p">()</span>    
-<span class="lineno"> 6</span>  <span class="n">opener</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">HTTPCookieProcessor</span><span class="p">(</span><span class="n">cookie</span><span class="p">))</span>  
+<span class="lineno"> 5</span> <span class="n">cookie</span> <span class="o">=</span> <span class="n">cookielib</span><span class="o">.</span><span class="n">CookieJar</span><span class="p">()</span>    
+<span class="lineno"> 6</span> <span class="n">opener</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">HTTPCookieProcessor</span><span class="p">(</span><span class="n">cookie</span><span class="p">))</span>  
 <span class="lineno"> 7</span>   
-<span class="lineno"> 8</span>  <span class="c">#需要POST的数据#  </span>
-<span class="lineno"> 9</span>  <span class="n">postdata</span><span class="o">=</span><span class="n">urllib</span><span class="o">.</span><span class="n">urlencode</span><span class="p">({</span>    
-<span class="lineno">10</span>  <span class="s">&#39;name&#39;</span><span class="p">:</span><span class="s">&#39;Cubernet&#39;</span><span class="p">,</span>    
-<span class="lineno">11</span>  <span class="s">&#39;pwd&#39;</span><span class="p">:</span><span class="s">&#39;Oppos...&#39;</span>    
-<span class="lineno">12</span>  <span class="p">})</span>  
+<span class="lineno"> 8</span> <span class="c">#需要POST的数据#  </span>
+<span class="lineno"> 9</span> <span class="n">postdata</span><span class="o">=</span><span class="n">urllib</span><span class="o">.</span><span class="n">urlencode</span><span class="p">({</span>    
+<span class="lineno">10</span> <span class="s">&#39;name&#39;</span><span class="p">:</span><span class="s">&#39;Cubernet&#39;</span><span class="p">,</span>    
+<span class="lineno">11</span> <span class="s">&#39;pwd&#39;</span><span class="p">:</span><span class="s">&#39;Oppos...&#39;</span>    
+<span class="lineno">12</span> <span class="p">})</span>  
 <span class="lineno">13</span>    
-<span class="lineno">14</span>  <span class="c">#自定义一个请求#  </span>
-<span class="lineno">15</span>  <span class="n">req</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span>    
-<span class="lineno">16</span>  <span class="n">url</span> <span class="o">=</span> <span class="s">&#39;http://cubernet.me/login.php&#39;</span><span class="p">,</span>    
-<span class="lineno">17</span>  <span class="n">data</span> <span class="o">=</span> <span class="n">postdata</span>  
-<span class="lineno">18</span>  <span class="p">)</span> 
+<span class="lineno">14</span> <span class="c">#自定义一个请求#  </span>
+<span class="lineno">15</span> <span class="n">req</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span>    
+<span class="lineno">16</span> <span class="n">url</span> <span class="o">=</span> <span class="s">&#39;http://cubernet.me/login.php&#39;</span><span class="p">,</span>    
+<span class="lineno">17</span> <span class="n">data</span> <span class="o">=</span> <span class="n">postdata</span>  
+<span class="lineno">18</span> <span class="p">)</span> 
 <span class="lineno">19</span>     
-<span class="lineno">20</span>  <span class="c">#访问该链接#  </span>
-<span class="lineno">21</span>  <span class="n">result</span> <span class="o">=</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">req</span><span class="err">）</span>
+<span class="lineno">20</span> <span class="c">#访问该链接#  </span>
+<span class="lineno">21</span> <span class="n">result</span> <span class="o">=</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">req</span><span class="err">）</span>
 <span class="lineno">22</span>  
 </code></pre></div>
 
@@ -195,6 +195,7 @@ re.X(VERBOSE)           详细模式。这个模式下正则表达式可以是�
 	
 	<div class="ds-thread" />
 		
+	<ul  class="ds-top-threads" data-range="monthly" data-num-items="3"></ul>
 	<script type="text/javascript">
 	var duoshuoQuery = {short_name:"cubernetgithub"};
 	(function() {

@@ -4,6 +4,7 @@
 	{% else %}
 	<div class="ds-thread" />
 	{% endif %}	
+	<ul  class="ds-top-threads" data-range="monthly" data-num-items="3"></ul>
 	<script type="text/javascript">
 	var duoshuoQuery = {short_name:"{{ site.duoshuo }}"};
 	(function() {
