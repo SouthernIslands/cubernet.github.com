@@ -67,7 +67,7 @@ Kali自带的浏览器是iceweasel，而iceweasel其实就是Debian下的Firefox
 
 如果你之前不晓得F12的作用的话，这个插件请自动无视。
 
-https://addons.mozilla.org/zh-CN/firefox/addon/firebug/?src=search
+<a title="https://addons.mozilla.org/zh-CN/firefox/addon/firebug/?src=search" href="https://addons.mozilla.org/zh-CN/firefox/addon/firebug/?src=search">https://addons.mozilla.org/zh-CN/firefox/addon/firebug/?src=search</a>
 
 <hr />
 
