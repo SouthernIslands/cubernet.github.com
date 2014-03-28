@@ -1,7 +1,7 @@
 ---
 title: About me
 layout: page
-comments: yes
+comments: no
 ---
 
 程序猿一只，深陷读博大坑不能自拔。 	

@@ -8,7 +8,13 @@
     <link href="/feed/" rel="alternate" title="Cubernet" type="application/atom+xml" />
     <link rel="stylesheet" href="/media/css/style.css" />
     <link rel="stylesheet" href="/media/css/highlight.css" />
+    
+    <link rel="stylesheet" href="/media/css/jplayer.blue.monday.css" />
+    
     <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
+    
+    <script type="text/javascript" src="/media/js/jquery.jplayer.min.js"></script>
+    
   </head>
   <body>
     <div id="container">
@@ -48,6 +54,47 @@
   
 </span>
 
+
+
+<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+<div id="jp_container_1" class="jp-audio">
+    <div class="jp-type-single">
+        <div class="jp-gui jp-interface">
+            <ul class="jp-controls">
+                <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+                <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+                <li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+                <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+                <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+                <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+            </ul>        
+            <div class="jp-progress">
+                <div class="jp-seek-bar">
+                    <div class="jp-play-bar"></div>
+                </div>
+            </div>
+            <div class="jp-volume-bar">
+                <div class="jp-volume-bar-value"></div>
+            </div>               
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+
+    $("#jquery_jplayer_1").jPlayer({
+        ready: function(event) {
+            $(this).jPlayer("setMedia", {
+              
+              mp3: "/assets/music/可爱宝贝嫁给我.mp3",
+                            
+            });
+        },
+        supplied: "mp3"
+    });
+});                                      
+</script>
+
 </section>
 <section class="post">
 <p><img src="/assets/images/2013-04-23-bestmeet.jpg" alt="image" /></p>
@@ -79,7 +126,6 @@
 	
 	<div class="ds-thread" />
 		
-	<ul  class="ds-top-threads" data-range="monthly" data-num-items="3"></ul>
 	<script type="text/javascript">
 	var duoshuoQuery = {short_name:"cubernetgithub"};
 	(function() {
