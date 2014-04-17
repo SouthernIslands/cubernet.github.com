@@ -25,12 +25,11 @@ layout: page
 
 {% raw %}
 <script id="search-results-template" type="text/mustache">
-  {{#entries}}
+    {{#entries}}
     <article>
       <h3>
         {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}}
-        <a href="{{url}}">{{title}}</a>
-      </h3>
+        <a href="{{url}}">{{title}}</a></h3>
     </article>
   {{/entries}}
 </script>
@@ -48,8 +47,3 @@ layout: page
     });
   });
 </script>
-
-
-<script type="text/javascript">
-document.write("<h1>Hello World!</h1>")
-</script> 
