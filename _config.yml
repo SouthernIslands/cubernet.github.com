@@ -1,14 +1,25 @@
 markdown: rdiscount
+
 permalink: /:title/
+
 url: http://cubernet.cn
+
 name: Cubernet'Blog
 author: Cubernet
+description: "刘小垒的博客"
+
 qq: 517324250
 email: luxaole@gmail.com
 duoshuo: cubernetgithub
 weibo: luxaole
 github: Cubernet
+
 pygments: true
 safe: true
+search: true
+
 paginate: 15
+
 about: "程序猿一只，深陷读博大坑不能自拔。\n热爱编程，开源爱好者，喜欢linux，github等。\n喜欢干净整洁的代码，轻微代码洁癖。"
+
+lunr_excludes: [rss.xml, atom.xml]

@@ -4,6 +4,9 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="{{ site.author }}" />
     <title>{% if page.path == 'index.html' %}{{ site.name }}{% else %}{% unless page.id %}{{ site.name }} - {% endunless %}{{ page.title }}{% endif %}</title>
+    <meta name="name" content="{{ site.name }}" />
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+    <meta name="keywords" content= "{% if page.tags %}{{ page.tags | join:',' }}{% endif %}" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link href="/feed/" rel="alternate" title="{{ site.author }}" type="application/atom+xml" />
     <link rel="stylesheet" href="/media/css/style.css" />
@@ -15,6 +18,7 @@
     {% if page.music.size == 1 %}
     <script type="text/javascript" src="/media/js/jquery.jplayer.min.js"></script>
     {% endif %}
+
   </head>
   <body>
     <div id="container">
@@ -30,6 +34,7 @@
         <span><a title="留言交流" class="" href="/guestbook/">留言</a></span>
         <span><a title="关于站长" class="" href="/about/">关于</a></span>
         <span><a title="种子订阅" class="" href="/feed/" target="_blank">订阅</a></span>
+        <span><a title="站内搜索" class="" href="/search/" target="_blank">搜索</a></span>
         </nav>
         <article class="content">
         {{ content }}
