@@ -3,7 +3,7 @@ layout: post
 keywords: 工作
 description: "关于我"
 title: 重新回归github
-categories: [life]
+categories: [寄意寒星荃不察，我以我血写代码【未完待续篇】]
 tags: [about me]
 group: archive
 icon: coffee

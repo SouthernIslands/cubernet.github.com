@@ -3,7 +3,7 @@ layout: post
 keywords: blog
 description: "电子科技大学一键评教"
 title: "电子科技大学一键评教"
-categories: [code, js]
+categories: [子在川上曰：我在写代码【动手动脚篇】]
 tags: [code]
 group: archive
 icon: file-o

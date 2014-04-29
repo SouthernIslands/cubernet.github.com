@@ -3,7 +3,7 @@ layout: post
 keywords: blog
 description: "保留数据的iPhone苹果手机刷机"
 title: "无损修复白苹果"
-categories: [tools,iPhone]
+categories: [子在川上曰：我在写代码【动手动脚篇】]
 tags: [iPhone]
 group: archive
 icon: file-o

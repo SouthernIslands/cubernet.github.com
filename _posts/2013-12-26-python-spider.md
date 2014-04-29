@@ -3,7 +3,7 @@ layout: post
 keywords: blog
 description: "用Python实现的一个简单爬虫"
 title: "Python应用の简单的爬虫"
-categories: [python, code]
+categories: [子在川上曰：我在写代码【动手动脚篇】]
 tags: [python]
 group: archive
 icon: file-o

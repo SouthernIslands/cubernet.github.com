@@ -1,141 +1,148 @@
 [
 	
 		{
+		  "title"    : "给jekyll添加静态搜索",
+		  "categories" : "子在川上曰：我在写代码<动手动脚篇>",
+		  "url"     : "/staticsearch/",
+		  "date"     : " 2014年18月04日"
+		} ,
+	
+		{
 		  "title"    : "虾米音乐app破解",
-		  "categories" : "软件破解",
+		  "categories" : "子在川上曰：我在写代码【动手动脚篇】",
 		  "url"     : "/xiami/",
 		  "date"     : " 2014年31月03日"
 		} ,
 	
 		{
 		  "title"    : "不想写诗的程序员不是好农民",
-		  "categories" : "life",
+		  "categories" : "年年岁岁花相似，岁岁年年写代码【年末总结篇】",
 		  "url"     : "/essay/",
 		  "date"     : " 2014年26月03日"
 		} ,
 	
 		{
 		  "title"    : "无损修复白苹果",
-		  "categories" : "toolsiphone",
+		  "categories" : "子在川上曰：我在写代码【动手动脚篇】",
 		  "url"     : "/iPhoneJailbreak/",
 		  "date"     : " 2014年01月02日"
 		} ,
 	
 		{
 		  "title"    : "ClamAV相关",
-		  "categories" : "learning",
+		  "categories" : "众里寻他千百度，蓦然回首，那人正在写代码【他山之石篇】",
 		  "url"     : "/clamav/",
 		  "date"     : " 2014年23月01日"
 		} ,
 	
 		{
 		  "title"    : "Metasploit渗透测试相关(五)——社会工程学",
-		  "categories" : "learningmetasploit",
+		  "categories" : "春眠不觉晓，醒来写代码【去粗取精篇】",
 		  "url"     : "/Metasploit-6/",
 		  "date"     : " 2013年31月12日"
 		} ,
 	
 		{
 		  "title"    : "Metasploit渗透测试相关(四)——漏洞映射与利用",
-		  "categories" : "learningmetasploit",
+		  "categories" : "春眠不觉晓，醒来写代码【去粗取精篇】",
 		  "url"     : "/Metasploit-5/",
 		  "date"     : " 2013年31月12日"
 		} ,
 	
 		{
 		  "title"    : "Metasploit渗透测试相关(三)——Web渗透",
-		  "categories" : "learningmetasploit",
+		  "categories" : "春眠不觉晓，醒来写代码【去粗取精篇】",
 		  "url"     : "/Metasploit-4/",
 		  "date"     : " 2013年30月12日"
 		} ,
 	
 		{
 		  "title"    : "Metasploit渗透测试相关(二)——探测与扫描",
-		  "categories" : "learningmetasploit",
+		  "categories" : "春眠不觉晓，醒来写代码【去粗取精篇】",
 		  "url"     : "/Metasploit-3/",
 		  "date"     : " 2013年29月12日"
 		} ,
 	
 		{
 		  "title"    : "Metasploit渗透测试相关(一)——Metasploit相关",
-		  "categories" : "learningmetasploit",
+		  "categories" : "春眠不觉晓，醒来写代码【去粗取精篇】",
 		  "url"     : "/Metasploit-2/",
 		  "date"     : " 2013年28月12日"
 		} ,
 	
 		{
 		  "title"    : "Metasploit渗透测试相关——专题目录",
-		  "categories" : "learningmetasploit",
+		  "categories" : "春眠不觉晓，醒来写代码【去粗取精篇】",
 		  "url"     : "/Metasploit-1/",
 		  "date"     : " 2013年27月12日"
 		} ,
 	
 		{
 		  "title"    : "Python框架のDjango",
-		  "categories" : "pythoncode",
+		  "categories" : "众里寻他千百度，蓦然回首，那人正在写代码【他山之石篇】",
 		  "url"     : "/Django/",
 		  "date"     : " 2013年27月12日"
 		} ,
 	
 		{
 		  "title"    : "Python应用の简单的爬虫",
-		  "categories" : "pythoncode",
+		  "categories" : "子在川上曰：我在写代码【动手动脚篇】",
 		  "url"     : "/python-spider/",
 		  "date"     : " 2013年26月12日"
 		} ,
 	
 		{
 		  "title"    : "电子科技大学一键评教",
-		  "categories" : "codejs",
+		  "categories" : "子在川上曰：我在写代码【动手动脚篇】",
 		  "url"     : "/easy-evaluation/",
 		  "date"     : " 2013年26月12日"
 		} ,
 	
 		{
 		  "title"    : "Phishing——愿者上钩",
-		  "categories" : "phishing",
+		  "categories" : "春眠不觉晓，醒来写代码【去粗取精篇】",
 		  "url"     : "/Phishing/",
 		  "date"     : " 2013年26月12日"
 		} ,
 	
 		{
 		  "title"    : "Mac相关",
-		  "categories" : "lifemac",
+		  "categories" : "举头望明月，低头写代码【科技人文篇】",
 		  "url"     : "/Mac/",
 		  "date"     : " 2013年26月12日"
 		} ,
 	
 		{
 		  "title"    : "重新回归github",
-		  "categories" : "life",
+		  "categories" : "寄意寒星荃不察，我以我血写代码【未完待续篇】",
 		  "url"     : "/first-post/",
 		  "date"     : " 2013年25月12日"
 		} ,
 	
 		{
 		  "title"    : "超好用的iceweasel插件",
-		  "categories" : "linux",
+		  "categories" : "众里寻他千百度，蓦然回首，那人正在写代码【他山之石篇】",
 		  "url"     : "/iceweasel/",
 		  "date"     : " 2013年08月08日"
 		} ,
 	
 		{
 		  "title"    : "100天",
-		  "categories" : "life",
+		  "categories" : "洛阳亲友如相问，就说我在写代码【爱爱爱情篇】",
 		  "url"     : "/100days/",
 		  "date"     : " 2013年18月07日"
 		} ,
 	
 		{
 		  "title"    : "临时邮箱地址获取脚本",
-		  "categories" : "python",
+		  "categories" : "子在川上曰：我在写代码【动手动脚篇】",
 		  "url"     : "/mail/",
 		  "date"     : " 2013年23月05日"
 		} ,
 	
 		{
 		  "title"    : "你是我最好的遇见",
-		  "categories" : "life",
+		  "categories" : "洛阳亲友如相问，就说我在写代码【爱爱爱情篇】",
 		  "url"     : "/bestmeet/",
 		  "date"     : " 2013年23月04日"
 		} 

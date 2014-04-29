@@ -3,7 +3,7 @@ layout: post
 keywords: blog
 description: "超好用的iceweasel插件"
 title: "超好用的iceweasel插件"
-categories: [Linux]
+categories: [众里寻他千百度，蓦然回首，那人正在写代码【他山之石篇】]
 tags: [Linux,Kali]
 group: archive
 icon: file-o
