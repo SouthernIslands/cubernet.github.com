@@ -1,4 +1,3 @@
-
 window.JekyllSearch = (function(window,document){
 	var searchInput = document.querySelector(".search"),
 		jsonFile = "/search.json",
@@ -8,7 +7,7 @@ window.JekyllSearch = (function(window,document){
 		searchResultsHeader = "<h4>Search results</h4>",
 		limit = 10,
 		fuzzy = false,
-		noResults = "<p>Nothing matched your query</p>";
+		noResults = "<p>Ooops...貌似你需要换个关键词试试...</p>";
 
 	/*
 		register the keydown event and load the json file

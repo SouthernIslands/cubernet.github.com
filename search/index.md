@@ -19,7 +19,6 @@ title: 搜索
           jsonFile : '/search.json',
           searchResults : document.getElementById("search-results"),
           template : '<li><article><a href="{url}">{title} <span><time datetime="{date}">{date}</time></span></a></article></li>',
-          noResults: '<p>Nothing found.</p>',
           fuzzy: true
         });
 </script>

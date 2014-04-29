@@ -1,7 +1,7 @@
 ---
 layout: post
 keywords: blog
-description: blog
+description: "电子科技大学一键评教"
 title: "电子科技大学一键评教"
 categories: [code, js]
 tags: [code]

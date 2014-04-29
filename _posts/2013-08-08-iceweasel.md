@@ -1,7 +1,7 @@
 ---
 layout: post
 keywords: blog
-description: blog
+description: "超好用的iceweasel插件"
 title: "超好用的iceweasel插件"
 categories: [Linux]
 tags: [Linux,Kali]

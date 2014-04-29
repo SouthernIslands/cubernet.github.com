@@ -1,7 +1,7 @@
 ---
 layout: post
 keywords: blog
-description: blog
+description: "保留数据的iPhone苹果手机刷机"
 title: "无损修复白苹果"
 categories: [tools,iPhone]
 tags: [iPhone]

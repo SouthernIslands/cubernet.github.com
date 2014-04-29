@@ -1,7 +1,7 @@
 ---
 layout: post
 keywords: blog
-description: blog
+description: "用Python实现的一个简单爬虫"
 title: "Python应用の简单的爬虫"
 categories: [python, code]
 tags: [python]

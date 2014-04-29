@@ -1,7 +1,7 @@
 ---
 layout: post
 keywords: blog
-description: blog
+description: "Metasploit渗透测试相关——专题目录"
 title: "Metasploit渗透测试相关——专题目录"
 categories: [learning, Metasploit]
 tags: [Metasploit,渗透]

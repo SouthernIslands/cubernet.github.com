@@ -1,7 +1,7 @@
 ---
 layout: post
 keywords: 工作
-description: 关于我
+description: "关于我"
 title: 重新回归github
 categories: [life]
 tags: [about me]

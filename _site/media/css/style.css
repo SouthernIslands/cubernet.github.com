@@ -132,3 +132,27 @@ color: white;
 background: #83BF73;
 }
 
+#search-this-page{
+	border:solid 1px;
+	border-radius:3px;
+	border-color:#dddddd;
+	width:592px;
+	height:30px;
+	font-size: 17px;
+	padding-left: 6px;
+}
+
+#search-this-page:hover{
+	border:solid 1px;
+	border-radius:3px;
+	border-color:#0099ff;
+	width:592px;
+	height:30px;
+	font-size: 17px;
+	padding-left: 6px;
+}
+
+#search{
+	margin:6px 10px 9px 0px;
+}
+

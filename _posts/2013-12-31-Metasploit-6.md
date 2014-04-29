@@ -1,7 +1,7 @@
 ---
 layout: post
 keywords: blog
-description: blog
+description: "Metasploit渗透测试相关(五)——社会工程学"
 title: "Metasploit渗透测试相关(五)——社会工程学"
 categories: [learning, Metasploit]
 tags: [Metasploit,渗透]
