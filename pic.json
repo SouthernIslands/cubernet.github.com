@@ -1,0 +1,17 @@
+---
+---
+[
+	{% for url in site.funnypicsurl %}
+		{
+		  "url" : "{{ url }}"
+		} 
+	{% if forloop.last %},{% else %},{% endif %}
+	{% endfor %}
+
+	{% for title in site.funnypicstitle %}
+		{
+		  "title" : "{{ title }}"
+		} 
+	{% if forloop.last %}{% else %},{% endif %}
+	{% endfor %}
+]

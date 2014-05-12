@@ -6,4 +6,4 @@ comments: yes
 
 来了，就留下你的足迹吧。。
 
-![image](/assets/images/back.jpg)
+![image](/assets/images/back.png)

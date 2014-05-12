@@ -26,6 +26,10 @@
     </url>
     
     <url>
+        <loc>http://cubernet.cn/funny/index.html</loc>
+    </url>
+    
+    <url>
         <loc>http://cubernet.cn/guestbook/index.html</loc>
     </url>
     
@@ -35,6 +39,10 @@
     
     <url>
         <loc>http://cubernet.cn/links/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://cubernet.cn/pic.json</loc>
     </url>
     
     <url>
@@ -58,6 +66,22 @@
     </url>
     
 
+    
+    <url>
+        <loc>http://cubernet.cn/newdaynewstart/</loc>
+    </url>
+    
+    <url>
+        <loc>http://cubernet.cn/boom/</loc>
+    </url>
+    
+    <url>
+        <loc>http://cubernet.cn/iPhoneSpeedUp/</loc>
+    </url>
+    
+    <url>
+        <loc>http://cubernet.cn/oneyear/</loc>
+    </url>
     
     <url>
         <loc>http://cubernet.cn/staticsearch/</loc>
