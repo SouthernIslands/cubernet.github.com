@@ -7,7 +7,7 @@ categories: [少壮不努力，老大写代码【成长记录篇】]
 tags: [心情随笔]
 group: archive
 icon: file-o
-music: [Remember The Name.mp3]
+music: [明天你好.mp3]
 
 ---
 
