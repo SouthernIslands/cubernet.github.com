@@ -95,7 +95,7 @@ $(document).ready(function() {
         ready: function(event) {
             $(this).jPlayer("setMedia", {
               
-              mp3: "/assets/music/Remember The Name.mp3",
+              mp3: "/assets/music/明天你好.mp3",
                             
             });
         },
@@ -106,60 +106,7 @@ $(document).ready(function() {
 
 </section>
 <section class="post">
-<p><img src="/assets/images/2014-03-31-xiami.jpeg" alt="image" /></p>
-
-<p>前几天登录虾米音乐，首页赫然提醒，建议用户将虾米账号迁移到淘宝上，以后用淘宝账号登录虾米。说实在的，当时心瞬间就凉了。就像当初排斥多看阅读迁移到小米账号上一样，我讨厌把自己在互联网上辛苦打造出来的一小片净土和BAT挂上勾。</p>
-
-<p>说到这里，想起个“笑话”。</p>
-
-<p><code>有人在逛淘宝搜索宝贝时，不小心输入错误，搜成了“棺材”。本以为只是一次手误，删了重来就可以。结果没想到的是，从此以后他每次再登录淘宝时，首页到处都是向他推荐棺材的。更过分的是，他的微博等各种社交空间上也到处都是推荐棺材的。欲哭无泪。</code></p>
-
-<p>这就是天下账号大一统的后果，当然也是BAT希望看到的效果。</p>
-
-<hr />
-
-<p>言归正传。今天在看雪上注意到Hopper Disassembler这么一款软件，据说是mac平台上反编译神器，所以下下来体验一下。碰巧又在52上看到一个破解虾米音乐的例子，想到那让我心凉的虾米音乐，于是决定就对它下手了。</p>
-
-<h4>（以下内容仅用于技术交流）</h4>
-
-<p>这次的任务是破解mac系统的虾米音乐app，使普通用户也可以享用VIP服务。</p>
-
-<p>首先来一张破解之前的截图，未付费用户是无法享受高品质的。</p>
-
-<p><img src="/assets/images/2014-03-31-xiami-1.png" alt="image" /></p>
-
-<p>然后打开HD，选择<code>Read Executable</code>-><code>应用程序</code>-><code>虾米音乐</code>-><code>Contents</code>-><code>MacOS</code>-><code>Xiami</code></p>
-
-<p><img src="/assets/images/2014-03-31-xiami-2.png" alt="image" /></p>
-
-<p>等待几秒钟，待完全载入分析完成后，可以看到如下界面：</p>
-
-<p><img src="/assets/images/2014-03-31-xiami-3.png" alt="image" /></p>
-
-<p>左边一栏列出了该程序中包含的函数，迅速浏览一遍，发现了一个<code>isVIP</code>的函数，从名字上猜测，这个函数是用来判断用户是不是VIP的（也可再搜索栏中直接搜isVip），点击左侧函数名，右侧便会显示出该函数对应的汇编指令。【这一步的截图丢失了，所以下面这张图是从52上搬过来的，可能稍微有点模糊】</p>
-
-<p><img src="/assets/images/2014-03-31-xiami-4.png" alt="image" /></p>
-
-<p>从平时使用这款app的经验上可以得知，这款虾米客户端的功能比较简单，稍微复杂的操作都需要跳转到网页版进行，所以猜想客户端的逻辑验证也比较简单。</p>
-
-<p>从<code>isVIP</code>这个函数中我们可以看到，首先对rbp压栈，然后做了几次赋值操作后，将rbp出栈返回。那么这个函数的实际工作过程有没有可能是：给用户一个是否为VIP的标识，然后通过向服务器查询，将返回值赋值给这个标识并返回。为了验证这个猜想，我们只需将rbp归零再加1，使其值为true，最后返回，如下图：</p>
-
-<p><img src="/assets/images/2014-03-31-xiami-5.png" alt="image" /></p>
-
-<p>最后通过<code>File</code>-><code>Produce New Executable</code>来生成新的Xiami文件，替换原来的，双击运行，看到如下效果图：</p>
-
-<p><img src="/assets/images/2014-03-31-xiami-6.png" alt="image" /></p>
-
-<p><img src="/assets/images/2014-03-31-xiami-7.png" alt="image" /></p>
-
-<p>看来我们猜测的没有错，现在已经可以享受高品质的音乐了。Have fun :)</p>
-
-<hr />
-
-<p>PS：由于是第一次在Mac上做相关的工作，所以觉得很新鲜很有趣，便记录下来，大神勿喷。</p>
-
-<pre><code>在此过程中，感谢52的xiaobai和NSTL卓博的大力帮助。
-</code></pre>
+<p><img src="/assets/images/2014-05-01-newdaynewstart.jpg" alt="image" /></p>
 
 </section>
 <section align="right">
