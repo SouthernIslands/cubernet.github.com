@@ -43,8 +43,7 @@ icon: file-o
 常见的有两种解决办法。
 
 * 一是在保存每个联系人的姓名时，同时保存中文和拼音，即每个联系人添加汉语拼音发音，这样就可以正常显示了；如果你觉得手动一个一个添加工作量太大，那么这里有一个批量添加的程序或许可以帮到你 [PhoneticContacts](https://github.com/lexrus/PhoneticContacts)。
-
-* 另外一种就是先将iPhone 切换为中文，找到/System/Library/Frameworks/AddressBook.framework 将zh_CN.lproj目录下的 ABContactSections.plist 文件替换到English.lproj目录和其他两个zh_文件夹下，再切换其他语言；当然这种方法的前提是你的手机已经越狱。 
+* 另外一种就是先将iPhone 切换为中文，找到/System/Library/Frameworks/AddressBook.framework 将zh_CN.lproj目录下的 ABContactSections.plist 文件替换到English.lproj目录和其他两个zh_文件夹下，再切换其他语言；当然这种方法的前提是你的手机已经越狱。
 
 当然，如果你觉得自己无法适应一个英文版的操作系统。那。。。那你一定是土豪，恩。土豪直接换手机就好啦。
 
