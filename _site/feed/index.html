@@ -7,7 +7,7 @@
     <title>Cubernet'Blog</title>
     <link href="http://cubernet.cn/feed/" rel="self" />
     <link href="http://cubernet.cn" />
-    <lastBuildDate>2014-05-13T14:35:01+08:00</lastBuildDate>
+    <lastBuildDate>2014-05-31T13:59:47+08:00</lastBuildDate>
     <webMaster>luxaole@gmail.com</webMaster>
     
     <item>
@@ -50,15 +50,15 @@
 
 <hr />
 
-<h5>卸载360</h5>
+<h4>卸载360</h4>
 
 <p>当初为了省事，越狱后直接安装了360，一些常用的功能都已经集成。但说实话，其实很多功能我都没有用，那么当我内存吃紧的时候，当然要吧这些无用的插件删除了。不过360不提供定制功能，只好把它整个卸载。【这里没有黑360的意思，360的垃圾短信过滤还是做得很不错的，我至今也没有找到一款在这方面可以相媲美的插件，如果你们知道，欢迎告诉我：）】</p>
 
-<h5>深度清理系统垃圾</h5>
+<h4>深度清理系统垃圾</h4>
 
 <p>手机用久了，就会产生很多的系统垃圾，包括很多缓存文件、日志文件等。隔一段时间清理一下，就当是给系统洗洗澡啦。</p>
 
-<h5>把系统语言设置为英文</h5>
+<h4>把系统语言设置为英文</h4>
 
 <p>把系统语言设置为英文后，打开AppStore和Cydia的速度简直快的让人不敢相信。当然，打开很多其他系统应用的速度都有明显改善。</p>
 
@@ -76,11 +76,11 @@
 
 <p>当然，如果你觉得自己无法适应一个英文版的操作系统。那。。。那你一定是土豪，恩。土豪直接换手机就好啦。</p>
 
-<h5>安装一款电池保护软件</h5>
+<h4>安装一款电池保护软件</h4>
 
 <p>现在有很多电池保护软件，个人感觉差别都不是很大，选择一款你喜欢的安装。推荐安装这类软件的理由是，它可以帮你或多或少的养成良好的充电习惯，对电池的保养肯定是有好处的。</p>
 
-<h5>最后推荐几款我在用的插件</h5>
+<h4>最后推荐几款我在用的插件</h4>
 
 <ul>
 <li><strong>CCMeters</strong>  一款在通知中心显示当前手机运行参数的插件，包括cpu使用率，网速，内存等</li>
@@ -117,6 +117,30 @@
       <author>Cubernet</author>
       <guid>http://cubernet.cn/staticsearch</guid>
       <content:encoded><![CDATA[<p><img src="/assets/images/2014-04-18-staticsearch.jpg" alt="image" /></p>
+
+<p>使用jekyll在github上搭建博客之后，无论是从写作的舒适度还是维护的方便程度上来讲都比之前有了很大的提升，不过一直觉得美中不足的是缺少一个搜索功能。由于整个博客都是静态的，因此很难做到像WordPress那种使用数据库来提供强大的搜索功能。不过退而求其次，给jekyll添加静态搜索，实现基本的功能还是有可能的。</p>
+
+<p>通过在Google搜索一番之后，发现了<a href="https://github.com/slashdotdash/jekyll-lunr-js-search">jekyll-lun-js-search</a>这个插件，可以实现jekyll的静态搜索。话不多说，按照说明文件中的步骤开始动手配置。</p>
+
+<p>配置完成，满怀期待在搜索框输入了一个单词，结果。。。是的，没有任何反应。</p>
+
+<p>重新检查确认配置无误之后继续在网上寻找是不是有人也遇到类似的问题。果然有一个教程里提到这个插件有一些bug。窃喜，一一修改。结果。。。是的，依旧没有任何反应。</p>
+
+<p>无耐操刀自己上，在又修改了几处代码中的bug之后还是未能配置成功。此时距当初发现这个插件已经过去了六七个小时。</p>
+
+<p>这时只好修改思路，通过去找一些添加了搜索功能的jekyll博客，然后查看他的代码实现。果然发现了另外一个，而且这个插件使用非常简单，也无需配置那么多的文件，即<a href="https://github.com/christian-fei/Simple-Jekyll-Search">Simple-Jekyll-Search</a></p>
+
+<hr />
+
+<p>由于两个插件都提供了很详细的配置说明，我这里就不再重复。</p>
+
+<p>从实现的角度来说，静态搜索的大概思路都是提取文章html页面的关键内容，保存在一个文件中，然后通过遍历这个文件来返回搜索结果。但这两个插件在具体实现时还有所不同。jekyll-lun-js-search这款插件是通过一段ruby代码来生成保存有文章页面关键内容的文件。由于是通过ruby代码提取，因此这个文件的内容比较丰富，可以包含博客文章的正文，也就是说实现了全文搜索。但是Simple-Jekyll-Search这款插件是通过简单的jekyll语法来提取内容，因此在这个文件中无法包含文章正文，因为通过jekyll语法提取的博客正文会包含html代码。所以简单配置的背后，带来的是对全文搜索的舍弃。</p>
+
+<p>另外，在调试第一个插件的过程时，虽然最后仍旧没有解决这个问题，而且我自己也不知道原因所在，但还是对jekyll的工作细节有了更多的了解，也知道了config文件中【<strong>安全</strong>】选项所代表的具体含义，第一次接触并修改了ruby代码。。等等。感觉收获还是很大的。</p>
+
+<hr />
+
+<p>额。。。好吧，我成功的把一篇技术文写成了流水账。</p>
 ]]></content:encoded>
     </item>
     
@@ -139,8 +163,6 @@
 <hr />
 
 <p>言归正传。今天在看雪上注意到Hopper Disassembler这么一款软件，据说是mac平台上反编译神器，所以下下来体验一下。碰巧又在52上看到一个破解虾米音乐的例子，想到那让我心凉的虾米音乐，于是决定就对它下手了。</p>
-
-<h4>（以下内容仅用于技术交流）</h4>
 
 <p>这次的任务是破解mac系统的虾米音乐app，使普通用户也可以享用VIP服务。</p>
 
@@ -281,7 +303,7 @@
 
 <hr />
 
-<h3>安装及配置</h3>
+<h4>安装及配置</h4>
 
 <p>ClamAV是一套开源的杀毒软件，所以你可以从它的官网上下载到它的源码，按照自己的意愿对其修改之后，即可编译生成可执行文件。我在windows和Linux上均测试编译成功。</p>
 
@@ -289,7 +311,22 @@
 
 <p><img src="/assets/images/2014-1-23-clamav-1.png" alt="image" /></p>
 
-<p>安装完成后将出现上面这些exe。其中常用到的只有三个，分别是clamscan.exe、freshclam.exe和sigtool.exe。<em> Clamscan.exe是用来扫描文件或者目录的（支持递归以及压缩文件等）</em> Freshclam.exe是用来更新病毒库的* Sigtool.exe是用来新增病毒的。在安装完成后，首先需要从conf_example中将配置文件拷贝出来，然后将配置文件中的example字段注释掉。根据当前环境修改配置文件中的参数，如日志文件保存地址等。正确配置以后，先执行freshclam来下载最新的病毒库。然后就可以扫描文件了。扫描命令： clamscan –r [需要递归扫描的路径] –l [日志文件保存的路径]扫描结果：
+<p>安装完成后将出现上面这些exe。其中常用到的只有三个，分别是clamscan.exe、freshclam.exe和sigtool.exe。</p>
+
+<ul>
+<li>Clamscan.exe是用来扫描文件或者目录的（支持递归以及压缩文件等）</li>
+<li>Freshclam.exe是用来更新病毒库的</li>
+<li>Sigtool.exe是用来新增病毒的。</li>
+</ul>
+
+
+<p>在安装完成后，首先需要从conf_example中将配置文件拷贝出来，然后将配置文件中的example字段注释掉。根据当前环境修改配置文件中的参数，如日志文件保存地址等。</p>
+
+<p>正确配置以后，先执行freshclam来下载最新的病毒库。然后就可以扫描文件了。</p>
+
+<p>扫描命令： clamscan –r [需要递归扫描的路径] –l [日志文件保存的路径]</p>
+
+<p>扫描结果：
 没有发现病毒的：
 <img src="/assets/images/2014-1-23-clamav-2.png" alt="image" />
 发现病毒的：
@@ -298,37 +335,35 @@
 
 <h2><img src="/assets/images/2014-1-23-clamav-4.png" alt="image" /></h2>
 
-<h3>配置文件实例：</h3>
+<h4>配置文件实例</h4>
 
 <div class="highlight"><pre><code class="java"><span class="lineno"> 1</span>   <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">clamd</span><span class="o">.</span><span class="na">conf</span>
-<span class="lineno"> 2</span>  <span class="n">LogFile</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">clamd</span><span class="o">.</span><span class="na">log</span><span class="err">日志文件</span>
-<span class="lineno"> 3</span>  <span class="n">LogFileMaxSize</span> <span class="mi">0</span> <span class="err">日志文件最大体积</span>
-<span class="lineno"> 4</span>  <span class="n">LogTime</span> <span class="n">yes</span> <span class="err">是否在日志文件中记录时间</span>
-<span class="lineno"> 5</span>  <span class="n">LogVerbose</span> <span class="n">yes</span> <span class="err">是否详细记录日志</span>
-<span class="lineno"> 6</span>  <span class="n">PidFile</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">clamav</span><span class="o">/</span><span class="n">clamd</span><span class="o">.</span><span class="na">pid</span> <span class="err">进程文件</span>
-<span class="lineno"> 7</span>  <span class="n">TemporaryDirectory</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">tmp</span> <span class="err">扫描时的临时目录</span>
-<span class="lineno"> 8</span>  <span class="n">DatabaseDirectory</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">clamav</span> <span class="err">病毒库目录</span>
-<span class="lineno"> 9</span>  <span class="n">LocalSocket</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">clamav</span><span class="o">/</span><span class="n">clamd</span><span class="o">.</span><span class="na">sock</span> <span class="err">本地通讯的</span><span class="n">socket</span><span class="err">文件</span>
-<span class="lineno">10</span>  <span class="err">#</span><span class="n">TCPSocket</span> <span class="mi">3310</span> <span class="n">TCPSocket</span><span class="err">端口（与</span><span class="n">LocalSocket</span><span class="err">不可并存）</span>
-<span class="lineno">11</span>  <span class="n">FixStaleSocket</span> <span class="n">yes</span>
-<span class="lineno">12</span>  <span class="n">User</span> <span class="n">clamav</span>
-<span class="lineno">13</span>  <span class="n">ScanOLE2</span> <span class="err">扫描</span><span class="n">office</span><span class="err">文档</span>
-<span class="lineno">14</span>  <span class="n">ScanMail</span> <span class="err">扫描邮件</span>
-<span class="lineno">15</span>  <span class="n">ScanArchive</span> <span class="err">扫描压缩包</span>
-<span class="lineno">16</span>  <span class="n">ScanRAR</span> <span class="err">扫描</span><span class="n">RAR</span><span class="err">压缩包</span>
-<span class="lineno">17</span>  <span class="n">ArchiveMaxFileSize</span> <span class="mi">10</span><span class="n">M</span> <span class="err">最大扫描压缩包文件为</span><span class="mi">10</span><span class="err">兆</span>
-<span class="lineno">18</span>  <span class="n">ArchiveMaxRecursion</span> <span class="mi">9</span> <span class="err">扫描压缩包</span><span class="mi">9</span><span class="err">层</span>
-<span class="lineno">19</span>  <span class="n">ArchiveMaxFiles</span> <span class="mi">1000</span> <span class="err">最多扫描压缩包内</span><span class="mi">1500</span><span class="err">个文件</span>
+<span class="lineno"> 2</span>  <span class="n">LogFile</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">clamd</span><span class="o">.</span><span class="na">log</span>   <span class="err">日志文件</span>
+<span class="lineno"> 3</span>  <span class="n">LogFileMaxSize</span> <span class="mi">0</span>    <span class="err">日志文件最大体积</span>
+<span class="lineno"> 4</span>  <span class="n">LogTime</span> <span class="n">yes</span>    <span class="err">是否在日志文件中记录时间</span>
+<span class="lineno"> 5</span>  <span class="n">LogVerbose</span> <span class="n">yes</span>    <span class="err">是否详细记录日志</span>
+<span class="lineno"> 6</span>  <span class="n">PidFile</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">clamav</span><span class="o">/</span><span class="n">clamd</span><span class="o">.</span><span class="na">pid</span>    <span class="err">进程文件</span>
+<span class="lineno"> 7</span>  <span class="n">TemporaryDirectory</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">tmp</span>    <span class="err">扫描时的临时目录</span>
+<span class="lineno"> 8</span>  <span class="n">DatabaseDirectory</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">clamav</span>    <span class="err">病毒库目录</span>
+<span class="lineno"> 9</span>  <span class="n">LocalSocket</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">clamav</span><span class="o">/</span><span class="n">clamd</span><span class="o">.</span><span class="na">sock</span>    <span class="err">本地通讯的</span><span class="n">socket</span><span class="err">文件</span>
+<span class="lineno">10</span>  <span class="n">TCPSocket</span> <span class="mi">3310</span>    <span class="n">TCPSocket</span><span class="err">端口（与</span><span class="n">LocalSocket</span><span class="err">不可并存）</span>
+<span class="lineno">11</span>  <span class="n">FixStaleSocket</span>    <span class="n">yes</span>
+<span class="lineno">12</span>  <span class="n">User</span>    <span class="n">clamav</span>
+<span class="lineno">13</span>  <span class="n">ScanOLE2</span>    <span class="err">扫描</span><span class="n">office</span><span class="err">文档</span>
+<span class="lineno">14</span>  <span class="n">ScanMail</span>    <span class="err">扫描邮件</span>
+<span class="lineno">15</span>  <span class="n">ScanArchive</span>    <span class="err">扫描压缩包</span>
+<span class="lineno">16</span>  <span class="n">ScanRAR</span>    <span class="err">扫描</span><span class="n">RAR</span><span class="err">压缩包</span>
+<span class="lineno">17</span>  <span class="n">ArchiveMaxFileSize</span> <span class="mi">10</span><span class="n">M</span>    <span class="err">最大扫描压缩包文件为</span><span class="mi">10</span><span class="err">兆</span>
+<span class="lineno">18</span>  <span class="n">ArchiveMaxRecursion</span> <span class="mi">9</span>    <span class="err">扫描压缩包</span><span class="mi">9</span><span class="err">层</span>
+<span class="lineno">19</span>  <span class="n">ArchiveMaxFiles</span> <span class="mi">1000</span>    <span class="err">最多扫描压缩包内</span><span class="mi">1500</span><span class="err">个文件</span>
 <span class="lineno">20</span>  <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">freshclam</span><span class="o">.</span><span class="na">conf</span>
-<span class="lineno">21</span>  <span class="n">DatabaseDirectory</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">clamav</span> <span class="err">病毒库目录</span>
-<span class="lineno">22</span>  <span class="n">UpdateLogFile</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">freshclam</span><span class="o">.</span><span class="na">log</span> <span class="err">更新日志</span>
-<span class="lineno">23</span>  <span class="n">LogVerbose</span> <span class="n">yes</span> <span class="err">是否详细记录日志</span>
-<span class="lineno">24</span>  <span class="n">PidFile</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">clamav</span><span class="o">/</span><span class="n">freshclam</span><span class="o">.</span><span class="na">pid</span> <span class="err">进程文件</span>
-<span class="lineno">25</span>  <span class="n">DatabaseOwner</span> <span class="n">clamav</span> <span class="err">病毒库用户</span>
-<span class="lineno">26</span>  <span class="n">DatabaseMirror</span> <span class="n">db</span><span class="o">.</span><span class="na">cn</span><span class="o">.</span><span class="na">clamav</span><span class="o">.</span><span class="na">net</span> <span class="err">病毒库的镜像地址（可以多个）</span>
+<span class="lineno">21</span>  <span class="n">DatabaseDirectory</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">clamav</span>    <span class="err">病毒库目录</span>
+<span class="lineno">22</span>  <span class="n">UpdateLogFile</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">freshclam</span><span class="o">.</span><span class="na">log</span>    <span class="err">更新日志</span>
+<span class="lineno">23</span>  <span class="n">LogVerbose</span> <span class="n">yes</span>    <span class="err">是否详细记录日志</span>
+<span class="lineno">24</span>  <span class="n">PidFile</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">clamav</span><span class="o">/</span><span class="n">freshclam</span><span class="o">.</span><span class="na">pid</span>    <span class="err">进程文件</span>
+<span class="lineno">25</span>  <span class="n">DatabaseOwner</span> <span class="n">clamav</span>    <span class="err">病毒库用户</span>
+<span class="lineno">26</span>  <span class="n">DatabaseMirror</span> <span class="n">db</span><span class="o">.</span><span class="na">cn</span><span class="o">.</span><span class="na">clamav</span><span class="o">.</span><span class="na">net</span>    <span class="err">病毒库的镜像地址（可以多个）</span>
 <span class="lineno">27</span>  <span class="n">DatabaseMirror</span> <span class="n">database</span><span class="o">.</span><span class="na">clamav</span><span class="o">.</span><span class="na">net</span>
-<span class="lineno">28</span> 
-<span class="lineno">29</span>  
 </code></pre></div>
 
 

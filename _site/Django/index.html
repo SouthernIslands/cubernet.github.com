@@ -17,6 +17,8 @@
     <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
     
     
+    <script type="text/javascript" src="/media/js/outliner.js"></script>
+    
 
   </head>
   <body>
@@ -25,7 +27,7 @@
         <header>
         <h1>Python框架のDjango</h1>
         </header>
-        <nav>
+        <nav id="real_nav">
         <span><a title="网站首页" class="" href="/">首页</a></span>
         <span><a title="文章分类" class="" href="/categories/">分类</a></span>
         <span><a title="标签索引" class="" href="/tags/">标签</a></span>
@@ -70,7 +72,7 @@
 
 <hr />
 
-<h3>组件</h3>
+<h4>组件</h4>
 
 <p>Django框架的核心包括：一个面向对象的映射器，用作数据模型（以Python类的形式定义）和关联性数据库间的媒介；一个基于正则表达式的URL分发器；一个视图系统，用于处理请求；以及一个模板系统。</p>
 
@@ -92,7 +94,7 @@
 
 <hr />
 
-<h3>内置应用</h3>
+<h4>内置应用</h4>
 
 <p>Django 包含了很多应用在它的"contrib"包中，这些包括：</p>
 
@@ -110,7 +112,7 @@
 
 <hr />
 
-<h3>服务的部署</h3>
+<h4>服务的部署</h4>
 
 <p>Django可以运行在启用了mod python的Apache 2上，或是任何WSGI兼容的Web服务器。Django也有启动FastCGI服务的能力，因此能够应用于任何支持FastCGI的机器上。</p>
 

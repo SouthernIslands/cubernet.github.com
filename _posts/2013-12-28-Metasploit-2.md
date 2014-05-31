@@ -25,9 +25,8 @@ icon: file-o
 这一节的内容多为从`《Metasploit用户指南》`中摘取出来的，感兴趣的朋友可以去阅读完整版。
 
 ---
-#### 安装
 
-##### 在windows上的安装
+#### 在windows上的安装
 1、访问http://www.metasploit.com/download/下载Windows的安装文件。
 
 2、找到下载好的安装文件并双击安装程序的图标。此时可能会出现安全警告。在安全警告界面上点击“运行（Run）”。当安装欢迎界面出现之后，点击“下一步（Next）”来继续。在Windows 7上，在出现最初安装界面之前可能需要10分钟时间。
@@ -52,7 +51,7 @@ icon: file-o
 
 12、当安装完成之后，点击“完成（Finish）”按钮。
 
-##### 在linux上的安装
+#### 在linux上的安装
 1、访问http://www.metasploit.com/download/下载Linux 32 bit或者64 bit安装包。保存安装文件到一个位置，比如可以放到桌面上。
 
 2、打开一个终端。

@@ -17,6 +17,8 @@
     <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
     
     
+    <script type="text/javascript" src="/media/js/outliner.js"></script>
+    
 
   </head>
   <body>
@@ -25,7 +27,7 @@
         <header>
         <h1>ClamAV相关</h1>
         </header>
-        <nav>
+        <nav id="real_nav">
         <span><a title="网站首页" class="" href="/">首页</a></span>
         <span><a title="文章分类" class="" href="/categories/">分类</a></span>
         <span><a title="标签索引" class="" href="/tags/">标签</a></span>
@@ -77,7 +79,7 @@
 
 <hr />
 
-<h3>安装及配置</h3>
+<h4>安装及配置</h4>
 
 <p>ClamAV是一套开源的杀毒软件，所以你可以从它的官网上下载到它的源码，按照自己的意愿对其修改之后，即可编译生成可执行文件。我在windows和Linux上均测试编译成功。</p>
 
@@ -85,7 +87,22 @@
 
 <p><img src="/assets/images/2014-1-23-clamav-1.png" alt="image" /></p>
 
-<p>安装完成后将出现上面这些exe。其中常用到的只有三个，分别是clamscan.exe、freshclam.exe和sigtool.exe。<em> Clamscan.exe是用来扫描文件或者目录的（支持递归以及压缩文件等）</em> Freshclam.exe是用来更新病毒库的* Sigtool.exe是用来新增病毒的。在安装完成后，首先需要从conf_example中将配置文件拷贝出来，然后将配置文件中的example字段注释掉。根据当前环境修改配置文件中的参数，如日志文件保存地址等。正确配置以后，先执行freshclam来下载最新的病毒库。然后就可以扫描文件了。扫描命令： clamscan –r [需要递归扫描的路径] –l [日志文件保存的路径]扫描结果：
+<p>安装完成后将出现上面这些exe。其中常用到的只有三个，分别是clamscan.exe、freshclam.exe和sigtool.exe。</p>
+
+<ul>
+<li>Clamscan.exe是用来扫描文件或者目录的（支持递归以及压缩文件等）</li>
+<li>Freshclam.exe是用来更新病毒库的</li>
+<li>Sigtool.exe是用来新增病毒的。</li>
+</ul>
+
+
+<p>在安装完成后，首先需要从conf_example中将配置文件拷贝出来，然后将配置文件中的example字段注释掉。根据当前环境修改配置文件中的参数，如日志文件保存地址等。</p>
+
+<p>正确配置以后，先执行freshclam来下载最新的病毒库。然后就可以扫描文件了。</p>
+
+<p>扫描命令： clamscan –r [需要递归扫描的路径] –l [日志文件保存的路径]</p>
+
+<p>扫描结果：
 没有发现病毒的：
 <img src="/assets/images/2014-1-23-clamav-2.png" alt="image" />
 发现病毒的：
@@ -94,37 +111,35 @@
 
 <h2><img src="/assets/images/2014-1-23-clamav-4.png" alt="image" /></h2>
 
-<h3>配置文件实例：</h3>
+<h4>配置文件实例</h4>
 
 <div class="highlight"><pre><code class="java"><span class="lineno"> 1</span>   <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">clamd</span><span class="o">.</span><span class="na">conf</span>
-<span class="lineno"> 2</span>  <span class="n">LogFile</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">clamd</span><span class="o">.</span><span class="na">log</span><span class="err">日志文件</span>
-<span class="lineno"> 3</span>  <span class="n">LogFileMaxSize</span> <span class="mi">0</span> <span class="err">日志文件最大体积</span>
-<span class="lineno"> 4</span>  <span class="n">LogTime</span> <span class="n">yes</span> <span class="err">是否在日志文件中记录时间</span>
-<span class="lineno"> 5</span>  <span class="n">LogVerbose</span> <span class="n">yes</span> <span class="err">是否详细记录日志</span>
-<span class="lineno"> 6</span>  <span class="n">PidFile</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">clamav</span><span class="o">/</span><span class="n">clamd</span><span class="o">.</span><span class="na">pid</span> <span class="err">进程文件</span>
-<span class="lineno"> 7</span>  <span class="n">TemporaryDirectory</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">tmp</span> <span class="err">扫描时的临时目录</span>
-<span class="lineno"> 8</span>  <span class="n">DatabaseDirectory</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">clamav</span> <span class="err">病毒库目录</span>
-<span class="lineno"> 9</span>  <span class="n">LocalSocket</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">clamav</span><span class="o">/</span><span class="n">clamd</span><span class="o">.</span><span class="na">sock</span> <span class="err">本地通讯的</span><span class="n">socket</span><span class="err">文件</span>
-<span class="lineno">10</span>  <span class="err">#</span><span class="n">TCPSocket</span> <span class="mi">3310</span> <span class="n">TCPSocket</span><span class="err">端口（与</span><span class="n">LocalSocket</span><span class="err">不可并存）</span>
-<span class="lineno">11</span>  <span class="n">FixStaleSocket</span> <span class="n">yes</span>
-<span class="lineno">12</span>  <span class="n">User</span> <span class="n">clamav</span>
-<span class="lineno">13</span>  <span class="n">ScanOLE2</span> <span class="err">扫描</span><span class="n">office</span><span class="err">文档</span>
-<span class="lineno">14</span>  <span class="n">ScanMail</span> <span class="err">扫描邮件</span>
-<span class="lineno">15</span>  <span class="n">ScanArchive</span> <span class="err">扫描压缩包</span>
-<span class="lineno">16</span>  <span class="n">ScanRAR</span> <span class="err">扫描</span><span class="n">RAR</span><span class="err">压缩包</span>
-<span class="lineno">17</span>  <span class="n">ArchiveMaxFileSize</span> <span class="mi">10</span><span class="n">M</span> <span class="err">最大扫描压缩包文件为</span><span class="mi">10</span><span class="err">兆</span>
-<span class="lineno">18</span>  <span class="n">ArchiveMaxRecursion</span> <span class="mi">9</span> <span class="err">扫描压缩包</span><span class="mi">9</span><span class="err">层</span>
-<span class="lineno">19</span>  <span class="n">ArchiveMaxFiles</span> <span class="mi">1000</span> <span class="err">最多扫描压缩包内</span><span class="mi">1500</span><span class="err">个文件</span>
+<span class="lineno"> 2</span>  <span class="n">LogFile</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">clamd</span><span class="o">.</span><span class="na">log</span>   <span class="err">日志文件</span>
+<span class="lineno"> 3</span>  <span class="n">LogFileMaxSize</span> <span class="mi">0</span>    <span class="err">日志文件最大体积</span>
+<span class="lineno"> 4</span>  <span class="n">LogTime</span> <span class="n">yes</span>    <span class="err">是否在日志文件中记录时间</span>
+<span class="lineno"> 5</span>  <span class="n">LogVerbose</span> <span class="n">yes</span>    <span class="err">是否详细记录日志</span>
+<span class="lineno"> 6</span>  <span class="n">PidFile</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">clamav</span><span class="o">/</span><span class="n">clamd</span><span class="o">.</span><span class="na">pid</span>    <span class="err">进程文件</span>
+<span class="lineno"> 7</span>  <span class="n">TemporaryDirectory</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">tmp</span>    <span class="err">扫描时的临时目录</span>
+<span class="lineno"> 8</span>  <span class="n">DatabaseDirectory</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">clamav</span>    <span class="err">病毒库目录</span>
+<span class="lineno"> 9</span>  <span class="n">LocalSocket</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">clamav</span><span class="o">/</span><span class="n">clamd</span><span class="o">.</span><span class="na">sock</span>    <span class="err">本地通讯的</span><span class="n">socket</span><span class="err">文件</span>
+<span class="lineno">10</span>  <span class="n">TCPSocket</span> <span class="mi">3310</span>    <span class="n">TCPSocket</span><span class="err">端口（与</span><span class="n">LocalSocket</span><span class="err">不可并存）</span>
+<span class="lineno">11</span>  <span class="n">FixStaleSocket</span>    <span class="n">yes</span>
+<span class="lineno">12</span>  <span class="n">User</span>    <span class="n">clamav</span>
+<span class="lineno">13</span>  <span class="n">ScanOLE2</span>    <span class="err">扫描</span><span class="n">office</span><span class="err">文档</span>
+<span class="lineno">14</span>  <span class="n">ScanMail</span>    <span class="err">扫描邮件</span>
+<span class="lineno">15</span>  <span class="n">ScanArchive</span>    <span class="err">扫描压缩包</span>
+<span class="lineno">16</span>  <span class="n">ScanRAR</span>    <span class="err">扫描</span><span class="n">RAR</span><span class="err">压缩包</span>
+<span class="lineno">17</span>  <span class="n">ArchiveMaxFileSize</span> <span class="mi">10</span><span class="n">M</span>    <span class="err">最大扫描压缩包文件为</span><span class="mi">10</span><span class="err">兆</span>
+<span class="lineno">18</span>  <span class="n">ArchiveMaxRecursion</span> <span class="mi">9</span>    <span class="err">扫描压缩包</span><span class="mi">9</span><span class="err">层</span>
+<span class="lineno">19</span>  <span class="n">ArchiveMaxFiles</span> <span class="mi">1000</span>    <span class="err">最多扫描压缩包内</span><span class="mi">1500</span><span class="err">个文件</span>
 <span class="lineno">20</span>  <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">freshclam</span><span class="o">.</span><span class="na">conf</span>
-<span class="lineno">21</span>  <span class="n">DatabaseDirectory</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">clamav</span> <span class="err">病毒库目录</span>
-<span class="lineno">22</span>  <span class="n">UpdateLogFile</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">freshclam</span><span class="o">.</span><span class="na">log</span> <span class="err">更新日志</span>
-<span class="lineno">23</span>  <span class="n">LogVerbose</span> <span class="n">yes</span> <span class="err">是否详细记录日志</span>
-<span class="lineno">24</span>  <span class="n">PidFile</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">clamav</span><span class="o">/</span><span class="n">freshclam</span><span class="o">.</span><span class="na">pid</span> <span class="err">进程文件</span>
-<span class="lineno">25</span>  <span class="n">DatabaseOwner</span> <span class="n">clamav</span> <span class="err">病毒库用户</span>
-<span class="lineno">26</span>  <span class="n">DatabaseMirror</span> <span class="n">db</span><span class="o">.</span><span class="na">cn</span><span class="o">.</span><span class="na">clamav</span><span class="o">.</span><span class="na">net</span> <span class="err">病毒库的镜像地址（可以多个）</span>
+<span class="lineno">21</span>  <span class="n">DatabaseDirectory</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">clamav</span>    <span class="err">病毒库目录</span>
+<span class="lineno">22</span>  <span class="n">UpdateLogFile</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">freshclam</span><span class="o">.</span><span class="na">log</span>    <span class="err">更新日志</span>
+<span class="lineno">23</span>  <span class="n">LogVerbose</span> <span class="n">yes</span>    <span class="err">是否详细记录日志</span>
+<span class="lineno">24</span>  <span class="n">PidFile</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">clamav</span><span class="o">/</span><span class="n">freshclam</span><span class="o">.</span><span class="na">pid</span>    <span class="err">进程文件</span>
+<span class="lineno">25</span>  <span class="n">DatabaseOwner</span> <span class="n">clamav</span>    <span class="err">病毒库用户</span>
+<span class="lineno">26</span>  <span class="n">DatabaseMirror</span> <span class="n">db</span><span class="o">.</span><span class="na">cn</span><span class="o">.</span><span class="na">clamav</span><span class="o">.</span><span class="na">net</span>    <span class="err">病毒库的镜像地址（可以多个）</span>
 <span class="lineno">27</span>  <span class="n">DatabaseMirror</span> <span class="n">database</span><span class="o">.</span><span class="na">clamav</span><span class="o">.</span><span class="na">net</span>
-<span class="lineno">28</span> 
-<span class="lineno">29</span>  
 </code></pre></div>
 
 
