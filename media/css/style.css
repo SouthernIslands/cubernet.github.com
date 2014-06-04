@@ -74,6 +74,15 @@ h2{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-siz
 h3{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.2em;color:#222;}
 h4{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1em;color:#333;
    margin: 20px 0px 20px; padding: 7px; border-bottom: 1px solid;}
+h4:before{
+    background-color: #3060C0;
+    float: left;
+    margin-top: 8px;
+    content: "";
+    margin-right: 10px;
+    height: 5px;
+    width: 60px;
+}
 
 pre,code{font-family:Menlo,"DejaVu Sans Mono","Bitstream Vera Sans Mono","Andale Mono",Consolas,Menlo,"Andale Mono","Courier New",Monaco,monospace;font-size:11px;}
 p code{background-color:#f7f7f7; padding: 2px; margin: 2px; border-radius: 3px; border: 1px solid #ddd;}
