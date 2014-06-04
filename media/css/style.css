@@ -73,7 +73,7 @@ h2{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-siz
    margin: 20px 0px 20px; padding: 7px; border-bottom: 1px solid;}
 h3{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.2em;color:#222;}
 h4{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1em;color:#333;
-   margin: 20px 0px 20px; padding: 7px; border-bottom: 1px solid #3060C0;}
+   margin: 20px 0px 20px; padding: 7px; border-bottom: 3px solid #3060C0;}
 h4:before{
     background-color: #3060C0;
     float: left;
