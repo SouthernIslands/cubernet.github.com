@@ -35,7 +35,8 @@ body{
 *{padding:0;margin: 0;border:none;outline:none;}
 a:hover {
     color: #FFF;
-    background-color: #3060C0;
+    background-color: #C00;
+    border-radius: 3px;
 }
 a {
     text-decoration: none;
@@ -44,13 +45,13 @@ a {
 }
 
 a.pageNav{
-	color:#dd0000;
+	color:#C00;
 	text-decoration:none;
 }
 
 a.pageNav:hover{
-	 color: #FFF;
-    background-color: #dd0000;
+	color: #FFF;
+  background-color: #C00;
 
 }
 hr{margin:.7em 0;border-top:1px dashed #d0d0d0;border-bottom:1px dashed #f9f9f9;}
@@ -66,7 +67,7 @@ blockquote p{margin:0;padding:.5em 0;}
 .content h1{padding:.5em 0;}
 .content img{max-width:530px;display:block;margin:4px auto;-webkit-box-shadow:#999 1px 1px 4px;-moz-box-shadow:#999 1px 1px 4px;box-shadow:#999 1px 1px 4px;}
 #tag_cloud{margin-bottom: 1em;}
-#tag_cloud a:hover{color:#333333 !important;text-decoration:none;}
+#tag_cloud a:hover{color:#FFFFFF !important;text-decoration:none;}
 .listing-item,.listing-seperator{list-style-type:none;}
 .listing-item a{
 	padding:.2em 1em;
@@ -78,15 +79,15 @@ blockquote p{margin:0;padding:.5em 0;}
 .pageNav{font-weight:bold;font-size:17px;}
 .pageNavInvalid{font-weight:bold;font-size:17px;color:#D0D0D0;}
 header{
-    background-color: #262A30;
+     background-color: #262A30;
     border: 1px solid #000;
     box-shadow: 1px 2px 3px #DDD;
     color:#FFF;
-    padding:10px 30px;
+    padding:27px 30px 27px 30px;
 }
 nav{font-family:"Electrolize",sans-serif;font-size:1.1em;text-transform:uppercase;float:left;margin-left:-8em;margin-top:45px;width:6em;text-align:center;}
 nav a{display:block;padding:.7em 1em;color:#000000;}
-nav a:hover{background-color:#3333FF;text-decoration:none;color:#f9f9f9;-webkit-transition:color .2s linear;border-radius: 6px;}
+nav a:hover{background-color:#C00;text-decoration:none;color:#f9f9f9;-webkit-transition:color .2s linear;border-radius: 6px;}
 h1{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.6em;}
 h2{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.4em;color:#111;
    margin: 20px 0px 20px; padding: 7px; border-bottom: 1px solid;}
@@ -159,7 +160,7 @@ background: #ff0000;
 
 .paginator a:hover{
 color: white;
-background: #3060C0;
+background: #C00;
 }
 
 #search-this-page{
@@ -199,9 +200,10 @@ background: #3060C0;
 }
 
 .pageselect{
+  text-align:right;
   background-color: #FAFAFA;
   border-top: 1px solid #DDD;
-  padding:10px 0 26px 715px;
+  padding:10px 60px 26px 60px;
 }
 
 .post{
@@ -223,7 +225,7 @@ background: #3060C0;
 }
 
 .jp-jplayer{
-    top: 0;
+  top: 0;
   left: 0;
   position: fixed !important; position: relative; /* Rules for IE6 (full-screen) */
   overflow: hidden;

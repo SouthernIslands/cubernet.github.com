@@ -22,7 +22,7 @@ $(this).html('<a name="' + id + '"></a>'+$(this).html());
     $('#main').append($('<nav id="h2outline"></nav>')
                          .css('position', 'fixed')
                          .css('top', $('#real_nav').position().top - 1)
-                         .css('width', '155px')
+                         .css('width', '100px')
                          .css('text-align', 'left')
                          .html(outline_ul));
 
@@ -54,13 +54,13 @@ $(this).html('<a name="' + id + '"></a>'+$(this).html());
     var m = main.position().left,
         l = real_nav.position().left,
         n = real_nav.width(),
-        d = m - (l + n) + 184.8; // #real_nav has left margin of -184.8px
+        d = m - (l + n) + 124; // #real_nav has left margin of -184.8px
 
     $(window).resize(function () {
         var w = $(window).width(),
             c = main.width(),
             a = h2outline.width();
-        h2outline.css('right',
+        h2outline.css('right', 
                       (w - c) / 2 - (a + d));
     });
 
