@@ -82,7 +82,7 @@ blockquote p{margin:0;padding:.5em 0;}
 header{padding:.5em 0;border-bottom: 2px solid #3060C0;}
 nav{font-family:"Electrolize",sans-serif;font-size:1.1em;text-transform:uppercase;float:left;margin-left:-8em;width:6em;text-align:center;}
 nav a{display:block;padding:.7em 1em;color:#000000;}
-nav a:hover{background-color:#3333FF;text-decoration:none;color:#f9f9f9;-webkit-transition:color .2s linear;}
+nav a:hover{background-color:#3333FF;text-decoration:none;color:#f9f9f9;-webkit-transition:color .2s linear;border-radius: 6px;}
 .post{padding:.5em 0em;}
 h1{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.6em;color:#000;}
 h2{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.4em;color:#111;
@@ -202,11 +202,5 @@ background: #3060C0;
 	margin:6px 10px 9px 0px;
 }
 
-section.post{
-    margin-top:6px;
-    border:2px solid;
-    padding:10px;
-    border-radius:6px;
-    border-color:#3060C0;
-}
+
 
