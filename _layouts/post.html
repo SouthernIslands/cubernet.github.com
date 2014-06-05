@@ -24,6 +24,10 @@ layout: default
 </span>
 {% endif %}
 {% if page.music.size == 1 %}
+| 
+<span class="tags">
+  背景音乐
+
 
 <div id="jquery_jplayer_1" class="jp-jplayer"></div>
 <div id="jp_container_1" class="jp-audio">
@@ -32,19 +36,7 @@ layout: default
             <ul class="jp-controls">
                 <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
                 <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
-                <li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
-                <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
-                <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
-                <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
-            </ul>        
-            <div class="jp-progress">
-                <div class="jp-seek-bar">
-                    <div class="jp-play-bar"></div>
-                </div>
-            </div>
-            <div class="jp-volume-bar">
-                <div class="jp-volume-bar-value"></div>
-            </div>               
+            </ul>                      
         </div>
     </div>
 </div>
@@ -63,17 +55,21 @@ $(document).ready(function() {
     });
 });                                      
 </script>
+</span>
+
 {% endif %}
 </section>
 <section class="post">
 {{ content }}
 </section>
-<section align="right">
+<section class="pageselect" align="right">
 <br/>
 <span>
 	<a {% if page.previous %} href="{{ page.previous.url }}" class="pageNav"{% endif %} {% unless page.previous %} class="pageNavInvalid" {% endunless %} >上一篇</a>
 	&nbsp;&nbsp;&nbsp;
 	<a {% if page.next %} href="{{ page.next.url }}" class="pageNav"{% endif %} {% unless page.next %} class="pageNavInvalid" {% endunless %} >下一篇</a>
 </span>
+<span style="display:none">
+  <a href="{{ page.url }}#disqus_thread" class="commentsNum">0 COMMENTS</a>
 </section>
 {% include comments.md %}
