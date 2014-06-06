@@ -37,6 +37,7 @@ a:hover {
     color: #FFF;
     background-color: #C00;
     border-radius: 3px;
+    transition:all 0.3s ease 0s;
 }
 a {
     text-decoration: none;
@@ -85,7 +86,7 @@ header{
     color:#FFF;
     padding:27px 30px 27px 30px;
 }
-nav{font-family:"Electrolize",sans-serif;font-size:1.1em;text-transform:uppercase;float:left;margin-left:-8em;margin-top:45px;width:6em;text-align:center;}
+nav{font-family:"Electrolize",sans-serif;font-size:1.1em;text-transform:uppercase;float:left;margin-left:-100px;margin-top:120px;width:6em;text-align:center;position:fixed;top:28px;}
 nav a{display:block;padding:.7em 1em;color:#000000;}
 nav a:hover{background-color:#C00;text-decoration:none;color:#f9f9f9;-webkit-transition:color .2s linear;border-radius: 6px;}
 h1{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1.6em;}
@@ -164,27 +165,28 @@ background: #C00;
 }
 
 #search-this-page{
-	border:solid 1px;
-	border-radius:3px;
-	border-color:#dddddd;
-	width:592px;
-	height:30px;
-	font-size: 17px;
-	padding-left: 6px;
+  border:solid 1px;
+  border-radius:3px;
+  border-color:#dddddd;
+  width:818px;
+  height:46px;
+  font-size: 20px;
+  padding-left: 16px;
 }
 
 #search-this-page:hover{
-	border:solid 1px;
-	border-radius:3px;
-	border-color:#0099ff;
-	width:592px;
-	height:30px;
-	font-size: 17px;
-	padding-left: 6px;
+  border:solid 1px;
+  border-radius:3px;
+  border-color:#CC0000;
+  width:818px;
+  height:46px;
+  font-size: 20px;
+  padding-left: 16px;
+  transition:all 1.3s ease 0s;
 }
 
 #search{
-	margin:6px 10px 9px 0px;
+  margin:12px 10px 9px 0px;
 }
 
 .div-art{
@@ -214,7 +216,7 @@ background: #C00;
 }
 
 .post li{
-  padding:4px 0px;
+  padding:4px 20px;
 }
 
 .meta{
@@ -265,4 +267,28 @@ text-decoration: none;
 
 code{
     padding:6px 9px;
+}
+
+.header-span{
+    display:inline-block;
+    margin-left:17px;
+}
+
+.header-div{
+    float:right;
+    margin:6px 17px 0px 0px;
+}
+
+.line-span{
+    margin:0px 4px;
+    color:#CC0000;
+}
+
+.header-div a{
+    color:#FFF;
+}
+
+.header-div a:hover{
+    color:#999;
+    background-color:#000;
 }

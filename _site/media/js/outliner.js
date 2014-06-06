@@ -10,9 +10,9 @@ $(function() {
         var id = 'outline_' + idx;
         dict[title] = id;
 
-/*        $(this).append('<a name="' + id + '"></a>'); */
-$(this).html('<a name="' + id + '"></a>'+$(this).html());
-    });
+    /*        $(this).append('<a name="' + id + '"></a>'); */
+    $(this).html('<a name="' + id + '"></a>'+$(this).html());
+        });
 
     var outline_ul = $('<ul style="list-style-type: none"></ul>');
     $.each(dict, function (idx, val) {
@@ -23,7 +23,7 @@ $(this).html('<a name="' + id + '"></a>'+$(this).html());
                          .css('position', 'fixed')
                          .css('top', $('#real_nav').position().top - 1)
                          .css('width', '100px')
-                         .css('text-align', 'left')
+                         .css('text-align', 'center')
                          .html(outline_ul));
 
     /**
@@ -54,7 +54,7 @@ $(this).html('<a name="' + id + '"></a>'+$(this).html());
     var m = main.position().left,
         l = real_nav.position().left,
         n = real_nav.width(),
-        d = m - (l + n) + 124; // #real_nav has left margin of -184.8px
+        d = m - (l + n) + 116; // #real_nav has left margin of -184.8px
 
     $(window).resize(function () {
         var w = $(window).width(),
