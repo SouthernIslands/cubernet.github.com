@@ -59,7 +59,7 @@ hr{margin:.7em 0;border-top:1px dashed #d0d0d0;border-bottom:1px dashed #f9f9f9;
 p{padding:.5em 0;}
 ol,ul{list-style-position:inside;}
 ol ul, ul ol, ul ul, ol ol {margin-left:1em;}
-pre code{margin:1em 0;font-size:13px;line-height:1.6;display:block;overflow:auto;}
+pre code{margin:1em 0;font-size:15px;line-height:1.6;display:block;overflow:auto;}
 blockquote{display:block;text-align:justify;border-left:4px solid #eeeeee;}
 blockquote{margin:1em 0em;padding-left:1.5em;}
 blockquote p{margin:0;padding:.5em 0;}
@@ -105,8 +105,8 @@ h4:before{
     width: 5px;
 }
 
-pre,code{font-family:Menlo,"DejaVu Sans Mono","Bitstream Vera Sans Mono","Andale Mono",Consolas,Menlo,"Andale Mono","Courier New",Monaco,monospace;font-size:11px;}
-p code{background-color:#f7f7f7; padding: 2px; margin: 2px; border-radius: 3px; border: 1px solid #ddd;}
+pre,code{font-family:Menlo,"DejaVu Sans Mono","Bitstream Vera Sans Mono","Andale Mono",Consolas,Menlo,"Andale Mono","Courier New",Monaco,monospace;font-size:15px;}
+p code{line-height:2;background-color:#f7f7f7; padding: 2px; margin: 2px; border-radius: 3px; border: 1px solid #ddd;}
 embed,object,iframe{display:block;margin:4px auto;}
 .gist{font-size: 12px;line-height:1.6;}
 
