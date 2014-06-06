@@ -62,13 +62,14 @@ task :post do
     post.puts "---"
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
-    post.puts "categories:"
-    post.puts "- "
-    post.puts "tags:"
-    post.puts "- "
-    post.puts ""
+    post.puts "description: \"\""
+    post.puts "categories: []"
+    post.puts "tags: []"
+    post.puts "music: []"
     post.puts ""
     post.puts "---"
+    post.puts ""
+    post.puts "![image](/assets/images/)"
   end
 end # task :post
 
