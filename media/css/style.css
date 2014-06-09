@@ -237,7 +237,7 @@ background: #C00;
     display:inline-block;
 }
 
-#search-results{
+#search-results,.jp-controls{
     list-style:none;
 }
 footer{
