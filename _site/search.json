@@ -1,6 +1,13 @@
 [
 	
 		{
+		  "title"    : "给博客添加了自己的主题",
+		  "categories" : "子在川上曰：我在写代码【动手动脚篇】",
+		  "url"     : "/new-theme/",
+		  "date"     : " 2014年09月06日"
+		} ,
+	
+		{
 		  "title"    : "明天，你好",
 		  "categories" : "少壮不努力，老大写代码【成长记录篇】",
 		  "url"     : "/newdaynewstart/",
