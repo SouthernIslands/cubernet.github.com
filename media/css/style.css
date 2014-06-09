@@ -106,7 +106,7 @@ h4:before{
 }
 
 pre,code{font-family:Menlo,"DejaVu Sans Mono","Bitstream Vera Sans Mono","Andale Mono",Consolas,Menlo,"Andale Mono","Courier New",Monaco,monospace;font-size:15px;}
-p code{line-height:2;background-color:#f7f7f7; padding: 2px; margin: 2px; border-radius: 3px; border: 1px solid #ddd;}
+code{line-height:2;background-color:#f7f7f7;   padding:3px 6px;margin: 2px; border-radius: 3px; border: 1px solid #ddd;}
 embed,object,iframe{display:block;margin:4px auto;}
 .gist{font-size: 12px;line-height:1.6;}
 
@@ -263,10 +263,6 @@ text-decoration: none;
 footer a:hover {
 border-bottom: 1px dashed #FFF;
 text-decoration: none;
-}
-
-code{
-    padding:6px 9px;
 }
 
 .header-span{
