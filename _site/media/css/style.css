@@ -280,11 +280,11 @@ text-decoration: none;
     color:#CC0000;
 }
 
-.header-div a{
+.header-div a,saying-span a{
     color:#FFF;
 }
 
-.header-div a:hover{
+.header-div a:hover,saying-span a:hover{
     color:#999;
     background-color:#000;
 }
