@@ -62,7 +62,7 @@ $(document).ready(function() {
 <section class="post">
 {{ content }}
 </section>
-<section class="pageselect" align="right">
+<section class="pageselect">
 <br/>
 <span class="pre-span">  
   <a {% if page.next %} href="{{ page.next.url }}" class="pageNav"{% unless page.next %} class="pageNavInvalid" {% endunless %} >上一篇&nbsp;-&nbsp;{{ page.next.title }} {% else %} href="" >已经是第一篇{% endif %} </a>
