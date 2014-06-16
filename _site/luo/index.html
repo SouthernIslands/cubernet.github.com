@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Cubernet" />
+    <title>落电台音乐批量下载</title>
+    <meta name="name" content="Cubernet'Blog" />
+    <meta name="description" content="批量下载落电台www.luoo.net的音乐" />
+    <meta name="keywords" content= "Python" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link href="/feed/" rel="alternate" title="Cubernet" type="application/atom+xml" />
+    <link rel="stylesheet" href="/media/css/style.css" />
+    <link rel="stylesheet" href="/media/css/highlight.css" />
+    <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
+    
+    
+    <script type="text/javascript" src="/media/js/outliner.js"></script>
+    
+
+  </head>
+  <body>
+    <div id="container">
+      <div id="main" role="main">
+        <nav id="real_nav">
+        <span><a title="网站首页" class="" href="/">首页</a></span>
+        <span><a title="文章分类" class="" href="/categories/">分类</a></span>
+        <span><a title="标签索引" class="" href="/tags/">标签</a></span>
+        <span><a title="趣图分享" class="" href="/funny/">趣图</a></span>
+        <!--<span><a title="友情链接" class="" href="/links/">链接</a></span>-->
+        <span><a title="留言交流" class="" href="/guestbook/">留言</a></span>
+        <span><a title="关于站长" class="" href="/about/">关于</a></span>
+        <span><a title="站内搜索" class="" href="/search/">搜索</a></span>
+        <!--<span><a title="种子订阅" class="" href="/feed/" target="_blank">订阅</a></span>-->
+        </nav>
+
+        <div class="maincontent">
+            <header>
+            <span class="header-span"><h1>落电台音乐批量下载</h1></span>  
+                  
+            <div class="header-div">
+                <span><a title="网站首页" class="" href="/">首页</a></span>
+                <span class="line-span">|</span>
+                <span><a title="文章分类" class="" href="/categories/">分类</a></span>
+                <span class="line-span">|</span>
+                <span><a title="留言交流" class="" href="/guestbook/">留言</a></span>
+                <span class="line-span">|</span>
+                <span><a title="关于站长" class="" href="/about/">关于</a></span>
+                <span class="line-span">|</span>
+                <span><a title="站内搜索" class="" href="/search/">搜索</a></span>
+            </div>
+            </header>
+            
+            <div class="div-art">
+                <article class="content">
+                <section class="meta">
+<span class="time">
+  <time datetime="2014-06-16">2014-06-16</time>
+</span>
+
+ | 
+<span class="categories">
+  分类
+  
+  <a href="/categories/#我在写代码【动手动脚篇】" title="我在写代码【动手动脚篇】">我在写代码【动手动脚篇】</a>&nbsp;
+  
+</span>
+
+
+ | 
+<span class="tags">
+  标签
+  
+  <a href="/tags/#Python" title="Python">Python</a>&nbsp;
+  
+</span>
+
+
+</section>
+<section class="post">
+<p><img src="/assets/images/2014-06-16-luo.png" alt="image" /></p>
+
+<p><a href="http://www.luoo.net">落电台</a>是我很喜欢的一个电台，也曾经在日志中不止一次的推荐过这个电台。这个网站上的音乐、文字、图片，无一不让我陶醉。</p>
+
+<blockquote><p>在本科四年中那段最奋斗最辛苦的日子，<code>落网</code>陪我一路走过。那些清早起来，听着电台开始一天编码的生活，是最充实最美丽的回忆。</p></blockquote>
+
+<p>可能是太过于喜欢，进而会变的依赖。在许多没有网的时候也希望能够有<code>落网</code>陪伴，于是萌生了将电台音乐下载到本地的想法（只是为了本地播放，希望大家也不要拿来商用）。</p>
+
+<p>说干就干。</p>
+
+<p>简单看下<code>落网</code>的网站结构，会发现基本格式都是<code>主网址/music/期刊编号</code>，而每一期的歌曲地址则是通过js代码动态加载的。于是一个简单的办法就是，先遍历每一期，然后将js代码动态加载的歌曲地址筛选出来，然后批量下载。</p>
+
+<div class="highlight"><pre><code class="python"><span class="lineno"> 1</span> <span class="c">#期刊页面链接生成方法</span>
+<span class="lineno"> 2</span> <span class="k">def</span> <span class="nf">getUrl</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+<span class="lineno"> 3</span>     <span class="n">url</span> <span class="o">=</span> <span class="s">&#39;http://www.luoo.net/music/&#39;</span>
+<span class="lineno"> 4</span>     <span class="k">return</span> <span class="n">url</span> <span class="o">+</span> <span class="n">getNum</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<span class="lineno"> 5</span> 
+<span class="lineno"> 6</span> <span class="k">def</span> <span class="nf">readsrc</span><span class="p">(</span><span class="n">src</span><span class="p">):</span>
+<span class="lineno"> 7</span>     <span class="k">try</span><span class="p">:</span>
+<span class="lineno"> 8</span>         <span class="n">url</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">src</span><span class="p">)</span>
+<span class="lineno"> 9</span>         <span class="n">content</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="lineno">10</span>         <span class="k">return</span> <span class="n">content</span>
+<span class="lineno">11</span>     <span class="k">except</span><span class="p">:</span>
+<span class="lineno">12</span>         <span class="k">print</span> <span class="s">&#39;readsrc error&#39;</span>
+<span class="lineno">13</span>         <span class="k">return</span> <span class="bp">None</span>
+<span class="lineno">14</span> <span class="c">#歌曲详情js代码提取方法</span>
+<span class="lineno">15</span> <span class="k">def</span> <span class="nf">getSongs</span><span class="p">(</span><span class="n">content</span><span class="p">):</span>
+<span class="lineno">16</span>     <span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s">r&#39;&quot;title&quot;:&quot;(?P&lt;title&gt;.*?)&quot;,&quot;artist&quot;:&quot;(?P&lt;artist&gt;.*?)&quot;,&quot;album&quot;:&quot;(?P&lt;album&gt;.*?)&quot;,&quot;mp3&quot;:&quot;(?P&lt;mp3&gt;.*?)&quot;&#39;</span><span class="p">,</span><span class="n">re</span><span class="o">.</span><span class="n">M</span><span class="p">)</span>
+<span class="lineno">17</span>     <span class="n">r</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+<span class="lineno">18</span>     <span class="k">if</span> <span class="n">r</span><span class="p">:</span>
+<span class="lineno">19</span>         <span class="k">return</span> <span class="n">r</span>
+<span class="lineno">20</span>     <span class="k">else</span><span class="p">:</span>
+<span class="lineno">21</span>         <span class="k">return</span> <span class="bp">None</span>
+</code></pre></div>
+
+
+<p>最后增加了提取期刊名并按照期刊号归类，并将其改为命令行工具，使用方法如下：</p>
+
+<pre><code>-------------------------------------------------------------------------------
+
+    This program downloads music from www.luo.net . 
+    Options include: 
+      --version : Prints the version number 
+      --help    : Display this help
+      --a       : Download all music from the first vol
+      -v[&lt;vol number&gt;]      : Download the specified vol
+      -r[&lt;rank of music&gt;]   : Download the specified music
+      -p[&lt;filepath&gt;]        : The filepath where to save music
+
+---------------------------------------------------------------------------------
+</code></pre>
+
+<p>最终实现效果如下图：</p>
+
+<p><img src="/assets/images/2014-06-16-luo-2.png" alt="image" /></p>
+
+<p>完整源码地址：<a href="https://github.com/Cubernet/luoo">点击下载</a></p>
+
+</section>
+<section class="pageselect" align="right">
+<br/>
+<span>
+	<a  href="/encode/" class="pageNav"  >上一篇</a>
+	&nbsp;&nbsp;&nbsp;
+	<a   class="pageNavInvalid"  >下一篇</a>
+</span>
+<span style="display:none">
+  <a href="/luo/#disqus_thread" class="commentsNum">0 COMMENTS</a>
+</section>
+
+
+	
+	<div class="ds-thread" />
+		
+	<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'cubernet'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <script type="text/javascript">
+    var disqus_shortname = 'cubernet';
+
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+
+
+
+                </article>
+            </div>
+        </div>
+      </div>
+
+    <footer>
+        <p><small>
+            Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a> @ <a href="http://github.com/cubernet" target="_blank" title="项目主页">GitHub</a>
+             | <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/cn/" target="_blank" title="许可协议">©</a> 2013 - 2014 <a href="/about/">Cubernet</a>
+             | <script type="text/javascript">var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fcbf651a0c9c199e73857441cc83b3884' type='text/javascript'%3E%3C/script%3E"));
+             </script>
+
+			<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"5","bdPos":"right","bdTop":"174"},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+		</small></p>
+    </footer>
+    </div>
+  </body>
+</html>

@@ -1,6 +1,20 @@
 [
 	
 		{
+		  "title"    : "落电台音乐批量下载",
+		  "categories" : "我在写代码【动手动脚篇】",
+		  "url"     : "/luo/",
+		  "date"     : " 2014年16月06日"
+		} ,
+	
+		{
+		  "title"    : "encode",
+		  "categories" : "",
+		  "url"     : "/encode/",
+		  "date"     : " 2014年15月06日"
+		} ,
+	
+		{
 		  "title"    : "给博客添加了自己的主题",
 		  "categories" : "子在川上曰：我在写代码【动手动脚篇】",
 		  "url"     : "/new-theme/",

@@ -26,9 +26,9 @@ html{
 body{
   font-size:14px;
   word-spacing:1px;
-	margin-left:auto;
+  margin-left:auto;
   margin-right:auto;
-	font-family:"Galdeano","Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
+  font-family:"Galdeano","Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
   color:#000000;
 }
 
@@ -46,12 +46,12 @@ a {
 }
 
 a.pageNav{
-	color:#C00;
-	text-decoration:none;
+  color:#C00;
+  text-decoration:none;
 }
 
 a.pageNav:hover{
-	color: #FFF;
+  color: #FFF;
   background-color: #C00;
 
 }
@@ -71,7 +71,7 @@ blockquote p{margin:0;padding:.5em 0;}
 #tag_cloud a:hover{color:#FFFFFF !important;text-decoration:none;}
 .listing-item,.listing-seperator{list-style-type:none;}
 .listing-item a{
-	padding:.2em 1em;
+  padding:.2em 1em;
 
 }
 
@@ -104,8 +104,10 @@ h4:before{
     height: 5px;
     width: 5px;
 }
+.highlight pre code{background: none repeat scroll 0% 0% #272822;font-family:Menlo,"DejaVu Sans Mono","Bitstream Vera Sans Mono","Andale Mono",Consolas,Menlo,"Andale Mono","Courier New",Monaco,monospace;font-size:15px;}
+.highlight code{background-color:#f7f7f7;border: 1px solid #ddd;}
+embed,object,iframe{display:block;margin:4px auto;}
 
-pre code{background: none repeat scroll 0% 0% #272822;font-family:Menlo,"DejaVu Sans Mono","Bitstream Vera Sans Mono","Andale Mono",Consolas,Menlo,"Andale Mono","Courier New",Monaco,monospace;font-size:15px;}
 code{background-color:#f7f7f7;line-height:2;padding:3px 6px;margin: 2px; border-radius: 3px; border: 1px solid #ddd;}
 embed,object,iframe{display:block;margin:4px auto;}
 .gist{font-size: 12px;line-height:1.6;}
