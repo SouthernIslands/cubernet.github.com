@@ -64,10 +64,11 @@ $(document).ready(function() {
 </section>
 <section class="pageselect" align="right">
 <br/>
-<span>
-	<a {% if page.previous %} href="{{ page.previous.url }}" class="pageNav"{% endif %} {% unless page.previous %} class="pageNavInvalid" {% endunless %} >上一篇</a>
-	&nbsp;&nbsp;&nbsp;
-	<a {% if page.next %} href="{{ page.next.url }}" class="pageNav"{% endif %} {% unless page.next %} class="pageNavInvalid" {% endunless %} >下一篇</a>
+<span class="pre-span">  
+  <a {% if page.next %} href="{{ page.next.url }}" class="pageNav"{% unless page.next %} class="pageNavInvalid" {% endunless %} >上一篇&nbsp;-&nbsp;{{ page.next.title }} {% else %} href="" >已经是第一篇{% endif %} </a>
+</span>
+<span class="next-span">
+	<a {% if page.previous %} href="{{ page.previous.url }}" class="pageNav" {% unless page.previous %} class="pageNavInvalid" {% endunless %} >下一篇&nbsp;-&nbsp;{{ page.previous.title }} {% else %}href="">已经是最后一篇{% endif %}</a>
 </span>
 <span style="display:none">
   <a href="{{ page.url }}#disqus_thread" class="commentsNum">0 COMMENTS</a>

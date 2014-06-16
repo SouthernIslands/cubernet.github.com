@@ -204,10 +204,13 @@ background: #C00;
 }
 
 .pageselect{
-  text-align:right;
   background-color: #FAFAFA;
   border-top: 1px solid #DDD;
   padding:10px 60px 26px 60px;
+}
+
+.next-span{
+    float:right;
 }
 
 .post{
