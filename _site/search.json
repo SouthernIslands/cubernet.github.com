@@ -1,15 +1,29 @@
 [
 	
 		{
+		  "title"    : "离别",
+		  "categories" : "少壮不努力，老大写代码【成长记录篇】",
+		  "url"     : "/libie/",
+		  "date"     : " 2014年28月06日"
+		} ,
+	
+		{
+		  "title"    : "别离",
+		  "categories" : "少壮不努力，老大写代码【成长记录篇】",
+		  "url"     : "/bieli/",
+		  "date"     : " 2014年28月06日"
+		} ,
+	
+		{
 		  "title"    : "落电台音乐批量下载",
-		  "categories" : "我在写代码【动手动脚篇】",
+		  "categories" : "子在川上曰：我在写代码【动手动脚篇】",
 		  "url"     : "/luo/",
 		  "date"     : " 2014年16月06日"
 		} ,
 	
 		{
-		  "title"    : "encode",
-		  "categories" : "",
+		  "title"    : "谈编码",
+		  "categories" : "春眠不觉晓，醒来写代码【去粗取精篇】",
 		  "url"     : "/encode/",
 		  "date"     : " 2014年15月06日"
 		} ,
@@ -19,13 +33,6 @@
 		  "categories" : "子在川上曰：我在写代码【动手动脚篇】",
 		  "url"     : "/new-theme/",
 		  "date"     : " 2014年09月06日"
-		} ,
-	
-		{
-		  "title"    : "明天，你好",
-		  "categories" : "少壮不努力，老大写代码【成长记录篇】",
-		  "url"     : "/newdaynewstart/",
-		  "date"     : " 2014年01月05日"
 		} ,
 	
 		{
