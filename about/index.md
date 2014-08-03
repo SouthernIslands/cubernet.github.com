@@ -18,5 +18,5 @@ github : [Cubernet](https://github.com/cubernet)
 
 ----
 
+<iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=5&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=2063852757&verifier=b3464355&dpc=1"></iframe>
 
-[![新浪微博](http://service.t.sina.com.cn/widget/qmd/2063852757/b3464355/4.png)](http://weibo.com/luxaole)
