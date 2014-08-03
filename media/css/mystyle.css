@@ -593,6 +593,7 @@ article footer .tags:before {
   background: #fff;
   border: 1px solid #e3e3e5;
   margin-bottom: 50px;
+  margin-top: 50px;
 }
 #comment .title {
   font-weight: normal;
