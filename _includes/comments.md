@@ -51,10 +51,12 @@
 	{% if page.thread %}
 	<div class="ds-thread" data-thread-key="{{ page.thread }}" data-url="{{ site.url }}{{ page.url }}" data-title="{{ page.title }}" />
 	{% else %}
-	<div class="ds-thread" />
+	<section id="comment">
+  		<h1 class="title">Comments</h1>
 	{% endif %}	
 	<!-- UY BEGIN -->
 	<div id="uyan_frame"></div>
 	<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=1954501"></script>
 	<!-- UY END -->
+	</section>
 {% endif %}
