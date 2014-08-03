@@ -1,0 +1,105 @@
+{% if page.title == "趣图" %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd>
+{% else %}
+<!DOCTYPE html>
+{% endif %}
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="{{ site.author }}" />
+    <title>{% if page.path == 'index.html' %}{{ site.name }}{% else %}{% unless page.id %}{{ site.name }} - {% endunless %}{{ page.title }}{% endif %}</title>
+    <meta name="name" content="{{ site.name }}" />
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+    <meta name="keywords" content= "{% if page.tags %}{{ page.tags | join:',' }}{% endif %}" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link href="/feed/" rel="alternate" title="{{ site.author }}" type="application/atom+xml" />
+    <link rel="stylesheet" href="/media/css/style.css" />
+    <link rel="stylesheet" href="/media/css/highlight.css" />
+    <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
+    
+    {% if page.music.size == 1 %}
+    <script type="text/javascript" src="/media/js/jquery.jplayer.min.js"></script>
+    {% endif %}
+    <script type="text/javascript" src="/media/js/outliner.js"></script>
+    {% if page.title == "趣图" %}
+    <style>
+        body,ul,p,h2,h3{margin:0;padding:0;}
+        li{list-style:none};
+        a {text-decoration:none;}
+        h3 {font:14px "微软雅黑";}
+        strong { font-weight:normal; font-size:12px; color:#808080;height:24px; line-height:24px; float:left; padding:0 7px; cursor:pointer;}
+        .clear{zoom:1}
+        .clear:after{content:"";display:block;clear:both;}
+        .parent{width:1000px; overflow:hidden; margin:15px auto 0;}        
+        .parent li { width:240px; float:left;margin-right:10px;overflow:hidden;}
+        .parent li div[class='tag']{width:229px;border:1px solid #b6b6b6; margin-bottom:10px; border-top:4px solid #6f6f6f; padding:12px 0 0 9px;}
+        .parent li:first-child a{ background:#f0f0f0; text-decoration:none; margin:4px 5px 5px 0;display:inline-block; height:22px; line-height:22px; font-size:12px; color:#a0a0a0; padding:0 10px; border:1px solid #e2e2e2; border-radius:20px;}
+        .parent li:first-child a:nth-of-type(1) { background:#ff9231; color:#fff;}
+        .parent li:last-child{margin-right:0;}
+        .parent li div[class='boBtn'] { width:221px; margin:10px 0 0 -10px; padding-top:17px;}
+        .parent li div[class='boBtn'] div {margin-bottom:10px;}
+        .parent li div[class='boBtn'] p{ float:left; height:24px; line-height:24px; background:#fefefe;margin-bottom:6px; border-radius:15px;-webkit-border-radius:15px;-moz-border-radius:15px; border:1px solid #ddd; overflow:hidden;} 
+        .parent li div[class='boBtn'] span { float:left; padding:0 10px; font-size:12px; height:24px; line-height:24px;}
+        .active  { background:#ff9231; color:#fff;}
+        .parent .pic {margin-bottom:10px; border:1px solid #dadada; overflow:hidden; }
+        .parent .pic h3 { padding-top:5px;height:20px; line-height:20px; text-align:center; color:#00c0ff; text-shadow:1px 1px 3px rgba(255,255,255,.5)}
+        .parent .pic p {  font-size:12px; color:#aaa;padding:5px 10px; text-indent:2em; line-height:20px; background:#fbfbfb;color:#aaa;}
+        li div img { width:240px; border:none; vertical-align:top; }
+    </style>
+    {% endif %}
+
+  </head>
+  <body>
+    <div id="container">
+      <div id="main" role="main">
+        <nav id="real_nav">
+        <span><a title="网站首页" class="" href="/">首页</a></span>
+        <span><a title="文章分类" class="" href="/categories/">分类</a></span>
+        <span><a title="标签索引" class="" href="/tags/">标签</a></span>
+        <span><a title="趣图分享" class="" href="/funny/">趣图</a></span>
+        <!--<span><a title="友情链接" class="" href="/links/">链接</a></span>-->
+        <span><a title="留言交流" class="" href="/guestbook/">留言</a></span>
+        <span><a title="关于站长" class="" href="/about/">关于</a></span>
+        <span><a title="站内搜索" class="" href="/search/">搜索</a></span>
+        <!--<span><a title="种子订阅" class="" href="/feed/" target="_blank">订阅</a></span>-->
+        </nav>
+
+        <div class="maincontent">
+            <header>
+            <span class="header-span"><h1>{{ page.title }}</h1></span>  
+            {% if page.title == "趣图" or page.title == "首页" or page.title == "分类" or page.title == "标签" or page.title == "留言" or page.title == "关于" or page.title == "搜索" %}
+                <span class="saying-span"><a>人是靠思想站立起来的</a></span> 
+            {% endif %}      
+            <div class="header-div">
+                <span><a title="网站首页" class="" href="/">首页</a></span>
+                <span class="line-span">|</span>
+                <span><a title="文章分类" class="" href="/categories/">分类</a></span>
+                <span class="line-span">|</span>
+                <span><a title="留言交流" class="" href="/guestbook/">留言</a></span>
+                <span class="line-span">|</span>
+                <span><a title="关于站长" class="" href="/about/">关于</a></span>
+                <span class="line-span">|</span>
+                <span><a title="站内搜索" class="" href="/search/">搜索</a></span>
+            </div>
+            </header>
+            
+            <div class="div-art">
+                <article class="content">
+                {{ content }}
+                </article>
+            </div>
+        </div>
+      </div>
+
+    <footer>
+        <p><small>
+            Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a> @ <a href="http://github.com/cubernet" target="_blank" title="项目主页">GitHub</a>
+             | <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/cn/" target="_blank" title="许可协议">©</a> 2013 - {{site.time | date:"%Y"}} <a href="/about/">{{ site.author }}</a>
+             | <script type="text/javascript">var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fcbf651a0c9c199e73857441cc83b3884' type='text/javascript'%3E%3C/script%3E"));
+             </script>
+
+		</small></p>
+    </footer>
+    </div>
+  </body>
+</html>

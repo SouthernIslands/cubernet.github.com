@@ -1,0 +1,76 @@
+---
+layout: default
+---
+<section class="meta">
+<span class="time">
+  <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}</time>
+</span>
+{% if page.categories.size != 0 %}
+ | 
+<span class="categories">
+  分类
+  {% for cat in page.categories %}
+  <a href="/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>&nbsp;
+  {% endfor %}
+</span>
+{% endif %}
+{% if page.tags.size != 0 %}
+ | 
+<span class="tags">
+  标签
+  {% for tag in page.tags %}
+  <a href="/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>&nbsp;
+  {% endfor %}
+</span>
+{% endif %}
+{% if page.music.size == 1 %}
+| 
+<span class="tags">
+  背景音乐
+
+
+<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+<div id="jp_container_1" class="jp-audio">
+    <div class="jp-type-single">
+        <div class="jp-gui jp-interface">
+            <ul class="jp-controls">
+                <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+                <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+            </ul>                      
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+
+    $("#jquery_jplayer_1").jPlayer({
+        ready: function(event) {
+            $(this).jPlayer("setMedia", {
+              {% for mus in page.music %}
+              mp3: "/assets/music/{{ mus }}",
+              {% endfor %}              
+            });
+        },
+        supplied: "mp3"
+    });
+});                                      
+</script>
+</span>
+
+{% endif %}
+</section>
+<section class="post">
+{{ content }}
+</section>
+<section class="pageselect">
+<br/>
+<span class="pre-span">  
+  <a {% if page.next %} href="{{ page.next.url }}" class="pageNav"{% unless page.next %} class="pageNavInvalid" {% endunless %} >上一篇&nbsp;-&nbsp;{{ page.next.title }} {% else %} href="" >已经是第一篇{% endif %} </a>
+</span>
+<span class="next-span">
+	<a {% if page.previous %} href="{{ page.previous.url }}" class="pageNav" {% unless page.previous %} class="pageNavInvalid" {% endunless %} >下一篇&nbsp;-&nbsp;{{ page.previous.title }} {% else %}href="">已经是最后一篇{% endif %}</a>
+</span>
+<span style="display:none">
+  <a href="{{ page.url }}#disqus_thread" class="commentsNum">0 COMMENTS</a>
+</section>
+{% include comments.md %}

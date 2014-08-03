@@ -14,6 +14,8 @@ icon: file-o
 
 使用jekyll在github上搭建博客之后，无论是从写作的舒适度还是维护的方便程度上来讲都比之前有了很大的提升，不过一直觉得美中不足的是缺少一个搜索功能。由于整个博客都是静态的，因此很难做到像WordPress那种使用数据库来提供强大的搜索功能。不过退而求其次，给jekyll添加静态搜索，实现基本的功能还是有可能的。
 
+<!-- more -->
+
 通过在Google搜索一番之后，发现了[jekyll-lun-js-search](https://github.com/slashdotdash/jekyll-lunr-js-search)这个插件，可以实现jekyll的静态搜索。话不多说，按照说明文件中的步骤开始动手配置。
 
 配置完成，满怀期待在搜索框输入了一个单词，结果。。。是的，没有任何反应。

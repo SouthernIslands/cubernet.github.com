@@ -26,7 +26,7 @@ Kali自带的浏览器是iceweasel，而iceweasel其实就是Debian下的Firefox
 
 <a title="https://addons.mozilla.org/zh-cn/firefox/addon/adblock-plus/?src=cb-dl-users" href="https://addons.mozilla.org/zh-cn/firefox/addon/adblock-plus/?src=cb-dl-users">https://addons.mozilla.org/zh-cn/firefox/addon/adblock-plus/?src=cb-dl-users</a>
 
-<!--more-->
+<!-- more -->
 <hr />
 
 <h4>2.Add to Search Bar 添加至搜索栏</h4>

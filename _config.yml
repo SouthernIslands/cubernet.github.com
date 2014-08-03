@@ -17,6 +17,8 @@ github: Cubernet
 
 pygments: true
 
+excerpt_separator: <!-- more -->
+
 paginate: 15
 
 about: "程序猿一只，深陷读博大坑不能自拔。\n热爱编程，开源爱好者，喜欢linux，github等。\n喜欢干净整洁的代码，轻微代码洁癖。"

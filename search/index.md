@@ -8,17 +8,17 @@ title: 搜索
 
 <div id="search">
   <form action="/search" method="get">
-    <input type="text" id="search-this-page" name="q" placeholder="Search.." autocomplete="off">
+    <input type="text" id="search-this-page" name="q" placeholder="  Search.." autocomplete="off">
   </form>
 </div>
-<ul id="search-results"></ul>
+<div class="archive searcharchive" id="search-results"></div>
 
 <script type="text/javascript">
         JekyllSearch.init({
           searchInput: document.getElementById("search-this-page"),
           jsonFile : '/search.json',
           searchResults : document.getElementById("search-results"),
-          template : '<li><article><a href="{url}">{title} <span><time datetime="{date}">{date}</time></span></a></article></li>',
+          template : '<article class="post"><div class="post-content"><header><h1 class="title"><a href="{url}">{title}</a></h1><time datetime="{date}"><a href="{url}">{date}</a></time></header></div></article>',
           fuzzy: true
         });
 </script>

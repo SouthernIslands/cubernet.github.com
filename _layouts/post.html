@@ -1,7 +1,15 @@
 ---
 layout: default
 ---
-<section class="meta">
+<article class="post">
+<div class="post-content">
+
+
+
+
+<header>
+    <h1 class="title">{{ page.title }}</h1>
+    <section class="meta">
 <span class="time">
   <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}</time>
 </span>
@@ -58,19 +66,30 @@ $(document).ready(function() {
 </span>
 
 {% endif %}
-</section>
-<section class="post">
-{{ content }}
-</section>
+</section>    
+</header>
+
+<div class="entry">
+
+  {{ content }}
+
+  <p style="margin:20px 0; color:#9f9f9f; font-size:12px;">
+  <span>Posted by <a style="color:#9f9f9f;" href="http://weibo.com/luxaole"><strong>Cubernet</strong></a> - {{ page.date | date:"%Y-%m-%d" }}</span><br>
+  <span style="line-height:13px;">如需转载，请注明： 本文来自 <a style="color:#9f9f9f;" href="http://cubernet.cn"><strong>Cubernet</strong></a></span>
+  </p>
+</div>
+
+
+</div>
+</article>
+
 <section class="pageselect">
 <br/>
 <span class="pre-span">  
   <a {% if page.next %} href="{{ page.next.url }}" class="pageNav"{% unless page.next %} class="pageNavInvalid" {% endunless %} >上一篇&nbsp;-&nbsp;{{ page.next.title }} {% else %} href="" >已经是第一篇{% endif %} </a>
 </span>
 <span class="next-span">
-	<a {% if page.previous %} href="{{ page.previous.url }}" class="pageNav" {% unless page.previous %} class="pageNavInvalid" {% endunless %} >下一篇&nbsp;-&nbsp;{{ page.previous.title }} {% else %}href="">已经是最后一篇{% endif %}</a>
+  <a {% if page.previous %} href="{{ page.previous.url }}" class="pageNav" {% unless page.previous %} class="pageNavInvalid" {% endunless %} >下一篇&nbsp;-&nbsp;{{ page.previous.title }} {% else %}href="">已经是最后一篇{% endif %}</a>
 </span>
-<span style="display:none">
-  <a href="{{ page.url }}#disqus_thread" class="commentsNum">0 COMMENTS</a>
 </section>
 {% include comments.md %}
