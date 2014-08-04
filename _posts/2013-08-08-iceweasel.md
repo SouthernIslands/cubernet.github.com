@@ -18,7 +18,7 @@ Kali自带的浏览器是iceweasel，而iceweasel其实就是Debian下的Firefox
 
 如果你习惯了windows下的各种其他千奇百怪的浏览器而觉得iceweasel的功能设计过于不人性化时，不妨试试下面的这些插件，它们会将你的iceweasel打造成一款web入口神器。
 
-<h4>1.Adblock Plus 广告过滤神器</h4>
+<h2>1.Adblock Plus 广告过滤神器</h2>
 
 <hr />
 
@@ -29,7 +29,7 @@ Kali自带的浏览器是iceweasel，而iceweasel其实就是Debian下的Firefox
 <!-- more -->
 <hr />
 
-<h4>2.Add to Search Bar 添加至搜索栏</h4>
+<h2>2.Add to Search Bar 添加至搜索栏</h2>
 
 <hr />
 
@@ -41,7 +41,7 @@ Kali自带的浏览器是iceweasel，而iceweasel其实就是Debian下的Firefox
 
 <hr />
 
-<h4>3.将地址栏和搜索栏合并</h4>
+<h2>3.将地址栏和搜索栏合并</h2>
 
 <hr />
 
@@ -51,7 +51,7 @@ Kali自带的浏览器是iceweasel，而iceweasel其实就是Debian下的Firefox
 
 <hr />
 
-<h4>4.QuickDrag拖拽搜索</h4>
+<h2>4.QuickDrag拖拽搜索</h2>
 
 <hr />
 
@@ -61,7 +61,7 @@ Kali自带的浏览器是iceweasel，而iceweasel其实就是Debian下的Firefox
 
 <hr />
 
-<h4>5.Firebug</h4>
+<h2>5.Firebug</h2>
 
 <hr />
 
@@ -71,7 +71,7 @@ Kali自带的浏览器是iceweasel，而iceweasel其实就是Debian下的Firefox
 
 <hr />
 
-<h4>6.HTTPS Everywhere</h4>
+<h2>6.HTTPS Everywhere</h2>
 
 <hr />
 
@@ -81,7 +81,7 @@ Kali自带的浏览器是iceweasel，而iceweasel其实就是Debian下的Firefox
 
 <hr />
 
-<h4>7.HackBar</h4>
+<h2>7.HackBar</h2>
 
 <hr />
 

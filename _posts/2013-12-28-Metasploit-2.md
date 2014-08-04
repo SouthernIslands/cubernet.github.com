@@ -26,8 +26,8 @@ icon: file-o
 
 ---
 
-#### 在windows上的安装
-1、访问http://www.metasploit.com/download/下载Windows的安装文件。
+## 在windows上的安装
+1、访问http://www.metasploit.com/download/下载Windows的安装文件。
 
 2、找到下载好的安装文件并双击安装程序的图标。此时可能会出现安全警告。在安全警告界面上点击“运行（Run）”。当安装欢迎界面出现之后，点击“下一步（Next）”来继续。在Windows 7上，在出现最初安装界面之前可能需要10分钟时间。
 
@@ -51,24 +51,25 @@ icon: file-o
 
 12、当安装完成之后，点击“完成（Finish）”按钮。
 
-#### 在linux上的安装
-1、访问http://www.metasploit.com/download/下载Linux 32 bit或者64 bit安装包。保存安装文件到一个位置，比如可以放到桌面上。
+
+## 在linux上的安装
+1、访问http://www.metasploit.com/download/下载Linux 32 bit或者64 bit安装包。保存安装文件到一个位置，比如可以放到桌面上。
 
 2、打开一个终端。
 
 3、改变执行安装包的模式。可以由以下命令实现：
 	
 	对于64位的系统：
-	 	chmod +x desktop/metasploit-latest-linux-x64-installer.run
-	对于32位的系统：
-	 	chmod +x desktop/metasploit-latest-linux-x32-installer.run
+	 	chmod +x desktop/metasploit-latest-linux-x64-installer.run
+	对于32位的系统：
+	 	chmod +x desktop/metasploit-latest-linux-x32-installer.run
 
 4、运行安装包。可以由以下命令实现：
 
 	对于64位系统：
-		sudo desktop/metasploit-latest-linux-x64-installer.run
-	对于32位系统：
-		sudo desktop/metasploit-latest-linux-x32-installer.run
+		sudo desktop/metasploit-latest-linux-x64-installer.run
+	对于32位系统：
+		sudo desktop/metasploit-latest-linux-x32-installer.run
 
 5、如果提示输入密码，请输入你的sudo密码。
 
@@ -93,5 +94,6 @@ icon: file-o
 15、Ready to Install窗口出现。点击Forward开始安装进程。
 
 ---
-
+
+
 
