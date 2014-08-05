@@ -10,9 +10,9 @@ comments: yes
 <article class="page"> 
   <div class="post-content">
   <div class="entry">
-      程序猿一只。 	
-	  热爱编程，开源爱好者，喜欢linux，github等。		
-	  喜欢干净整洁的代码，轻微代码洁癖。
+程序猿一只。 	
+热爱编程，开源爱好者。		
+喜欢干净整洁的代码，轻微代码洁癖。
   <hr>
 
 ####联系方式：        
