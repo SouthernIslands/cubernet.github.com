@@ -28,6 +28,11 @@ tags: [博客主题]
 * 增加了对`友言`评论插件的支持，在设置中可以切换选择使用'友言'或`多说`或`disqus`；
 * 去掉了`分享`按钮；
 * 访问统计由`百度统计`改为`gostats`(不过访问统计被清零了，好伤心T T)；
+
+---
+8月7日更新：
+
+* 增加了洋葱头表情 <img src="http://cubernet.cn/assets/smilies/10.gif"class="smiley">
 * to be continued...💪💪💪
 
 
