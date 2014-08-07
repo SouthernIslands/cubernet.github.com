@@ -32,7 +32,7 @@ tags: [博客主题]
 ---
 8月7日更新：
 
-* 增加了洋葱头表情 <img src="http://cubernet.cn/assets/smilies/10.gif"class="smiley">
+* 增加了洋葱头表情 <img src="http://cubernet.cn/assets/smilies/10.gif"id="smiley">
 * to be continued...💪💪💪
 
 

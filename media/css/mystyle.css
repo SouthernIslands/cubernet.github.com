@@ -1085,7 +1085,7 @@ a.pageNav:hover {
     overflow: hidden;
 }
 
-.smiley {
+#smiley {
   display: inline;
   -webkit-box-shadow:none;
   -moz-box-shadow:none;

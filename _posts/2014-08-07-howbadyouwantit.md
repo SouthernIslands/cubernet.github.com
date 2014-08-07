@@ -40,7 +40,7 @@ tags: [life]
 
 或者说是深思熟虑了好久，亦或仅仅是三个年轻人的一时兴起，iOS小组成立了。
 
-也许在之后的日子里，当我们看着一堆反编译代码很久很久却依然毫无头绪时，<img src="http://cubernet.cn/assets/smilies/7.gif"class="smiley">
+也许在之后的日子里，当我们看着一堆反编译代码很久很久却依然毫无头绪时，<img src="http://cubernet.cn/assets/smilies/7.gif"id="smiley">
 
 我们能做的，
 
@@ -56,5 +56,5 @@ HOW BAD YOU WANT IT，
 
 他说，“科研注定是孤独的。”
 
-也对。<img src="http://cubernet.cn/assets/smilies/12.gif"class="smiley">
+也对。<img src="http://cubernet.cn/assets/smilies/12.gif"id="smiley">
 
