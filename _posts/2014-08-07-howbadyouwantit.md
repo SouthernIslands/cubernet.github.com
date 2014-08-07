@@ -31,12 +31,12 @@ tags: [life]
 
 ##HOW BAD YOU WANT IT
 
-<embed src="http://player.youku.com/player.php/sid/XNjEyMjYyODk2/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+<center><embed src="http://player.youku.com/player.php/sid/XNjEyMjYyODk2/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed></center>
 
 
 ##HOW BAD YOU WANT IT Ⅱ
 
-<embed src="http://player.youku.com/player.php/sid/XNTQ2MzMwOTY0/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+<center><embed src="http://player.youku.com/player.php/sid/XNTQ2MzMwOTY0/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed></center>
 
 或者说是深思熟虑了好久，亦或仅仅是三个年轻人的一时兴起，iOS小组成立了。
 
