@@ -5,10 +5,10 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="Cubernet" />
-    <title>Metasploit渗透测试相关(四)——漏洞映射与利用</title>
+    <title>墙里墙外</title>
     <meta name="name" content="Cubernet's Blog" />
-    <meta name="description" content="Metasploit渗透测试相关(四)——漏洞映射与利用" />
-    <meta name="keywords" content= "Metasploit,渗透" />
+    <meta name="description" content="翻墙，GWF，VPN" />
+    <meta name="keywords" content= "翻墙,VPN" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link href="/feed/" rel="alternate" title="Cubernet" type="application/atom+xml" />
     <link rel="stylesheet" href="/media/css/mystyle.css" />
@@ -190,17 +190,17 @@
 
 
 <header>
-    <h1 class="title">Metasploit渗透测试相关(四)——漏洞映射与利用</h1>
+    <h1 class="title">墙里墙外</h1>
     <section class="meta">
 <span class="time">
-  <time datetime="2013-12-31">2013-12-31</time>
+  <time datetime="2014-08-21">2014-08-21</time>
 </span>
 
  | 
 <span class="categories">
   分类
   
-  <a href="/categories/#春眠不觉晓，醒来写代码【去粗取精篇】" title="春眠不觉晓，醒来写代码【去粗取精篇】">春眠不觉晓，醒来写代码【去粗取精篇】</a>&nbsp;
+  <a href="/categories/#众里寻他千百度，蓦然回首，那人正在写代码【他山之石篇】" title="众里寻他千百度，蓦然回首，那人正在写代码【他山之石篇】">众里寻他千百度，蓦然回首，那人正在写代码【他山之石篇】</a>&nbsp;
   
 </span>
 
@@ -209,9 +209,9 @@
 <span class="tags">
   标签
   
-  <a href="/tags/#Metasploit" title="Metasploit">Metasploit</a>&nbsp;
+  <a href="/tags/#翻墙" title="翻墙">翻墙</a>&nbsp;
   
-  <a href="/tags/#渗透" title="渗透">渗透</a>&nbsp;
+  <a href="/tags/#VPN" title="VPN">VPN</a>&nbsp;
   
 </span>
 
@@ -221,11 +221,60 @@
 
 <div class="entry">
 
-  
+  <p><img src="/assets/images/2014-08-21-overthewall.png" alt="image" /></p>
+
+<blockquote><p>秦筑长城比铁牢，蕃戎不敢过临洮。</p>
+
+<p>虽然万里连云际，争及尧阶三尺高。</p>
+
+<p>——《长城》【唐】汪遵</p></blockquote>
+
+<p>“互联网”这个词现在已经逐渐为大众知晓，“长城”一词也自古就时常出没于文人骚客的笔下，但是“互联网中的长城”即<code>GWF</code>，可能不是所有的人都听过。GWF即Great Wall Fire（翻译过来是长城防火墙），是我国在中国网络出口处部署的一套网络安全系统。</p>
+
+<!-- more -->
+
+
+<p><code>GWF</code>其实早已名声在外，在大众眼中，它的作用无非就是让国内的网民无法访问国外的网站，在一定程度上也不允许国外的网民访问国内的网站。从这个角度来看，这个防火墙以及它的主要创建者背负那么大的骂名也是可以理解的。作为网络安全实验室中的一员，我一直不愿对GWF做太多的评价。我只想说，GWF还是很有必要的，方校长也没有那么可恶。</p>
+
+<hr />
+
+<p>但是。</p>
+
+<p>但是但是。</p>
+
+<p>凡事要有度。要有度啊！</p>
+
+<hr />
+
+<p>最初，你们说不允许连接国外的H网<img src="http://cubernet.cn/assets/smilies/23.gif"id="smiley">无所谓啊，反正对外国人无感</p>
+
+<p>然后，你们又说Facebook、Twitter也不要访问了，上面的反动言论太多<img src="http://cubernet.cn/assets/smilies/37.gif"id="smiley">无所谓啊，反正我也没有外国朋友</p>
+
+<p>接着，包括Google在内的一大波常用网站开始沦陷，据说原因比较复杂，不能全怪GWF<img src="http://cubernet.cn/assets/smilies/7.gif"id="smiley">好吧，那我就勉强https访问谷歌香港呗，虽然好多博客访问不到了，至少还能访问Stack Overflow等等</p>
+
+<p>最后，你们连同Stack Overflow、github、谷歌学术一起封了<img src="http://cubernet.cn/assets/smilies/33.gif"id="smiley">我只想说一个程序猿讨论编程问题的地方、一个程序猿分享代码的地方、一个程序猿搜索论文的地方，你TMD封个蛋蛋！大家都是程序猿，相煎何太急。</p>
+
+<hr />
+
+<p>不知道别人是什么情况，反正我有一种良民被逼上梁山的感觉，我这个胖子也不得不开始翻墙。不过，我还是觉得GWF是有必要存在的，只是没必要这么过分。想到最近爆出的各种后门、漏洞，好多<code>专家</code>又开始建议什么政府级办公电脑要采用国产操作系统啦，相关人员不许使用iPhone啦等等<img src="http://cubernet.cn/assets/smilies/10.gif"id="smiley">。同样的道理，不是说不需要防范国外的软硬件，而是要有个度，毕竟国内在相关领域很多地方都还是空白。你说不用Windows，难道要用DOS？<img src="http://cubernet.cn/assets/smilies/21.gif"id="smiley">不对，好像DOS也不是国产的。师夷长技以制夷，闭关锁国，一步之遥。</p>
+
+<hr />
+
+<p>好了，牢骚发泄完了，下面进入正题。</p>
+
+<p>相信那些免费的翻墙软件大家都已经很熟悉了。相关的安装配置教程网上也是一搜一大把，这里就不再赘述。我想向大家推荐的是一个收费的VPN解决方案。相比于免费的翻墙工具，收费的不用担心流量、速度、稳定性等问题，个人觉得还是物有所值的。采用这套VPN及即将介绍的路由配置方法，可以达到国内国外网站访问VPN自动切换的效果，完全无感访问。<img src="http://cubernet.cn/assets/smilies/12.gif"id="smiley"></p>
+
+<p>大家点击这个链接<a href="http://gjsq.me/1915340"><strong>点击访问</strong></a>或者博客主页左侧栏中的购买按钮可以进入GreenVPN的主页进行了解或购买。算下来一个月大概十几块钱，前期注册即送200M体验流量，可以先体验后付费。</p>
+
+<p>通过下载这个脚本<a href="https://code.google.com/p/chnroutes/wiki/Usage"><strong>点击下载</strong></a>，可以让vpn客户端在进行连接的时候自动执行。通过这些路由脚本, 可以让用户在使用vpn作为默认网络网关的时候，不使用vpn进行对中国国内ip的访问，从而减轻vpn的负担，增加访问国内网站的速度。具体使用方法在下载页面有详细的说明，不同操作系统方法略有不同。</p>
+
+<hr />
+
+<p>有了这两个宝贝，从此便可以随意穿梭于墙里墙外了。友情提示，多读论文，少看小电影。当然，如果你觉得这个工具对你有用，建议点击我提供的链接访问GreenVPN进行购买，这样我会得到小额回报，就当是大家送我的二十二岁生日礼物了。<img src="http://cubernet.cn/assets/smilies/37.gif"id="smiley"></p>
 
 
   <p style="margin:20px 0; color:#9f9f9f; font-size:12px;">
-  <span>Posted by <a style="color:#9f9f9f;" href="http://weibo.com/luxaole"><strong>Cubernet</strong></a> - 2013-12-31</span><br>
+  <span>Posted by <a style="color:#9f9f9f;" href="http://weibo.com/luxaole"><strong>Cubernet</strong></a> - 2014-08-21</span><br>
   <span style="line-height:13px;">如需转载，请注明： 本文来自 <a style="color:#9f9f9f;" href="http://cubernet.cn"><strong>Cubernet's Blog</strong></a></span>
   </p>
 </div>
@@ -254,10 +303,10 @@ var jiathis_config = {data_track_clickback:'true'};
 <section class="pageselect">
 <br/>
 <span class="pre-span">  
-  <a  href="/Metasploit-6/" class="pageNav" >上一篇&nbsp;-&nbsp;Metasploit渗透测试相关(五)——社会工程学  </a>
+  <a  href="" >已经是第一篇 </a>
 </span>
 <span class="next-span">
-  <a  href="/Metasploit-4/" class="pageNav"  >下一篇&nbsp;-&nbsp;Metasploit渗透测试相关(三)——Web渗透 </a>
+  <a  href="/howbadyouwantit/" class="pageNav"  >下一篇&nbsp;-&nbsp;HOW BAD YOU WANT IT </a>
 </span>
 </section>
 
