@@ -791,6 +791,11 @@ article footer .tags:before {
 #sidebar .ad .button {
   width: 20%;
 }
+#sidebar .gostats .title {
+  height: 28px;
+  line-height: 28px;
+  font-size: 12px;
+}
 #sidebar .tagcloud .title {
   height: 28px;
   line-height: 28px;

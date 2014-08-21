@@ -1,16 +1,44 @@
 [
 	
 		{
-		  "title"    : "离别",
+		  "title"    : "HOW BAD YOU WANT IT",
 		  "categories" : "少壮不努力，老大写代码【成长记录篇】",
-		  "url"     : "/libie/",
-		  "date"     : " 2014年28月06日"
+		  "url"     : "/howbadyouwantit/",
+		  "date"     : " 2014年07月08日"
 		} ,
 	
 		{
-		  "title"    : "别离",
+		  "title"    : "【译】在iOS上以root身份运行守护进程",
+		  "categories" : "众里寻他千百度，蓦然回首，那人正在写代码【他山之石篇】",
+		  "url"     : "/rootdaemon/",
+		  "date"     : " 2014年06月08日"
+		} ,
+	
+		{
+		  "title"    : "Theos介绍",
+		  "categories" : "春眠不觉晓，醒来写代码【去粗取精篇】",
+		  "url"     : "/theos1/",
+		  "date"     : " 2014年05月08日"
+		} ,
+	
+		{
+		  "title"    : "博客再次更换主题",
+		  "categories" : "子在川上曰：我在写代码【动手动脚篇】",
+		  "url"     : "/another-new-theme/",
+		  "date"     : " 2014年03月08日"
+		} ,
+	
+		{
+		  "title"    : "时光不老，我们不散",
 		  "categories" : "少壮不努力，老大写代码【成长记录篇】",
 		  "url"     : "/bieli/",
+		  "date"     : " 2014年28月07日"
+		} ,
+	
+		{
+		  "title"    : "离别",
+		  "categories" : "少壮不努力，老大写代码【成长记录篇】",
+		  "url"     : "/libie/",
 		  "date"     : " 2014年28月06日"
 		} ,
 	

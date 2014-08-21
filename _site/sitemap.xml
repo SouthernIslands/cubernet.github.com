@@ -81,14 +81,34 @@
         <loc>http://cubernet.cn/page2/index.html</loc>
     </url>
     
+    <url>
+        <loc>http://cubernet.cn/page3/index.html</loc>
+    </url>
+    
 
     
     <url>
-        <loc>http://cubernet.cn/libie/</loc>
+        <loc>http://cubernet.cn/howbadyouwantit/</loc>
+    </url>
+    
+    <url>
+        <loc>http://cubernet.cn/rootdaemon/</loc>
+    </url>
+    
+    <url>
+        <loc>http://cubernet.cn/theos1/</loc>
+    </url>
+    
+    <url>
+        <loc>http://cubernet.cn/another-new-theme/</loc>
     </url>
     
     <url>
         <loc>http://cubernet.cn/bieli/</loc>
+    </url>
+    
+    <url>
+        <loc>http://cubernet.cn/libie/</loc>
     </url>
     
     <url>

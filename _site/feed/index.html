@@ -4,11 +4,523 @@
         xmlns:atom="http://www.w3.org/2005/Atom"
   >
   <channel>
-    <title>Cubernet'Blog</title>
+    <title>Cubernet's Blog</title>
     <link href="http://cubernet.cn/feed/" rel="self" />
     <link href="http://cubernet.cn" />
-    <lastBuildDate>2014-08-04T06:48:29+08:00</lastBuildDate>
+    <lastBuildDate>2014-08-21T10:24:01+08:00</lastBuildDate>
     <webMaster>luxaole@gmail.com</webMaster>
+    
+    <item>
+      <title>HOW BAD YOU WANT IT</title>
+      <link href="http://cubernet.cn/howbadyouwantit/"/>
+      <pubDate>2014-08-07T00:00:00+08:00</pubDate>
+      <author>Cubernet</author>
+      <guid>http://cubernet.cn/howbadyouwantit</guid>
+      <content:encoded><![CDATA[<p><img src="/assets/images/2014-08-07-howbadyouwantit.jpeg" alt="image" /></p>
+
+<blockquote><p>Where all you wanna do is be successful as bad as you wanna breathe,then you will be successful.——HOW BAD YOU WANT IT</p></blockquote>
+
+<!-- more -->
+
+
+<p>这两个视频在手机中陪伴了我很多年。</p>
+
+<p>时不时拿出来看一看，告诉自己，要做的还有很多。</p>
+
+<p>越成功的人的背后一定越有超越常人的付出和努力，与种族、肤色无关，与国籍、政策无关，与智力、性格无关，我始终坚信这一点。</p>
+
+<p>所以我一直提醒自己，</p>
+
+<p>做一个能够看到别人背后辛勤付出的人，</p>
+
+<p>然后做一个他们这样的人。</p>
+
+<hr />
+
+<h2>HOW BAD YOU WANT IT</h2>
+
+<center><embed src="http://player.youku.com/player.php/sid/XNjEyMjYyODk2/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed></center>
+
+
+<h2>HOW BAD YOU WANT IT Ⅱ</h2>
+
+<center><embed src="http://player.youku.com/player.php/sid/XNTQ2MzMwOTY0/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed></center>
+
+
+<p>或者说是深思熟虑了好久，亦或仅仅是三个年轻人的一时兴起，iOS小组成立了。</p>
+
+<p>也许在之后的日子里，当我们看着一堆反编译代码很久很久却依然毫无头绪时，<img src="http://cubernet.cn/assets/smilies/7.gif"id="smiley"></p>
+
+<p>我们能做的，</p>
+
+<p>只能是把它做的更好。</p>
+
+<p>HOW BAD YOU WANT IT，</p>
+
+<p>我们不能放弃。</p>
+
+<hr />
+
+
+<p>记得有一次周末来实验室，看到师兄一个人在学习，便问他怎么不去陪女朋友。</p>
+
+<p>他说，“科研注定是孤独的。”</p>
+
+<p>也对。<img src="http://cubernet.cn/assets/smilies/12.gif"id="smiley"></p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>【译】在iOS上以root身份运行守护进程</title>
+      <link href="http://cubernet.cn/rootdaemon/"/>
+      <pubDate>2014-08-06T00:00:00+08:00</pubDate>
+      <author>Cubernet</author>
+      <guid>http://cubernet.cn/rootdaemon</guid>
+      <content:encoded><![CDATA[<p><img src="/assets/images/2014-08-06-rootdaemon.png" alt="image" /></p>
+
+<p><a href="http://bbs.iosre.com/forum.php?mod=viewthread&amp;tid=204&amp;page=1&amp;extra=#pid1096">原文地址</a>：http://bbs.iosre.com/forum.php?mod=viewthread&amp;tid=204&amp;page=1&amp;extra=#pid1096</p>
+
+<p>作者：snakeninny</p>
+
+<p>感谢snakeninny提供的优质文章。</p>
+
+<p>这篇文章在我最近项目的完成过程中给予了很大的帮助，特在此表示感谢，并翻译之。</p>
+
+<!-- more -->
+
+
+<p>下面是译文内容：</p>
+
+<h2>第一部分 基础理论</h2>
+
+<ol>
+<li><p>守护进程</p>
+
+<p> 什么是守护进程？根据<a href="http://http:en.wikipedia.org/wiki/Daemon">wikipedia</a>的解释，守护进程是一个运行在计算机后台、不受前台用户交互影响的进程。通常，守护进程以字母<code>d</code>结尾，例如，syslogd是处理系统日志的后台进程，sshd是处理SSH链接请求服务的进程。你可以以<code>backboardd</code>,<code>mediaserverd</code>,<code>apsd</code>等 来命名iOS上的其他后台进程。 后台进程是由iOS上的第一个进程<code>launchd</code>启动的，launchd是开机时启动的第一个进程。那么守护进程能做什么呢？“它可以为网络请求，硬件活动以及一些处理其他任务的程序提供后台服务”。<strong>注意：以root身份运行的后台进程功能非常强大，并且非常隐蔽，很多时候也许超级管理员都不知道有一些后台进程在偷偷运行。所以，一些恶意软件就是以后台进程的形式存在的。这篇文章只是用来交流学习，如果你去做非法的事情，后果自负。</strong></p></li>
+<li><p>守护进程的所有者</p>
+
+<p> 守护进程是由launchd启动，通过“launchctl”命令加载配置文件。我们要特别注意在这个<a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/launchctl.1.html">查询手册</a>中提到的，“LaunchAgents启动加载的每个配置文件必须属于启动加载它们的用户。所有的系统后台进程必须属于root用户。”配置文件不可以是属于“group-”或者任何人可写。这些限制是出于安全考虑，因为如果一个启动配置文件是任何人可写的话，那么就有可能出现在程序启动时配置文件被恶意修改的情况。因为后台进程是由launchd启动的，所以它应该属于root:wheel：</p>
+
+<pre><code> FunMaker-5:~ root# ls -l /sbin/launchd
+ -r-xr-xr-x 1 root wheel 154736 Nov  8  2013 /sbin/launchd
+</code></pre></li>
+</ol>
+
+
+<h2>第二部分 组成</h2>
+
+<p>正如在《iOS应用逆向工程》一书中提到的那样，后台进程包括两个部分，一个可执行的二进制文件和一个配置plist配置文件。下面，让我们利用Theos来创建一个可执行二进制文件：</p>
+
+<pre><code>snakeninnys-MacBook:Code snakeninny$ /opt/theos/bin/nic.pl
+NIC 2.0 - New Instance Creator
+------------------------------
+[1.] iphone/application
+[2.] iphone/cydget
+[3.] iphone/framework
+[4.] iphone/library
+[5.] iphone/notification_center_widget
+[6.] iphone/preference_bundle
+[7.] iphone/sbsettingstoggle
+[8.] iphone/tool
+[9.] iphone/tweak
+[10.] iphone/xpc_service
+Choose a Template (required): 8
+Project Name (required): rootdaemond
+Package Name [com.yourcompany.rootdaemond]: com.iosre.rootdaemond
+Author/Maintainer Name [snakeninny]: snakeninny
+Instantiating iphone/tool in rootdaemond/...
+Done.
+</code></pre>
+
+<p>然后修改main.mm文件的内容：</p>
+
+<pre><code>static void Reboot(CFNotificationCenterRef center, void *observer, CFStringRef name, const  void *object, CFDictionaryRef userInfo)
+{
+        NSLog(@"iOSRE: reboot");
+        system("reboot");
+}
+
+int main(int argc, char **argv, char **envp)
+{
+        NSLog(@"iOSRE: rootdaemond is launched!");
+        CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, Reboot, CFSTR("com.iosre.rootdaemon.reboot"), NULL,  CFNotificationSuspensionBehaviorCoalesce);
+        CFRunLoopRun(); // keep it running in background
+        return 0;
+}
+</code></pre>
+
+<p>现在，让我们处理配置文件。以“com.iosre.rootdaemond.plist”为文件名新建文件，然后将下面的代码写入文件中：</p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/    PropertyList-1.0.dtd"&gt;
+&lt;plist version="1.0"&gt;
+&lt;dict&gt;
+        &lt;key&gt;KeepAlive&lt;/key&gt;
+        &lt;true/&gt;
+        &lt;key&gt;Label&lt;/key&gt;
+        &lt;string&gt;com.iosre.rootdaemond&lt;/string&gt;
+        &lt;key&gt;Program&lt;/key&gt;
+        &lt;string&gt;/usr/bin/rootdaemond&lt;/string&gt;
+        &lt;key&gt;RunAtLoad&lt;/key&gt;
+        &lt;true/&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;
+</code></pre>
+
+<p>在这些键值对当中，<code>Label</code>键对应的是一个可以唯一标示你的后台进程的字符串，<code>Program</code>键对应的是可执行文件所在位置的绝对路径，这两个都是必填的。如果你的后台进程还有其他的参数，那么只需要在文件中增加类似下面这样的键值对即可：</p>
+
+<pre><code>&lt;key&gt;ProgramArguments&lt;/key&gt;
+ &lt;array&gt;
+        &lt;string&gt;arg1&lt;/string&gt;
+        &lt;string&gt;arg2&lt;/string&gt;
+        &lt;string&gt;more args...&lt;/string&gt;
+    &lt;/array&gt;
+</code></pre>
+
+<p>在完成了这些之后，我们把这个配置文件保存在项目根目录下的/layout/Library/System/文件夹中。现在，我们的项目树看上去是这个样子的：</p>
+
+<p><img src="/assets/images/2014-08-06-rootdaemon2.png" alt="image" /></p>
+
+<p>执行<code>make package</code>命令，然后检查deb所属的用户：</p>
+
+<pre><code>snakeninnys-MacBook:rootdaemond snakeninny$ dpkg-deb -c /Users/snakeninny/Code/ rootdaemond/com.iosre.rootdaemond_1.0-1_iphoneos-arm.deb 
+drwxr-xr-x snakeninny/staff  0 2014-05-11 15:52 ./
+drwxr-xr-x snakeninny/staff  0 2014-05-11 14:45 ./Library/
+drwxr-xr-x snakeninny/staff  0 2014-05-11 15:48 ./Library/LaunchDaemons/
+-rwxr-xr-x snakeninny/staff 367 2014-05-11 15:37 ./Library/LaunchDaemons/   com.iosre.rootdaemond.plist
+drwxr-xr-x snakeninny/staff   0 2014-05-11 15:52 ./usr/
+drwxr-xr-x snakeninny/staff   0 2014-05-11 15:52 ./usr/bin/
+-rwxr-xr-x snakeninny/staff 197984 2014-05-11 15:52 ./usr/bin/rootdaemond
+</code></pre>
+
+<p>可以看到，deb中的所有文件都是属于snakeninny:staff的。还记得在第一部分中提到，后台进程必须属于root用户吗？所以，这个后台进程所属的用户不对，当你运行时将会报错。</p>
+
+<p>这是为什么呢？因为这个deb文件是在OSX上打包的，所以它所属的用户就是snakeninny。为了将它的所属用户改为root:wheel，我们需要一个叫做<a href="https://github.com/DHowett/fauxsu">fauxsu</a>的工具。下载这个工具，将解压得到的fauxsu和libfauxsu.dylib复制到<code>$THEOS/bin/</code> 目录下，然后运行<code>chmod a+x</code>。重新打包检查一次：</p>
+
+<pre><code>snakeninnys-MacBook:rootdaemond snakeninny$ dpkg-deb -c /Users/snakeninny/Code/ rootdaemond/com.iosre.rootdaemond_1.0-2_iphoneos-arm.deb 
+drwxr-xr-x root/wheel        0 2014-05-11 16:05 ./
+drwxr-xr-x root/wheel        0 2014-05-11 14:45 ./Library/
+drwxr-xr-x root/wheel        0 2014-05-11 15:48 ./Library/LaunchDaemons/
+-rwxr-xr-x root/wheel      367 2014-05-11 15:37 ./Library/LaunchDaemons/    com.iosre.rootdaemond.plist
+drwxr-xr-x root/wheel        0 2014-05-11 16:05 ./usr/
+drwxr-xr-x root/wheel        0 2014-05-11 16:05 ./usr/bin/
+-rwxr-xr-x root/wheel   197984 2014-05-11 16:05 ./usr/bin/rootdaemond
+</code></pre>
+
+<p>现在，文件所属用户是正确的了。执行<code>make install</code>来安装这个后台进程：</p>
+
+<pre><code>snakeninnys-MacBook:rootdaemond snakeninny$ make install
+install.exec "cat &gt; /tmp/_theos_install.deb; dpkg -i /tmp/_theos_install.deb &amp;&amp; rm /tmp/    _theos_install.deb" &lt; "./com.iosre.rootdaemond_1.0-2_iphoneos-arm.deb"
+Selecting previously deselected package com.iosre.rootdaemond.
+(Reading database ... 2589 files and directories currently installed.)
+Unpacking com.iosre.rootdaemond (from /tmp/_theos_install.deb) ...
+Setting up com.iosre.rootdaemond (1.0-2) ...
+</code></pre>
+
+<h2>第三部分 测试</h2>
+
+<p>重启手机检查后台进程是否启动：</p>
+
+<pre><code>FunMaker-5:~ root# reboot
+FunMaker-5:~ root# Connection to 192.168.1.101 closed by remote host.
+Connection to 192.168.1.101 closed.
+snakeninnys-MacBook:Code snakeninny$ ssh root@192.168.1.101
+FunMaker-5:~ root# grep iOSRE /var/log/syslog
+May 11 16:14:01 FunMaker-5 rootdaemond[20]: iOSRE: rootdaemond is launched!
+FunMaker-5:~ root# ps -e | grep rootdaemond
+  20 ??         0:00.13 /usr/bin/rootdaemond
+370 ttys000    0:00.01 grep rootdaemond
+FunMaker-5:~ root#
+</code></pre>
+
+<p>我们可以看到，rootdaemond开机自动启动，并且保持在后台运行。最后，我们检查一下它是否在像预期的那样运行：</p>
+
+<pre><code>// compile: clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -o iOSRERootDaemonTester -arch armv7 /Users/snakeninny/main.mm
+
+#include &lt;notify.h&gt;
+
+int main(int argc, char **argv)
+{
+        notify_post("com.iosre.rootdaemon.reboot");
+        return 0;
+}
+</code></pre>
+
+<p>用scp命令将iOSRERootDaemonTester复制到iOS上，然后运行：</p>
+
+<pre><code>snakeninnys-MacBook:~ snakeninny$ scp iOSRERootDaemonTester root@192.168.1.101:/var/tmp/
+iOSRERootDaemonTester                         100%   48KB  48.3KB/s   00:00    
+FunMaker-5:~ root# /var/tmp/iOSRERootDaemonTester
+FunMaker-5:~ root# Connection to 192.168.1.101 closed by remote host.
+Connection to 192.168.1.101 closed.
+snakeninnys-MacBook:Code snakeninny$ ssh root@192.168.1.101
+FunMaker-5:~ root# grep iOSRE /var/log/syslog
+May 11 16:36:01 FunMaker-5 rootdaemond[20]: iOSRE: reboot
+May 11 16:36:58 FunMaker-5 rootdaemond[20]: iOSRE: rootdaemond is launched!
+FunMaker-5:~ root#
+</code></pre>
+
+<p>它神奇的运行了。</p>
+
+<h2>第四部分 结论</h2>
+
+<p>事实上，在iOS或者OSX上，后台进程和代理程序远比这篇文章中描述的要复杂的多。我强烈建议大家看一下下面相关的文章。再次强调，后台进程是一个强大的工具，但它是一把双刃剑，在你决定使用它之前，你最好非常了解自己接下来将要做什么，然后小心的使用它。谢谢阅读。</p>
+
+<p>相关阅读：</p>
+
+<ol>
+<li>http://en.wikipedia.org/wiki/Daemon_(computing)</li>
+<li>https://www.chrisalvares.com/blog/7/creating-an-iphone-daemon-part-1/</li>
+<li>https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/launchctl.1.html</li>
+<li>https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html</li>
+<li>https://developer.apple.com/library/mac/documentation/Darwin/Reference/Manpages/man5/launchd.plist.5.html</li>
+</ol>
+
+
+<p>2014.5.22注：
+com.iosre.rootdaemond.plist文件必须拥有644权限，否则示例后台进程将不会运行。</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Theos介绍</title>
+      <link href="http://cubernet.cn/theos1/"/>
+      <pubDate>2014-08-05T00:00:00+08:00</pubDate>
+      <author>Cubernet</author>
+      <guid>http://cubernet.cn/theos1</guid>
+      <content:encoded><![CDATA[<p><img src="/assets/images/2014-08-05-theos1.jpg" alt="image" /></p>
+
+<p>最近由于工作原因，需要了解iOS越狱开发相关的一些技术。之前虽然有接触过iOS开发，不过都是基于苹果公开的API，相对于越狱开发还是一头雾水。于是打开Google，开始找寻我需要的资料。经过一段时间的查阅，发现iOS越狱开发相关的资料实在太少，并且比较杂乱，甚至即使在安装时遇到的问题都要花费很长的时间去搜索解决办法。虽说现在项目已经接近尾声，当初的很多步骤细节已经记得不清楚，不过我还是尽力回顾整理一下，对自己来说是一种知识的巩固，或许还能帮上别人的一点小忙。</p>
+
+<!-- more -->
+
+
+<h2>开发环境</h2>
+
+<p>首先，要开启一段iOS越狱开发之旅的你，最好有一定的Objective-C基础，Objective-C是苹果开发的唯一官方语言，虽说越狱开发也可以采用Lua语言开发的Wax框架，但我相信了解Objective-C总归不是一件坏事。</p>
+
+<p>其次，如果你有一台Mac，那么基本的开发环境以及iOS的SDK都会随着XCode的安装而解决。如果你是一位Linux上的geek，那么你只需要运行这段脚本【<a href="http://https://gist.github.com/kirb/2353599">点击下载</a>】，就可以安装Toolchain和Theos来完成基本开发环境的搭建。如果你是Windows的fans，那……暂时我还没找到解决办法。</p>
+
+<p>由于我是在Mac上进行的开发，所以下面的内容都是默认在Mac上。</p>
+
+<h2>常用框架</h2>
+
+<p>iOS越狱开发常用的框架有两个，一个是Theos；</p>
+
+<blockquote><p>Theos is a cross-platform suite of development tools for managing, developing, and deploying iOS software without the use of Xcode.——iphonedevwiki</p>
+
+<p>Theos是一个跨平台的开发工具套件，用于在没有Xcode的情况下管理、开发、部署iOS软件。——iphonedevwiki</p></blockquote>
+
+<p>另外一个是iOSOpenDev。</p>
+
+<blockquote><p>iOSOpenDev is an open-source project that sets up the iOS SDK to allow open development in Xcode of jailbreak-type projects not supported nor allowed by default and provides Xcode templates for building common jailbreak-type projects and the various tools needed for such development.——iphonedevwiki</p>
+
+<p>iOSOpenDev是一个开源项目，它使开发者可以在Xcode中开发默认情况下不支持的越狱项目，并且提供越狱开发中需要的模板和工具。——iphonedevwiki</p></blockquote>
+
+<p>以上是这两款工具在iphonedevwiki中给出的解释以及我个人的翻译。简单点说，采用Theos开发时需要自己管理makefile文件等，界面没有在Xcode中友好；iOSOpenDev则是基于Xcode创建模板和编译打包，对于不熟悉makefile的同学可能更倾向使用它。不过我本人更喜欢Theos，感觉更高效直观，而且在安装iOSOpenDev时遇到一系列未知错误，好像是和OS X及Xcode的版本相关，所以一直在用Theos，虽然我也不熟悉makefile，活到老学到老嘛：）。</p>
+
+<h2>Theos安装及使用</h2>
+
+<p>说了这么多，下面开始看下Theos的安装及使用。</p>
+
+<p>从Theos的库中下载框架到本地：</p>
+
+<pre><code>git clone https://github.com/DHowett/theos /opt/theos
+</code></pre>
+
+<p>你可以将其保存在本地的任何位置，不过推荐使用默认的/opt/theos。</p>
+
+<p>除此之外，你还需要安装<code>ldid</code>和<code>dpkg</code>，这两个工具是签名和打包时必须的。推荐通过Macports安装dpkg：</p>
+
+<pre><code>sudo port install dkpg
+</code></pre>
+
+<p>默认的Theos中，很多苹果私有的头文件都没有包含在下载包中，这时推荐下载rpetrich已经打包好的头文件库（当然也可以用class-dump自己去获取），下载好解压在<code>$THEOS/include</code>文件夹下即可。<a href="https://github.com/rpetrich/iphoneheaders">点击下载</a></p>
+
+<p>这时就可以开始我们的第一个Theos应用了。</p>
+
+<ul>
+<li><p>设置环境变量：</p>
+
+<pre><code>  export THEOS=/opt/theos
+</code></pre></li>
+<li><p>进入存放项目的文件夹下，创建示例工程：</p>
+
+<pre><code>  $THEOS/bin/nic.pl
+</code></pre></li>
+<li><p>这时需要我们选择使用哪种模板：</p>
+
+<pre><code>  application--&gt; 普通的应用程序
+  library--&gt;库文件
+  preference_bundle--&gt;设置束
+  tool --&gt;后台程序
+  tweak--&gt;外挂程序
+</code></pre></li>
+<li><p>之后输入工程名、包名等参数即可完成初始化工作。</p></li>
+<li>网上有很多tweak程序的helloworld版本，即在开机时弹出一个框，显示helloworld，大家可以google一下。</li>
+<li>在编码完成之后就可以编译打包然后安装到手机上测试了。</li>
+<li><p>如果你的测试iPhone上安装了ssh，那么只需要在makefile或者系统变量中添加THEOS_DEVICE_IP=192.168.x.xxx（你的IP），然后执行下面这条命令就可以自动完成编译、打包、安装了：</p>
+
+<pre><code>  make package install
+</code></pre></li>
+</ul>
+
+
+<p>这时会提示你输入ssh密码，默认的密码是<code>alpine</code>。</p>
+
+<p>Theos默认的要求非常严格，经常会因为warning而报错，无法安装测试。这时在makefile头部添加'GO_EASY_ON_ME=1'即可。</p>
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>博客再次更换主题</title>
+      <link href="http://cubernet.cn/another-new-theme/"/>
+      <pubDate>2014-08-03T00:00:00+08:00</pubDate>
+      <author>Cubernet</author>
+      <guid>http://cubernet.cn/another-new-theme</guid>
+      <content:encoded><![CDATA[<p><img src="/assets/images/2014-08-03-anothernewtheme.png" alt="image" /></p>
+
+<p>无意中看到<a href="http://esoftmobile.com">esoftmobile</a>的博客，对他的博客主题有种一见钟情的感觉，可惜到github上一看源码才发现，原来esoftmobile是基于node.js来实现的那套主题。由于实在喜爱，虽夜已深，但决定模仿那个主题，自己操刀仿一个过来。</p>
+
+<!-- more -->
+
+
+<p>说干就干。由于之前自己亲手做过一个主题，所以对jekyll的这一套东西已经比较熟悉，噼里啪啦在键盘上乱敲了一顿之后，cmd+R，我看着屏幕笑了笑，已经达到我预期的效果了。</p>
+
+<p>这时再抬起头，发现不知道什么时候已然天亮。</p>
+
+<p>手上的bong开始震动，提醒我该起床了。=_=</p>
+
+<p>这套模板在模仿esoftmobile主题的基础上又做了些许的修改，如果有喜欢之前那套主题的同学(样式见这篇<a href="http://cubernet.github.io/new-theme/">博文</a>的截图)可以从github上下载我博客源码，用_layout目录下标注<code>备份</code>的文件替换在用的文件即可。这个主题做的修改大概包括：</p>
+
+<ul>
+<li>在色调和布局上较之前做了很大改动；</li>
+<li>增加了首页<code>显示更多</code>功能；</li>
+<li>去掉了博文目录的悬浮导航；</li>
+<li>保留了背景音乐播放器，如果有背景音乐的文章，在文章题目下有背景音乐<code>PLAY</code>字样，点击可播放；</li>
+<li>增加了对<code>友言</code>评论插件的支持，在设置中可以切换选择使用'友言'或<code>多说</code>或<code>disqus</code>；</li>
+<li>去掉了<code>分享</code>按钮；</li>
+<li>访问统计由<code>百度统计</code>改为<code>gostats</code>(不过访问统计被清零了，好伤心T T)；</li>
+</ul>
+
+
+<hr />
+
+<p>8月7日更新：</p>
+
+<ul>
+<li>增加了洋葱头表情 <img src="http://cubernet.cn/assets/smilies/10.gif"id="smiley"></li>
+<li>to be continued...💪💪💪</li>
+</ul>
+
+]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>时光不老，我们不散</title>
+      <link href="http://cubernet.cn/bieli/"/>
+      <pubDate>2014-07-28T00:00:00+08:00</pubDate>
+      <author>Cubernet</author>
+      <guid>http://cubernet.cn/bieli</guid>
+      <content:encoded><![CDATA[<p><img src="/assets/images/2014-06-28-bieli.png" alt="image" /></p>
+
+<blockquote><p>人生浪急滩险
+走来不易
+最后值得珍重的
+不过是你我的情义</p>
+
+<p>——祝小兔</p></blockquote>
+
+<!-- more -->
+
+
+<p>这篇文章本来是<a href="http://cubernet.github.io/libie">离别</a>的姊妹篇，从url链接中也看的出来，原准备的名字叫<code>别离</code>。当初觉得，毕业了，有聚有散，有人离开，也有人归来。相同的两个字，次序不同，意义竟也不同。</p>
+
+<p>某人<img src="http://cubernet.cn/assets/smilies/14.gif"id="smiley">当时看了文章后问我，为什么没有提及她。其实，那些没有被提及的，不是因为在我本科的四年生活中毫无分量，而是因为，你们不在我离别的<code>队列</code>里。<img src="http://cubernet.cn/assets/smilies/32.gif"id="smiley">好吧，我承认程序猿的本质被我暴露了。</p>
+
+<p>后来想想，别离或许不能准确表达我内心的想法，所以将题目改成现在的这个。【背景音乐也非常的切题 :) 】</p>
+
+<hr />
+
+<p>这个暑假没有回家，于是也亲身经历了一把“辞旧迎新”的感觉。整个夏天校园里都时不时会有家长出现，最初是来参加孩子毕业典礼的家长，后来是带孩子提前来熟悉校园的家长。食堂一如既往的开始翻修。Oh，不，准确的说是食堂外围开始翻修，这样新生到来时，不至于输在第一印象上。那条黑色的狗依然每天在主楼前面乘凉，而我们的生活却一直没有止步。</p>
+
+<hr />
+
+<p>肉肉同学结束了一个月的博士楼生活，搬进了单位的职工宿舍。不舍的情绪就像空气一样弥漫在身边，但似乎又不容易那么被发现。刚搬走的那几天，只是突然的不想说话。晚上开门回去，总下意识地觉得进错了家。那声“你回来啦”，听不到了。</p>
+
+<p>不舍却也欣慰。</p>
+
+<p>因为我终于看到她在这片现在还既不属于我更不属于她的土地上，重新有了自己的朋友圈，有了自己的工作，有了自己的轨迹。在那些被爱情滋润不到的地方，这一次，重新被填满了。</p>
+
+<p>除了欣慰，更多的是感动。</p>
+
+<p>前几天在空间里看到羊蛋和小波快结婚了。很替他们高兴。我只想说，我想回去参加你们的婚礼。这样的婚姻是被祝福的。正如肉肉一无反顾的来到成都，对我来说，不仅仅是感动，更是一种钦佩，或者，更是一种责任。</p>
+
+<p>这种责任不是拿来在类似于父亲节给叔叔发的短信里一样用来口头承诺的。我更愿意用行动去证明。</p>
+
+<p>当然啦，平淡的生活总归需要一些小矛盾来调节一下。有时候双方实在找不到什么毛病，就会因为一些党派立场、民族大义的问题产生争执。这个时候，争执的内容和结果早已不重要，安心“享受”过程。<img src="http://cubernet.cn/assets/smilies/28.gif"id="smiley"></p>
+
+<p>哈哈，开玩笑啦。毕竟和谐社会，还是和谐点好。</p>
+
+<p>总之，很幸运能遇到一个愿意付出这么多也这么优秀的你，可能所有程序猿的共同特点的都是嘴笨心细，很多话很多事都一直呆呆的藏在心里。我们一起吃遍成都的大街小巷，一起体验生活中的各种点点滴滴。</p>
+
+<p>爷爷在短信里说，你们会很幸福。<img src="http://cubernet.cn/assets/smilies/1.gif"id="smiley"></p>
+
+<p>我也这么觉得。</p>
+
+<hr />
+
+<p>记得肉肉同学去参加同事聚会的那天晚上，无意打开微信刷新一下，看见阿姨十二点半还在更新状态。</p>
+
+<p>可怜天下父母心啊。</p>
+
+<p>因为今年暑假没回去，爸爸妈妈决定过来找我。</p>
+
+<p>想想我一年轻汉子在屋里吹空调，让两位长辈不远千里过来看我，心里还是有一种说不出来的滋味。</p>
+
+<p>不仅仅是激动和开心。</p>
+
+<p>不知出于何种目的<img src="http://cubernet.cn/assets/smilies/30.gif"id="smiley">，也不知是经过何种途径<img src="http://cubernet.cn/assets/smilies/23.gif"id="smiley">，更不知是因为哪次比赛<img src="http://cubernet.cn/assets/smilies/32.gif"id="smiley">，毕业之后，家里莫名收到学校发来祝贺我信安大赛获奖的喜报。</p>
+
+<p>当然，这里想说的重点是，爸爸在空间里发的一段话。</p>
+
+<p>也许还是在谈高考的事情？说实话我也就是在当时知道成绩的那几天郁闷了一下，很快就坦然了。感觉当年高中的成绩就好像现在的房价，虽然虚高不下，但终归有遭不住的一天，回归到本来的面目。电子科大是我很好的选择，这也是为什么四年后我再次选择它的原因。</p>
+
+<p>这里很适合我。</p>
+
+<p>我很喜欢这里。</p>
+
+<p>亦或是因为在我身上的期望太大了？那就待我负重远行一万里，让你们扬眉吐气。</p>
+
+<hr />
+
+<p>最近一直处于一种焦躁的忙碌中。所谓忙碌，是因为觉得自己有很多事情要做。而所谓焦躁，是因为自己不知道该不该去做。</p>
+
+<p>最终还是在没有任何老师或者学长的指导下，凭自己的判断和喜好定了博士期间的方向。定之前的那几天想了很多，经常一整个晚上一整个晚上的处于写代码、看书、思考的循环中，一不小心就天亮了，然后抱着地主头眯上一会儿，起来去实验室。我给自己选择了一个别人眼中最痛苦的方向，也不知道自己能不能坚持下去。跟很多人聊天，大家都说这个方向可能根本就没什么论文可发。</p>
+
+<p>但，这又怎样呢？</p>
+
+<p>我还是义无返顾的选择了。</p>
+
+<p>另外两位小伙伴的加入给了我信心，我也相信我自己可以坚持。</p>
+
+<p>今天中午碰巧和陈博士一起吃饭。</p>
+
+<p>路上我问，博士，你这么优秀的秘诀是什么？</p>
+
+<p>他说，找准一个方向，然后猛操，不要想太多。</p>
+
+<p>那一刻，觉得暗淡了这么久的天，</p>
+
+<p>晴了。</p>
+
+<p>我想，我等的，就是这么一句话。</p>
+
+<p>我想，等我的，也是这么一句话。</p>
+
+<p><img src="http://cubernet.cn/assets/smilies/12.gif"id="smiley"></p>
+]]></content:encoded>
+    </item>
     
     <item>
       <title>离别</title>
@@ -35,7 +547,7 @@
 
 <hr />
 
-<h4>回忆篇</h4>
+<h2>回忆篇</h2>
 
 <p>四年前，迎新的校车把我从火车站接到了学校，下车的第一眼看到的是学生活动中心，不知为何，当时给了我极差的第一印象。第一个晚上一个人睡在寝室里，满脑子想的都是要不回去补习吧，明年换个学校。。。不过后来一想，既来之则安之，时间久了说不定会慢慢发现它的好。果然现在觉得它其实还不错。是的，我现在觉得<code>电子科技大学</code>还不错，虽然它依旧听起来像个专科。</p>
 
@@ -71,7 +583,7 @@
 
 <p>好像回忆的有些久远了，又好像都是最近的事，脑子乱了，就不去想它了。</p>
 
-<h4>感谢篇</h4>
+<h2>感谢篇</h2>
 
 <p>好像只有那些取得卓越成就的人才有资格说，感谢谁谁谁曾经对我的帮助，才使得我取得今天的成就。</p>
 
@@ -83,7 +595,7 @@
 
 <p>感谢跟我室友过或者同学过的人，我是个喜欢懒床翘课毛病多的人，感谢你们帮我签到喊我上课替我考试代我买票，没有你们，我一个人走不到今天。</p>
 
-<h4>遗憾篇</h4>
+<h2>遗憾篇</h2>
 
 <p>任何一段时间中，总会有一些遗憾。</p>
 
@@ -106,22 +618,6 @@
 <p>今天去领博士通知书，老师再三核对照片来确认是否来本人带领，边看边说，“怎么感觉你好小啊，是本人吗？”</p>
 
 <p>我在心中默念，我是还小啊，因为未来的路还长。</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>别离</title>
-      <link href="http://cubernet.cn/bieli/"/>
-      <pubDate>2014-06-28T00:00:00+08:00</pubDate>
-      <author>Cubernet</author>
-      <guid>http://cubernet.cn/bieli</guid>
-      <content:encoded><![CDATA[<p><img src="/assets/images/2014-06-28-bieli.jpg" alt="image" /></p>
-
-<p>一口气写完了《离别》，回过头看，好多想说的貌似都忘记提到了。不过本着不要在意这些细节的原则，我就不一点一点修改原文了。</p>
-
-<p>至于这篇文章的内容，想必心细的同学已经发现之前的文章里有一些人一些事没有提到。没错，那就是这篇的主要内容。</p>
-
-<p>（未完待续。。。）</p>
 ]]></content:encoded>
     </item>
     
@@ -209,15 +705,15 @@
 
 <p>下面进入今天的正题，谈谈平时常见的几种编码。</p>
 
-<h4>URL编码</h4>
+<h2>URL编码</h2>
 
-<h4>Unicode编码</h4>
+<h2>Unicode编码</h2>
 
-<h4>HTML编码</h4>
+<h2>HTML编码</h2>
 
-<h4>Base64编码</h4>
+<h2>Base64编码</h2>
 
-<h4>十六进制编码</h4>
+<h2>十六进制编码</h2>
 
 <p>许多应用程序在传送二进制数据时直接使用十六进制编码，用ASCII字符表示十六进制数据块。</p>
 
@@ -279,7 +775,7 @@
 
 <hr />
 
-<h4>卸载360</h4>
+<h2>卸载360</h2>
 
 <p>当初为了省事，越狱后直接安装了360，一些常用的功能都已经集成。但说实话，其实很多功能我都没有用，那么当我内存吃紧的时候，当然要吧这些无用的插件删除了。不过360不提供定制功能，只好把它整个卸载。【这里没有黑360的意思，360的垃圾短信过滤还是做得很不错的，我至今也没有找到一款在这方面可以相媲美的插件，如果你们知道，欢迎告诉我：）】</p>
 
@@ -287,7 +783,7 @@
 
 <p>手机用久了，就会产生很多的系统垃圾，包括很多缓存文件、日志文件等。隔一段时间清理一下，就当是给系统洗洗澡啦。</p>
 
-<h4>把系统语言设置为英文</h4>
+<h2>把系统语言设置为英文</h2>
 
 <p>把系统语言设置为英文后，打开AppStore和Cydia的速度简直快的让人不敢相信。当然，打开很多其他系统应用的速度都有明显改善。</p>
 
@@ -305,11 +801,11 @@
 
 <p>当然，如果你觉得自己无法适应一个英文版的操作系统。那。。。那你一定是土豪，恩。土豪直接换手机就好啦。</p>
 
-<h4>安装一款电池保护软件</h4>
+<h2>安装一款电池保护软件</h2>
 
 <p>现在有很多电池保护软件，个人感觉差别都不是很大，选择一款你喜欢的安装。推荐安装这类软件的理由是，它可以帮你或多或少的养成良好的充电习惯，对电池的保养肯定是有好处的。</p>
 
-<h4>最后推荐几款我在用的插件</h4>
+<h2>最后推荐几款我在用的插件</h2>
 
 <ul>
 <li><strong>CCMeters</strong>  一款在通知中心显示当前手机运行参数的插件，包括cpu使用率，网速，内存等</li>
@@ -326,201 +822,6 @@
 <hr />
 
 <p>折腾了一番之后，感觉系统流畅了许多，续航基本可以保证一天一充，更重要的是之前常用的功能现在还有，甚至多了一些新的功能，如果你跟我有同样的问题，不妨也按照我的方法试一试。</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>牵着手，一起走</title>
-      <link href="http://cubernet.cn/oneyear/"/>
-      <pubDate>2014-04-23T00:00:00+08:00</pubDate>
-      <author>Cubernet</author>
-      <guid>http://cubernet.cn/oneyear</guid>
-      <content:encoded><![CDATA[<p><img alt="image" src="/assets/images/2014-04-23-oneyear.JPG" style="width:220px"></p>
-
-<div style="text-align:center">
-
-<p>一年很长</p>
-
-<p>我们了解，磨合，争吵，置气</p>
-
-<p>一年很短</p>
-
-<p>我们拥抱，热恋，旅行，玩耍</p>
-
-<p>你总说</p>
-
-<p>我是你最好的遇见</p>
-
-<!-- more -->
-
-<p>而我说</p>
-
-<p>我遇见了最好的你</p>
-
-<p>这一年中的快乐或不开心都超越过去的总和</p>
-
-<p>这一年承载了我们彼此生命中最重要的决定</p>
-
-<p>当岁月一年又一年褪去爱情华丽的外表</p>
-
-<p>我相信剩下的</p>
-
-<p>是绝对的信任和满满的爱</p>
-
-<p>2014.04.23#一周年快乐，宝贝#</p>
-
-
-</div>
-
-
-<h4>GIFT</h4>
-
-<p>一份来自程序员的礼物。<a href="http://cubernet.cn/anniversary/">点击查看</a></p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>给jekyll添加静态搜索</title>
-      <link href="http://cubernet.cn/staticsearch/"/>
-      <pubDate>2014-04-18T00:00:00+08:00</pubDate>
-      <author>Cubernet</author>
-      <guid>http://cubernet.cn/staticsearch</guid>
-      <content:encoded><![CDATA[<p><img src="/assets/images/2014-04-18-staticsearch.jpg" alt="image" /></p>
-
-<p>使用jekyll在github上搭建博客之后，无论是从写作的舒适度还是维护的方便程度上来讲都比之前有了很大的提升，不过一直觉得美中不足的是缺少一个搜索功能。由于整个博客都是静态的，因此很难做到像WordPress那种使用数据库来提供强大的搜索功能。不过退而求其次，给jekyll添加静态搜索，实现基本的功能还是有可能的。</p>
-
-<!-- more -->
-
-
-<p>通过在Google搜索一番之后，发现了<a href="https://github.com/slashdotdash/jekyll-lunr-js-search">jekyll-lun-js-search</a>这个插件，可以实现jekyll的静态搜索。话不多说，按照说明文件中的步骤开始动手配置。</p>
-
-<p>配置完成，满怀期待在搜索框输入了一个单词，结果。。。是的，没有任何反应。</p>
-
-<p>重新检查确认配置无误之后继续在网上寻找是不是有人也遇到类似的问题。果然有一个教程里提到这个插件有一些bug。窃喜，一一修改。结果。。。是的，依旧没有任何反应。</p>
-
-<p>无耐操刀自己上，在又修改了几处代码中的bug之后还是未能配置成功。此时距当初发现这个插件已经过去了六七个小时。</p>
-
-<p>这时只好修改思路，通过去找一些添加了搜索功能的jekyll博客，然后查看他的代码实现。果然发现了另外一个，而且这个插件使用非常简单，也无需配置那么多的文件，即<a href="https://github.com/christian-fei/Simple-Jekyll-Search">Simple-Jekyll-Search</a></p>
-
-<hr />
-
-<p>由于两个插件都提供了很详细的配置说明，我这里就不再重复。</p>
-
-<p>从实现的角度来说，静态搜索的大概思路都是提取文章html页面的关键内容，保存在一个文件中，然后通过遍历这个文件来返回搜索结果。但这两个插件在具体实现时还有所不同。jekyll-lun-js-search这款插件是通过一段ruby代码来生成保存有文章页面关键内容的文件。由于是通过ruby代码提取，因此这个文件的内容比较丰富，可以包含博客文章的正文，也就是说实现了全文搜索。但是Simple-Jekyll-Search这款插件是通过简单的jekyll语法来提取内容，因此在这个文件中无法包含文章正文，因为通过jekyll语法提取的博客正文会包含html代码。所以简单配置的背后，带来的是对全文搜索的舍弃。</p>
-
-<p>另外，在调试第一个插件的过程时，虽然最后仍旧没有解决这个问题，而且我自己也不知道原因所在，但还是对jekyll的工作细节有了更多的了解，也知道了config文件中【<strong>安全</strong>】选项所代表的具体含义，第一次接触并修改了ruby代码。。等等。感觉收获还是很大的。</p>
-
-<hr />
-
-<p>额。。。好吧，我成功的把一篇技术文写成了流水账。</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>虾米音乐app破解</title>
-      <link href="http://cubernet.cn/xiami/"/>
-      <pubDate>2014-03-31T00:00:00+08:00</pubDate>
-      <author>Cubernet</author>
-      <guid>http://cubernet.cn/xiami</guid>
-      <content:encoded><![CDATA[<p><img src="/assets/images/2014-03-31-xiami.jpeg" alt="image" /></p>
-
-<p>前几天登录虾米音乐，首页赫然提醒，建议用户将虾米账号迁移到淘宝上，以后用淘宝账号登录虾米。说实在的，当时心瞬间就凉了。就像当初排斥多看阅读迁移到小米账号上一样，我讨厌把自己在互联网上辛苦打造出来的一小片净土和BAT挂上勾。</p>
-
-<p>说到这里，想起个“笑话”。</p>
-
-<!-- more -->
-
-
-<p><code>有人在逛淘宝搜索宝贝时，不小心输入错误，搜成了“棺材”。本以为只是一次手误，删了重来就可以。结果没想到的是，从此以后他每次再登录淘宝时，首页到处都是向他推荐棺材的。更过分的是，他的微博等各种社交空间上也到处都是推荐棺材的。欲哭无泪。</code></p>
-
-<p>这就是天下账号大一统的后果，当然也是BAT希望看到的效果。</p>
-
-<hr />
-
-<p>言归正传。今天在看雪上注意到Hopper Disassembler这么一款软件，据说是mac平台上反编译神器，所以下下来体验一下。碰巧又在52上看到一个破解虾米音乐的例子，想到那让我心凉的虾米音乐，于是决定就对它下手了。</p>
-
-<p>这次的任务是破解mac系统的虾米音乐app，使普通用户也可以享用VIP服务。</p>
-
-<p>首先来一张破解之前的截图，未付费用户是无法享受高品质的。</p>
-
-<p><img src="/assets/images/2014-03-31-xiami-1.png" alt="image" /></p>
-
-<p>然后打开HD，选择<code>Read Executable</code>-><code>应用程序</code>-><code>虾米音乐</code>-><code>Contents</code>-><code>MacOS</code>-><code>Xiami</code></p>
-
-<p><img src="/assets/images/2014-03-31-xiami-2.png" alt="image" /></p>
-
-<p>等待几秒钟，待完全载入分析完成后，可以看到如下界面：</p>
-
-<p><img src="/assets/images/2014-03-31-xiami-3.png" alt="image" /></p>
-
-<p>左边一栏列出了该程序中包含的函数，迅速浏览一遍，发现了一个<code>isVIP</code>的函数，从名字上猜测，这个函数是用来判断用户是不是VIP的（也可再搜索栏中直接搜isVip），点击左侧函数名，右侧便会显示出该函数对应的汇编指令。【这一步的截图丢失了，所以下面这张图是从52上搬过来的，可能稍微有点模糊】</p>
-
-<p><img src="/assets/images/2014-03-31-xiami-4.png" alt="image" /></p>
-
-<p>从平时使用这款app的经验上可以得知，这款虾米客户端的功能比较简单，稍微复杂的操作都需要跳转到网页版进行，所以猜想客户端的逻辑验证也比较简单。</p>
-
-<p>从<code>isVIP</code>这个函数中我们可以看到，首先对rbp压栈，然后做了几次赋值操作后，将rbp出栈返回。那么这个函数的实际工作过程有没有可能是：给用户一个是否为VIP的标识，然后通过向服务器查询，将返回值赋值给这个标识并返回。为了验证这个猜想，我们只需将rbp归零再加1，使其值为true，最后返回，如下图：</p>
-
-<p><img src="/assets/images/2014-03-31-xiami-5.png" alt="image" /></p>
-
-<p>最后通过<code>File</code>-><code>Produce New Executable</code>来生成新的Xiami文件，替换原来的，双击运行，看到如下效果图：</p>
-
-<p><img src="/assets/images/2014-03-31-xiami-6.png" alt="image" /></p>
-
-<p><img src="/assets/images/2014-03-31-xiami-7.png" alt="image" /></p>
-
-<p>看来我们猜测的没有错，现在已经可以享受高品质的音乐了。Have fun :)</p>
-
-<hr />
-
-<p>PS：由于是第一次在Mac上做相关的工作，所以觉得很新鲜很有趣，便记录下来，大神勿喷。</p>
-
-<p>在此过程中，感谢52的xiaobai和NSTL卓博的大力帮助。</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>不想写诗的程序员不是好农民</title>
-      <link href="http://cubernet.cn/essay/"/>
-      <pubDate>2014-03-26T00:00:00+08:00</pubDate>
-      <author>Cubernet</author>
-      <guid>http://cubernet.cn/essay</guid>
-      <content:encoded><![CDATA[<p><img src="/assets/images/2014-03-26-essay.png" alt="image" /></p>
-
-<p>其实这篇本应该是2013的年终总结的，结果没想到拖到14年都过了四分之一，还是没有把这个坑补上。过了这么久，当初那份想写一点什么东西的心情早就没有了。简单的说，这一年算得上人生中另一个充满转折点的年份吧。爱情学业双丰收。但今年不会那么轻松，对我，对我的她，可能都是。我们都要好好努力。</p>
-
-<p>最近发生了好多事情，有好有坏，细说无趣，不如随便说点感悟。</p>
-
-<!-- more -->
-
-
-<h4>关于父母</h4>
-
-<p>父母给予我们最大的财富，不在于从小的锦衣玉食，更多的是对自己人格品质上的沉淀和别人那里的良好口碑。</p>
-
-<h4>关于师长</h4>
-
-<p>予渔非鱼乃为上，亦师亦友乃为上。翻译成大白话，“这个方向是好的，这个做法是错的，这杯酒干了”。</p>
-
-<h4>关于爱情</h4>
-
-<p>爱情好比是一种化合物，通过<code>付出+欣赏+真心→爱情</code>这个反应在时间的催化下得到爱情。不同的人会用不同的系数配平这个方程式。不同的系数孕育着不同种类的爱情。</p>
-
-<h4>关于朋友</h4>
-
-<p>本人生性胆小，自然不会让朋友两肋插棍棒刀枪去惹是生非。朋友间但求真心处、不两面，滴水恩必当涌泉报。</p>
-
-<h4>关于读博</h4>
-
-<p>读博好比农民种田。勤劳的农民经过自己辛苦耕耘用收获的粮食盖房娶妻生子，懒惰的农民颗粒无收，荒废数年，仅得一“农民”称号。</p>
-
-<h4>关于未来</h4>
-
-<p>秀才解字，“自食其果”，自己吃自己种下的果子。对我而言，虽不知未来何处得果，但相信必定会有幸福的果。</p>
-
-<h4>关于自己</h4>
-
-<p>黑、胖、丑、呆，自以为现实世界也如二进制般非0即1。</p>
 ]]></content:encoded>
     </item>
     
