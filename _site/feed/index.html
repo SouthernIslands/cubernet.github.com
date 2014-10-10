@@ -7,8 +7,78 @@
     <title>Cubernet's Blog</title>
     <link href="http://cubernet.cn/feed/" rel="self" />
     <link href="http://cubernet.cn" />
-    <lastBuildDate>2014-09-24T18:34:17+08:00</lastBuildDate>
+    <lastBuildDate>2014-10-11T01:40:59+08:00</lastBuildDate>
     <webMaster>luxaole@gmail.com</webMaster>
+    
+    <item>
+      <title>【译】网络钓鱼检测：综述</title>
+      <link href="http://cubernet.cn/phishing-review/"/>
+      <pubDate>2014-10-10T00:00:00+08:00</pubDate>
+      <author>Cubernet</author>
+      <guid>http://cubernet.cn/phishing-review</guid>
+      <content:encoded><![CDATA[<p><img src="/assets/images/" alt="image" /></p>
+
+<p><strong>摘要</strong>：网络钓鱼是指通过电子邮件或其他网络聊天服务，试图窃取用户身份信息或银行卡号、密码等个人信息的行为。通常，攻击者会伪装成一个相关组织，引导受害者访问一个伪造的官方网站，进而通过这个钓鱼网站收集用户的个人信息。攻击者也会通过诱导用户点击内嵌在电子邮件中的链接使用户在未知情况下下载恶意软件。</p>
+
+<p>研究者们提出了一些防止用户受到钓鱼攻击的方法。常见的方法有：防火墙技术、黑名单技术、垃圾邮件技术、假冒网站监测技术、客户端插件和用户安全意识教育等。每种现有的技术都有各自的利弊。如何自动识别钓鱼攻击目标是目前反钓鱼工作中最重要的问题。如果我们知道某个页面包含钓鱼攻击目标，我们就可以确认含有该目标的页面都是钓鱼页面。这可以帮助站长更好的识别钓鱼攻击，从而使他们能够立即采取必要的反制措施。</p>
+
+<p><strong>关键词</strong>：钓鱼网站，分裂式聚类算法，分类</p>
+
+<h3>1.介绍</h3>
+
+<p>本文主要探讨钓鱼检测的重要性并对现有的几种检测方法做出评价。钓鱼攻击每年都给许多上网用户造成巨大损失。我们的目标是将基于人工的黑名单验证技术和具有低误报率的启发式方法相结合。所以，我们之后阐述的检测方法都是在人工验证黑名单的基础上，应用各种新的技术。从卡内基梅隆反网络钓鱼和网络分析工具中引入的功能在很大程度上与基于机器学习的网络钓鱼检测很相似。这种启发式检测通常都利用了URL相似度计算、域名概率评估、IP地址和端口号检测等技术。进一步，我们可以通过Google Page rank等第三方库，查询网站的排名、注册内容等其他信息。相比于之前基于签名的模型，这种方式显著的增加了钓鱼网站的检测效率。这种方法可以检测出各种含有钓鱼攻击和异常行为的网站。</p>
+
+<p>网站的页面内容一方面能够很好地展现该站点的目的和意愿，另一方面也成为钓鱼欺诈信息的主要显示途径。目前，包括决策树、支持向量机、朴素贝叶斯分类、神经网络在内的很多机器学习算法已经被应用到检测模型的训练中，通过该模型来预测一个给定的网站是否为钓鱼站点。聚类和分类是数据挖掘的两个根本任务。分类是一种有监督的学习方法，而聚类是无监督的。聚类的目的是对现有数据做出描述，而分类则是做出预测。我们把相似的聚类实例数据划分到一个子集，不同的子集包含不同种类的数据。通过这种方式，将数据划分成具有高度代表性的若干子集。形式上，聚类结构被表示为一组子集。我们划分子集的依据是各个实例数据之间的距离。目前有两种常见的方法来估算两个数据之间的关系，分别是距离度量和相似性度量。许多聚类算法都是通过距离度量来判断数据之间的相似性。这里我们把Xi和Xj之间的距离表示为d(Xi,Xj)。</p>
+
+<p>相似函数被认为是一种替代概念上的距离，即向量xi和xj的距离函数s(xi,xj)。这个函数应该是对称的，例如满足s(xi,xj)=s(xj,xi)。通过余弦函数求得两个向量的夹角作为衡量它们相似性的方法，归一化的向量内积也是一种有效的相似性度量方法。现有的基于黑/白名单的钓鱼模型的工作流程为，当用户访问一个网站时，反钓鱼工具首先在数据库中存储的黑名单内搜索该网站的地址。</p>
+
+<p><img src="http://latex.codecogs.com/png.latex?\s(x_{i},x_{j})%20=%20\frac{x_{i}^{T}\cdot%20x_{j}}{\left%20|%20x_{i}%20\right%20|\cdot%20\left%20|%20x_{j}%20\right%20|}" alt="image" /></p>
+
+<p>如果数据库中包含该访问的网站地址，那么反钓鱼工具将引导用户避免钓鱼攻击。包括来自EarthLink的公司Scam Blocker,Phish Guard和Net craft等都是属于这一类型的工具。在基于规则的检测方法中，通过在软件中内置过滤规则，然后通过这些规则来检测一个网站的安全性。这种类型的工具包括斯坦福大学开发的Spoof Guard等。Spoof Guard会检查域名、URL，它也会检测电子邮件中的链接地址是否指向当前URL。一旦检测出当前访问网站的域名与某著名网站域名相似，或者该站点没有使用标准端口，Spoof Guard就会提醒用户小心钓鱼网站。这些工具都提供了浏览器插件，以便于通知用户当前访问的站点是否可信。</p>
+
+<p>钓鱼网站智能检测是通过各种分类算法进行特征提取，进而基于特征提取模块对各种钓鱼网站特征的提取结果做层次化聚类。</p>
+
+<p>1）特征提取是模式分类中的重要问题。这个过程包括了如何基于信息之间的相互性来选择有效的特征。由于直接执行最大相关性的条件非常苛刻，所以我们采用了一种叫做最小冗余-最大-相关准则的等效方式来用于一阶的增量特征选择。这个过程包括从N个样本中选择特征，例如，一个特征选择问题就是从M维观测空间R(M)，得到m个特征的子空间。</p>
+
+<p><img src="http://latex.codecogs.com/png.latex?\I(x;y)%20=%20\iint%20p(x,y)log\frac{p(x,y)}{p(x)p(y)}dxdy." alt="image" /></p>
+
+<p>2）朴素贝叶斯分类认为所有这些属性对于“这种水果是苹果”推断的贡献是相互独立的。它只需要少量的训练数据来估计所需的分类参数，即基于均值和方差的朴素贝叶斯概率模型。该概率模型的分类器是由相关变量C在F1到Fn的若干特征变量作用下得出。</p>
+
+<p><img src="http://latex.codecogs.com/png.latex?\\p(C\mid%20F_{1},...,F_{n})" alt="image" /></p>
+
+<p>3）定义统计学习的最好方法称为有监督学习。在此，每个数据点都包含一个特征向量x和一个类标签y，并假定有一个函数f，使得y=f(x)满足每个训练数据点(x,y)。学习算法的目标是找到一个很好的近似ħ到f可以应用到分配标签到新的x值。函数h称为分类器，因为它以输入数据点×分配类标签y。有监督学习可以应用到许多问题，包括手写识别，医疗诊断。</p>
+
+<p>4）聚类是一种用于将数据元素融入到相关组中的数据挖掘技术。数据挖掘通过分析不同的立体数据和所述数据，并对其进行分类、总结，最后将其转化为有用的信息。通常使用聚类分析，归纳，决策树等方法做分析，最流行的方法是将数据分成不相交的组。层次化聚类将测量2元组和其指定的集的成对距离的函数相异性之间的距离。</p>
+
+<h3>2.应用</h3>
+
+<p>该反钓鱼软件可以部署在以下4种不同的场景中。</p>
+
+<p>1）将反钓鱼过滤器集成在浏览器本身。</p>
+
+<p>2）将反钓鱼过滤器集成在安全类软件中。</p>
+
+<p>3）将反钓鱼软件集成在路由器中。</p>
+
+<p>4）在电子邮件软件中集成反钓鱼过滤器，或者阻塞由虚拟主机服务器发送的电子邮件。</p>
+
+<h3>3.结论</h3>
+
+<p>网络钓鱼已经成为一个严重的网络安全问题，每年对消费者和电子商务公司造成数十亿美元的经济损失。网络钓鱼攻击可以通过用户举报，图像监控，蜜罐以及其他技术相结合的方式来检测。通过广泛部署电子邮件认证技术，如发件人ID和加密签名，来降低网络钓鱼邮件被成功发送到用户邮箱的可能性。个人身份信息应包括在所有电子邮件通信系统中，并且系统应该允许用户输入或选择自定义文本和图像。基于浏览器插件的反钓鱼工具栏在识别钓鱼网站，检测到潜在的网络钓鱼网站时加高安全性等方面非常有效。</p>
+
+<p><strong>REFERENCES</strong></p>
+
+<p>1) Feature Selection Based on Mutual Information: Criteria of Max-Dependency, Max- Relevance, and Min- Redundancy Hanchuan Peng, Member, IEEE, Fuhui Long, and Chris Ding.</p>
+
+<p>2) Hierarchical Clustering Algorithm - A Comparative Study,Dr.N.Rajalingam K.Ranjini Dept. of Management Studies.</p>
+
+<p>3) CANTINA: A Content-Based Approach to Detecting PhishingWeb Sites.Yue Zhang Dept of Computer Science University of Pittsburgh 210 South Bouquet Street.</p>
+
+<p>4) Naive Bayes Classifier.</p>
+
+<p>5) Web Phishing Detection In Machine Learning Using Heuristic Image Based Method, Vinnarasi Tharania. I,R. Sangareswari , M. Saleembabu International Journal of Engineering Research and Applications ISSN: 2248-9622</p>
+]]></content:encoded>
+    </item>
     
     <item>
       <title>开学记</title>
@@ -783,37 +853,6 @@ com.iosre.rootdaemond.plist文件必须拥有644权限，否则示例后台进�
 <p><img src="/assets/images/2014-06-16-luo-2.png" alt="image" /></p>
 
 <p>完整源码地址：<a href="https://github.com/Cubernet/luoo">点击下载</a></p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>谈编码</title>
-      <link href="http://cubernet.cn/encode/"/>
-      <pubDate>2014-06-15T00:00:00+08:00</pubDate>
-      <author>Cubernet</author>
-      <guid>http://cubernet.cn/encode</guid>
-      <content:encoded><![CDATA[<p><img src="/assets/images/2014-06-15-encode.jpg" alt="image" /></p>
-
-<p>偶然获知阮一峰老师的博客文集上线了，十年（2004-2013）的思想漫游，100篇精华文章，20万字。一直很喜欢阮一峰老师的博客，也从他的博客中学到了很多东西。推荐大家有空去他的博客<a href="http://www.ruanyifeng.com">阮一峰的网络日志</a>看看，更推荐大家购买一份电子版文集好好品读，<a href="http://www.ruanyifeng.com/blog/2014/05/my_blog_book.html">文集介绍及购买地址</a>。</p>
-
-<!-- more -->
-
-
-<p>下面进入今天的正题，谈谈平时常见的几种编码。</p>
-
-<h2>URL编码</h2>
-
-<h2>Unicode编码</h2>
-
-<h2>HTML编码</h2>
-
-<h2>Base64编码</h2>
-
-<h2>十六进制编码</h2>
-
-<p>许多应用程序在传送二进制数据时直接使用十六进制编码，用ASCII字符表示十六进制数据块。</p>
-
-<p>（草稿，未整理。。。）</p>
 ]]></content:encoded>
     </item>
     
