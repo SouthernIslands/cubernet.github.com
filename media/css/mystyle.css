@@ -1086,7 +1086,7 @@ pre .deletion {
   .pageselect{
     background-color: #FAFAFA;
     border-top: 1px solid #DDD;
-    padding: 1% 1% 4% 1%;
+    padding: 0% 1% 4% 1%;
     margin-top: -31px;
   }
   .pre-span{
