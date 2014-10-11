@@ -9,7 +9,7 @@ tags: [iOS,Theos,System Security,daemon]
 
 ![image](/assets/images/2014-08-06-rootdaemon.png)
 
-[原文地址](http://bbs.iosre.com/forum.php?mod=viewthread&tid=204&page=1&extra=#pid1096)：http://bbs.iosre.com/forum.php?mod=viewthread&tid=204&page=1&extra=#pid1096
+[原文地址](http://bbs.iosre.com/forum.php?mod=viewthread&tid=204&page=1&extra=#pid1096)：http://bbs.iosre.com /forum.php? mod=viewthread &tid=204&page=1 &extra=#pid1096
 
 作者：snakeninny
 

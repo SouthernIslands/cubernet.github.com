@@ -9,7 +9,7 @@
     <title>【译】网络钓鱼检测：综述</title>
     <meta name="name" content="Cubernet's Blog" />
     <meta name="description" content="网络钓鱼 机器学习 聚类 分类" />
-    <meta name="keywords" content= "" />
+    <meta name="keywords" content= "Phishing" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link href="/feed/" rel="alternate" title="Cubernet" type="application/atom+xml" />
     <link rel="stylesheet" href="/media/css/mystyle.css" />
@@ -102,7 +102,7 @@
                     
                     <a href="/tags/#Mac" title="Mac" rel="1">Mac</a>
                     
-                    <a href="/tags/#Phishing" title="Phishing" rel="1">Phishing</a>
+                    <a href="/tags/#Phishing" title="Phishing" rel="2">Phishing</a>
                     
                     <a href="/tags/#code" title="code" rel="1">code</a>
                     
@@ -147,6 +147,8 @@
                     <a href="/tags/#翻墙" title="翻墙" rel="1">翻墙</a>
                     
                     <a href="/tags/#VPN" title="VPN" rel="1">VPN</a>
+                    
+                    <a href="/tags/#LaTex" title="LaTex" rel="1">LaTex</a>
                     
                 </div>
             </div>
@@ -205,13 +207,34 @@
 </span>
 
 
+ | 
+<span class="tags">
+  标签
+  
+  <a href="/tags/#Phishing" title="Phishing">Phishing</a>&nbsp;
+  
+</span>
+
 
 </section>    
 </header>
 
 <div class="entry">
 
-  <p><img src="/assets/images/" alt="image" /></p>
+  <p><img src="/assets/images/2014-10-10-phishing-review.png" alt="image" /></p>
+
+<p><a href="http://ijcsmc.com/docs/papers/February2014/V3I2201499a42.pdf"><strong>原文地址</strong></a>： http://ijcsmc.com /docs/papers/ February2014/ V3I2201499a42.pdf</p>
+
+<p>作者：Feon Jaison1, Seenia Francis</p>
+
+<p>感谢Feon Jaison1, Seenia Francis提供的优质文章。</p>
+
+<p>这篇文章在我最近项目的完成过程中给予了很大的帮助，特在此表示感谢，并翻译之。</p>
+
+<!-- more -->
+
+
+<p>下面是译文内容：</p>
 
 <p><strong>摘要</strong>：网络钓鱼是指通过电子邮件或其他网络聊天服务，试图窃取用户身份信息或银行卡号、密码等个人信息的行为。通常，攻击者会伪装成一个相关组织，引导受害者访问一个伪造的官方网站，进而通过这个钓鱼网站收集用户的个人信息。攻击者也会通过诱导用户点击内嵌在电子邮件中的链接使用户在未知情况下下载恶意软件。</p>
 
@@ -235,7 +258,7 @@
 
 <p>1）特征提取是模式分类中的重要问题。这个过程包括了如何基于信息之间的相互性来选择有效的特征。由于直接执行最大相关性的条件非常苛刻，所以我们采用了一种叫做最小冗余-最大-相关准则的等效方式来用于一阶的增量特征选择。这个过程包括从N个样本中选择特征，例如，一个特征选择问题就是从M维观测空间R(M)，得到m个特征的子空间。</p>
 
-<p><img src="http://latex.codecogs.com/png.latex?\I(x;y)%20=%20\iint%20p(x,y)log\frac{p(x,y)}{p(x)p(y)}dxdy." alt="image" /></p>
+<p><img src="http://latex.codecogs.com/png.latex?\\I(x;y)%20=%20\iint%20p(x,y)log\frac{p(x,y)}{p(x)p(y)}dxdy." alt="image" /></p>
 
 <p>2）朴素贝叶斯分类认为所有这些属性对于“这种水果是苹果”推断的贡献是相互独立的。它只需要少量的训练数据来估计所需的分类参数，即基于均值和方差的朴素贝叶斯概率模型。该概率模型的分类器是由相关变量C在F1到Fn的若干特征变量作用下得出。</p>
 
@@ -303,10 +326,16 @@ var jiathis_config = {data_track_clickback:'true'};
 <section class="pageselect">
 <br/>
 <span class="pre-span">  
-  <a  href="" >已经是第一篇 </a>
+  <a  href="/mdformath/" class="pageNav" >上一篇&nbsp;-&nbsp;在Markdown中使用数学公式  </a>
 </span>
 <span class="next-span">
   <a  href="/xiabb/" class="pageNav"  >下一篇&nbsp;-&nbsp;开学记 </a>
+</span>
+<span class="mobile-pre-span">  
+  <a  href="/mdformath/" class="pageNav" >上一篇 </a>
+</span>
+<span class="mobile-next-span">
+  <a  href="/xiabb/" class="pageNav"  >下一篇</a>
 </span>
 </section>
 

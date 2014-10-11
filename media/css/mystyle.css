@@ -1074,6 +1074,14 @@ pre .deletion {
   margin-top: -31px;
 }
 
+.mobile-pre-span{
+	display:none;
+}
+
+.mobile-next-span{
+	display:none;
+}
+
 @media screen and (max-width: 900px) {
   .pageselect{
     background-color: #FAFAFA;
@@ -1082,10 +1090,19 @@ pre .deletion {
     margin-top: -31px;
   }
   .pre-span{
-    display: block;
+  	display:none;
   }
   .next-span{
-    float:left;
+   	display:none;
+  }
+  .mobile-pre-span{
+  	display:inline-block;
+  	margin-left:8%;
+  }
+  .mobile-next-span{
+  	display:inline-block;
+  	margin-right:8%;
+  	float:right;
   }
 }
 
@@ -1102,12 +1119,6 @@ a.pageNav:hover {
 .next-span{
   float:right;
 }
-@media screen and (max-width: 900px) {
-  .next-span{
-    float:left;
-  }
-}
-
 
 .jp-audio {
     display: inline-block;

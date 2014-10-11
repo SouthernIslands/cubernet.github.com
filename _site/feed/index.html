@@ -7,8 +7,45 @@
     <title>Cubernet's Blog</title>
     <link href="http://cubernet.cn/feed/" rel="self" />
     <link href="http://cubernet.cn" />
-    <lastBuildDate>2014-10-11T01:40:59+08:00</lastBuildDate>
+    <lastBuildDate>2014-10-11T13:46:50+08:00</lastBuildDate>
     <webMaster>luxaole@gmail.com</webMaster>
+    
+    <item>
+      <title>在Markdown中使用数学公式</title>
+      <link href="http://cubernet.cn/mdformath/"/>
+      <pubDate>2014-10-11T00:00:00+08:00</pubDate>
+      <author>Cubernet</author>
+      <guid>http://cubernet.cn/mdformath</guid>
+      <content:encoded><![CDATA[<p><img src="/assets/images/2014-10-11-mdformath.jpg" alt="image" /></p>
+
+<p>上一博文是翻译的一篇学术论文，在用markdown语法编辑译文时，发现原文中出现的公式不知如何插入。</p>
+
+<p>当然，能想到的一个简单的办法就是，把原文中的公式截图，然后在译文中插入图片。但是，作为一个天生爱折腾的工科男，这样的解决办法显然满足不了我。</p>
+
+<!-- more -->
+
+
+<p>用百度谷歌了一番之后发现，原来还真有别的办法。那就是将LaTex强大的数学公式排版能力与Markdown相结合。</p>
+
+<p>第一步，将原文中的公式用Latex语法描述出来。例如<img src="http://latex.codecogs.com/png.latex?\\I(x;y)%20=%20\iint%20p(x,y)log\frac{p(x,y)}{p(x)p(y)}dxdy." alt="image" />这个公式的Latex语法是：<code>I(x;y\)=\iint p(x,y)log\frac{p(x,y)}{p(x)p(y)}dxdy.</code></p>
+
+<p>第二步，将这段LaTex语法描述的公式转化成图片插入到Markdown文本中。这里有两个可以调用的接口。</p>
+
+<p>七十二松网站的Latex服务调用接口：</p>
+
+<blockquote><p>http://tex.72pines.com/latex.php?latex=$LaTeX公式代码$</p></blockquote>
+
+<p>Google的Latex服务调用接口：</p>
+
+<blockquote><p>http://latex.codecogs.com/png.latex?LaTex公式代码</p></blockquote>
+
+<p>当然，看到这里，有些同学可能会说，用LaTex语法编写数学公式的门槛太高，需要太多时间去熟悉、记忆。其实你大可不必担心，推荐给大家一个很好的在线LaTex公式编辑器，<a href="http://latex.codecogs.com/"><strong>传送门</strong></a>。有了它，分分钟写出自己想要的LaTex公式不是梦。当然，这个网站也提供了丰富易用的调用接口，大家也可以直接利用。</p>
+
+<hr />
+
+<p>还有一种方法我没有尝试，但是整理在这里，供大家参考。其实也很简单，那就是使用<a href="http://www.mathjax.org"><strong>MathJax</strong></a>，只需要在你的页面添加几行代码，就可以解析LaTex、MathML等语法描述的数学公式了。如果你用过，欢迎与我交流使用感受<img src="http://cubernet.cn/assets/smilies/16.gif"id="smiley">。</p>
+]]></content:encoded>
+    </item>
     
     <item>
       <title>【译】网络钓鱼检测：综述</title>
@@ -16,7 +53,20 @@
       <pubDate>2014-10-10T00:00:00+08:00</pubDate>
       <author>Cubernet</author>
       <guid>http://cubernet.cn/phishing-review</guid>
-      <content:encoded><![CDATA[<p><img src="/assets/images/" alt="image" /></p>
+      <content:encoded><![CDATA[<p><img src="/assets/images/2014-10-10-phishing-review.png" alt="image" /></p>
+
+<p><a href="http://ijcsmc.com/docs/papers/February2014/V3I2201499a42.pdf"><strong>原文地址</strong></a>： http://ijcsmc.com /docs/papers/ February2014/ V3I2201499a42.pdf</p>
+
+<p>作者：Feon Jaison1, Seenia Francis</p>
+
+<p>感谢Feon Jaison1, Seenia Francis提供的优质文章。</p>
+
+<p>这篇文章在我最近项目的完成过程中给予了很大的帮助，特在此表示感谢，并翻译之。</p>
+
+<!-- more -->
+
+
+<p>下面是译文内容：</p>
 
 <p><strong>摘要</strong>：网络钓鱼是指通过电子邮件或其他网络聊天服务，试图窃取用户身份信息或银行卡号、密码等个人信息的行为。通常，攻击者会伪装成一个相关组织，引导受害者访问一个伪造的官方网站，进而通过这个钓鱼网站收集用户的个人信息。攻击者也会通过诱导用户点击内嵌在电子邮件中的链接使用户在未知情况下下载恶意软件。</p>
 
@@ -40,7 +90,7 @@
 
 <p>1）特征提取是模式分类中的重要问题。这个过程包括了如何基于信息之间的相互性来选择有效的特征。由于直接执行最大相关性的条件非常苛刻，所以我们采用了一种叫做最小冗余-最大-相关准则的等效方式来用于一阶的增量特征选择。这个过程包括从N个样本中选择特征，例如，一个特征选择问题就是从M维观测空间R(M)，得到m个特征的子空间。</p>
 
-<p><img src="http://latex.codecogs.com/png.latex?\I(x;y)%20=%20\iint%20p(x,y)log\frac{p(x,y)}{p(x)p(y)}dxdy." alt="image" /></p>
+<p><img src="http://latex.codecogs.com/png.latex?\\I(x;y)%20=%20\iint%20p(x,y)log\frac{p(x,y)}{p(x)p(y)}dxdy." alt="image" /></p>
 
 <p>2）朴素贝叶斯分类认为所有这些属性对于“这种水果是苹果”推断的贡献是相互独立的。它只需要少量的训练数据来估计所需的分类参数，即基于均值和方差的朴素贝叶斯概率模型。该概率模型的分类器是由相关变量C在F1到Fn的若干特征变量作用下得出。</p>
 
@@ -784,75 +834,6 @@ com.iosre.rootdaemond.plist文件必须拥有644权限，否则示例后台进�
 <p>今天去领博士通知书，老师再三核对照片来确认是否来本人带领，边看边说，“怎么感觉你好小啊，是本人吗？”</p>
 
 <p>我在心中默念，我是还小啊，因为未来的路还长。</p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>落电台音乐批量下载</title>
-      <link href="http://cubernet.cn/luo/"/>
-      <pubDate>2014-06-16T00:00:00+08:00</pubDate>
-      <author>Cubernet</author>
-      <guid>http://cubernet.cn/luo</guid>
-      <content:encoded><![CDATA[<p><img src="/assets/images/2014-06-16-luo.png" alt="image" /></p>
-
-<p><a href="http://www.luoo.net">落电台</a>是我很喜欢的一个电台，也曾经在日志中不止一次的推荐过这个电台。这个网站上的音乐、文字、图片，无一不让我陶醉。</p>
-
-<blockquote><p>在本科四年中那段最奋斗最辛苦的日子，<code>落网</code>陪我一路走过。那些清早起来，听着电台开始一天编码的生活，是最充实最美丽的回忆。——感谢<code>落网</code></p></blockquote>
-
-<p>可能是太过于喜欢，进而会变的依赖。在许多没有网的时候也希望能够有<code>落网</code>陪伴，于是萌生了将电台音乐下载到本地的想法（只是为了本地播放，希望大家也不要拿来商用）。</p>
-
-<!-- more -->
-
-
-<p>说干就干。</p>
-
-<p>简单看下<code>落网</code>的网站结构，会发现基本格式都是<code>主网址/music/期刊编号</code>，而每一期的歌曲地址则是通过js代码动态加载的。于是一个简单的办法就是，先遍历每一期，然后将js代码动态加载的歌曲地址筛选出来，然后批量下载。</p>
-
-<div class="highlight"><pre><code class="python"><span class="lineno"> 1</span> <span class="c">#期刊页面链接生成方法</span>
-<span class="lineno"> 2</span> <span class="k">def</span> <span class="nf">getUrl</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
-<span class="lineno"> 3</span>     <span class="n">url</span> <span class="o">=</span> <span class="s">&#39;http://www.luoo.net/music/&#39;</span>
-<span class="lineno"> 4</span>     <span class="k">return</span> <span class="n">url</span> <span class="o">+</span> <span class="n">getNum</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
-<span class="lineno"> 5</span> 
-<span class="lineno"> 6</span> <span class="k">def</span> <span class="nf">readsrc</span><span class="p">(</span><span class="n">src</span><span class="p">):</span>
-<span class="lineno"> 7</span>     <span class="k">try</span><span class="p">:</span>
-<span class="lineno"> 8</span>         <span class="n">url</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">src</span><span class="p">)</span>
-<span class="lineno"> 9</span>         <span class="n">content</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="lineno">10</span>         <span class="k">return</span> <span class="n">content</span>
-<span class="lineno">11</span>     <span class="k">except</span><span class="p">:</span>
-<span class="lineno">12</span>         <span class="k">print</span> <span class="s">&#39;readsrc error&#39;</span>
-<span class="lineno">13</span>         <span class="k">return</span> <span class="bp">None</span>
-<span class="lineno">14</span> <span class="c">#歌曲详情js代码提取方法</span>
-<span class="lineno">15</span> <span class="k">def</span> <span class="nf">getSongs</span><span class="p">(</span><span class="n">content</span><span class="p">):</span>
-<span class="lineno">16</span>     <span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s">r&#39;&quot;title&quot;:&quot;(?P&lt;title&gt;.*?)&quot;,&quot;artist&quot;:&quot;(?P&lt;artist&gt;.*?)&quot;,&quot;album&quot;:&quot;(?P&lt;album&gt;.*?)&quot;,&quot;mp3&quot;:&quot;(?P&lt;mp3&gt;.*?)&quot;&#39;</span><span class="p">,</span><span class="n">re</span><span class="o">.</span><span class="n">M</span><span class="p">)</span>
-<span class="lineno">17</span>     <span class="n">r</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
-<span class="lineno">18</span>     <span class="k">if</span> <span class="n">r</span><span class="p">:</span>
-<span class="lineno">19</span>         <span class="k">return</span> <span class="n">r</span>
-<span class="lineno">20</span>     <span class="k">else</span><span class="p">:</span>
-<span class="lineno">21</span>         <span class="k">return</span> <span class="bp">None</span>
-</code></pre></div>
-
-
-<p>最后增加了提取期刊名并按照期刊号归类，并将其改为命令行工具，使用方法如下：</p>
-
-<pre><code>-------------------------------------------------------------------------------
-
-    This program downloads music from www.luo.net . 
-    Options include: 
-      --version : Prints the version number 
-      --help    : Display this help
-      --a       : Download all music from the first vol
-      -v[&lt;vol number&gt;]      : Download the specified vol
-      -r[&lt;rank of music&gt;]   : Download the specified music
-      -p[&lt;filepath&gt;]        : The filepath where to save music
-
----------------------------------------------------------------------------------
-</code></pre>
-
-<p>最终实现效果如下图：</p>
-
-<p><img src="/assets/images/2014-06-16-luo-2.png" alt="image" /></p>
-
-<p>完整源码地址：<a href="https://github.com/Cubernet/luoo">点击下载</a></p>
 ]]></content:encoded>
     </item>
     

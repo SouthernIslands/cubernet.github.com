@@ -107,5 +107,11 @@ var jiathis_config = {data_track_clickback:'true'};
 <span class="next-span">
   <a {% if page.previous %} href="{{ page.previous.url }}" class="pageNav" {% unless page.previous %} class="pageNavInvalid" {% endunless %} >下一篇&nbsp;-&nbsp;{{ page.previous.title }} {% else %}href="">已经是最后一篇{% endif %}</a>
 </span>
+<span class="mobile-pre-span">  
+  <a {% if page.next %} href="{{ page.next.url }}" class="pageNav"{% unless page.next %} class="pageNavInvalid" {% endunless %} >上一篇{% else %} href="" >已经是第一篇{% endif %} </a>
+</span>
+<span class="mobile-next-span">
+  <a {% if page.previous %} href="{{ page.previous.url }}" class="pageNav" {% unless page.previous %} class="pageNavInvalid" {% endunless %} >下一篇{% else %}href="">已经是最后一篇{% endif %}</a>
+</span>
 </section>
 {% include comments.md %}

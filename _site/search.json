@@ -1,6 +1,13 @@
 [
 	
 		{
+		  "title"    : "在Markdown中使用数学公式",
+		  "categories" : "子在川上曰：我在写代码【动手动脚篇】",
+		  "url"     : "/mdformath/",
+		  "date"     : " 2014年11月10日"
+		} ,
+	
+		{
 		  "title"    : "【译】网络钓鱼检测：综述",
 		  "categories" : "众里寻他千百度，蓦然回首，那人正在写代码【他山之石篇】",
 		  "url"     : "/phishing-review/",
