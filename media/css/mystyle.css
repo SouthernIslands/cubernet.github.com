@@ -1082,7 +1082,7 @@ pre .deletion {
 	display:none;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 901px) {
   .pageselect{
     background-color: #FAFAFA;
     border-top: 1px solid #DDD;
