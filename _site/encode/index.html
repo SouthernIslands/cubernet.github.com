@@ -163,6 +163,8 @@
                 $('#tag_cloud a').tagcloud();
             });
             </script>
+
+            <script type="text/javascript">document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E%3Cscript charset="utf-8" src="http://rp.baidu.com/rp3w/3w.js?sid=14299602366886084485') + '&t=' + (Math.ceil(new Date()/3600000)) + unescape('"%3E%3C/script%3E'));</script>
         </div>
 
         <footer id="footer" class="inner">
@@ -232,17 +234,61 @@
 
 <h2>URL编码</h2>
 
+<p>URL只允许使用US-ASCII字符集中的可打印字符。URL编码方案主要用于对扩展ASCII字符集中的任何有问题的字符进行编码，使其可通过HTTP安全传输。任何URL编码的字符都以%为前缀，其后是这个字符的两个十六进制ASCII代码。</p>
+
+<p>当攻击Web应用程序时，如果需要将以下字符当做数据插入HTTP请求中，渗透测试员必须对它们进行URL编码。</p>
+
+<blockquote><p>空格  %  ？  &amp;  =  ；  +  #</p></blockquote>
+
 <h2>Unicode编码</h2>
+
+<p>Unicode是一种为支持全世界所使用的各种编写系统而设计的字符编码标准，它采用各种编码方案，其中一些可用于表示Web应用程序中的不常见字符。</p>
+
+<p>16位Unicode编码的工作原理与URL编码类似。为通过HTTP进行传输，16位Unicode编码的字符以%u为前缀，其后是这个字符的十六进行Unicode码点。例如：</p>
+
+<ul>
+<li>%u2215代表/；</li>
+</ul>
+
+
+<p>UTF-8是一种长度可变的编码标准，它使用一个或几个字节表示每个字符。为通过HTTP进行传输，UTF-8编码的多字节字符以%为前缀，其后用十六进制表示每个字节。</p>
+
+<p>攻击Web应用程序时，之所以要用到Unicode编码，主要在于有时可用它来破坏输入确认机制。如果输入过滤阻止了某些恶意表达式，但随后处理输入的组件识别Unicode编码，就可以使用各种标准与畸形的Unicode编码避开过滤。</p>
 
 <h2>HTML编码</h2>
 
+<p>HTML编码是一种用于表示问题字符以将其安全并入HTML文档的方案。有许多字符具有特殊的含义，并被用于定义文档结构而非其内容。为了安全使用这些字符，并将其用在文档内容中，就必须对其进行HTML编码。</p>
+
+<p>HTML编码定义了大量HTML实体来表示特殊的字面量字符，例如：</p>
+
+<blockquote><ul>
+<li><code>&amp;quot;</code>代表<code>"</code>;</li>
+<li><code>&amp;lt;</code>代表<code>&lt;</code>;</li>
+<li><code>&amp;gt;</code>代表<code>&gt;</code>。</li>
+</ul>
+</blockquote>
+
+<p>此外，任何字符都可以使用它的十进制ASCII码进行HTML编码，例如：</p>
+
+<blockquote><p><code>&amp;#34;</code>代表<code>"</code>；</p></blockquote>
+
+<p>或者使用十六进制的ASCII码，例如：</p>
+
+<blockquote><p><code>&amp;#x22;</code>代表<code>"</code>；</p></blockquote>
+
 <h2>Base64编码</h2>
+
+<p>Base64编码仅用一个可打印的ASCII字符就可以安全转换任何二进制数据，它常用与对电子邮件附件进行编码，使其通过SMTP安全传输。它还可用于在基本HTTP验证机制中对用户证书进行编码。</p>
+
+<p>Base64编码将输入数据转换成3哥字节块。每个块被划分为4段，每段6个数据位。这6个数据位有64种不同的排列组合，因此每个段可使用一组64个字符表示。Base64编码使用以下字符集，其中只包含可打印的ASCII字符：</p>
+
+<blockquote><p><strong>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/</strong></p></blockquote>
+
+<p>如果最后的输入数据块不能构成3段输出数据，就用一个或者两个等号(=)不足输出。</p>
 
 <h2>十六进制编码</h2>
 
 <p>许多应用程序在传送二进制数据时直接使用十六进制编码，用ASCII字符表示十六进制数据块。</p>
-
-<p>（草稿，未整理。。。）</p>
 
 
   <p style="margin:20px 0; color:#9f9f9f; font-size:12px;">
