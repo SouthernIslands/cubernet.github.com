@@ -7,8 +7,100 @@
     <title>Cubernet's Blog</title>
     <link href="http://cubernet.cn/feed/" rel="self" />
     <link href="http://cubernet.cn" />
-    <lastBuildDate>2014-10-13T15:18:44+08:00</lastBuildDate>
+    <lastBuildDate>2014-10-16T12:03:11+08:00</lastBuildDate>
     <webMaster>luxaole@gmail.com</webMaster>
+    
+    <item>
+      <title>PVM环境配置</title>
+      <link href="http://cubernet.cn/pvm/"/>
+      <pubDate>2014-10-14T00:00:00+08:00</pubDate>
+      <author>Cubernet</author>
+      <guid>http://cubernet.cn/pvm</guid>
+      <content:encoded><![CDATA[<p><img src="/assets/images/2014-10-14-pvm.jpg" alt="image" /></p>
+
+<blockquote><p>并行计算机（pvm）是用于网络并行计算机上的软件工具。设计它的目的是将异构的计算机网络连接起来，使它使用起来就像一组分布式的并行处理器。</p>
+
+<p>——百度百科</p></blockquote>
+
+<p>PVM即Parallel Virtual Machine，并行虚拟计算机，是一个软件包，它能够把一些安装有Unix或Windows系统的计算机组成一个异构系统，使其用起来就像一个单一但能力强大的并行计算机。PVM支持的异构性分为三层：机器层、应用层和网络层。</p>
+
+<!-- more -->
+
+
+<h4>PVM的特点</h4>
+
+<ul>
+<li>支持多用户及多任务</li>
+<li>提供便于使用的通信原语</li>
+<li>提出了进程组的概念</li>
+<li>可无差别地运行在多种操作系统上</li>
+<li>具有容错功能</li>
+</ul>
+
+
+<h4>PVM的安装</h4>
+
+<p>PVM是一套跨平台的软件系统，我是在Ubuntu Server 10.04.4版本下安装并测试的。</p>
+
+<p>Ubuntu环境下安装PVM是一件十分简单的事情。只需要在终端中执行<code>$sudo apt-get install pvm</code>即可。</p>
+
+<p>接下来，我们需要查看一下PVM安装在了系统的哪个位置。通常在/usr/lib/pvm3或/usr/local/lib/pvm3中。include文件夹在/usr/include路径下。</p>
+
+<p>知道了安装路径后就可以在.bashrc文件中设置环境变量：</p>
+
+<div class="highlight"><pre><code class="c"><span class="lineno">1</span> <span class="n">export</span> <span class="n">PVM_ROOT</span><span class="o">=</span><span class="s">&quot;/usr/lib/pvm3&quot;</span>
+<span class="lineno">2</span> <span class="n">export</span> <span class="n">PVM_ARCH</span><span class="o">=</span><span class="err">`$</span><span class="n">PVM_ROOT</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">pvmgetarch</span><span class="err">`</span>
+<span class="lineno">3</span> <span class="n">export</span> <span class="n">XPVM_ROOT</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">xpvm</span>
+<span class="lineno">4</span> <span class="n">export</span> <span class="n">PATH</span><span class="o">=</span><span class="err">$</span><span class="n">PATH</span><span class="o">:</span><span class="err">$</span><span class="n">PVM_ROOT</span><span class="o">/</span><span class="n">lib</span><span class="o">:/</span><span class="n">usr</span><span class="o">/</span><span class="n">include</span>
+<span class="lineno">5</span> <span class="n">export</span> <span class="n">PVM_RSH</span><span class="o">=</span><span class="err">`</span><span class="n">which</span> <span class="n">ssh</span><span class="err">`</span>
+</code></pre></div>
+
+
+<p>在home目录下建立.rhosts文件，在rhost文件中列出当前可用的计算机名或者IP地址。</p>
+
+<h4>PVM的使用</h4>
+
+<p>在终端中输入pvm，进入PVM的控制台界面。</p>
+
+<blockquote><p>pvm></p></blockquote>
+
+<p>如果有新的结点需要增加，则输入下面的命令：</p>
+
+<blockquote><p>pvm>add <hostname></p></blockquote>
+
+<p>hostname是你想添加的计算机名称或者IP。</p>
+
+<p>在PVM的终端界面还有很多交互命令，可以输入<code>help</code>来查看。</p>
+
+<p>在这个网站上有一个基于PVM的矩阵乘法示例程序=》<a href="http://math.arizona.edu/~swig/documentation/pvm/matrix_mult/">PVM Matrix Multiplication Example</a></p>
+
+<p>下载上面提供的master.c、slave.c和Makefile.aimk文件，在本地编译：</p>
+
+<pre><code>aimk mm_master mm_slave
+</code></pre>
+
+<p>如果编译成功了，则可以进入PVM中运行：</p>
+
+<blockquote><p>pvm>spawn -3 ->mm_master</p></blockquote>
+
+<p><code>spawn</code>是向PVM中加载任务。然后程序会自动运行，将计算结果保存在mat.out文件中。</p>
+
+<h4>并行算法</h4>
+
+<p>上述示例程序中使用了外积算法，即每个结点每次独立运算得到结果矩阵C的一行数值：</p>
+
+<p><img src="http://latex.codecogs.com/png.latex?C_{*j}=(c_{1j},c_{2j},...,c_{mj})%20^{\tau}%20=%20\sum_{k=1}^{n}(a_{1k},a_{2k},...,a_{mk})^{\tau}b_{kj},j=1,2,...,p" alt="image" /></p>
+
+<blockquote><ul>
+<li>矩阵a保存在master中；</li>
+<li>矩阵b分别在每个slave结点只能中保存一份；</li>
+<li>master把矩阵a的每一行发送给一个单独的slave；</li>
+<li>如果结点数小于a的行数，则等待某些slave运算完成并返回结果时，再向其分发新的任务；</li>
+<li>master在收到所有slave返回的结果后，把结果c保存在mat.out文件中。</li>
+</ul>
+</blockquote>
+]]></content:encoded>
+    </item>
     
     <item>
       <title>在Markdown中使用数学公式</title>
@@ -39,7 +131,7 @@
 
 <blockquote><p>http://latex.codecogs.com/png.latex?LaTex公式代码</p></blockquote>
 
-<p>当然，看到这里，有些同学可能会说，用LaTex语法编写数学公式的门槛太高，需要太多时间去熟悉、记忆。其实你大可不必担心，推荐给大家一个很好的在线LaTex公式编辑器，<a href="http://latex.codecogs.com/"><strong>传送门</strong></a>。有了它，分分钟写出自己想要的LaTex公式不是梦。当然，这个网站也提供了丰富易用的调用接口，大家也可以直接利用。</p>
+<p>当然，看到这里，有些同学可能会说，用LaTex语法编写数学公式的门槛太高，需要太多时间去熟悉、记忆。其实你大可不必担心，推荐给大家一个很好的在线LaTex公式编辑器，<a href="http://www.codecogs.com/latex/eqneditor.php"><strong>传送门</strong></a>。有了它，分分钟写出自己想要的LaTex公式不是梦。当然，这个网站也提供了丰富易用的调用接口，大家也可以直接利用。</p>
 
 <hr />
 
@@ -735,105 +827,6 @@ com.iosre.rootdaemond.plist文件必须拥有644权限，否则示例后台进�
 <p>我想，等我的，也是这么一句话。</p>
 
 <p><img src="http://cubernet.cn/assets/smilies/12.gif"id="smiley"></p>
-]]></content:encoded>
-    </item>
-    
-    <item>
-      <title>离别</title>
-      <link href="http://cubernet.cn/libie/"/>
-      <pubDate>2014-06-28T00:00:00+08:00</pubDate>
-      <author>Cubernet</author>
-      <guid>http://cubernet.cn/libie</guid>
-      <content:encoded><![CDATA[<p><img src="/assets/images/2014-06-28-libie.JPG" alt="image" /></p>
-
-<blockquote><p>华灯再上，离别的已是自己。 ——Cubernet</p></blockquote>
-
-<p>一觉醒来就要去参加毕业典礼，心里有种莫名的感觉，总觉得这一切来的有点始料未及，呵，我就要毕业了。</p>
-
-<p>其实一路走来，毕业早已不是第一次经历的事情。小学、初中、高中，每一个阶段都有毕业，或隆重或平常，它们都标志着一段旧生活的结束和另一段新生活的开始。</p>
-
-<p>只是人都是安于现状的。所以我们疯狂的留念，疯狂的纪念。其实，我们不是害怕忘记彼此，而是害怕失去自己曾经拥有的那些过去。</p>
-
-<p>我也是害怕离别的。</p>
-
-<p>因为离别当头，总是会有止不住的过往回忆。</p>
-
-<!-- more -->
-
-
-<hr />
-
-<h2>回忆篇</h2>
-
-<p>四年前，迎新的校车把我从火车站接到了学校，下车的第一眼看到的是学生活动中心，不知为何，当时给了我极差的第一印象。第一个晚上一个人睡在寝室里，满脑子想的都是要不回去补习吧，明年换个学校。。。不过后来一想，既来之则安之，时间久了说不定会慢慢发现它的好。果然现在觉得它其实还不错。是的，我现在觉得<code>电子科技大学</code>还不错，虽然它依旧听起来像个专科。</p>
-
-<p>可能天生不是做学生活动的料，从最初不愿参加任何学生会的面试，到最后勉强加入分团委，事后觉得，大一一年的学生工作给我带来的可能更多是教训和反思，也使我慢慢认识到，原来我对官场上那一套“做法”有多么的深恶痛绝，我不想让自己太早沾染上那些腔调，于是果断急流勇退。（PS，我觉得雷*在任时的分团委还是很温馨的，虽然他抱怨当时水，其实挺好的啦）</p>
-
-<p>当然，更多的时间是疯狂的加入各种社团，加入各种工作室、俱乐部，发传单、搞活动，每天生活充实到不行。如果现在要我用四个字来概括那个时候的话，那就是</p>
-
-<p><code>一事无成</code>。</p>
-
-<p>好在至少醒悟了一点，那就是，学长都是骗人的。</p>
-
-<p>同我一起考来成都的，还有刘靖跟宝铁。虽然不在同一个学校，好在离得不远，所以每隔一段时间就出来聚聚，聊聊伤心事，再吹吹牛皮。一不小心就这么四年过去了，刘靖要去香港，还真是有点舍不得。</p>
-
-<p>大三的时候王凯大鹏他们十几个人赶来成都过中秋，刚好又对上王凯生日。十几个人就那么在路边摊一直喝啊喝啊，一直到冰洁都喝成一滩烂泥了。那段回忆真是美好啊，不知道以后还有没有这样的机会了。</p>
-
-<p>其实我这四年几乎没怎么在成都玩过，也没吃过多少正宗的成都美食，可能是见的少，所以就只能对铁板烧烤铁板炒饭情有独钟。这方面，我相信逼哥跟我有同感。</p>
-
-<p>逼哥跟我军训时就站在一起，那个时候还不知道我俩是老乡，没想到后来竟在一间屋子里睡了三年，说了那么多交心交肺的话。当然，绝大多数都是在<code>旺角烧烤</code>。说好的走之前再去喝一顿呢，你趁我在北京竟然发只发了条微信就回山西了。不过我想到以后可能还要靠梁局长罩着，也只能默默的在心里骂句FUCK YOU。</p>
-
-<p>相比之下，铭铭和建行就不太喜欢那个烧烤。带他们去过一次，结果两个人都没吃high。可能是没有旺角烧烤存在的缘故，跟铭铭每天形影不离却一直都是三脚踢不出一个屁，我们两个四年对话的总和可能都没这篇流水账的字数多。但默契还是有的。铭铭走中，那种见死不救崩了怪队友的中；建行打野，那种20分钟裸出一把跳得打野；Peace上单，那种一头扎进对面野区半个小时不出来的上单；我跟路人走下，那种5分钟补5个刀的下。有句话好像是说，网吧五连坐，从来没赢过。我想说，赢不赢都很快乐。以后的日子里可能不再有时间一起dota，但dota已在心里，偶尔看看dota视频，也会想起你们。</p>
-
-<p>刘学不打dota，其实什么游戏都不打，只看电影，什么电影都看。刘学是我见过的最好的老好人，没有之一。突然想起前几天那么晚回去没带钥匙，打电话吵醒你帮我开门，真是抱歉。好人有好报，我一直觉得这话不假。</p>
-
-<p>相反，马哥和超哥真是两个坏透了的人，可劳资还就是喜欢跟你们打交道。毕业旅行和毕业聚餐你们两个各自错过了一场。不过我在不同的地点跟你们两个说了同样的话，不知道酒醒之后你们还记得不。我还是很期待能一起做点事。</p>
-
-<p>说起做点事，毕业旅行的时候跟刚哥喝到凌晨三点半，第一次觉得懂了他，那天说过的那些话，可能这辈子都不会再跟我说了，但我觉得说一次，就已经是朋友，是好朋友了，对不对。</p>
-
-<p>我觉得好朋友就是那种不必一起分享所有的开心，却可以随时陪你分担所有的难过的人。好朋友可能不经常联系，但随叫随到。</p>
-
-<p>可是，高中那一帮人，海龟、三儿、孙鹏、嘉琪、华仔、地主等等，你们他妈的也太久不联系了吧！</p>
-
-<p>对了，去杭州耍的照片我好像一直忘记给你了孙学霸，你以后成大器了，不会就因为这个就不帮我了吧。。。</p>
-
-<p>好像回忆的有些久远了，又好像都是最近的事，脑子乱了，就不去想它了。</p>
-
-<h2>感谢篇</h2>
-
-<p>好像只有那些取得卓越成就的人才有资格说，感谢谁谁谁曾经对我的帮助，才使得我取得今天的成就。</p>
-
-<p>可是我想说，虽然我依旧像四年前一样一事无成，我还是想因一些事对一些人表达一些感谢。</p>
-
-<p>由近及远，最应该感谢的是志瑜兄。虽说直博是个大坑，但没有你，我还真没这个资格去享受这个大坑。我这个人不善于当面在口头上表达一些感谢，当时的一顿饭更不足以代表我的谢意，这么说吧，这个人情，一辈子去还。</p>
-
-<p>再有就是实验室了吧，大一大二在汤老师的实验室，以及后来张老师的实验室，里面的老师、师兄都在各方面给了我极大的帮助。</p>
-
-<p>感谢跟我室友过或者同学过的人，我是个喜欢懒床翘课毛病多的人，感谢你们帮我签到喊我上课替我考试代我买票，没有你们，我一个人走不到今天。</p>
-
-<h2>遗憾篇</h2>
-
-<p>任何一段时间中，总会有一些遗憾。</p>
-
-<p>比如还是没有完成从一个明显的胖子到不明显的胖子的转型。</p>
-
-<p>比如还是没有养成经常锻炼身体的习惯。</p>
-
-<p>比如没有趁学生价多去游玩几个景区。</p>
-
-<p>比如没有学会说四川话。</p>
-
-<p>比如。。。其实还有很多。</p>
-
-<p>我想说，最遗憾的是，没有遇到一个超级团结的集体，可能是实验班的同学都太过个性鲜明而难以互相融合。不过这不影响国软是<code>邦清班</code>，是一个超牛逼的集体的事实。过程已然如此，我只是希望未来的路上，每一颗星星在忙于闪耀的同时，能牵一牵彼此的手。</p>
-
-<p>当然，遗憾虽有，但不后悔。</p>
-
-<hr />
-
-<p>今天去领博士通知书，老师再三核对照片来确认是否来本人带领，边看边说，“怎么感觉你好小啊，是本人吗？”</p>
-
-<p>我在心中默念，我是还小啊，因为未来的路还长。</p>
 ]]></content:encoded>
     </item>
     

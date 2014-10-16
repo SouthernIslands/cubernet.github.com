@@ -1,6 +1,13 @@
 [
 	
 		{
+		  "title"    : "PVM环境配置",
+		  "categories" : "子在川上曰：我在写代码【动手动脚篇】",
+		  "url"     : "/pvm/",
+		  "date"     : " 2014年14月10日"
+		} ,
+	
+		{
 		  "title"    : "在Markdown中使用数学公式",
 		  "categories" : "子在川上曰：我在写代码【动手动脚篇】",
 		  "url"     : "/mdformath/",
