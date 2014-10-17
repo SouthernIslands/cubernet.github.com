@@ -52,7 +52,6 @@
 	<div class="ds-thread" data-thread-key="{{ page.thread }}" data-url="{{ site.url }}{{ page.url }}" data-title="{{ page.title }}" />
 	{% else %}
 	<section id="comment">
-  		<h1 class="title">评论</h1>
 	{% endif %}	
 	<!-- UY BEGIN -->
 	<div id="uyan_frame"></div>
