@@ -6,6 +6,7 @@ layout: page
 
 {% for cat in site.categories %}
 {% if cat[0] == '阅读书单' %}
+{% elsif cat[0] == '观影列表' %}
 {% else %}
 <h2 class="archive-title">{{ cat[0] }}</h2>
 <div class="archive">
