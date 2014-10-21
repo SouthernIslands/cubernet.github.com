@@ -8,7 +8,7 @@ layout: page
 {% if cat[0] == '阅读书单' %}
 {% elsif cat[0] == '观影列表' %}
 {% else %}
-<h2 class="archive-title">{{ cat[0] }}</h2>
+<h2 class="archive-title">{{ cat[0] }}({{ cat[1].size }})</h2>
 <div class="archive">
 {% for post in cat[1] %}
 <article class="post">
