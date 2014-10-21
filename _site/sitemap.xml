@@ -18,6 +18,10 @@
     </url>
     
     <url>
+        <loc>http://cubernet.cn/books/index.html</loc>
+    </url>
+    
+    <url>
         <loc>http://cubernet.cn/categories/index.html</loc>
     </url>
     
@@ -47,6 +51,10 @@
     
     <url>
         <loc>http://cubernet.cn/links/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://cubernet.cn/movies/index.html</loc>
     </url>
     
     <url>
@@ -91,6 +99,10 @@
     
     <url>
         <loc>http://cubernet.cn/page5/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://cubernet.cn/page6/index.html</loc>
     </url>
     
 
@@ -180,6 +192,14 @@
     </url>
     
     <url>
+        <loc>http://cubernet.cn/movie_list/</loc>
+    </url>
+    
+    <url>
+        <loc>http://cubernet.cn/book_list/</loc>
+    </url>
+    
+    <url>
         <loc>http://cubernet.cn/Metasploit-6/</loc>
     </url>
     
@@ -241,6 +261,26 @@
     
     <url>
         <loc>http://cubernet.cn/bestmeet/</loc>
+    </url>
+    
+    <url>
+        <loc>http://cubernet.cn/movie_list/</loc>
+    </url>
+    
+    <url>
+        <loc>http://cubernet.cn/book_list/</loc>
+    </url>
+    
+    <url>
+        <loc>http://cubernet.cn/book_list3/</loc>
+    </url>
+    
+    <url>
+        <loc>http://cubernet.cn/book_list/</loc>
+    </url>
+    
+    <url>
+        <loc>http://cubernet.cn/book_list/</loc>
     </url>
     
 </urlset>

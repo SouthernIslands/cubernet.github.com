@@ -5,6 +5,8 @@ layout: page
 
 
 {% for cat in site.categories %}
+{% if cat[0] == '阅读书单' %}
+{% else %}
 <h2 class="archive-title">{{ cat[0] }}</h2>
 <div class="archive">
 {% for post in cat[1] %}
@@ -22,5 +24,6 @@ layout: page
 </article>
 {% endfor %}
 </div>
+{% endif %}
 {% endfor %}
 

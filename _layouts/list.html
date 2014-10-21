@@ -1,0 +1,180 @@
+---
+layout: default
+---
+<article class="post">
+<div class="post-content">
+
+<header>
+    <h1 class="title">{{ page.title }}</h1>
+    <section class="meta">
+<span class="time">
+  <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}</time>
+</span>
+{% if page.categories.size != 0 %}
+ | 
+<span class="categories">
+  分类
+  {% for cat in page.categories %}
+  {% if cat == '阅读书单' %}
+  <a href="/books" title="{{ cat }}">{{ cat }}</a>&nbsp;
+  {% else %}
+  <a href="/movies" title="{{ cat }}">{{ cat }}</a>&nbsp;
+  {% endif %}
+  {% endfor %}
+</span>
+{% endif %}
+{% if page.tags.size != 0 %}
+ | 
+<span class="tags">
+  标签
+  {% for tag in page.tags %}
+  <a href="/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>&nbsp;
+  {% endfor %}
+</span>
+{% endif %}
+{% if page.music.size == 1 %}
+| 
+<span class="tags">
+  背景音乐
+
+
+<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+<div id="jp_container_1" class="jp-audio">
+    <div class="jp-type-single">
+        <div class="jp-gui jp-interface">
+            <ul class="jp-controls">
+                <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+                <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+            </ul>                      
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+
+    $("#jquery_jplayer_1").jPlayer({
+        ready: function(event) {
+            $(this).jPlayer("setMedia", {
+              {% for mus in page.music %}
+              mp3: "/assets/music/{{ mus }}",
+              {% endfor %}              
+            });
+        },
+        supplied: "mp3"
+    });
+});                                      
+</script>
+</span>
+
+{% endif %}
+</section>    
+</header>
+
+<div class="entry">
+
+  {% for book in page.books %}
+          <div class="list-panel">
+            <div class="list-panel-heading">{{ book.title }}</div>
+            <div class="list-panel-body">
+              <div class="list-panel-body-inline">
+                <div class="list-panel-body-left">
+                  <img src="{{ book.cover }}" alt="cover" class="list-img">
+                </div>
+                <div class="list-panel-body-right">
+                  <table class="list-table">
+                    <tbody>
+                      <tr><td class="list-td">作者</td><td>{{ book.author }}</td></tr>
+                      <tr><td>出版商</td><td>{{ book.publisher }}</td></tr>
+                      <tr><td>语言</td><td>{{ book.language }}</td></tr>
+                      <tr>
+                        <td>链接</td><td>
+                        <a href="{{ book.link }}" title="{{ book.link }}">图书链接</a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>状态</td>
+                        <td>
+                          {% if book.status == '已读' %}
+                            <span class="list-label list-label-success">{{ book.status }}</span>
+                          {% elsif book.status == '在读' %}
+                            <span class="list-label list-label-info">{{ book.status }}</span>
+                          {% elsif book.status == '未读' %}
+                            <span class="list-label list-label-default">{{ book.status }}</span>
+                          {% endif %}
+                        </td>
+                      </tr>
+                      <tr><td>评论</td><td>{{ book.description }}</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>  
+            </div>
+          </div>    
+      {% endfor %}
+
+    {% for movie in page.movies %}
+          <div class="list-panel">
+            <div class="list-panel-heading">{{ movie.title }}</div>
+            <div class="list-panel-body">
+              <div class="list-panel-body-inline">
+                <div class="list-panel-body-left">
+                  <img src="{{ movie.cover }}" alt="cover" class="list-img">
+                </div>
+                <div class="list-panel-body-right">
+                  <table class="list-table">
+                    <tbody>
+                      <tr><td style="width:17.7%;">导演</td><td>{{ movie.director }}</td></tr>
+                      <tr><td>主演</td><td>{{ movie.leader }}</td></tr>
+                      <tr><td>类型</td><td>{{ movie.type }}</td></tr>
+                      <tr>
+                        <td>链接</td><td>
+                        <a href="{{ movie.link }}" title="{{ movie.link }}">影片链接</a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>状态</td>
+                        <td>
+                          {% if movie.status == '已看' %}
+                            <span class="list-label list-label-success">{{ movie.status }}</span>
+                          {% elsif movie.status == '在看' %}
+                            <span class="list-label list-label-info">{{ movie.status }}</span>
+                          {% elsif movie.status == '未看' %}
+                            <span class="list-label list-label-default">{{ movie.status }}</span>
+                          {% endif %}
+                        </td>
+                      </tr>
+                      <tr><td>影评</td><td>{{ movie.description }}</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>  
+            </div>
+          </div>      
+      {% endfor %}
+
+  <p style="margin:20px 0; color:#9f9f9f; font-size:12px;">
+  <span>Posted by <a style="color:#9f9f9f;" href="http://weibo.com/luxaole"><strong>Cubernet</strong></a> - {{ page.date | date:"%Y-%m-%d" }}</span><br>
+  <span style="line-height:13px;">如需转载，请注明： 本文来自 <a style="color:#9f9f9f;" href="http://cubernet.cn"><strong>Cubernet's Blog</strong></a></span>
+  </p>
+</div>
+
+<footer>
+
+<!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_weixin">微信</a>
+  <a class="jiathis_button_qzone">QQ空间</a>
+  <a class="jiathis_button_tsina">新浪微博</a>
+  <a href="http://www.jiathis.com/share?uid=1954501" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+</div>
+<script type="text/javascript">
+var jiathis_config = {data_track_clickback:'true'};
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js?uid=1954501" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+</footer>
+</div>
+</article>
+
+{% include comments.md %}

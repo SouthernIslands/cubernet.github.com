@@ -21,9 +21,6 @@ comments: yes
 新浪微博: [小怪兽](http://weibo.com/luxaole)	 
 github : [Cubernet](https://github.com/cubernet) 
     </div>
-<footer>
-	<div class="clearfix"></div>
-</footer>
   </div>
 </article>
 

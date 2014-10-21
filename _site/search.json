@@ -148,6 +148,20 @@
 		} ,
 	
 		{
+		  "title"    : "2014年观影列表",
+		  "categories" : "观影列表",
+		  "url"     : "/movie_list/",
+		  "date"     : " 2014年01月01日"
+		} ,
+	
+		{
+		  "title"    : "2014年阅读书单",
+		  "categories" : "阅读书单",
+		  "url"     : "/book_list/",
+		  "date"     : " 2014年01月01日"
+		} ,
+	
+		{
 		  "title"    : "Metasploit渗透测试相关(五)——社会工程学",
 		  "categories" : "春眠不觉晓，醒来写代码【去粗取精篇】",
 		  "url"     : "/Metasploit-6/",
@@ -257,6 +271,41 @@
 		  "categories" : "洛阳亲友如相问，就说我在写代码【爱爱爱情篇】",
 		  "url"     : "/bestmeet/",
 		  "date"     : " 2013年23月04日"
+		} ,
+	
+		{
+		  "title"    : "2013年观影列表",
+		  "categories" : "观影列表",
+		  "url"     : "/movie_list/",
+		  "date"     : " 2013年01月01日"
+		} ,
+	
+		{
+		  "title"    : "2013年阅读书单",
+		  "categories" : "阅读书单",
+		  "url"     : "/book_list/",
+		  "date"     : " 2013年01月01日"
+		} ,
+	
+		{
+		  "title"    : "2012年阅读书单",
+		  "categories" : "阅读书单",
+		  "url"     : "/book_list3/",
+		  "date"     : " 2012年01月01日"
+		} ,
+	
+		{
+		  "title"    : "2011年阅读书单",
+		  "categories" : "阅读书单",
+		  "url"     : "/book_list/",
+		  "date"     : " 2011年01月01日"
+		} ,
+	
+		{
+		  "title"    : "2010年阅读书单",
+		  "categories" : "阅读书单",
+		  "url"     : "/book_list/",
+		  "date"     : " 2010年01月01日"
 		} 
 	
 ]

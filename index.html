@@ -5,6 +5,8 @@ layout: page
 
 
 {% for post in paginator.posts %}
+    {% if post.layout == 'list' %}
+    {% else %}
     <article class="post">
     <div class="post-content">
       <header>
@@ -24,6 +26,7 @@ layout: page
       </footer>
     </div>
     </article>
+    {% endif %}
 {% endfor %}
 
 
