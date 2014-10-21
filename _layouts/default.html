@@ -21,34 +21,6 @@
     {% if page.music.size == 1 %}
     <script type="text/javascript" src="/media/js/jquery.jplayer.min.js"></script>
     {% endif %}
-
-    {% if page.title == "趣图" %}
-    <style>
-        body,ul,p,h2,h3{margin:0;padding:0;}
-        li{list-style:none};
-        a {text-decoration:none;}
-        h3 {font:14px "微软雅黑";}
-        strong { font-weight:normal; font-size:12px; color:#808080;height:24px; line-height:24px; float:left; padding:0 7px; cursor:pointer;}
-        .clear{zoom:1}
-        .clear:after{content:"";display:block;clear:both;}
-        .parent{width:1000px; overflow:hidden; margin:15px auto 0;}        
-        .parent li { width:240px; float:left;margin-right:10px;overflow:hidden;}
-        .parent li div[class='tag']{width:229px;border:1px solid #b6b6b6; margin-bottom:10px; border-top:4px solid #6f6f6f; padding:12px 0 0 9px;}
-        .parent li:first-child a{ background:#f0f0f0; text-decoration:none; margin:4px 5px 5px 0;display:inline-block; height:22px; line-height:22px; font-size:12px; color:#a0a0a0; padding:0 10px; border:1px solid #e2e2e2; border-radius:20px;}
-        .parent li:first-child a:nth-of-type(1) { background:#ff9231; color:#fff;}
-        .parent li:last-child{margin-right:0;}
-        .parent li div[class='boBtn'] { width:221px; margin:10px 0 0 -10px; padding-top:17px;}
-        .parent li div[class='boBtn'] div {margin-bottom:10px;}
-        .parent li div[class='boBtn'] p{ float:left; height:24px; line-height:24px; background:#fefefe;margin-bottom:6px; border-radius:15px;-webkit-border-radius:15px;-moz-border-radius:15px; border:1px solid #ddd; overflow:hidden;} 
-        .parent li div[class='boBtn'] span { float:left; padding:0 10px; font-size:12px; height:24px; line-height:24px;}
-        .active  { background:#ff9231; color:#fff;}
-        .parent .pic {margin-bottom:10px; border:1px solid #dadada; overflow:hidden; }
-        .parent .pic h3 { padding-top:5px;height:20px; line-height:20px; text-align:center; color:#00c0ff; text-shadow:1px 1px 3px rgba(255,255,255,.5)}
-        .parent .pic p {  font-size:12px; color:#aaa;padding:5px 10px; text-indent:2em; line-height:20px; background:#fbfbfb;color:#aaa;}
-        li div img { width:240px; border:none; vertical-align:top; }
-    </style>
-    {% endif %}
-
   </head>
   <body>
     <div id="container">
@@ -60,10 +32,12 @@
 
         <nav class="widget" id="menu">
             <ul>
-              <li class="cell"><a class="next" href="/">Home</a></li>
-              <li class="cell"><a class="next" href="/categories/">Archives</a></li>
-              <li class="cell"><a class="next" href="/about/">About</a></li>
-              <li class="cell"><a class="next" href="/search/">Search</a></li>
+              <li class="cell"><a class="next" href="/">首页</a></li>
+              <li class="cell"><a class="next" href="/categories/">分类</a></li>
+              <li class="cell"><a class="next" href="/books/">读书</a></li>
+              <li class="cell"><a class="next" href="/movies/">电影</a></li>
+              <li class="cell"><a class="next" href="/about/">关于</a></li>
+              <li class="cell"><a class="next" href="/search/">搜索</a></li>
             </ul>
         </nav>
 

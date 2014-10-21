@@ -1,11 +1,11 @@
 ---
-title: About me
+title: 阅读书单
 layout: page
 comments: yes
 ---
 
 
-<h2 class="archive-title">About Me</h2>
+<h2 class="archive-title">阅读书单</h2>
 
 <article class="page"> 
   <div class="post-content">
