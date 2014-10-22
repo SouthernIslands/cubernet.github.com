@@ -64,10 +64,10 @@ def getType(content):
         return None
 
 def getPoster(content):
-    p = re.compile(r'<img src="http://img\d.douban.com/view/movie_poster_cover/spst/public/(.*?)".*?rel="v:image".*?>',re.M) 
+    p = re.compile(r'<img src="http://img\d.douban.com/view/.*?/p(\d*).jpg".*?rel="v:image".*?>',re.M) 
     r = p.findall(content)
     if r:
-        return 'http://img3.douban.com/view/photo/photo/public/'+r[0]
+        return 'http://img3.douban.com/view/photo/photo/public/p'+r[0]+'.jpg'
     else:
         return None
 
