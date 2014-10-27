@@ -4,10 +4,9 @@ title: "博客再次更换主题"
 description: "给自己的博客写了一个新主题，从另外一个博主的主题修改过来的"
 categories: [子在川上曰：我在写代码【动手动脚篇】]
 tags: [博客主题]
+image: /assets/images/2014-08-03-anothernewtheme.png
 
 ---
-
-![image](/assets/images/2014-08-03-anothernewtheme.png)
 
 无意中看到[esoftmobile](http://esoftmobile.com)的博客，对他的博客主题有种一见钟情的感觉，可惜到github上一看源码才发现，原来esoftmobile是基于node.js来实现的那套主题。由于实在喜爱，虽夜已深，但决定模仿那个主题，自己操刀仿一个过来。
 

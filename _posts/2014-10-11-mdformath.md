@@ -5,10 +5,9 @@ description: "markdown latex"
 categories: [子在川上曰：我在写代码【动手动脚篇】]
 tags: [LaTex]
 music: []
+image: /assets/images/2014-10-11-mdformath.jpg
 
 ---
-
-![image](/assets/images/2014-10-11-mdformath.jpg)
 
 上一博文是翻译的一篇学术论文，在用markdown语法编辑译文时，发现原文中出现的公式不知如何插入。
 

@@ -7,10 +7,9 @@ categories: [子在川上曰：我在写代码【动手动脚篇】]
 tags: [iPhone]
 group: archive
 icon: file-o
+image: /assets/images/2014-2-1-iPhoneJailbreak.jpg
 
 ---
-
-![image](/assets/images/2014-2-1-iPhoneJailbreak.jpg)
 
 >人生需要两次冲动，一次没事找事的刷机和一次奋不顾身的越狱。——Cubernet
 

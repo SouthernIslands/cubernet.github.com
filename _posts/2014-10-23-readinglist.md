@@ -5,10 +5,9 @@ description: "阅读书单 观影列表"
 categories: [子在川上曰：我在写代码【动手动脚篇】]
 tags: [Python]
 music: []
+image: /assets/images/2014-10-23-readinglist.jpg
 
 ---
-
-![image](/assets/images/2014-10-23-readinglist.jpg)
 
 前天下午无意中看到一个博客中的阅读书单栏目，觉得把自己读过的或准备读的书记录下来是一个很好的想法，于是决定在我这里也模仿实现一个。用了一天时间，现在基本上完成啦。
 

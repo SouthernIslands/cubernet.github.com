@@ -71,6 +71,9 @@ $(document).ready(function() {
 
 <div class="entry">
 
+  {% if page.image %} 
+  <p><img src="{{ page.image }}" alt="{{ page.title }}"></p>
+  {% endif %}
   {{ content }}
 
   <p style="margin:20px 0; color:#9f9f9f; font-size:12px;">

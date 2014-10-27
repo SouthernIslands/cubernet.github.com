@@ -7,10 +7,9 @@ categories: [寄意寒星荃不察，我以我血写代码【未完待续篇】]
 tags: [about me]
 group: archive
 icon: coffee
+image: /assets/images/2013-12-25-first-post.jpg
 
 ---
-
-![image](/assets/images/2013-12-25-first-post.jpg)
 
 这是我第二次折腾借用Github来制作自己的博客。
  

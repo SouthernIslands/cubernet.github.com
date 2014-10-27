@@ -7,16 +7,15 @@ categories: [众里寻他千百度，蓦然回首，那人正在写代码【他�
 tags: [Linux,Kali]
 group: archive
 icon: file-o
+image: /assets/images/2013-08-08-iceweasel.png
 
 ---
-![image](/assets/images/2013-08-08-iceweasel.png)
-
 
 首先感谢rootoorotor大神，从他的博客里学到了很多东西，这几天更新的文章也都是从他的博客里挑选出来的一些我对我个人比较适用的部分，再加上一点我自己的理解而写出来的。博客链接：[rootoorotor‘Blog](http://www.rootoorotor.org/)
 
 Kali自带的浏览器是iceweasel，而iceweasel其实就是Debian下的Firefox。话说为何改头换面用了全新的名字，其实中间有一段小故事，感兴趣的同学可以自己百度一下。
 
-如果你习惯了windows下的各种其他千奇百怪的浏览器而觉得iceweasel的功能设计过于不人性化时，不妨试试下面的这些插件，它们会将你的iceweasel打造成一款web入口神器。
+如果你习惯了windows下的各种其他千奇百怪的浏览器而觉得iceweasel的功能设计过于不人性化时，不妨试试下面的这些插件，它们会将你的iceweasel打造成一款web入口神器。<!-- more -->
 
 <h2>1.Adblock Plus 广告过滤神器</h2>
 
@@ -26,7 +25,6 @@ Kali自带的浏览器是iceweasel，而iceweasel其实就是Debian下的Firefox
 
 <a title="https://addons.mozilla.org/zh-cn/firefox/addon/adblock-plus/?src=cb-dl-users" href="https://addons.mozilla.org/zh-cn/firefox/addon/adblock-plus/?src=cb-dl-users">https://addons.mozilla.org/zh-cn/firefox/addon/adblock-plus/?src=cb-dl-users</a>
 
-<!-- more -->
 <hr />
 
 <h2>2.Add to Search Bar 添加至搜索栏</h2>

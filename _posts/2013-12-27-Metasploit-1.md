@@ -26,6 +26,8 @@ featured: true
 
 5.[ Metasploit渗透测试相关(五)——社会工程学 ](http://cubernet.github.io/2013/12/31/Metasploit-6/)
 
+<!-- more -->
+
 
 ---
 参考资料：

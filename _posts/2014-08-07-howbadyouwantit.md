@@ -4,10 +4,9 @@ title: "HOW BAD YOU WANT IT"
 description: "how bad you want it . iOS小组加油。为自己加油。"
 categories: [少壮不努力，老大写代码【成长记录篇】]
 tags: [life]
+image: /assets/images/2014-08-07-howbadyouwantit.jpeg
 
 ---
-
-![image](/assets/images/2014-08-07-howbadyouwantit.jpeg)
 
 >Where all you wanna do is be successful as bad as you wanna breathe,then you will be successful.——HOW BAD YOU WANT IT
 

@@ -66,10 +66,11 @@ task :post do
     post.puts "categories: []"
     post.puts "tags: []"
     post.puts "music: []"
+    post.puts "image: "
     post.puts ""
     post.puts "---"
     post.puts ""
-    post.puts "![image](/assets/images/)"
+
   end
 end # task :post
 

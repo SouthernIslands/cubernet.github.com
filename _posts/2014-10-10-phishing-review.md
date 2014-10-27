@@ -5,10 +5,9 @@ description: "网络钓鱼 机器学习 聚类 分类"
 categories: [众里寻他千百度，蓦然回首，那人正在写代码【他山之石篇】]
 tags: [Phishing]
 music: []
+image: /assets/images/2014-10-10-phishing-review.png
 
 ---
-
-![image](/assets/images/2014-10-10-phishing-review.png)
 
 [**原文地址**](http://ijcsmc.com/docs/papers/February2014/V3I2201499a42.pdf)： http://ijcsmc.com /docs/papers/ February2014/ V3I2201499a42.pdf
 
@@ -80,7 +79,8 @@ music: []
 
 4) Naive Bayes Classifier.
 
-5) Web Phishing Detection In Machine Learning Using Heuristic Image Based Method, Vinnarasi Tharania. I,R. Sangareswari , M. Saleembabu International Journal of Engineering Research and Applications ISSN: 2248-9622
+5) Web Phishing Detection In Machine Learning Using Heuristic Image Based Method, Vinnarasi Tharania. I,
+R. Sangareswari , M. Saleembabu International Journal of Engineering Research and Applications ISSN: 2248-9622
 
 
 

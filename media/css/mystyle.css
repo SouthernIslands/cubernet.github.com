@@ -487,9 +487,6 @@ article .entry video {
 }
 }
 
-article .entry img:hover{
-  opacity: 0.65;
-}
 article .entry iframe {
   border: none;
 }
@@ -1273,6 +1270,43 @@ a.pageNav:hover {
     text-align: center;
     padding:0px;
   }
+}
+
+.small-image{
+  display:inline-block;
+  width:35%;
+  float:left;
+}
+
+.small-image img{
+  width:250px;
+}
+
+.excerpt{
+  display:inline-block;
+  width:62%;
+}
+
+.div-clear{
+  clear:both;
+}
+
+@media screen and (max-width: 900px) {
+  .small-image{
+  display:block;
+  width:100%;
+  float:none;
+}
+
+.small-image img{
+  width:100%;
+}
+
+.excerpt{
+  display:block;
+  width:100%;
+}
+
 }
 	
 

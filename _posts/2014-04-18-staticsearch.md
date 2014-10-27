@@ -7,10 +7,9 @@ categories: [子在川上曰：我在写代码【动手动脚篇】]
 tags: [jekyll,静态搜索,static search,]
 group: archive
 icon: file-o
+image: /assets/images/2014-04-18-staticsearch.jpg
 
 ---
-
-![image](/assets/images/2014-04-18-staticsearch.jpg)
 
 使用jekyll在github上搭建博客之后，无论是从写作的舒适度还是维护的方便程度上来讲都比之前有了很大的提升，不过一直觉得美中不足的是缺少一个搜索功能。由于整个博客都是静态的，因此很难做到像WordPress那种使用数据库来提供强大的搜索功能。不过退而求其次，给jekyll添加静态搜索，实现基本的功能还是有可能的。
 

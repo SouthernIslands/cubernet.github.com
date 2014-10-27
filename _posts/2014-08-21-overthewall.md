@@ -4,10 +4,9 @@ title: "墙里墙外"
 description: "翻墙，GWF，VPN"
 categories: [众里寻他千百度，蓦然回首，那人正在写代码【他山之石篇】]
 tags: [翻墙,VPN]
+image: /assets/images/2014-08-21-overthewall.png
 
 ---
-
-![image](/assets/images/2014-08-21-overthewall.png)
 
 >秦筑长城比铁牢，蕃戎不敢过临洮。
 
