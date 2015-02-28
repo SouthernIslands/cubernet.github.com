@@ -24,7 +24,7 @@ github : [Cubernet](https://github.com/cubernet)
   </div>
 </article>
 
-{% include ads.md %}
+
 
 
 
