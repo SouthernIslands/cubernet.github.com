@@ -48,6 +48,24 @@ layout: default
         </div>
     </div>
 </div>
+
+{% if page.autoplay %}
+<script type="text/javascript">
+$(document).ready(function() {
+
+    $("#jquery_jplayer_1").jPlayer({
+        ready: function(event) {
+            $(this).jPlayer("setMedia", {
+              {% for mus in page.music %}
+              mp3: "/assets/music/{{ mus }}",
+              {% endfor %}              
+            }).jPlayer("play");
+        },
+        supplied: "mp3"
+    });
+});                                      
+</script>
+{% else %}
 <script type="text/javascript">
 $(document).ready(function() {
 
@@ -63,6 +81,7 @@ $(document).ready(function() {
     });
 });                                      
 </script>
+{% endif %}
 </span>
 
 {% endif %}

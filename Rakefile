@@ -66,6 +66,7 @@ task :post do
     post.puts "categories: []"
     post.puts "tags: []"
     post.puts "music: []"
+    post.puts "autoplay: "
     post.puts "image: "
     post.puts ""
     post.puts "---"
