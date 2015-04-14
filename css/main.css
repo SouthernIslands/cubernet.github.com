@@ -942,7 +942,8 @@ body {
 .brand {
   position: relative;
   display: inline-block;
-  padding: 0 25px;
+  margin-left: 18px;
+  padding: 0 20px 0 20px;
   color: #fff;
   background: #222;
   border-bottom: none;
@@ -1020,8 +1021,8 @@ input.menu-search-input {
 }
 .sidebar-toggle {
   position: fixed;
-  right: 50px;
-  bottom: 45px;
+  right: 138px;
+  bottom: 85px;
   width: 15px;
   height: 15px;
   padding: 5px;
@@ -1167,7 +1168,7 @@ input.menu-search-input {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #73ffcc;
+  background: #0537ff;
 }
 .sidebar-nav {
   margin: 0;
@@ -1693,8 +1694,8 @@ px
 }
 .back-to-top {
   position: fixed;
-  bottom: 19px;
-  right: 50px;
+  bottom: 59px;
+  right: 138px;
   z-index: 1050;
   width: 15px;
   height: 13px;
