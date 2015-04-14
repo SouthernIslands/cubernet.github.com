@@ -373,6 +373,9 @@ a.fancybox {
   text-align: center;
   margin-top: 20px;
 }
+ul.category-list {
+  text-align: center;
+}
 table {
   width: 100%;
   border-collapse: collapse;
@@ -1168,7 +1171,7 @@ input.menu-search-input {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0537ff;
+  background: #ff40f2;
 }
 .sidebar-nav {
   margin: 0;
