@@ -186,7 +186,7 @@
       
 
       
-        <a href="/images/2014-1-23-clamav.jpg" class="fancybox"><img src="/images/2014-1-23-clamav.jpg"></a>
+        <a href="http://7xikui.com1.z0.glb.clouddn.com/2014-1-23-clamav.jpg-blogpic" class="fancybox"><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-1-23-clamav.jpg-blogpic"></a>
       
 
       
@@ -199,7 +199,7 @@
 <hr>
 <h2 id="安装及配置">安装及配置</h2><p>ClamAV是一套开源的杀毒软件，所以你可以从它的官网上下载到它的源码，按照自己的意愿对其修改之后，即可编译生成可执行文件。我在windows和Linux上均测试编译成功。</p>
 <p>下面以Windows上的配置为例：</p>
-<p><img src="/images/2014-1-23-clamav-1.png" alt="image"></p>
+<p><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-1-23-clamav-1.png-blogpic" alt="image"></p>
 <p>安装完成后将出现上面这些exe。其中常用到的只有三个，分别是clamscan.exe、freshclam.exe和sigtool.exe。</p>
 <ul>
 <li>Clamscan.exe是用来扫描文件或者目录的（支持递归以及压缩文件等）</li>
@@ -210,9 +210,9 @@
 <p>正确配置以后，先执行freshclam来下载最新的病毒库。然后就可以扫描文件了。</p>
 <p>扫描命令： clamscan –r [需要递归扫描的路径] –l [日志文件保存的路径]</p>
 <p>扫描结果：</p>
-<p>没有发现病毒的：<br><img src="/images/2014-1-23-clamav-2.png" alt="image"></p>
-<p>发现病毒的：<br><img src="/images/2014-1-23-clamav-3.png" alt="image"></p>
-<p>对应的日志文件：<br><img src="/images/2014-1-23-clamav-4.png" alt="image"></p>
+<p>没有发现病毒的：<br><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-1-23-clamav-2.png-blogpic" alt="image"></p>
+<p>发现病毒的：<br><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-1-23-clamav-3.png-blogpic" alt="image"></p>
+<p>对应的日志文件：<br><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-1-23-clamav-4.png-blogpic" alt="image"></p>
 <hr>
 <h2 id="配置文件实例">配置文件实例</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">/etc/clamd<span class="class">.conf</span></span><br><span class="line">LogFile /var/log/clamd<span class="class">.log</span>   日志文件</span><br><span class="line">LogFileMaxSize <span class="number">0</span>    日志文件最大体积</span><br><span class="line">LogTime yes    是否在日志文件中记录时间</span><br><span class="line">LogVerbose yes    是否详细记录日志</span><br><span class="line">PidFile /var/run/clamav/clamd<span class="class">.pid</span>    进程文件</span><br><span class="line">TemporaryDirectory /var/tmp    扫描时的临时目录</span><br><span class="line">DatabaseDirectory /var/clamav    病毒库目录</span><br><span class="line">LocalSocket /var/run/clamav/clamd<span class="class">.sock</span>    本地通讯的socket文件</span><br><span class="line">TCPSocket <span class="number">3310</span>    TCPSocket端口（与LocalSocket不可并存）</span><br><span class="line">FixStaleSocket    yes</span><br><span class="line">User    clamav</span><br><span class="line">ScanOLE2    扫描office文档</span><br><span class="line">ScanMail    扫描邮件</span><br><span class="line">ScanArchive    扫描压缩包</span><br><span class="line">ScanRAR    扫描RAR压缩包</span><br><span class="line">ArchiveMaxFileSize <span class="number">10</span>M    最大扫描压缩包文件为<span class="number">10</span>兆</span><br><span class="line">ArchiveMaxRecursion <span class="number">9</span>    扫描压缩包<span class="number">9</span>层</span><br><span class="line">ArchiveMaxFiles <span class="number">1000</span>    最多扫描压缩包内<span class="number">1500</span>个文件</span><br><span class="line">/etc/freshclam<span class="class">.conf</span></span><br><span class="line">DatabaseDirectory /var/clamav    病毒库目录</span><br><span class="line">UpdateLogFile /var/log/freshclam<span class="class">.log</span>    更新日志</span><br><span class="line">LogVerbose yes    是否详细记录日志</span><br><span class="line">PidFile /var/run/clamav/freshclam<span class="class">.pid</span>    进程文件</span><br><span class="line">DatabaseOwner clamav    病毒库用户</span><br><span class="line">DatabaseMirror db<span class="class">.cn</span><span class="class">.clamav</span><span class="class">.net</span>    病毒库的镜像地址（可以多个）</span><br><span class="line">DatabaseMirror database<span class="class">.clamav</span><span class="class">.net</span></span><br></pre></td></tr></table></figure>
 <hr>

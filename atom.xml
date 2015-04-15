@@ -4,7 +4,7 @@
   <subtitle><![CDATA[subtitle]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://cubernet.cn/"/>
-  <updated>2015-04-14T13:40:17.000Z</updated>
+  <updated>2015-04-15T18:17:41.000Z</updated>
   <id>http://cubernet.cn/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <link href="http://cubernet.cn/2015-02-28/newyear/"/>
     <id>http://cubernet.cn/2015-02-28/newyear/</id>
     <published>2015-02-27T16:00:00.000Z</published>
-    <updated>2015-04-14T13:40:17.000Z</updated>
-    <content type="html"><![CDATA[<img src="/images/2015-02-28-newyear.jpg" width="600" height="900">
+    <updated>2015-04-15T18:17:41.000Z</updated>
+    <content type="html"><![CDATA[<img src="http://7xikui.com1.z0.glb.clouddn.com/2015-02-28-newyear.jpg-blogpic" width="600" height="900">
 <p>很久没有写一点东西，眼睛盯着屏幕，不知道该从何说起。</p>
 <p>写上一篇博文的时候是在期末之前，到现在在家里背靠着床头为止，中间这段时间经历很多细小琐碎却让我觉得十足倒霉的事情。所谓吃一堑长一智，也算是买教训了。</p>
 <a id="more"></a>
@@ -65,7 +65,7 @@
     <link href="http://cubernet.cn/2014-10-23/readinglist/"/>
     <id>http://cubernet.cn/2014-10-23/readinglist/</id>
     <published>2014-10-22T16:00:00.000Z</published>
-    <updated>2015-04-14T13:58:28.000Z</updated>
+    <updated>2015-04-15T18:17:45.000Z</updated>
     <content type="html"><![CDATA[<p>前天下午无意中看到一个博客中的阅读书单栏目，觉得把自己读过的或准备读的书记录下来是一个很好的想法，于是决定在我这里也模仿实现一个。用了一天时间，现在基本上完成啦。</p>
 <p>犹豫平时闲暇时间更多的用来看电影了<img src="http://cubernet.cn/assets/smilies/5.gif" id="smiley">，所以又特意增加了一个记录电影的<a id="more"></a>子栏目。以后大家就可以通过电脑（出于排版优化的问题，手机访问时左边的导航栏默认是不显示的）访问我博客的<a href="http://cubernet.cn/books/" target="_blank" rel="external">阅读书单</a>和<a href="http://cubernet.cn/movies/" target="_blank" rel="external">观影列表</a>来与我交流分享好看的书或者电影了。</p>
 <p>这一天的时间里，整理资料和编写代码的时间基本上一半一半吧。先说整理资料的事情。</p>
@@ -114,7 +114,7 @@
     <link href="http://cubernet.cn/2014-10-14/pvm/"/>
     <id>http://cubernet.cn/2014-10-14/pvm/</id>
     <published>2014-10-13T16:00:00.000Z</published>
-    <updated>2015-04-14T13:40:30.000Z</updated>
+    <updated>2015-04-15T18:17:49.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>并行计算机（pvm）是用于网络并行计算机上的软件工具。设计它的目的是将异构的计算机网络连接起来，使它使用起来就像一组分布式的并行处理器。</p>
 <p>——百度百科</p>
@@ -180,7 +180,7 @@
     <link href="http://cubernet.cn/2014-10-11/mdformath/"/>
     <id>http://cubernet.cn/2014-10-11/mdformath/</id>
     <published>2014-10-10T16:00:00.000Z</published>
-    <updated>2015-04-14T17:27:11.000Z</updated>
+    <updated>2015-04-15T18:17:55.000Z</updated>
     <content type="html"><![CDATA[<p>上一博文是翻译的一篇学术论文，在用markdown语法编辑译文时，发现原文中出现的公式不知如何插入。</p>
 <p>当然，能想到的一个简单的办法就是，把原文中的公式截图，然后在译文中插入图片。但是，作为一个天生爱折腾的工科男，这样的解决办法显然满足不了我。</p>
 <a id="more"></a>
@@ -215,7 +215,7 @@
     <link href="http://cubernet.cn/2014-10-10/phishing-review/"/>
     <id>http://cubernet.cn/2014-10-10/phishing-review/</id>
     <published>2014-10-09T16:00:00.000Z</published>
-    <updated>2015-04-14T17:27:52.000Z</updated>
+    <updated>2015-04-15T18:17:58.000Z</updated>
     <content type="html"><![CDATA[<p><a href="http://ijcsmc.com/docs/papers/February2014/V3I2201499a42.pdf" target="_blank" rel="external"><strong>原文地址</strong></a>： <a href="http://ijcsmc.com" target="_blank" rel="external">http://ijcsmc.com</a> /docs/papers/ February2014/ V3I2201499a42.pdf</p>
 <p>作者：Feon Jaison1, Seenia Francis</p>
 <p>感谢Feon Jaison1, Seenia Francis提供的优质文章。</p>
@@ -263,7 +263,7 @@
     <link href="http://cubernet.cn/2014-09-16/xiabb/"/>
     <id>http://cubernet.cn/2014-09-16/xiabb/</id>
     <published>2014-09-15T16:00:00.000Z</published>
-    <updated>2015-04-14T13:40:41.000Z</updated>
+    <updated>2015-04-15T18:18:01.000Z</updated>
     <content type="html"><![CDATA[<p>作为一名资深老学生，本已没有心情再去关心开学放假这种逗小朋友的事情，但不得不承认今年开学这两周所经历的一些事还是让我有了很多感触。拟题<code>xiabb</code>，后又觉得有失风度，遂改为<code>开学记</code>。</p>
 <p>感觉上一直是从年初3月份来校后一直忙过来的，虽然中间夹杂着毕业季和暑假，但对我来说貌似都是夹杂在忙碌中的很普通的日子。直到突然有一天收到系统发送的欢迎新生报道和提示新生缴费的短信时，才意识到，又开学了。</p>
 <a id="more"></a>
@@ -294,7 +294,7 @@
     <link href="http://cubernet.cn/2014-08-21/overthewall/"/>
     <id>http://cubernet.cn/2014-08-21/overthewall/</id>
     <published>2014-08-20T16:00:00.000Z</published>
-    <updated>2015-04-14T13:40:47.000Z</updated>
+    <updated>2015-04-15T18:18:04.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>秦筑长城比铁牢，蕃戎不敢过临洮。</p>
 <p>虽然万里连云际，争及尧阶三尺高。</p>
@@ -339,7 +339,7 @@
     <link href="http://cubernet.cn/2014-08-06/rootdaemon/"/>
     <id>http://cubernet.cn/2014-08-06/rootdaemon/</id>
     <published>2014-08-05T16:00:00.000Z</published>
-    <updated>2015-04-14T13:40:55.000Z</updated>
+    <updated>2015-04-15T18:18:16.000Z</updated>
     <content type="html"><![CDATA[<p><a href="http://bbs.iosre.com/forum.php?mod=viewthread&amp;tid=204&amp;page=1&amp;extra=#pid1096" target="_blank" rel="external">原文地址</a>：<a href="http://bbs.iosre.com" target="_blank" rel="external">http://bbs.iosre.com</a> /forum.php? mod=viewthread &amp;tid=204&amp;page=1 &amp;extra=#pid1096</p>
 <p>作者：snakeninny</p>
 <p>感谢snakeninny提供的优质文章。</p>
@@ -413,7 +413,7 @@
         <span class="tag">&lt;<span class="title">string</span>&gt;</span>more args...<span class="tag">&lt;/<span class="title">string</span>&gt;</span>
     <span class="tag">&lt;/<span class="title">array</span>&gt;</span>
 </code></pre><p>在完成了这些之后，我们把这个配置文件保存在项目根目录下的/layout/Library/System/文件夹中。现在，我们的项目树看上去是这个样子的：</p>
-<p><img src="/images/2014-08-06-rootdaemon2.png" alt="image"></p>
+<p><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-08-06-rootdaemon2.png-blogpic" alt="image"></p>
 <p>执行<code>make package</code>命令，然后检查deb所属的用户：</p>
 <pre><code>snakeninnys-<span class="string">MacBook:</span>rootdaemond snakeninny$ dpkg-deb -c <span class="regexp">/Users/</span>snakeninny<span class="regexp">/Code/</span>    rootdaemond/com.iosre.rootdaemond_1.0-<span class="number">1</span>_iphoneos-arm.deb 
 drwxr-xr-x snakeninny<span class="regexp">/staff  0 2014-05-11 15:52 ./</span>
@@ -506,7 +506,7 @@ snakeninnys-<span class="constant">MacBook</span><span class="symbol">:Code</spa
     <link href="http://cubernet.cn/2014-08-05/theos1/"/>
     <id>http://cubernet.cn/2014-08-05/theos1/</id>
     <published>2014-08-04T16:00:00.000Z</published>
-    <updated>2015-04-14T13:37:08.000Z</updated>
+    <updated>2015-04-15T18:18:19.000Z</updated>
     <content type="html"><![CDATA[<p>最近由于工作原因，需要了解iOS越狱开发相关的一些技术。之前虽然有接触过iOS开发，不过都是基于苹果公开的API，相对于越狱开发还是一头雾水。于是打开Google，开始找寻我需要的资料。经过一段时间的查阅，发现iOS越狱开发相关的资料实在太少，并且比较杂乱，甚至即使在安装时遇到的问题都要花费很长的时间去搜索解决办法。虽说现在项目已经接近尾声，当初的很多步骤细节已经记得不清楚，不过我还是尽力回顾整理一下，对自己来说是一种知识的巩固，或许还能帮上别人的一点小忙。</p>
 <a id="more"></a>
 <h2 id="开发环境">开发环境</h2><p>首先，要开启一段iOS越狱开发之旅的你，最好有一定的Objective-C基础，Objective-C是苹果开发的唯一官方语言，虽说越狱开发也可以采用Lua语言开发的Wax框架，但我相信了解Objective-C总归不是一件坏事。</p>
@@ -576,7 +576,7 @@ tweak<span class="comment">--&gt;外挂程序</span>
     <link href="http://cubernet.cn/2014-08-03/another-new-theme/"/>
     <id>http://cubernet.cn/2014-08-03/another-new-theme/</id>
     <published>2014-08-02T16:00:00.000Z</published>
-    <updated>2015-04-14T13:41:05.000Z</updated>
+    <updated>2015-04-15T18:18:31.000Z</updated>
     <content type="html"><![CDATA[<p>无意中看到<a href="http://esoftmobile.com" target="_blank" rel="external">esoftmobile</a>的博客，对他的博客主题有种一见钟情的感觉，可惜到github上一看源码才发现，原来esoftmobile是基于node.js来实现的那套主题。由于实在喜爱，虽夜已深，但决定模仿那个主题，自己操刀仿一个过来。</p>
 <a id="more"></a>
 <p>说干就干。由于之前自己亲手做过一个主题，所以对jekyll的这一套东西已经比较熟悉，噼里啪啦在键盘上乱敲了一顿之后，cmd+R，我看着屏幕笑了笑，已经达到我预期的效果了。</p>
@@ -615,7 +615,7 @@ tweak<span class="comment">--&gt;外挂程序</span>
     <link href="http://cubernet.cn/2014-07-28/bieli/"/>
     <id>http://cubernet.cn/2014-07-28/bieli/</id>
     <published>2014-07-27T16:00:00.000Z</published>
-    <updated>2015-04-14T13:42:23.000Z</updated>
+    <updated>2015-04-15T18:18:24.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>人生浪急滩险<br>走来不易<br>最后值得珍重的<br>不过是你我的情义</p>
 <p>——祝小兔</p>
@@ -680,7 +680,7 @@ tweak<span class="comment">--&gt;外挂程序</span>
     <link href="http://cubernet.cn/2014-06-28/libie/"/>
     <id>http://cubernet.cn/2014-06-28/libie/</id>
     <published>2014-06-27T16:00:00.000Z</published>
-    <updated>2015-04-14T13:42:32.000Z</updated>
+    <updated>2015-04-15T18:18:35.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>华灯再上，离别的已是自己。 ——Cubernet</p>
 </blockquote>
@@ -741,7 +741,7 @@ tweak<span class="comment">--&gt;外挂程序</span>
     <link href="http://cubernet.cn/2014-06-16/luo/"/>
     <id>http://cubernet.cn/2014-06-16/luo/</id>
     <published>2014-06-15T16:00:00.000Z</published>
-    <updated>2015-04-14T13:44:02.000Z</updated>
+    <updated>2015-04-15T18:18:45.000Z</updated>
     <content type="html"><![CDATA[<p><a href="http://www.luoo.net" target="_blank" rel="external">落电台</a>是我很喜欢的一个电台，也曾经在日志中不止一次的推荐过这个电台。这个网站上的音乐、文字、图片，无一不让我陶醉。</p>
 <blockquote>
 <p>在本科四年中那段最奋斗最辛苦的日子，<code>落网</code>陪我一路走过。那些清早起来，听着电台开始一天编码的生活，是最充实最美丽的回忆。——感谢<code>落网</code></p>
@@ -765,7 +765,7 @@ tweak<span class="comment">--&gt;外挂程序</span>
 
 ---------------------------------------------------------------------------------
 </code></pre><p>最终实现效果如下图：</p>
-<p><img src="/images/2014-06-16-luo-2.png" alt="image"></p>
+<p><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-06-16-luo-2.png-blogpic" alt="image"></p>
 <p>完整源码地址：<a href="https://github.com/Cubernet/luoo" target="_blank" rel="external">点击下载</a>       </p>
 ]]></content>
     <summary type="html">
@@ -784,7 +784,7 @@ tweak<span class="comment">--&gt;外挂程序</span>
     <link href="http://cubernet.cn/2014-06-15/encode/"/>
     <id>http://cubernet.cn/2014-06-15/encode/</id>
     <published>2014-06-14T16:00:00.000Z</published>
-    <updated>2015-04-14T13:44:07.000Z</updated>
+    <updated>2015-04-15T18:18:50.000Z</updated>
     <content type="html"><![CDATA[<p>偶然获知阮一峰老师的博客文集上线了，十年（2004-2013）的思想漫游，100篇精华文章，20万字。一直很喜欢阮一峰老师的博客，也从他的博客中学到了很多东西。推荐大家有空去他的博客<a href="http://www.ruanyifeng.com" target="_blank" rel="external">阮一峰的网络日志</a>看看，更推荐大家购买一份电子版文集好好品读，<a href="http://www.ruanyifeng.com/blog/2014/05/my_blog_book.html" target="_blank" rel="external">文集介绍及购买地址</a>。</p>
 <a id="more"></a>
 <p>下面进入今天的正题，谈谈平时常见的几种编码。</p>
@@ -841,7 +841,7 @@ tweak<span class="comment">--&gt;外挂程序</span>
     <link href="http://cubernet.cn/2014-06-09/new-theme/"/>
     <id>http://cubernet.cn/2014-06-09/new-theme/</id>
     <published>2014-06-08T16:00:00.000Z</published>
-    <updated>2015-04-14T15:59:07.000Z</updated>
+    <updated>2015-04-15T18:18:57.000Z</updated>
     <content type="html"><![CDATA[<p>之前一直使用WP搭建博客，后来觉得WP实在过于庞大，那些高大上的功能对我这样一个<code>手残</code>来说实在是没有用武之地，所以投靠到了Github。</p>
 <a id="more"></a>
 <p>刚来的时候，花了很长时间在网上寻找博客主题，筛选的条件只有一个，简洁。于是就有了之前的那个主题，那个模板修改自 <a href="http://yonsm.net/" target="_blank" rel="external">Yonsm</a> 的博客，在这里再次表示感谢。 看久之后，总觉得之前的模板更多的只是符合我对简洁的要求，并没有达到简洁美，于是在欢度六一之后，决定亲自写一套模板，只有这样才能最大程度的达到预期的样式效果。</p>
@@ -873,7 +873,7 @@ tweak<span class="comment">--&gt;外挂程序</span>
     <link href="http://cubernet.cn/2014-04-25/iPhoneSpeedUp/"/>
     <id>http://cubernet.cn/2014-04-25/iPhoneSpeedUp/</id>
     <published>2014-04-24T16:00:00.000Z</published>
-    <updated>2015-04-14T13:45:18.000Z</updated>
+    <updated>2015-04-15T18:18:59.000Z</updated>
     <content type="html"><![CDATA[<p>作为一名奋战在第一线的程序猿，如果跟开发无关，那么对新系统的抵抗力几乎为0，所以当初毫不犹豫的升级了iOS7。年初越狱工具放出之后，也在第一时间进行了越狱。倒不是对破解的免费软件有什么需求，说白了就是三个字，爱折腾。</p>
 <p>不过在用了一段时间之后，不得不承认iOS7在增加了许多功能改进和提高用户UI体验的同时，对系统内存和电池续航都提出了更大的需求。就我自己的4S而言，电池续航方面，保持正常频率的电话短信微信微博，基本半天就得充电。流畅度方面<br><a id="more"></a>更是糟糕，闪退现象极其严重，如果想运行一个稍微大一点的游戏，就需要将后台的其他应用全部关闭。</p>
 <p>忍无可忍却又换不起5S的屌丝只好自己动手丰衣足食了。</p>
@@ -922,8 +922,8 @@ tweak<span class="comment">--&gt;外挂程序</span>
     <link href="http://cubernet.cn/2014-04-23/oneyear/"/>
     <id>http://cubernet.cn/2014-04-23/oneyear/</id>
     <published>2014-04-22T16:00:00.000Z</published>
-    <updated>2015-04-14T16:06:22.000Z</updated>
-    <content type="html"><![CDATA[<p><img alt="image" src="/images/2014-04-23-oneyear.JPG" style="width:220px"></p>
+    <updated>2015-04-15T18:19:05.000Z</updated>
+    <content type="html"><![CDATA[<p><img alt="image" src="http://7xikui.com1.z0.glb.clouddn.com/2014-04-23-oneyear.JPG-blogpic" style="width:220px"></p>
 <div style="text-align:center"><br><br><p>一年很长</p><br><br><p>我们了解，磨合，争吵，置气</p><br><br><p>一年很短</p><br><br><p>我们拥抱，热恋，旅行，玩耍</p><br><br><p>你总说</p><br><br><p>我是你最好的遇见</p><br><br><a id="more"></a><br><br><p>而我说</p><br><br><p>我遇见了最好的你</p><br><br><p>这一年中的快乐或不开心都超越过去的总和</p><br><br><p>这一年承载了我们彼此生命中最重要的决定</p><br><br><p>当岁月一年又一年褪去爱情华丽的外表</p><br><br><p>我相信剩下的</p><br><br><p>是绝对的信任和满满的爱</p><br><br><p>2014.04.23#一周年快乐，宝贝#</p><br><br><br></div>
 
 
@@ -947,7 +947,7 @@ tweak<span class="comment">--&gt;外挂程序</span>
     <link href="http://cubernet.cn/2014-04-18/staticsearch/"/>
     <id>http://cubernet.cn/2014-04-18/staticsearch/</id>
     <published>2014-04-17T16:00:00.000Z</published>
-    <updated>2015-04-14T13:45:31.000Z</updated>
+    <updated>2015-04-15T18:19:09.000Z</updated>
     <content type="html"><![CDATA[<p>使用jekyll在github上搭建博客之后，无论是从写作的舒适度还是维护的方便程度上来讲都比之前有了很大的提升，不过一直觉得美中不足的是缺少一个搜索功能。由于整个博客都是静态的，因此很难做到像WordPress那种使用数据库来提供强大的搜索功能。不过退而求其次，给jekyll添加静态搜索，实现基本的功能还是有可能的。</p>
 <a id="more"></a>
 <p>通过在Google搜索一番之后，发现了<a href="https://github.com/slashdotdash/jekyll-lunr-js-search" target="_blank" rel="external">jekyll-lun-js-search</a>这个插件，可以实现jekyll的静态搜索。话不多说，按照说明文件中的步骤开始动手配置。</p>
@@ -982,7 +982,7 @@ tweak<span class="comment">--&gt;外挂程序</span>
     <link href="http://cubernet.cn/2014-03-31/xiami/"/>
     <id>http://cubernet.cn/2014-03-31/xiami/</id>
     <published>2014-03-30T16:00:00.000Z</published>
-    <updated>2015-04-14T13:45:42.000Z</updated>
+    <updated>2015-04-15T18:17:24.000Z</updated>
     <content type="html"><![CDATA[<p>前几天登录虾米音乐，首页赫然提醒，建议用户将虾米账号迁移到淘宝上，以后用淘宝账号登录虾米。说实在的，当时心瞬间就凉了。就像当初排斥多看阅读迁移到小米账号上一样，我讨厌把自己在互联网上辛苦打造出来的一小片净土和BAT挂上勾。</p>
 <p>说到这里，想起个“笑话”。</p>
 <a id="more"></a>
@@ -992,19 +992,19 @@ tweak<span class="comment">--&gt;外挂程序</span>
 <p>言归正传。今天在看雪上注意到Hopper Disassembler这么一款软件，据说是mac平台上反编译神器，所以下下来体验一下。碰巧又在52上看到一个破解虾米音乐的例子，想到那让我心凉的虾米音乐，于是决定就对它下手了。</p>
 <p>这次的任务是破解mac系统的虾米音乐app，使普通用户也可以享用VIP服务。</p>
 <p>首先来一张破解之前的截图，未付费用户是无法享受高品质的。</p>
-<p><img src="/images/2014-03-31-xiami-1.png" alt="image"></p>
+<p><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-03-31-xiami-1.png-blogpic" alt="image"></p>
 <p>然后打开HD，选择<code>Read Executable</code>-&gt;<code>应用程序</code>-&gt;<code>虾米音乐</code>-&gt;<code>Contents</code>-&gt;<code>MacOS</code>-&gt;<code>Xiami</code></p>
-<p><img src="/images/2014-03-31-xiami-2.png" alt="image"></p>
+<p><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-03-31-xiami-2.png-blogpic" alt="image"></p>
 <p>等待几秒钟，待完全载入分析完成后，可以看到如下界面：</p>
-<p><img src="/images/2014-03-31-xiami-3.png" alt="image"></p>
+<p><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-03-31-xiami-3.png-blogpic" alt="image"></p>
 <p>左边一栏列出了该程序中包含的函数，迅速浏览一遍，发现了一个<code>isVIP</code>的函数，从名字上猜测，这个函数是用来判断用户是不是VIP的（也可再搜索栏中直接搜isVip），点击左侧函数名，右侧便会显示出该函数对应的汇编指令。【这一步的截图丢失了，所以下面这张图是从52上搬过来的，可能稍微有点模糊】</p>
-<p><img src="/images/2014-03-31-xiami-4.png" alt="image"></p>
+<p><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-03-31-xiami-4.png-blogpic" alt="image"></p>
 <p>从平时使用这款app的经验上可以得知，这款虾米客户端的功能比较简单，稍微复杂的操作都需要跳转到网页版进行，所以猜想客户端的逻辑验证也比较简单。</p>
 <p>从<code>isVIP</code>这个函数中我们可以看到，首先对rbp压栈，然后做了几次赋值操作后，将rbp出栈返回。那么这个函数的实际工作过程有没有可能是：给用户一个是否为VIP的标识，然后通过向服务器查询，将返回值赋值给这个标识并返回。为了验证这个猜想，我们只需将rbp归零再加1，使其值为true，最后返回，如下图：</p>
-<p><img src="/images/2014-03-31-xiami-5.png" alt="image"></p>
+<p><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-03-31-xiami-5.png-blogpic" alt="image"></p>
 <p>最后通过<code>File</code>-&gt;<code>Produce New Executable</code>来生成新的Xiami文件，替换原来的，双击运行，看到如下效果图：</p>
-<p><img src="/images/2014-03-31-xiami-6.png" alt="image"></p>
-<p><img src="/images/2014-03-31-xiami-7.png" alt="image"></p>
+<p><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-03-31-xiami-6.png-blogpic" alt="image"></p>
+<p><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-03-31-xiami-7.png-blogpic" alt="image"></p>
 <p>看来我们猜测的没有错，现在已经可以享受高品质的音乐了。Have fun :)</p>
 <hr>
 <p>PS：由于是第一次在Mac上做相关的工作，所以觉得很新鲜很有趣，便记录下来，大神勿喷。</p>
@@ -1028,7 +1028,7 @@ tweak<span class="comment">--&gt;外挂程序</span>
     <link href="http://cubernet.cn/2014-03-26/essay/"/>
     <id>http://cubernet.cn/2014-03-26/essay/</id>
     <published>2014-03-25T16:00:00.000Z</published>
-    <updated>2015-04-14T13:45:54.000Z</updated>
+    <updated>2015-04-15T18:17:05.000Z</updated>
     <content type="html"><![CDATA[<p>其实这篇本应该是2013的年终总结的，结果没想到拖到14年都过了四分之一，还是没有把这个坑补上。过了这么久，当初那份想写一点什么东西的心情早就没有了。简单的说，这一年算得上人生中另一个充满转折点的年份吧。爱情学业双丰收。但今年不会那么轻松，对我，对我的她，可能都是。我们都要好好努力。</p>
 <p>最近发生了好多事情，有好有坏，细说无趣，不如随便说点感悟。</p>
 <a id="more"></a>
