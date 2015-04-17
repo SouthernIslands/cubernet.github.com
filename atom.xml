@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[Cubernet'Blog]]></title>
   <subtitle><![CDATA[subtitle]]></subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="/blog/atom.xml" rel="self"/>
   <link href="http://cubernet.cn/"/>
   <updated>2015-04-15T18:17:41.000Z</updated>
   <id>http://cubernet.cn/</id>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[随便说点什么]]></title>
-    <link href="http://cubernet.cn/newyear/"/>
-    <id>http://cubernet.cn/newyear/</id>
+    <link href="http://cubernet.cn/blog/newyear/"/>
+    <id>http://cubernet.cn/blog/newyear/</id>
     <published>2015-02-27T16:00:00.000Z</published>
     <updated>2015-04-15T18:17:41.000Z</updated>
     <content type="html"><![CDATA[<img src="http://7xikui.com1.z0.glb.clouddn.com/2015-02-28-newyear.jpg-blogpic" width="600" height="900">
@@ -62,8 +62,8 @@
   
   <entry>
     <title><![CDATA[博客新增阅读书单和观影列表子栏目]]></title>
-    <link href="http://cubernet.cn/readinglist/"/>
-    <id>http://cubernet.cn/readinglist/</id>
+    <link href="http://cubernet.cn/blog/readinglist/"/>
+    <id>http://cubernet.cn/blog/readinglist/</id>
     <published>2014-10-22T16:00:00.000Z</published>
     <updated>2015-04-15T18:28:14.000Z</updated>
     <content type="html"><![CDATA[<p>前天下午无意中看到一个博客中的阅读书单栏目，觉得把自己读过的或准备读的书记录下来是一个很好的想法，于是决定在我这里也模仿实现一个。用了一天时间，现在基本上完成啦。</p>
@@ -111,8 +111,8 @@
   
   <entry>
     <title><![CDATA[PVM环境配置]]></title>
-    <link href="http://cubernet.cn/pvm/"/>
-    <id>http://cubernet.cn/pvm/</id>
+    <link href="http://cubernet.cn/blog/pvm/"/>
+    <id>http://cubernet.cn/blog/pvm/</id>
     <published>2014-10-13T16:00:00.000Z</published>
     <updated>2015-04-15T18:17:49.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
@@ -177,8 +177,8 @@
   
   <entry>
     <title><![CDATA[在Markdown中使用数学公式]]></title>
-    <link href="http://cubernet.cn/mdformath/"/>
-    <id>http://cubernet.cn/mdformath/</id>
+    <link href="http://cubernet.cn/blog/mdformath/"/>
+    <id>http://cubernet.cn/blog/mdformath/</id>
     <published>2014-10-10T16:00:00.000Z</published>
     <updated>2015-04-15T18:17:55.000Z</updated>
     <content type="html"><![CDATA[<p>上一博文是翻译的一篇学术论文，在用markdown语法编辑译文时，发现原文中出现的公式不知如何插入。</p>
@@ -212,8 +212,8 @@
   
   <entry>
     <title><![CDATA[【译】网络钓鱼检测：综述]]></title>
-    <link href="http://cubernet.cn/phishing-review/"/>
-    <id>http://cubernet.cn/phishing-review/</id>
+    <link href="http://cubernet.cn/blog/phishing-review/"/>
+    <id>http://cubernet.cn/blog/phishing-review/</id>
     <published>2014-10-09T16:00:00.000Z</published>
     <updated>2015-04-15T18:17:58.000Z</updated>
     <content type="html"><![CDATA[<p><a href="http://ijcsmc.com/docs/papers/February2014/V3I2201499a42.pdf" target="_blank" rel="external"><strong>原文地址</strong></a>： <a href="http://ijcsmc.com" target="_blank" rel="external">http://ijcsmc.com</a> /docs/papers/ February2014/ V3I2201499a42.pdf</p>
@@ -260,8 +260,8 @@
   
   <entry>
     <title><![CDATA[开学记]]></title>
-    <link href="http://cubernet.cn/xiabb/"/>
-    <id>http://cubernet.cn/xiabb/</id>
+    <link href="http://cubernet.cn/blog/xiabb/"/>
+    <id>http://cubernet.cn/blog/xiabb/</id>
     <published>2014-09-15T16:00:00.000Z</published>
     <updated>2015-04-15T18:18:01.000Z</updated>
     <content type="html"><![CDATA[<p>作为一名资深老学生，本已没有心情再去关心开学放假这种逗小朋友的事情，但不得不承认今年开学这两周所经历的一些事还是让我有了很多感触。拟题<code>xiabb</code>，后又觉得有失风度，遂改为<code>开学记</code>。</p>
@@ -291,8 +291,8 @@
   
   <entry>
     <title><![CDATA[墙里墙外]]></title>
-    <link href="http://cubernet.cn/overthewall/"/>
-    <id>http://cubernet.cn/overthewall/</id>
+    <link href="http://cubernet.cn/blog/overthewall/"/>
+    <id>http://cubernet.cn/blog/overthewall/</id>
     <published>2014-08-20T16:00:00.000Z</published>
     <updated>2015-04-15T18:18:04.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
@@ -336,8 +336,8 @@
   
   <entry>
     <title><![CDATA[【译】在iOS上以root身份运行守护进程]]></title>
-    <link href="http://cubernet.cn/rootdaemon/"/>
-    <id>http://cubernet.cn/rootdaemon/</id>
+    <link href="http://cubernet.cn/blog/rootdaemon/"/>
+    <id>http://cubernet.cn/blog/rootdaemon/</id>
     <published>2014-08-05T16:00:00.000Z</published>
     <updated>2015-04-15T18:18:16.000Z</updated>
     <content type="html"><![CDATA[<p><a href="http://bbs.iosre.com/forum.php?mod=viewthread&amp;tid=204&amp;page=1&amp;extra=#pid1096" target="_blank" rel="external">原文地址</a>：<a href="http://bbs.iosre.com" target="_blank" rel="external">http://bbs.iosre.com</a> /forum.php? mod=viewthread &amp;tid=204&amp;page=1 &amp;extra=#pid1096</p>
@@ -503,8 +503,8 @@ snakeninnys-<span class="constant">MacBook</span><span class="symbol">:Code</spa
   
   <entry>
     <title><![CDATA[Theos介绍]]></title>
-    <link href="http://cubernet.cn/theos1/"/>
-    <id>http://cubernet.cn/theos1/</id>
+    <link href="http://cubernet.cn/blog/theos1/"/>
+    <id>http://cubernet.cn/blog/theos1/</id>
     <published>2014-08-04T16:00:00.000Z</published>
     <updated>2015-04-15T18:18:19.000Z</updated>
     <content type="html"><![CDATA[<p>最近由于工作原因，需要了解iOS越狱开发相关的一些技术。之前虽然有接触过iOS开发，不过都是基于苹果公开的API，相对于越狱开发还是一头雾水。于是打开Google，开始找寻我需要的资料。经过一段时间的查阅，发现iOS越狱开发相关的资料实在太少，并且比较杂乱，甚至即使在安装时遇到的问题都要花费很长的时间去搜索解决办法。虽说现在项目已经接近尾声，当初的很多步骤细节已经记得不清楚，不过我还是尽力回顾整理一下，对自己来说是一种知识的巩固，或许还能帮上别人的一点小忙。</p>
@@ -573,8 +573,8 @@ tweak<span class="comment">--&gt;外挂程序</span>
   
   <entry>
     <title><![CDATA[博客再次更换主题]]></title>
-    <link href="http://cubernet.cn/another-new-theme/"/>
-    <id>http://cubernet.cn/another-new-theme/</id>
+    <link href="http://cubernet.cn/blog/another-new-theme/"/>
+    <id>http://cubernet.cn/blog/another-new-theme/</id>
     <published>2014-08-02T16:00:00.000Z</published>
     <updated>2015-04-15T18:18:31.000Z</updated>
     <content type="html"><![CDATA[<p>无意中看到<a href="http://esoftmobile.com" target="_blank" rel="external">esoftmobile</a>的博客，对他的博客主题有种一见钟情的感觉，可惜到github上一看源码才发现，原来esoftmobile是基于node.js来实现的那套主题。由于实在喜爱，虽夜已深，但决定模仿那个主题，自己操刀仿一个过来。</p>
@@ -612,8 +612,8 @@ tweak<span class="comment">--&gt;外挂程序</span>
   
   <entry>
     <title><![CDATA[时光不老，我们不散]]></title>
-    <link href="http://cubernet.cn/bieli/"/>
-    <id>http://cubernet.cn/bieli/</id>
+    <link href="http://cubernet.cn/blog/bieli/"/>
+    <id>http://cubernet.cn/blog/bieli/</id>
     <published>2014-07-27T16:00:00.000Z</published>
     <updated>2015-04-15T18:18:24.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
@@ -677,8 +677,8 @@ tweak<span class="comment">--&gt;外挂程序</span>
   
   <entry>
     <title><![CDATA[离别]]></title>
-    <link href="http://cubernet.cn/libie/"/>
-    <id>http://cubernet.cn/libie/</id>
+    <link href="http://cubernet.cn/blog/libie/"/>
+    <id>http://cubernet.cn/blog/libie/</id>
     <published>2014-06-27T16:00:00.000Z</published>
     <updated>2015-04-15T18:18:35.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
@@ -738,10 +738,10 @@ tweak<span class="comment">--&gt;外挂程序</span>
   
   <entry>
     <title><![CDATA[落电台音乐批量下载]]></title>
-    <link href="http://cubernet.cn/luo/"/>
-    <id>http://cubernet.cn/luo/</id>
+    <link href="http://cubernet.cn/blog/luo/"/>
+    <id>http://cubernet.cn/blog/luo/</id>
     <published>2014-06-15T16:00:00.000Z</published>
-    <updated>2015-04-15T18:18:45.000Z</updated>
+    <updated>2015-04-15T18:18:48.000Z</updated>
     <content type="html"><![CDATA[<p><a href="http://www.luoo.net" target="_blank" rel="external">落电台</a>是我很喜欢的一个电台，也曾经在日志中不止一次的推荐过这个电台。这个网站上的音乐、文字、图片，无一不让我陶醉。</p>
 <blockquote>
 <p>在本科四年中那段最奋斗最辛苦的日子，<code>落网</code>陪我一路走过。那些清早起来，听着电台开始一天编码的生活，是最充实最美丽的回忆。——感谢<code>落网</code></p>
@@ -781,10 +781,10 @@ tweak<span class="comment">--&gt;外挂程序</span>
   
   <entry>
     <title><![CDATA[谈编码]]></title>
-    <link href="http://cubernet.cn/encode/"/>
-    <id>http://cubernet.cn/encode/</id>
+    <link href="http://cubernet.cn/blog/encode/"/>
+    <id>http://cubernet.cn/blog/encode/</id>
     <published>2014-06-14T16:00:00.000Z</published>
-    <updated>2015-04-15T18:18:50.000Z</updated>
+    <updated>2015-04-15T18:18:54.000Z</updated>
     <content type="html"><![CDATA[<p>偶然获知阮一峰老师的博客文集上线了，十年（2004-2013）的思想漫游，100篇精华文章，20万字。一直很喜欢阮一峰老师的博客，也从他的博客中学到了很多东西。推荐大家有空去他的博客<a href="http://www.ruanyifeng.com" target="_blank" rel="external">阮一峰的网络日志</a>看看，更推荐大家购买一份电子版文集好好品读，<a href="http://www.ruanyifeng.com/blog/2014/05/my_blog_book.html" target="_blank" rel="external">文集介绍及购买地址</a>。</p>
 <a id="more"></a>
 <p>下面进入今天的正题，谈谈平时常见的几种编码。</p>
@@ -838,8 +838,8 @@ tweak<span class="comment">--&gt;外挂程序</span>
   
   <entry>
     <title><![CDATA[给博客添加了自己的主题]]></title>
-    <link href="http://cubernet.cn/new-theme/"/>
-    <id>http://cubernet.cn/new-theme/</id>
+    <link href="http://cubernet.cn/blog/new-theme/"/>
+    <id>http://cubernet.cn/blog/new-theme/</id>
     <published>2014-06-08T16:00:00.000Z</published>
     <updated>2015-04-15T18:18:57.000Z</updated>
     <content type="html"><![CDATA[<p>之前一直使用WP搭建博客，后来觉得WP实在过于庞大，那些高大上的功能对我这样一个<code>手残</code>来说实在是没有用武之地，所以投靠到了Github。</p>
@@ -870,8 +870,8 @@ tweak<span class="comment">--&gt;外挂程序</span>
   
   <entry>
     <title><![CDATA[让4S重新飞速运行起来]]></title>
-    <link href="http://cubernet.cn/iPhoneSpeedUp/"/>
-    <id>http://cubernet.cn/iPhoneSpeedUp/</id>
+    <link href="http://cubernet.cn/blog/iPhoneSpeedUp/"/>
+    <id>http://cubernet.cn/blog/iPhoneSpeedUp/</id>
     <published>2014-04-24T16:00:00.000Z</published>
     <updated>2015-04-15T18:18:59.000Z</updated>
     <content type="html"><![CDATA[<p>作为一名奋战在第一线的程序猿，如果跟开发无关，那么对新系统的抵抗力几乎为0，所以当初毫不犹豫的升级了iOS7。年初越狱工具放出之后，也在第一时间进行了越狱。倒不是对破解的免费软件有什么需求，说白了就是三个字，爱折腾。</p>
@@ -919,10 +919,10 @@ tweak<span class="comment">--&gt;外挂程序</span>
   
   <entry>
     <title><![CDATA[牵着手，一起走]]></title>
-    <link href="http://cubernet.cn/oneyear/"/>
-    <id>http://cubernet.cn/oneyear/</id>
+    <link href="http://cubernet.cn/blog/oneyear/"/>
+    <id>http://cubernet.cn/blog/oneyear/</id>
     <published>2014-04-22T16:00:00.000Z</published>
-    <updated>2015-04-15T18:19:05.000Z</updated>
+    <updated>2015-04-15T18:19:06.000Z</updated>
     <content type="html"><![CDATA[<p><img alt="image" src="http://7xikui.com1.z0.glb.clouddn.com/2014-04-23-oneyear.JPG-blogpic" style="width:220px"></p>
 <div style="text-align:center"><br><br><p>一年很长</p><br><br><p>我们了解，磨合，争吵，置气</p><br><br><p>一年很短</p><br><br><p>我们拥抱，热恋，旅行，玩耍</p><br><br><p>你总说</p><br><br><p>我是你最好的遇见</p><br><br><a id="more"></a><br><br><p>而我说</p><br><br><p>我遇见了最好的你</p><br><br><p>这一年中的快乐或不开心都超越过去的总和</p><br><br><p>这一年承载了我们彼此生命中最重要的决定</p><br><br><p>当岁月一年又一年褪去爱情华丽的外表</p><br><br><p>我相信剩下的</p><br><br><p>是绝对的信任和满满的爱</p><br><br><p>2014.04.23#一周年快乐，宝贝#</p><br><br><br></div>
 
@@ -944,8 +944,8 @@ tweak<span class="comment">--&gt;外挂程序</span>
   
   <entry>
     <title><![CDATA[给jekyll添加静态搜索]]></title>
-    <link href="http://cubernet.cn/staticsearch/"/>
-    <id>http://cubernet.cn/staticsearch/</id>
+    <link href="http://cubernet.cn/blog/staticsearch/"/>
+    <id>http://cubernet.cn/blog/staticsearch/</id>
     <published>2014-04-17T16:00:00.000Z</published>
     <updated>2015-04-15T18:19:09.000Z</updated>
     <content type="html"><![CDATA[<p>使用jekyll在github上搭建博客之后，无论是从写作的舒适度还是维护的方便程度上来讲都比之前有了很大的提升，不过一直觉得美中不足的是缺少一个搜索功能。由于整个博客都是静态的，因此很难做到像WordPress那种使用数据库来提供强大的搜索功能。不过退而求其次，给jekyll添加静态搜索，实现基本的功能还是有可能的。</p>
@@ -979,8 +979,8 @@ tweak<span class="comment">--&gt;外挂程序</span>
   
   <entry>
     <title><![CDATA[虾米音乐app破解]]></title>
-    <link href="http://cubernet.cn/xiami/"/>
-    <id>http://cubernet.cn/xiami/</id>
+    <link href="http://cubernet.cn/blog/xiami/"/>
+    <id>http://cubernet.cn/blog/xiami/</id>
     <published>2014-03-30T16:00:00.000Z</published>
     <updated>2015-04-15T18:17:24.000Z</updated>
     <content type="html"><![CDATA[<p>前几天登录虾米音乐，首页赫然提醒，建议用户将虾米账号迁移到淘宝上，以后用淘宝账号登录虾米。说实在的，当时心瞬间就凉了。就像当初排斥多看阅读迁移到小米账号上一样，我讨厌把自己在互联网上辛苦打造出来的一小片净土和BAT挂上勾。</p>
@@ -1025,8 +1025,8 @@ tweak<span class="comment">--&gt;外挂程序</span>
   
   <entry>
     <title><![CDATA[不想写诗的程序员不是好农民]]></title>
-    <link href="http://cubernet.cn/essay/"/>
-    <id>http://cubernet.cn/essay/</id>
+    <link href="http://cubernet.cn/blog/essay/"/>
+    <id>http://cubernet.cn/blog/essay/</id>
     <published>2014-03-25T16:00:00.000Z</published>
     <updated>2015-04-15T18:17:05.000Z</updated>
     <content type="html"><![CDATA[<p>其实这篇本应该是2013的年终总结的，结果没想到拖到14年都过了四分之一，还是没有把这个坑补上。过了这么久，当初那份想写一点什么东西的心情早就没有了。简单的说，这一年算得上人生中另一个充满转折点的年份吧。爱情学业双丰收。但今年不会那么轻松，对我，对我的她，可能都是。我们都要好好努力。</p>
