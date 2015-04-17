@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[Cubernet'Blog]]></title>
   <subtitle><![CDATA[subtitle]]></subtitle>
-  <link href="/blog/atom.xml" rel="self"/>
-  <link href="http://cubernet.cn/"/>
+  <link href="/blog/../atom.xml" rel="self"/>
+  <link href="http://cubernet.cn/blog/"/>
   <updated>2015-04-15T18:17:41.000Z</updated>
-  <id>http://cubernet.cn/</id>
+  <id>http://cubernet.cn/blog/</id>
   
   <author>
     <name><![CDATA[Cubernet]]></name>
@@ -16,8 +16,54 @@
   
   <entry>
     <title><![CDATA[随便说点什么]]></title>
-    <link href="http://cubernet.cn/newyear/"/>
-    <id>http://cubernet.cn/newyear/</id>
+    <link href="http://cubernet.cn/blog/new/"/>
+    <id>http://cubernet.cn/blog/new/</id>
+    <published>2015-03-27T16:00:00.000Z</published>
+    <updated>2015-04-15T18:17:41.000Z</updated>
+    <content type="html"><![CDATA[<img src="http://7xikui.com1.z0.glb.clouddn.com/2015-02-28-newyear.jpg-blogpic" width="600" height="900">
+<p>很久没有写一点东西，眼睛盯着屏幕，不知道该从何说起。</p>
+<p>写上一篇博文的时候是在期末之前，到现在在家里背靠着床头为止，中间这段时间经历很多细小琐碎却让我觉得十足倒霉的事情。所谓吃一堑长一智，也算是买教训了。</p>
+<a id="more"></a>
+<p>从上次离家到这次回来，整整一年。还没来得及开寝室门，就被松哥喊去了上海，由此掀开了这一年的NSTL生活。说不上累，但也时不时的忙，六月的毕业和九月的开学与我无关，现在回头看一看，能想到的几个点，貌似只有怡然做手术、入职以及爸妈来成都。然后一晃就是一年，大家都说我还小，但我已经开始感觉到时间过得快的吓人。</p>
+<h2 id="DOTA">DOTA</h2><p>一上来就讲dota，不是因为它最重要，而是在这一年里它给了我新的意义。从单排到开黑，从DOTA1到DOTA2，从本科到毕业，伴随着DOTA的成长我们也一起慢慢长大。那些本科的记忆，兄弟间的情谊，都和DOTA缠绕在一起。有时候仅仅是上线看铭铭或者建行打上一小会儿，那感觉好像又回到623站在他们身后一样。Pis或者09的视频下面经常有这样的留言，“现在工作了没时间打，但还是喜欢来看看视频，这是一种别人不能理解的怀念方式”。厅长经常说东哥当年打大鱼人、主任玩lion的故事。</p>
+<p>DOTA，原来是很多人的青春。</p>
+<h2 id="毕业">毕业</h2><p>计划着毕业旅行、计划着拍毕业照、计划着毕业聚餐，总以为很周全的计划，现在回头想想，才觉得毕业的那么仓促。我时不时的联系你们，希望我们不要忘记。</p>
+<p>过年回来宝铁在帅府街宴请小团体。我从西城墙一路走过来，感觉每一步迈过去，都是一大段的回忆。东方广场周边的房子都拆了，我最终还是没机会请桐桐吃上一碗传说中的瓦罐面。一中门口卖盒饭的小房子已经岌岌可危，也是第一次去小房子对面的公厕。出门东拐去帅府街，那个消防队还在，以前在操场经常能听到这里的号声。丁字路口的电线杆子也在，当年就在这个路灯下，跟三儿说我好像考砸了，可能要去成都。这里往前是跟嘉琪海龟周末常去吃的兰州拉面，往右是三儿当年租的房子，高考后的那个暑假，在这里住了很久，吃了很多包子。</p>
+<p>年后大聚餐去了一多半人，好多同学四年没见，谈不上激动，不过见到老同学的确挺开心。虽说现在分处天南海北，但还是想说，有事没事常联系。</p>
+<h2 id="变老">变老</h2><p>人到了一定年纪之后就习惯把“老了”当做玩笑话挂在嘴边。可当真发现老了的时候，未必有多可笑。在外漂泊一年，除了明白钱难挣，屎难吃的道理之外，最大的感受就是时间过得太快。</p>
+<p>今年回来发现爷爷脖子上的肉好像比去年更松了，爸爸的白头发更多了，前几天哥哥也当爸爸了。当时爷爷说了一句，“真快，你大姑也当奶奶了”。</p>
+<p>我想我现在可能无法体会到一个人说自己的孩子当奶奶了的时候会是一种怎样的感受，但我知道，大家都变老了，我们所有人。</p>
+<p>我翻着老照片，看着我们一点点变成长辈们年轻时的模样。</p>
+<blockquote>
+<p>门前老树长新芽/院里枯木又开花/半生存了好多话/藏进了满头白发</p>
+<p>——《时间都去哪了》</p>
+</blockquote>
+<h2 id="幸福">幸福</h2><p>很久之前，偶然间进了羊蛋和晓波的情侣空间，记不清具体的等级了，总之那是个让我羡慕的数值，去年他们结婚了，我没能回来，再这里再次送上祝福。</p>
+<p>倒不是我在孩子气的攀比谁的等级更高，而是我觉得，那是一点一滴的积累，那是平平淡淡的幸福。现在，我也拥有了这样的幸福。周一到周五工作学习打电话，周末一起吃遍成都玩转成都。偶尔还是会生气吵架，我也偶尔还是会孩子气不懂事，但我们现在拥有的是一份被两个人用心经营的很稳定的感情。即使天翻地覆，亦然心照不宣。这种感觉无法复制，更无法替代。我们会越走越好，点点滴滴都更好。从毕业来成都工作的那一刻起，你，甚至整个家庭对这份感情的付出我都看得到，也必定有回报。</p>
+<p>说不清未来的路，但至少有陪伴，有幸福。</p>
+<h2 id="博士">博士</h2><p>这不是荣誉。</p>
+<p>待我脚踏实地干五年。</p>
+<p>然后给你们讲这些年的故事。</p>
+<hr>
+<p>明天一早又要踏上去成都的路，临行前晚，躺在床上辗转难眠。回忆虽好，但难免伤感，略不符合新春氛围。</p>
+<p>只希望大家都好。</p>
+<p>来年见。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[一篇拖了很久很久的年末总结]]>
+    
+    </summary>
+    
+      <category term="life" scheme="http://cubernet.cn/blog/tags/life/"/>
+    
+      <category term="生活归档" scheme="http://cubernet.cn/blog/categories/%E7%94%9F%E6%B4%BB%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[随便说点什么]]></title>
+    <link href="http://cubernet.cn/blog/newyear/"/>
+    <id>http://cubernet.cn/blog/newyear/</id>
     <published>2015-02-27T16:00:00.000Z</published>
     <updated>2015-04-15T18:17:41.000Z</updated>
     <content type="html"><![CDATA[<img src="http://7xikui.com1.z0.glb.clouddn.com/2015-02-28-newyear.jpg-blogpic" width="600" height="900">
@@ -54,16 +100,16 @@
     
     </summary>
     
-      <category term="life" scheme="http://cubernet.cn/tags/life/"/>
+      <category term="life" scheme="http://cubernet.cn/blog/tags/life/"/>
     
-      <category term="生活归档" scheme="http://cubernet.cn/categories/%E7%94%9F%E6%B4%BB%E5%BD%92%E6%A1%A3/"/>
+      <category term="生活归档" scheme="http://cubernet.cn/blog/categories/%E7%94%9F%E6%B4%BB%E5%BD%92%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[博客新增阅读书单和观影列表子栏目]]></title>
-    <link href="http://cubernet.cn/readinglist/"/>
-    <id>http://cubernet.cn/readinglist/</id>
+    <link href="http://cubernet.cn/blog/readinglist/"/>
+    <id>http://cubernet.cn/blog/readinglist/</id>
     <published>2014-10-22T16:00:00.000Z</published>
     <updated>2015-04-15T18:28:14.000Z</updated>
     <content type="html"><![CDATA[<p>前天下午无意中看到一个博客中的阅读书单栏目，觉得把自己读过的或准备读的书记录下来是一个很好的想法，于是决定在我这里也模仿实现一个。用了一天时间，现在基本上完成啦。</p>
@@ -103,16 +149,16 @@
     
     </summary>
     
-      <category term="Python" scheme="http://cubernet.cn/tags/Python/"/>
+      <category term="Python" scheme="http://cubernet.cn/blog/tags/Python/"/>
     
-      <category term="技术归档" scheme="http://cubernet.cn/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[PVM环境配置]]></title>
-    <link href="http://cubernet.cn/pvm/"/>
-    <id>http://cubernet.cn/pvm/</id>
+    <link href="http://cubernet.cn/blog/pvm/"/>
+    <id>http://cubernet.cn/blog/pvm/</id>
     <published>2014-10-13T16:00:00.000Z</published>
     <updated>2015-04-15T18:17:49.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
@@ -169,16 +215,16 @@
     
     </summary>
     
-      <category term="PVM" scheme="http://cubernet.cn/tags/PVM/"/>
+      <category term="PVM" scheme="http://cubernet.cn/blog/tags/PVM/"/>
     
-      <category term="技术归档" scheme="http://cubernet.cn/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[在Markdown中使用数学公式]]></title>
-    <link href="http://cubernet.cn/mdformath/"/>
-    <id>http://cubernet.cn/mdformath/</id>
+    <link href="http://cubernet.cn/blog/mdformath/"/>
+    <id>http://cubernet.cn/blog/mdformath/</id>
     <published>2014-10-10T16:00:00.000Z</published>
     <updated>2015-04-15T18:17:55.000Z</updated>
     <content type="html"><![CDATA[<p>上一博文是翻译的一篇学术论文，在用markdown语法编辑译文时，发现原文中出现的公式不知如何插入。</p>
@@ -204,16 +250,16 @@
     
     </summary>
     
-      <category term="LaTex" scheme="http://cubernet.cn/tags/LaTex/"/>
+      <category term="LaTex" scheme="http://cubernet.cn/blog/tags/LaTex/"/>
     
-      <category term="技术归档" scheme="http://cubernet.cn/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[【译】网络钓鱼检测：综述]]></title>
-    <link href="http://cubernet.cn/phishing-review/"/>
-    <id>http://cubernet.cn/phishing-review/</id>
+    <link href="http://cubernet.cn/blog/phishing-review/"/>
+    <id>http://cubernet.cn/blog/phishing-review/</id>
     <published>2014-10-09T16:00:00.000Z</published>
     <updated>2015-04-15T18:17:58.000Z</updated>
     <content type="html"><![CDATA[<p><a href="http://ijcsmc.com/docs/papers/February2014/V3I2201499a42.pdf" target="_blank" rel="external"><strong>原文地址</strong></a>： <a href="http://ijcsmc.com" target="_blank" rel="external">http://ijcsmc.com</a> /docs/papers/ February2014/ V3I2201499a42.pdf</p>
@@ -252,16 +298,16 @@
     
     </summary>
     
-      <category term="Phishing" scheme="http://cubernet.cn/tags/Phishing/"/>
+      <category term="Phishing" scheme="http://cubernet.cn/blog/tags/Phishing/"/>
     
-      <category term="技术归档" scheme="http://cubernet.cn/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[开学记]]></title>
-    <link href="http://cubernet.cn/xiabb/"/>
-    <id>http://cubernet.cn/xiabb/</id>
+    <link href="http://cubernet.cn/blog/xiabb/"/>
+    <id>http://cubernet.cn/blog/xiabb/</id>
     <published>2014-09-15T16:00:00.000Z</published>
     <updated>2015-04-15T18:18:01.000Z</updated>
     <content type="html"><![CDATA[<p>作为一名资深老学生，本已没有心情再去关心开学放假这种逗小朋友的事情，但不得不承认今年开学这两周所经历的一些事还是让我有了很多感触。拟题<code>xiabb</code>，后又觉得有失风度，遂改为<code>开学记</code>。</p>
@@ -283,16 +329,16 @@
     
     </summary>
     
-      <category term="Life" scheme="http://cubernet.cn/tags/Life/"/>
+      <category term="Life" scheme="http://cubernet.cn/blog/tags/Life/"/>
     
-      <category term="生活归档" scheme="http://cubernet.cn/categories/%E7%94%9F%E6%B4%BB%E5%BD%92%E6%A1%A3/"/>
+      <category term="生活归档" scheme="http://cubernet.cn/blog/categories/%E7%94%9F%E6%B4%BB%E5%BD%92%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[墙里墙外]]></title>
-    <link href="http://cubernet.cn/overthewall/"/>
-    <id>http://cubernet.cn/overthewall/</id>
+    <link href="http://cubernet.cn/blog/overthewall/"/>
+    <id>http://cubernet.cn/blog/overthewall/</id>
     <published>2014-08-20T16:00:00.000Z</published>
     <updated>2015-04-15T18:18:04.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
@@ -326,18 +372,18 @@
     
     </summary>
     
-      <category term="VPN" scheme="http://cubernet.cn/tags/VPN/"/>
+      <category term="VPN" scheme="http://cubernet.cn/blog/tags/VPN/"/>
     
-      <category term="翻墙" scheme="http://cubernet.cn/tags/%E7%BF%BB%E5%A2%99/"/>
+      <category term="翻墙" scheme="http://cubernet.cn/blog/tags/%E7%BF%BB%E5%A2%99/"/>
     
-      <category term="技术归档" scheme="http://cubernet.cn/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[【译】在iOS上以root身份运行守护进程]]></title>
-    <link href="http://cubernet.cn/rootdaemon/"/>
-    <id>http://cubernet.cn/rootdaemon/</id>
+    <link href="http://cubernet.cn/blog/rootdaemon/"/>
+    <id>http://cubernet.cn/blog/rootdaemon/</id>
     <published>2014-08-05T16:00:00.000Z</published>
     <updated>2015-04-15T18:18:16.000Z</updated>
     <content type="html"><![CDATA[<p><a href="http://bbs.iosre.com/forum.php?mod=viewthread&amp;tid=204&amp;page=1&amp;extra=#pid1096" target="_blank" rel="external">原文地址</a>：<a href="http://bbs.iosre.com" target="_blank" rel="external">http://bbs.iosre.com</a> /forum.php? mod=viewthread &amp;tid=204&amp;page=1 &amp;extra=#pid1096</p>
@@ -489,22 +535,22 @@ snakeninnys-<span class="constant">MacBook</span><span class="symbol">:Code</spa
     
     </summary>
     
-      <category term="System Security" scheme="http://cubernet.cn/tags/System-Security/"/>
+      <category term="System Security" scheme="http://cubernet.cn/blog/tags/System-Security/"/>
     
-      <category term="Theos" scheme="http://cubernet.cn/tags/Theos/"/>
+      <category term="Theos" scheme="http://cubernet.cn/blog/tags/Theos/"/>
     
-      <category term="daemon" scheme="http://cubernet.cn/tags/daemon/"/>
+      <category term="daemon" scheme="http://cubernet.cn/blog/tags/daemon/"/>
     
-      <category term="iOS" scheme="http://cubernet.cn/tags/iOS/"/>
+      <category term="iOS" scheme="http://cubernet.cn/blog/tags/iOS/"/>
     
-      <category term="技术归档" scheme="http://cubernet.cn/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Theos介绍]]></title>
-    <link href="http://cubernet.cn/theos1/"/>
-    <id>http://cubernet.cn/theos1/</id>
+    <link href="http://cubernet.cn/blog/theos1/"/>
+    <id>http://cubernet.cn/blog/theos1/</id>
     <published>2014-08-04T16:00:00.000Z</published>
     <updated>2015-04-15T18:18:19.000Z</updated>
     <content type="html"><![CDATA[<p>最近由于工作原因，需要了解iOS越狱开发相关的一些技术。之前虽然有接触过iOS开发，不过都是基于苹果公开的API，相对于越狱开发还是一头雾水。于是打开Google，开始找寻我需要的资料。经过一段时间的查阅，发现iOS越狱开发相关的资料实在太少，并且比较杂乱，甚至即使在安装时遇到的问题都要花费很长的时间去搜索解决办法。虽说现在项目已经接近尾声，当初的很多步骤细节已经记得不清楚，不过我还是尽力回顾整理一下，对自己来说是一种知识的巩固，或许还能帮上别人的一点小忙。</p>
@@ -561,20 +607,20 @@ tweak<span class="comment">--&gt;外挂程序</span>
     
     </summary>
     
-      <category term="System Security" scheme="http://cubernet.cn/tags/System-Security/"/>
+      <category term="System Security" scheme="http://cubernet.cn/blog/tags/System-Security/"/>
     
-      <category term="Theos" scheme="http://cubernet.cn/tags/Theos/"/>
+      <category term="Theos" scheme="http://cubernet.cn/blog/tags/Theos/"/>
     
-      <category term="iOS" scheme="http://cubernet.cn/tags/iOS/"/>
+      <category term="iOS" scheme="http://cubernet.cn/blog/tags/iOS/"/>
     
-      <category term="技术归档" scheme="http://cubernet.cn/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[博客再次更换主题]]></title>
-    <link href="http://cubernet.cn/another-new-theme/"/>
-    <id>http://cubernet.cn/another-new-theme/</id>
+    <link href="http://cubernet.cn/blog/another-new-theme/"/>
+    <id>http://cubernet.cn/blog/another-new-theme/</id>
     <published>2014-08-02T16:00:00.000Z</published>
     <updated>2015-04-15T18:18:31.000Z</updated>
     <content type="html"><![CDATA[<p>无意中看到<a href="http://esoftmobile.com" target="_blank" rel="external">esoftmobile</a>的博客，对他的博客主题有种一见钟情的感觉，可惜到github上一看源码才发现，原来esoftmobile是基于node.js来实现的那套主题。由于实在喜爱，虽夜已深，但决定模仿那个主题，自己操刀仿一个过来。</p>
@@ -604,16 +650,16 @@ tweak<span class="comment">--&gt;外挂程序</span>
     
     </summary>
     
-      <category term="博客主题" scheme="http://cubernet.cn/tags/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/"/>
+      <category term="博客主题" scheme="http://cubernet.cn/blog/tags/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/"/>
     
-      <category term="技术归档" scheme="http://cubernet.cn/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[时光不老，我们不散]]></title>
-    <link href="http://cubernet.cn/bieli/"/>
-    <id>http://cubernet.cn/bieli/</id>
+    <link href="http://cubernet.cn/blog/bieli/"/>
+    <id>http://cubernet.cn/blog/bieli/</id>
     <published>2014-07-27T16:00:00.000Z</published>
     <updated>2015-04-15T18:18:24.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
@@ -669,16 +715,16 @@ tweak<span class="comment">--&gt;外挂程序</span>
     
     </summary>
     
-      <category term="life" scheme="http://cubernet.cn/tags/life/"/>
+      <category term="life" scheme="http://cubernet.cn/blog/tags/life/"/>
     
-      <category term="生活归档" scheme="http://cubernet.cn/categories/%E7%94%9F%E6%B4%BB%E5%BD%92%E6%A1%A3/"/>
+      <category term="生活归档" scheme="http://cubernet.cn/blog/categories/%E7%94%9F%E6%B4%BB%E5%BD%92%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[离别]]></title>
-    <link href="http://cubernet.cn/libie/"/>
-    <id>http://cubernet.cn/libie/</id>
+    <link href="http://cubernet.cn/blog/libie/"/>
+    <id>http://cubernet.cn/blog/libie/</id>
     <published>2014-06-27T16:00:00.000Z</published>
     <updated>2015-04-15T18:18:35.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
@@ -730,16 +776,16 @@ tweak<span class="comment">--&gt;外挂程序</span>
     
     </summary>
     
-      <category term="life" scheme="http://cubernet.cn/tags/life/"/>
+      <category term="life" scheme="http://cubernet.cn/blog/tags/life/"/>
     
-      <category term="生活归档" scheme="http://cubernet.cn/categories/%E7%94%9F%E6%B4%BB%E5%BD%92%E6%A1%A3/"/>
+      <category term="生活归档" scheme="http://cubernet.cn/blog/categories/%E7%94%9F%E6%B4%BB%E5%BD%92%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[落电台音乐批量下载]]></title>
-    <link href="http://cubernet.cn/luo/"/>
-    <id>http://cubernet.cn/luo/</id>
+    <link href="http://cubernet.cn/blog/luo/"/>
+    <id>http://cubernet.cn/blog/luo/</id>
     <published>2014-06-15T16:00:00.000Z</published>
     <updated>2015-04-15T18:18:48.000Z</updated>
     <content type="html"><![CDATA[<p><a href="http://www.luoo.net" target="_blank" rel="external">落电台</a>是我很喜欢的一个电台，也曾经在日志中不止一次的推荐过这个电台。这个网站上的音乐、文字、图片，无一不让我陶醉。</p>
@@ -773,16 +819,16 @@ tweak<span class="comment">--&gt;外挂程序</span>
     
     </summary>
     
-      <category term="Python" scheme="http://cubernet.cn/tags/Python/"/>
+      <category term="Python" scheme="http://cubernet.cn/blog/tags/Python/"/>
     
-      <category term="技术归档" scheme="http://cubernet.cn/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[谈编码]]></title>
-    <link href="http://cubernet.cn/encode/"/>
-    <id>http://cubernet.cn/encode/</id>
+    <link href="http://cubernet.cn/blog/encode/"/>
+    <id>http://cubernet.cn/blog/encode/</id>
     <published>2014-06-14T16:00:00.000Z</published>
     <updated>2015-04-15T18:18:54.000Z</updated>
     <content type="html"><![CDATA[<p>偶然获知阮一峰老师的博客文集上线了，十年（2004-2013）的思想漫游，100篇精华文章，20万字。一直很喜欢阮一峰老师的博客，也从他的博客中学到了很多东西。推荐大家有空去他的博客<a href="http://www.ruanyifeng.com" target="_blank" rel="external">阮一峰的网络日志</a>看看，更推荐大家购买一份电子版文集好好品读，<a href="http://www.ruanyifeng.com/blog/2014/05/my_blog_book.html" target="_blank" rel="external">文集介绍及购买地址</a>。</p>
@@ -830,16 +876,16 @@ tweak<span class="comment">--&gt;外挂程序</span>
     
     </summary>
     
-      <category term="编码" scheme="http://cubernet.cn/tags/%E7%BC%96%E7%A0%81/"/>
+      <category term="编码" scheme="http://cubernet.cn/blog/tags/%E7%BC%96%E7%A0%81/"/>
     
-      <category term="技术归档" scheme="http://cubernet.cn/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[给博客添加了自己的主题]]></title>
-    <link href="http://cubernet.cn/new-theme/"/>
-    <id>http://cubernet.cn/new-theme/</id>
+    <link href="http://cubernet.cn/blog/new-theme/"/>
+    <id>http://cubernet.cn/blog/new-theme/</id>
     <published>2014-06-08T16:00:00.000Z</published>
     <updated>2015-04-15T18:18:57.000Z</updated>
     <content type="html"><![CDATA[<p>之前一直使用WP搭建博客，后来觉得WP实在过于庞大，那些高大上的功能对我这样一个<code>手残</code>来说实在是没有用武之地，所以投靠到了Github。</p>
@@ -862,16 +908,16 @@ tweak<span class="comment">--&gt;外挂程序</span>
     
     </summary>
     
-      <category term="博客主题" scheme="http://cubernet.cn/tags/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/"/>
+      <category term="博客主题" scheme="http://cubernet.cn/blog/tags/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/"/>
     
-      <category term="技术归档" scheme="http://cubernet.cn/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[让4S重新飞速运行起来]]></title>
-    <link href="http://cubernet.cn/iPhoneSpeedUp/"/>
-    <id>http://cubernet.cn/iPhoneSpeedUp/</id>
+    <link href="http://cubernet.cn/blog/iPhoneSpeedUp/"/>
+    <id>http://cubernet.cn/blog/iPhoneSpeedUp/</id>
     <published>2014-04-24T16:00:00.000Z</published>
     <updated>2015-04-15T18:18:59.000Z</updated>
     <content type="html"><![CDATA[<p>作为一名奋战在第一线的程序猿，如果跟开发无关，那么对新系统的抵抗力几乎为0，所以当初毫不犹豫的升级了iOS7。年初越狱工具放出之后，也在第一时间进行了越狱。倒不是对破解的免费软件有什么需求，说白了就是三个字，爱折腾。</p>
@@ -909,18 +955,18 @@ tweak<span class="comment">--&gt;外挂程序</span>
     
     </summary>
     
-      <category term="iPhone4S" scheme="http://cubernet.cn/tags/iPhone4S/"/>
+      <category term="iPhone4S" scheme="http://cubernet.cn/blog/tags/iPhone4S/"/>
     
-      <category term="ios7" scheme="http://cubernet.cn/tags/ios7/"/>
+      <category term="ios7" scheme="http://cubernet.cn/blog/tags/ios7/"/>
     
-      <category term="技术归档" scheme="http://cubernet.cn/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[牵着手，一起走]]></title>
-    <link href="http://cubernet.cn/oneyear/"/>
-    <id>http://cubernet.cn/oneyear/</id>
+    <link href="http://cubernet.cn/blog/oneyear/"/>
+    <id>http://cubernet.cn/blog/oneyear/</id>
     <published>2014-04-22T16:00:00.000Z</published>
     <updated>2015-04-15T18:19:06.000Z</updated>
     <content type="html"><![CDATA[<p><img alt="image" src="http://7xikui.com1.z0.glb.clouddn.com/2014-04-23-oneyear.JPG-blogpic" style="width:220px"></p>
@@ -936,16 +982,16 @@ tweak<span class="comment">--&gt;外挂程序</span>
     
     </summary>
     
-      <category term="纪念日" scheme="http://cubernet.cn/tags/%E7%BA%AA%E5%BF%B5%E6%97%A5/"/>
+      <category term="纪念日" scheme="http://cubernet.cn/blog/tags/%E7%BA%AA%E5%BF%B5%E6%97%A5/"/>
     
-      <category term="生活归档" scheme="http://cubernet.cn/categories/%E7%94%9F%E6%B4%BB%E5%BD%92%E6%A1%A3/"/>
+      <category term="生活归档" scheme="http://cubernet.cn/blog/categories/%E7%94%9F%E6%B4%BB%E5%BD%92%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[给jekyll添加静态搜索]]></title>
-    <link href="http://cubernet.cn/staticsearch/"/>
-    <id>http://cubernet.cn/staticsearch/</id>
+    <link href="http://cubernet.cn/blog/staticsearch/"/>
+    <id>http://cubernet.cn/blog/staticsearch/</id>
     <published>2014-04-17T16:00:00.000Z</published>
     <updated>2015-04-15T18:19:09.000Z</updated>
     <content type="html"><![CDATA[<p>使用jekyll在github上搭建博客之后，无论是从写作的舒适度还是维护的方便程度上来讲都比之前有了很大的提升，不过一直觉得美中不足的是缺少一个搜索功能。由于整个博客都是静态的，因此很难做到像WordPress那种使用数据库来提供强大的搜索功能。不过退而求其次，给jekyll添加静态搜索，实现基本的功能还是有可能的。</p>
@@ -967,20 +1013,20 @@ tweak<span class="comment">--&gt;外挂程序</span>
     
     </summary>
     
-      <category term="jekyll" scheme="http://cubernet.cn/tags/jekyll/"/>
+      <category term="jekyll" scheme="http://cubernet.cn/blog/tags/jekyll/"/>
     
-      <category term="static search" scheme="http://cubernet.cn/tags/static-search/"/>
+      <category term="static search" scheme="http://cubernet.cn/blog/tags/static-search/"/>
     
-      <category term="静态搜索" scheme="http://cubernet.cn/tags/%E9%9D%99%E6%80%81%E6%90%9C%E7%B4%A2/"/>
+      <category term="静态搜索" scheme="http://cubernet.cn/blog/tags/%E9%9D%99%E6%80%81%E6%90%9C%E7%B4%A2/"/>
     
-      <category term="技术归档" scheme="http://cubernet.cn/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[虾米音乐app破解]]></title>
-    <link href="http://cubernet.cn/xiami/"/>
-    <id>http://cubernet.cn/xiami/</id>
+    <link href="http://cubernet.cn/blog/xiami/"/>
+    <id>http://cubernet.cn/blog/xiami/</id>
     <published>2014-03-30T16:00:00.000Z</published>
     <updated>2015-04-15T18:17:24.000Z</updated>
     <content type="html"><![CDATA[<p>前几天登录虾米音乐，首页赫然提醒，建议用户将虾米账号迁移到淘宝上，以后用淘宝账号登录虾米。说实在的，当时心瞬间就凉了。就像当初排斥多看阅读迁移到小米账号上一样，我讨厌把自己在互联网上辛苦打造出来的一小片净土和BAT挂上勾。</p>
@@ -1015,39 +1061,11 @@ tweak<span class="comment">--&gt;外挂程序</span>
     
     </summary>
     
-      <category term="Hopper Disassembler" scheme="http://cubernet.cn/tags/Hopper-Disassembler/"/>
+      <category term="Hopper Disassembler" scheme="http://cubernet.cn/blog/tags/Hopper-Disassembler/"/>
     
-      <category term="软件破解" scheme="http://cubernet.cn/tags/%E8%BD%AF%E4%BB%B6%E7%A0%B4%E8%A7%A3/"/>
+      <category term="软件破解" scheme="http://cubernet.cn/blog/tags/%E8%BD%AF%E4%BB%B6%E7%A0%B4%E8%A7%A3/"/>
     
-      <category term="技术归档" scheme="http://cubernet.cn/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[不想写诗的程序员不是好农民]]></title>
-    <link href="http://cubernet.cn/essay/"/>
-    <id>http://cubernet.cn/essay/</id>
-    <published>2014-03-25T16:00:00.000Z</published>
-    <updated>2015-04-15T18:17:05.000Z</updated>
-    <content type="html"><![CDATA[<p>其实这篇本应该是2013的年终总结的，结果没想到拖到14年都过了四分之一，还是没有把这个坑补上。过了这么久，当初那份想写一点什么东西的心情早就没有了。简单的说，这一年算得上人生中另一个充满转折点的年份吧。爱情学业双丰收。但今年不会那么轻松，对我，对我的她，可能都是。我们都要好好努力。</p>
-<p>最近发生了好多事情，有好有坏，细说无趣，不如随便说点感悟。</p>
-<a id="more"></a>
-<h2 id="关于父母">关于父母</h2><p>父母给予我们最大的财富，不在于从小的锦衣玉食，更多的是对自己人格品质上的沉淀和别人那里的良好口碑。</p>
-<h2 id="关于师长">关于师长</h2><p>予渔非鱼乃为上，亦师亦友乃为上。翻译成大白话，“这个方向是好的，这个做法是错的，这杯酒干了”。</p>
-<h2 id="关于爱情">关于爱情</h2><p>爱情好比是一种化合物，通过<code>付出+欣赏+真心→爱情</code>这个反应在时间的催化下得到爱情。不同的人会用不同的系数配平这个方程式。不同的系数孕育着不同种类的爱情。</p>
-<h2 id="关于朋友">关于朋友</h2><p>本人生性胆小，自然不会让朋友两肋插棍棒刀枪去惹是生非。朋友间但求真心处、不两面，滴水恩必当涌泉报。</p>
-<h2 id="关于读博">关于读博</h2><p>读博好比农民种田。勤劳的农民经过自己辛苦耕耘用收获的粮食盖房娶妻生子，懒惰的农民颗粒无收，荒废数年，仅得一“农民”称号。</p>
-<h2 id="关于未来">关于未来</h2><p>秀才解字，“自食其果”，自己吃自己种下的果子。对我而言，虽不知未来何处得果，但相信必定会有幸福的果。</p>
-<h2 id="关于自己">关于自己</h2><p>黑、胖、丑、呆，自以为现实世界也如二进制般非0即1。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[苦逼程序员的随笔总结]]>
-    
-    </summary>
-    
-      <category term="life" scheme="http://cubernet.cn/tags/life/"/>
-    
-      <category term="技术归档" scheme="http://cubernet.cn/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
     
   </entry>
   
