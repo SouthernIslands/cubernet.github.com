@@ -172,7 +172,7 @@
             <span class="post-comments-count">
             &nbsp; | &nbsp;
             <a href="/blog/newyear/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="newyear/"></span>
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="newyear/"></span>
             </a>
           </span>
           
@@ -253,8 +253,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="newyear/"
-               data-title="随便说点什么" data-url="http://cubernet.cn/blog/newyear/">
+          <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
           </div>
         
       </div>
@@ -948,24 +948,30 @@
 
   
   
+  
 
   
+
     
+      
+    
+
+    <script type="text/javascript">
+      var disqus_shortname = 'cubernet';
+      var disqus_identifier = 'newyear/';
+      var disqus_url = 'http://cubernet.cn/blog/newyear/';
+
+      (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }());
+    </script>
   
 
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"cubernetgithub"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
 
-  
 
 
   
