@@ -235,7 +235,7 @@ end
 <p>$f(x{_k}+\alpha{_k}d{_k}) \leq f(x{_k}) + \rho \alpha{_k} g{_k}^Td{_k}$ …………………………（1）</p>
 <p>$\nabla f(x{_k}+\alpha{_k}d{_k})^Td{_k} \geq \sigma g{_k}^Td{_k}$ …………………………（2）</p>
 <p>其中$g{_k}=g(x{_k})=\nabla f(x{_k})$.</p>
-<p>如果用条件（3）代替条件（2），这样，当$\sigma》0$充分小时，可保证（3）变成近似精确线搜索。（2）和（3）也称为强Wolfe准则。</p>
+<p>如果用条件（3）代替条件（2），这样，当$\sigma&gt;0$充分小时，可保证（3）变成近似精确线搜索。（2）和（3）也称为强Wolfe准则。</p>
 <p>$\mid \nabla f(x{_k}+\alpha{_k}d{_k})^Td{_k}\mid \leq -\sigma g{_k}^Td{_k}$ …………………………（3）</p>
 <h3 id="Armijo准则">Armijo准则</h3><p>Armijo准则是指给定$\beta \in (0,1), \sigma \in (0,0.5)$。令步长因子$\alpha{_k}=\beta^(m{_k})$，其中$m{_k}$为满足下列不等式的最小非负整数：</p>
 <p>$f(x{_k}+\beta^md{_k}) \leq f(x{_k}) + \sigma\beta^mg{_k}^Td{_k}$ …………………………（4）</p>

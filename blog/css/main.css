@@ -1174,7 +1174,7 @@ input.menu-search-input {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4e5509;
+  background: #6c3990;
 }
 .sidebar-nav {
   margin: 0;
@@ -1214,7 +1214,7 @@ input.menu-search-input {
   overflow: auto;
   margin: 0;
   padding: 0 10px 10px;
-  text-align: left;
+  text-align: center;
   list-style: none;
   font-size: 14px;
 }
