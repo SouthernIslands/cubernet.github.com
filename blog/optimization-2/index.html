@@ -20,7 +20,7 @@
 
 
 
-  <meta name="keywords" content="博客主题," />
+  <meta name="keywords" content="最优化方法," />
 
 
 
@@ -43,7 +43,7 @@
   </script>
 
 
-  <title> 博客再次更换主题 // Cubernet'Blog </title>
+  <title> 最优化方法(2)——线搜索技术 // Cubernet'Blog </title>
 </head>
 
 <body>
@@ -143,7 +143,7 @@
           
           
             
-              博客再次更换主题
+              最优化方法(2)——线搜索技术
             
           
         </h1>
@@ -151,14 +151,14 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2014-08-02
+          发表于 2015-04-24
         </span>
 
         
           <span class="post-category">
             &nbsp; | &nbsp; 分类于
             
-              <a href="/blog/categories/技术归档/">技术归档</a>
+              <a href="/blog/categories/学术归档/">学术归档</a>
 
               
               
@@ -171,8 +171,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/blog/another-new-theme/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="another-new-theme/"></span>
+            <a href="/blog/optimization-2/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="optimization-2/"></span>
             </a>
           </span>
           
@@ -186,31 +186,67 @@
       
 
       
-        <a href="http://7xikui.com1.z0.glb.clouddn.com/2014-08-03-anothernewtheme.png-blogpic" class="fancybox"><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-08-03-anothernewtheme.png-blogpic"></a>
-      
 
       
-        <p>无意中看到<a href="http://esoftmobile.com" target="_blank" rel="external">esoftmobile</a>的博客，对他的博客主题有种一见钟情的感觉，可惜到github上一看源码才发现，原来esoftmobile是基于node.js来实现的那套主题。由于实在喜爱，虽夜已深，但决定模仿那个主题，自己操刀仿一个过来。</p>
-<a id="more"></a>
-<p>说干就干。由于之前自己亲手做过一个主题，所以对jekyll的这一套东西已经比较熟悉，噼里啪啦在键盘上乱敲了一顿之后，cmd+R，我看着屏幕笑了笑，已经达到我预期的效果了。</p>
-<p>这时再抬起头，发现不知道什么时候已然天亮。</p>
-<p>手上的bong开始震动，提醒我该起床了。=_=</p>
-<p>这套模板在模仿esoftmobile主题的基础上又做了些许的修改，如果有喜欢之前那套主题的同学(样式见这篇<a href="http://cubernet.github.io/new-theme/" target="_blank" rel="external">博文</a>的截图)可以从github上下载我博客源码，用_layout目录下标注<code>备份</code>的文件替换在用的文件即可。这个主题做的修改大概包括：</p>
-<ul>
-<li>在色调和布局上较之前做了很大改动；</li>
-<li>增加了首页<code>显示更多</code>功能；</li>
-<li>去掉了博文目录的悬浮导航；</li>
-<li>保留了背景音乐播放器，如果有背景音乐的文章，在文章题目下有背景音乐<code>PLAY</code>字样，点击可播放；</li>
-<li>增加了对<code>友言</code>评论插件的支持，在设置中可以切换选择使用’友言’或<code>多说</code>或<code>disqus</code>；</li>
-<li>去掉了<code>分享</code>按钮；</li>
-<li>访问统计由<code>百度统计</code>改为<code>gostats</code>(不过访问统计被清零了，好伤心T T)；</li>
-</ul>
-<hr>
-<p>8月7日更新：</p>
-<ul>
-<li>增加了洋葱头表情 <img src="http://cubernet.cn/assets/smilies/10.gif" id="smiley"></li>
-<li>to be continued…💪💪💪</li>
-</ul>
+        <p>在无约束优化问题的迭代算法中通常有如下迭代步骤：</p>
+<blockquote>
+<p>   通过某种搜索方式确定步长因子$\alpha{_k}$，使得$f(x{_k}+\alpha{_k}d{_k})&lt;f(x{_k})$</p>
+</blockquote>
+<p>这实际上是（n个变量的）目标函数f(x)在一个规定的方向上移动所形成的单变量优化问题，也就是所谓的“线搜索”或“一维搜索”技术。</p>
+<p>线搜索有精确搜索和非精确搜索之分。所谓精确线搜索，是指求$\alpha{_k}$，使得目标函数f沿方向$d{_k}$达到极小。所谓非精确线搜索，是指选取$\alpha{-k}$，使得目标函数f得到可接受的下降量。</p>
+<h2 id="精确线搜索">精确线搜索</h2><p>精确线搜索的基本思想是：首先确定包含问题最优解的搜索区间，然后采用某种插值或分割技术缩小这个区间，进行搜索求解。精确线搜索分为两类，一类是使用导数的搜索，如插值法、牛顿法及抛物线法等；另一类是不用导数的搜索，如0.618法、分数法及成功-失败法等。</p>
+<h3 id="进退法">进退法</h3><p>进退法适用于确定搜索区间，并保证具有近似单峰性质的数值算法，其基本思想是从一点出发，按一定步长，试图确定函数值呈现“高-低-高”的三点，从而得到一个近似的单峰区间。</p>
+<h3 id="黄金分割法">黄金分割法</h3><p>黄金分割法也称为0.618法，其基本思想是通过试探点函数值的比较，使得包含极小点的搜索区间不断缩小。该方法仅需要计算函数值，使用范围广。</p>
+<p>由于每次迭代搜索区间的收缩率是t=0.618，故0.618法只是线性收敛的，即这一方法的计算效率并不高，但该方法每次迭代只需要计算一次函数值的优点弥补了这一缺憾。</p>
+<blockquote>
+<p>0.618法求单变量函数 $ \phi $ 在单峰区间上[a,b]的近似极小点的代码</p>
+</blockquote>
+<pre><code>function [s,phis,k,G,E] = golds(phi,a,b,delta,epsilon)
+%输入：phi是目标函数，a，b是搜索区间的两个端点
+%        delta，epsilon分别是自变量和函数值的容许误差
+%输出：s，phis分别是近似极小点和极小值，G是nx4矩阵，
+%        其第k行分别是a,p,q,b的第k次迭代值[ak,pk,qk,bk],
+%        <span class="variable">E=</span>[ds,dphi],分别是s和phis的误差限。
+<span class="variable">t=</span>(sqrt(<span class="number">5</span>)-<span class="number">1</span>)/<span class="number">2</span>; <span class="variable">h=</span>b-a;
+<span class="variable">phia=</span>feval(phi,a); <span class="variable">phib=</span>feval(phi,b);
+<span class="variable">p=</span>a+(<span class="number">1</span>-t)*h; <span class="variable">q=</span>a+t*h;
+<span class="variable">phip=</span>feval(phi,p); <span class="variable">phiq=</span>feval(phi,q);
+<span class="variable">k=</span><span class="number">1</span>;    G(k,:)=[a,p,q,b];
+while(abs(phib-phia)&gt;epsilon)|(h&gt;delta)
+    <span class="keyword">if</span>(phip&lt;phiq)
+        <span class="variable">b=</span>q; <span class="variable">phib=</span>phiq; <span class="variable">q=</span>p; <span class="variable">phiq=</span>phip;
+        <span class="variable">h=</span>b-a; <span class="variable">p=</span>a+(<span class="number">1</span>-t)*h; <span class="variable">phip=</span>feval(phi,p);
+    <span class="keyword">else</span>
+        <span class="variable">a=</span>p; <span class="variable">phia=</span>phip; <span class="variable">p=</span>q; <span class="variable">phip=</span>phiq;
+        <span class="variable">h=</span>b-a; <span class="variable">q=</span>a+t*h; <span class="variable">phiq=</span>feval(phi,q);
+    end
+    <span class="variable">k=</span>k+<span class="number">1</span>; G(k,:)=[a,p,q,b];
+end
+<span class="variable">ds=</span>abs(b-a); <span class="variable">dphi=</span>abs(phib-phia);
+<span class="keyword">if</span>(phip&lt;=phiq)
+    <span class="variable">s=</span>p; <span class="variable">phis=</span>phip;
+<span class="keyword">else</span>
+    <span class="variable">s=</span>q; <span class="variable">phis=</span>phiq;
+end
+<span class="variable">E=</span>[ds,dphi];
+</code></pre><h3 id="抛物线法">抛物线法</h3><p>抛物线法也叫做二次插值法，其基本思想是：在搜索区间中不断地使用二次多项式去近似目标函数，并逐步用插值多项式的极小点去逼近线搜索问题的极小点。</p>
+<h2 id="非精确线搜索">非精确线搜索</h2><p>线搜索技术是求解许多优化问题下降算法的基本组成部分，但精确线搜索往往需要计算很多的函数值和梯度值，从而耗费较多的计算资源。特别是当迭代点远离最优点时，精确线搜索通常不是十分有效和合理的。对于许多优化算法，其收敛速度并不依赖于精确搜索过程。因此，既能保证目标函数具有可接受的下降量，又能使最终形成的迭代序列收敛的非精确线搜索变得越来越流行。</p>
+<h3 id="Wolfe准则">Wolfe准则</h3><p>Wolfe准则是指给定$\rho \in (0,0.5),\sigma \in (\rho,0.5)$，求$\alpha{_k}$使得下面两个不等式同时成立：</p>
+<p>$f(x{_k}+\alpha{_k}d{_k}) \leq f(x{_k}) + \rho \alpha{_k} g{_k}^Td{_k}$ …………………………（1）</p>
+<p>$\nabla f(x{_k}+\alpha{_k}d{_k})^Td{_k} \geq \sigma g{_k}^Td{_k}$ …………………………（2）</p>
+<p>其中$g{_k}=g(x{_k})=\nabla f(x{_k})$.</p>
+<p>如果用条件（3）代替条件（2），这样，当$\sigma》0$充分小时，可保证（3）变成近似精确线搜索。（2）和（3）也称为强Wolfe准则。</p>
+<p>$\mid \nabla f(x{_k}+\alpha{_k}d{_k})^Td{_k}\mid \leq -\sigma g{_k}^Td{_k}$ …………………………（3）</p>
+<h3 id="Armijo准则">Armijo准则</h3><p>Armijo准则是指给定$\beta \in (0,1), \sigma \in (0,0.5)$。令步长因子$\alpha{_k}=\beta^(m{_k})$，其中$m{_k}$为满足下列不等式的最小非负整数：</p>
+<p>$f(x{_k}+\beta^md{_k}) \leq f(x{_k}) + \sigma\beta^mg{_k}^Td{_k}$ …………………………（4）</p>
+<p>可以证明，若$f(x)$是连续可微的且满足$g{_k}^Td{_k}&lt;0$，则Armijo准则是有限终止的，即存在正数$\sigma$,使得对于充分大的正整数m，式（4）成立。</p>
+<h2 id="线搜索算法的一般框架">线搜索算法的一般框架</h2><ol>
+<li>初始化.选取有关参数及初始迭代点$x{_0} \in R^n$.设定容许误差$\epsilon \ll 1$.令$k:=0$.</li>
+<li>检验终止判别准则。计算$g{_k}=\nabla f(x{_k})$.若$\mid\mid g{_k}\mid\mid \leq \epsilon$，输出$x^* \approx x{_k}$，停算.</li>
+<li>确定下降方向$d{_k}$，使得满足$g{_k}^Td{_k} &lt; 0$.</li>
+<li>确定步长因子$\alpha{_k}$.可在“精确”与“非精确”两种线搜索技术中选用其一.</li>
+<li>更新迭代点.令$x{_(k+1)}:=x{_k}+\alpha{_k}d{_k},k:=k+1$,转步骤2.</li>
+</ol>
 
       
     </div>
@@ -219,7 +255,7 @@
       
         <div class="post-tags">
           
-            <a href="/blog/tags/博客主题/"> #博客主题 </a>
+            <a href="/blog/tags/最优化方法/"> #最优化方法 </a>
           
         </div>
       
@@ -229,7 +265,7 @@
           <form action="https://shenghuo.alipay.com/send/payment/fill.htm" method="post" target="_blank" accept-charset="GBK">
                   <input name="optEmail" type="hidden" value="luxaole@gmail.com">
                   <input name="payAmount" type="hidden" value="2">
-                  <input name="title" type="hidden" value="赞助一下这篇文章:《博客再次更换主题》" placeholder="付款说明">
+                  <input name="title" type="hidden" value="赞助一下这篇文章:《最优化方法(2)——线搜索技术》" placeholder="付款说明">
                   <input name="pay" type="image" src="http://7xikui.com1.z0.glb.clouddn.com/zanzhu.png-blogpic">
                 </form>  
           </div>
@@ -241,13 +277,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/theos1/">Theos介绍</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/bieli/">时光不老，我们不散</a>
+              <a href="/blog/optimization-1/">最优化方法(1)——最优化问题的数学模型</a>
             
           </div>
         </div>
@@ -375,7 +409,7 @@
 
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#精确线搜索"><span class="nav-number">1.</span> <span class="nav-text">精确线搜索</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#进退法"><span class="nav-number">1.1.</span> <span class="nav-text">进退法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#黄金分割法"><span class="nav-number">1.2.</span> <span class="nav-text">黄金分割法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#抛物线法"><span class="nav-number">1.3.</span> <span class="nav-text">抛物线法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非精确线搜索"><span class="nav-number">2.</span> <span class="nav-text">非精确线搜索</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Wolfe准则"><span class="nav-number">2.1.</span> <span class="nav-text">Wolfe准则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Armijo准则"><span class="nav-number">2.2.</span> <span class="nav-text">Armijo准则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线搜索算法的一般框架"><span class="nav-number">3.</span> <span class="nav-text">线搜索算法的一般框架</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -966,8 +1000,8 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'cubernet';
-      var disqus_identifier = 'another-new-theme/';
-      var disqus_url = 'http://cubernet.cn/blog/another-new-theme/';
+      var disqus_identifier = 'optimization-2/';
+      var disqus_url = 'http://cubernet.cn/blog/optimization-2/';
 
       (function(){
         var dsq = document.createElement('script');

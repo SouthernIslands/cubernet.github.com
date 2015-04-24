@@ -20,7 +20,7 @@
 
 
 
-  <meta name="keywords" content="博客主题," />
+  <meta name="keywords" content="最优化方法," />
 
 
 
@@ -43,7 +43,7 @@
   </script>
 
 
-  <title> 博客再次更换主题 // Cubernet'Blog </title>
+  <title> 最优化方法(1)——最优化问题的数学模型 // Cubernet'Blog </title>
 </head>
 
 <body>
@@ -143,7 +143,7 @@
           
           
             
-              博客再次更换主题
+              最优化方法(1)——最优化问题的数学模型
             
           
         </h1>
@@ -151,14 +151,14 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2014-08-02
+          发表于 2015-04-23
         </span>
 
         
           <span class="post-category">
             &nbsp; | &nbsp; 分类于
             
-              <a href="/blog/categories/技术归档/">技术归档</a>
+              <a href="/blog/categories/学术归档/">学术归档</a>
 
               
               
@@ -171,8 +171,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/blog/another-new-theme/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="another-new-theme/"></span>
+            <a href="/blog/optimization-1/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="optimization-1/"></span>
             </a>
           </span>
           
@@ -186,31 +186,20 @@
       
 
       
-        <a href="http://7xikui.com1.z0.glb.clouddn.com/2014-08-03-anothernewtheme.png-blogpic" class="fancybox"><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-08-03-anothernewtheme.png-blogpic"></a>
-      
 
       
-        <p>无意中看到<a href="http://esoftmobile.com" target="_blank" rel="external">esoftmobile</a>的博客，对他的博客主题有种一见钟情的感觉，可惜到github上一看源码才发现，原来esoftmobile是基于node.js来实现的那套主题。由于实在喜爱，虽夜已深，但决定模仿那个主题，自己操刀仿一个过来。</p>
-<a id="more"></a>
-<p>说干就干。由于之前自己亲手做过一个主题，所以对jekyll的这一套东西已经比较熟悉，噼里啪啦在键盘上乱敲了一顿之后，cmd+R，我看着屏幕笑了笑，已经达到我预期的效果了。</p>
-<p>这时再抬起头，发现不知道什么时候已然天亮。</p>
-<p>手上的bong开始震动，提醒我该起床了。=_=</p>
-<p>这套模板在模仿esoftmobile主题的基础上又做了些许的修改，如果有喜欢之前那套主题的同学(样式见这篇<a href="http://cubernet.github.io/new-theme/" target="_blank" rel="external">博文</a>的截图)可以从github上下载我博客源码，用_layout目录下标注<code>备份</code>的文件替换在用的文件即可。这个主题做的修改大概包括：</p>
-<ul>
-<li>在色调和布局上较之前做了很大改动；</li>
-<li>增加了首页<code>显示更多</code>功能；</li>
-<li>去掉了博文目录的悬浮导航；</li>
-<li>保留了背景音乐播放器，如果有背景音乐的文章，在文章题目下有背景音乐<code>PLAY</code>字样，点击可播放；</li>
-<li>增加了对<code>友言</code>评论插件的支持，在设置中可以切换选择使用’友言’或<code>多说</code>或<code>disqus</code>；</li>
-<li>去掉了<code>分享</code>按钮；</li>
-<li>访问统计由<code>百度统计</code>改为<code>gostats</code>(不过访问统计被清零了，好伤心T T)；</li>
-</ul>
+        <p>通俗的讲，最优化问题就是求一个多元函数在某个给定集合上的极值。几乎所有类型的最优化问题都可以用下面的数学模型来描述：</p>
+<p>$min\ \ f(x),\ \ \ s.t.\ \ \ x \in K$</p>
+<p>其中，K 为某个给定的集合（称为可行集或可行域），$f(x)$为定义在集合K上的实值函数，x通常称为决策变量。</p>
+<p>通常按照可行集的性质将最优化问题分为以下几类：</p>
+<ol>
+<li>线性规划和非线性规划：可行集是有限维空间中的一个子集。</li>
+<li>组合优化或网络规划：可行集中的元素是有限的。</li>
+<li>动态规划：可行集是一个依赖于时间的决策序列。</li>
+<li>最优控制：可行集是无穷维空间中的一个连续子集。</li>
+</ol>
 <hr>
-<p>8月7日更新：</p>
-<ul>
-<li>增加了洋葱头表情 <img src="http://cubernet.cn/assets/smilies/10.gif" id="smiley"></li>
-<li>to be continued…💪💪💪</li>
-</ul>
+<p>参考资料： 《最优化方法及其Matlab程序设计》- 科学出版社</p>
 
       
     </div>
@@ -219,7 +208,7 @@
       
         <div class="post-tags">
           
-            <a href="/blog/tags/博客主题/"> #博客主题 </a>
+            <a href="/blog/tags/最优化方法/"> #最优化方法 </a>
           
         </div>
       
@@ -229,7 +218,7 @@
           <form action="https://shenghuo.alipay.com/send/payment/fill.htm" method="post" target="_blank" accept-charset="GBK">
                   <input name="optEmail" type="hidden" value="luxaole@gmail.com">
                   <input name="payAmount" type="hidden" value="2">
-                  <input name="title" type="hidden" value="赞助一下这篇文章:《博客再次更换主题》" placeholder="付款说明">
+                  <input name="title" type="hidden" value="赞助一下这篇文章:《最优化方法(1)——最优化问题的数学模型》" placeholder="付款说明">
                   <input name="pay" type="image" src="http://7xikui.com1.z0.glb.clouddn.com/zanzhu.png-blogpic">
                 </form>  
           </div>
@@ -241,13 +230,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/theos1/">Theos介绍</a>
+              <a href="/blog/optimization-2/">最优化方法(2)——线搜索技术</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/bieli/">时光不老，我们不散</a>
+              <a href="/blog/pray4u/">你总以为人生会比这个多</a>
             
           </div>
         </div>
@@ -966,8 +955,8 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'cubernet';
-      var disqus_identifier = 'another-new-theme/';
-      var disqus_url = 'http://cubernet.cn/blog/another-new-theme/';
+      var disqus_identifier = 'optimization-1/';
+      var disqus_url = 'http://cubernet.cn/blog/optimization-1/';
 
       (function(){
         var dsq = document.createElement('script');
