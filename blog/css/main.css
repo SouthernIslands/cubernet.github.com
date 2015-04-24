@@ -373,6 +373,9 @@ a.fancybox {
   text-align: center;
   margin-top: 20px;
 }
+ol.nav-child {
+  text-align: center;
+}
 ul.category-list {
   text-align: center;
 }
@@ -1171,7 +1174,7 @@ input.menu-search-input {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #8f1822;
+  background: #4e5509;
 }
 .sidebar-nav {
   margin: 0;
