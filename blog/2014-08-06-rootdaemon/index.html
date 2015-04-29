@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>【译】在iOS上以root身份运行守护进程 | Cubernet&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="翻译《Run a daemon (as root) on iOS》">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【译】在iOS上以root身份运行守护进程">
+<meta property="og:url" content="http://cubernet.cn/blog/2014-08-06-rootdaemon/index.html">
+<meta property="og:site_name" content="Cubernet's Blog">
+<meta property="og:description" content="翻译《Run a daemon (as root) on iOS》">
+<meta property="og:image" content="http://7xikui.com1.z0.glb.clouddn.com/2014-08-06-rootdaemon2.png-blogpic">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【译】在iOS上以root身份运行守护进程">
+<meta name="twitter:description" content="翻译《Run a daemon (as root) on iOS》">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/blog/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/blog/font-awesome/css/font-awesome.min.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <header id="header" class="print-invisible">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="/" id="logo"><i class="logo"></i><span class="site-title">Cubernet&#39;s Blog</span></a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="http://cubernet.cn">Home</a>
+        
+          <a class="main-nav-link" href="/">Blog</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/blog/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <div class="profile" id="profile-nav">
+          <a id="profile-anchor" href="javascript:;"><img class="avatar" src="/blog/css/images/logo.jpg"><i class="fa fa-caret-down"></i></a>
+        </div>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"> </button><input type="hidden" name="q" value="site:http://cubernet.cn/blog"></form>
+      </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tr>
+      
+        <td><a class="main-nav-link" href="http://cubernet.cn">Home</a></td>
+      
+        <td><a class="main-nav-link" href="/">Blog</a></td>
+      
+        <td><a class="main-nav-link" href="/blog/archives">Archives</a></td>
+      
+        <td><a class="main-nav-link" href="/blog/about">About</a></td>
+      
+      <td>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="q" value="site:http://cubernet.cn/blog"></form>
+      </td>
+      </tr>
+    </table>
+  </div>
+  
+</header>
+    <div class="outer">
+      <aside id="profile">
+  <div class="inner profile-inner">
+  	<div class="base-info profile-block">
+		  <img id="avatar" src="/blog/css/images/logo.jpg">
+      <h2 id="name">Cubernet</h2>
+      <h3 id="title">Talk is cheap, show me your code.</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Chengdu, China</span>
+      <a id="follow" href="https://github.com/cubernet/">FOLLOW</a>
+  	</div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        37
+        <span>posts</span>
+      </div>
+      <div class="article-info-block">
+        33
+        <span>tags</span>
+      </div>
+    </div>
+    
+    <div class="contact-info" align="center">
+      <img class="qrcode" src="/blog/css/images/wechat.JPG">
+    </div>
+    
+    <div class="contact-info profile-block">
+      <table class="contact-list">
+        <tr>
+          
+          <td><a href="http://github.com/cubernet" title="github"><i class="fa fa-github"></i></a></td>
+          
+          <td><a href="http://weibo.com/luxaole" title="weibo"><i class="fa fa-weibo"></i></a></td>
+          
+          <td><a href="mailto:luxaole@gmail.com" title="gmail"><i class="fa fa-envelope"></i></a></td>
+          
+          <td><a href="/blog/#" title="linkedin"><i class="fa fa-linkedin"></i></a></td>
+          
+          <td><a href="/atom.xml" title="rss"><i class="fa fa-rss"></i></a></td>
+          
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+      <section id="main"><article id="post-2014-08-06-rootdaemon" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      【译】在iOS上以root身份运行守护进程
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/blog/2014-08-06-rootdaemon/">
+    <time datetime="2014-08-05T16:39:16.000Z" itemprop="datePublished">2014-08-06</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/blog/categories/技术归档/">技术归档</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <div id="toc" class="toc-article">
+          <!-- # <strong class="toc-title">contents</strong> -->
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一部分_基础理论"><span class="toc-number">1.</span> <span class="toc-text">第一部分 基础理论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二部分_组成"><span class="toc-number">2.</span> <span class="toc-text">第二部分 组成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第三部分_测试"><span class="toc-number">3.</span> <span class="toc-text">第三部分 测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第四部分_结论"><span class="toc-number">4.</span> <span class="toc-text">第四部分 结论</span></a></li></ol>
+        </div>
+      
+        <p><a href="http://bbs.iosre.com/forum.php?mod=viewthread&amp;tid=204&amp;page=1&amp;extra=#pid1096" target="_blank" rel="external">原文地址</a>：<a href="http://bbs.iosre.com" target="_blank" rel="external">http://bbs.iosre.com</a> /forum.php? mod=viewthread &amp;tid=204&amp;page=1 &amp;extra=#pid1096</p>
+<p>作者：snakeninny</p>
+<p>感谢snakeninny提供的优质文章。</p>
+<p>这篇文章在我最近项目的完成过程中给予了很大的帮助，特在此表示感谢，并翻译之。</p>
+<a id="more"></a>
+<p>下面是译文内容：</p>
+<h2 id="第一部分_基础理论">第一部分 基础理论</h2><ol>
+<li><p>守护进程</p>
+<p> 什么是守护进程？根据<a href="http://http:en.wikipedia.org/wiki/Daemon" target="_blank" rel="external">wikipedia</a>的解释，守护进程是一个运行在计算机后台、不受前台用户交互影响的进程。通常，守护进程以字母<code>d</code>结尾，例如，syslogd是处理系统日志的后台进程，sshd是处理SSH链接请求服务的进程。你可以以<code>backboardd</code>,<code>mediaserverd</code>,<code>apsd</code>等 来命名iOS上的其他后台进程。 后台进程是由iOS上的第一个进程<code>launchd</code>启动的，launchd是开机时启动的第一个进程。那么守护进程能做什么呢？“它可以为网络请求，硬件活动以及一些处理其他任务的程序提供后台服务”。<strong>注意：以root身份运行的后台进程功能非常强大，并且非常隐蔽，很多时候也许超级管理员都不知道有一些后台进程在偷偷运行。所以，一些恶意软件就是以后台进程的形式存在的。这篇文章只是用来交流学习，如果你去做非法的事情，后果自负。</strong></p>
+</li>
+<li><p>守护进程的所有者</p>
+<p> 守护进程是由launchd启动，通过“launchctl”命令加载配置文件。我们要特别注意在这个<a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/launchctl.1.html" target="_blank" rel="external">查询手册</a>中提到的，“LaunchAgents启动加载的每个配置文件必须属于启动加载它们的用户。所有的系统后台进程必须属于root用户。”配置文件不可以是属于“group-”或者任何人可写。这些限制是出于安全考虑，因为如果一个启动配置文件是任何人可写的话，那么就有可能出现在程序启动时配置文件被恶意修改的情况。因为后台进程是由launchd启动的，所以它应该属于root:wheel：</p>
+<pre><code><span class="constant">Fun</span>Maker-<span class="number">5</span>:~ <span class="literal">root</span><span class="comment"># ls -l /sbin/launchd</span>
+-r-xr-xr-x <span class="number">1</span> <span class="literal">root</span> wheel <span class="number">154736</span> <span class="constant">Nov</span>  <span class="number">8</span>  <span class="number">2013</span> /sbin/launchd
+</code></pre></li>
+</ol>
+<h2 id="第二部分_组成">第二部分 组成</h2><p>正如在《iOS应用逆向工程》一书中提到的那样，后台进程包括两个部分，一个可执行的二进制文件和一个配置plist配置文件。下面，让我们利用Theos来创建一个可执行二进制文件：</p>
+<pre><code><span class="atom">snakeninnys</span>-<span class="name">MacBook</span>:<span class="name">Code</span> <span class="atom">snakeninny</span>$ /<span class="atom">opt</span>/<span class="atom">theos</span>/<span class="atom">bin</span>/<span class="atom">nic</span>.<span class="atom">pl</span>
+<span class="name">NIC</span> <span class="number">2.0</span> - <span class="name">New</span> <span class="name">Instance</span> <span class="name">Creator</span>
+------------------------------
+  [<span class="number">1.</span>] <span class="atom">iphone</span>/<span class="atom">application</span>
+  [<span class="number">2.</span>] <span class="atom">iphone</span>/<span class="atom">cydget</span>
+  [<span class="number">3.</span>] <span class="atom">iphone</span>/<span class="atom">framework</span>
+  [<span class="number">4.</span>] <span class="atom">iphone</span>/<span class="atom">library</span>
+  [<span class="number">5.</span>] <span class="atom">iphone</span>/<span class="atom">notification_center_widget</span>
+  [<span class="number">6.</span>] <span class="atom">iphone</span>/<span class="atom">preference_bundle</span>
+  [<span class="number">7.</span>] <span class="atom">iphone</span>/<span class="atom">sbsettingstoggle</span>
+  [<span class="number">8.</span>] <span class="atom">iphone</span>/<span class="atom">tool</span>
+  [<span class="number">9.</span>] <span class="atom">iphone</span>/<span class="atom">tweak</span>
+  [<span class="number">10.</span>] <span class="atom">iphone</span>/<span class="atom">xpc_service</span>
+<span class="name">Choose</span> <span class="atom">a</span> <span class="name">Template</span> (<span class="atom">required</span>): <span class="number">8</span>
+<span class="name">Project</span> <span class="name">Name</span> (<span class="atom">required</span>): <span class="atom">rootdaemond</span>
+<span class="name">Package</span> <span class="name">Name</span> [<span class="atom">com</span>.<span class="atom">yourcompany</span>.<span class="atom">rootdaemond</span>]: <span class="atom">com</span>.<span class="atom">iosre</span>.<span class="atom">rootdaemond</span>
+<span class="name">Author</span>/<span class="name">Maintainer</span> <span class="name">Name</span> [<span class="atom">snakeninny</span>]: <span class="atom">snakeninny</span>
+<span class="name">Instantiating</span> <span class="atom">iphone</span>/<span class="atom">tool</span> <span class="atom">in</span> <span class="atom">rootdaemond</span>/...
+<span class="name">Done</span>.
+</code></pre><p>然后修改main.mm文件的内容：</p>
+<pre><code><span class="keyword">static</span> <span class="keyword">void</span> Reboot(<span class="built_in">CFNotificationCenterRef</span> center, <span class="keyword">void</span> *observer, <span class="built_in">CFStringRef</span> name, <span class="keyword">const</span>     <span class="keyword">void</span> *object, <span class="built_in">CFDictionaryRef</span> userInfo)
+{
+        <span class="built_in">NSLog</span>(<span class="string">@"iOSRE: reboot"</span>);
+        system(<span class="string">"reboot"</span>);
+}
+
+<span class="keyword">int</span> main(<span class="keyword">int</span> argc, <span class="keyword">char</span> **argv, <span class="keyword">char</span> **envp)
+{
+        <span class="built_in">NSLog</span>(<span class="string">@"iOSRE: rootdaemond is launched!"</span>);
+        <span class="built_in">CFNotificationCenterAddObserver</span>(<span class="built_in">CFNotificationCenterGetDarwinNotifyCenter</span>(), <span class="literal">NULL</span>, Reboot, <span class="built_in">CFSTR</span>(<span class="string">"com.iosre.rootdaemon.reboot"</span>), <span class="literal">NULL</span>,     <span class="built_in">CFNotificationSuspensionBehaviorCoalesce</span>);
+        <span class="built_in">CFRunLoopRun</span>(); <span class="comment">// keep it running in background</span>
+        <span class="keyword">return</span> <span class="number">0</span>;
+}
+</code></pre><p>现在，让我们处理配置文件。以“com.iosre.rootdaemond.plist”为文件名新建文件，然后将下面的代码写入文件中：</p>
+<pre><code><span class="pi">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="doctype">&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/    PropertyList-1.0.dtd"&gt;</span>
+<span class="tag">&lt;<span class="title">plist</span> <span class="attribute">version</span>=<span class="value">"1.0"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">dict</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">key</span>&gt;</span>KeepAlive<span class="tag">&lt;/<span class="title">key</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">true</span>/&gt;</span>
+        <span class="tag">&lt;<span class="title">key</span>&gt;</span>Label<span class="tag">&lt;/<span class="title">key</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">string</span>&gt;</span>com.iosre.rootdaemond<span class="tag">&lt;/<span class="title">string</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">key</span>&gt;</span>Program<span class="tag">&lt;/<span class="title">key</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">string</span>&gt;</span>/usr/bin/rootdaemond<span class="tag">&lt;/<span class="title">string</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">key</span>&gt;</span>RunAtLoad<span class="tag">&lt;/<span class="title">key</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">true</span>/&gt;</span>
+<span class="tag">&lt;/<span class="title">dict</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">plist</span>&gt;</span>
+</code></pre><p>在这些键值对当中，<code>Label</code>键对应的是一个可以唯一标示你的后台进程的字符串，<code>Program</code>键对应的是可执行文件所在位置的绝对路径，这两个都是必填的。如果你的后台进程还有其他的参数，那么只需要在文件中增加类似下面这样的键值对即可：</p>
+<pre><code><span class="tag">&lt;<span class="title">key</span>&gt;</span>ProgramArguments<span class="tag">&lt;/<span class="title">key</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">array</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">string</span>&gt;</span>arg1<span class="tag">&lt;/<span class="title">string</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">string</span>&gt;</span>arg2<span class="tag">&lt;/<span class="title">string</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">string</span>&gt;</span>more args...<span class="tag">&lt;/<span class="title">string</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">array</span>&gt;</span>
+</code></pre><p>在完成了这些之后，我们把这个配置文件保存在项目根目录下的/layout/Library/System/文件夹中。现在，我们的项目树看上去是这个样子的：</p>
+<p><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-08-06-rootdaemon2.png-blogpic" alt="image"></p>
+<p>执行<code>make package</code>命令，然后检查deb所属的用户：</p>
+<pre><code>snakeninnys-<span class="string">MacBook:</span>rootdaemond snakeninny$ dpkg-deb -c <span class="regexp">/Users/</span>snakeninny<span class="regexp">/Code/</span>    rootdaemond/com.iosre.rootdaemond_1.0-<span class="number">1</span>_iphoneos-arm.deb 
+drwxr-xr-x snakeninny<span class="regexp">/staff  0 2014-05-11 15:52 ./</span>
+drwxr-xr-x snakeninny<span class="regexp">/staff  0 2014-05-11 14:45 ./</span>Library/
+drwxr-xr-x snakeninny<span class="regexp">/staff  0 2014-05-11 15:48 ./</span>Library<span class="regexp">/LaunchDaemons/</span>
+-rwxr-xr-x snakeninny<span class="regexp">/staff 367 2014-05-11 15:37 ./</span>Library<span class="regexp">/LaunchDaemons/</span>    com.iosre.rootdaemond.plist
+drwxr-xr-x snakeninny<span class="regexp">/staff   0 2014-05-11 15:52 ./</span>usr/
+drwxr-xr-x snakeninny<span class="regexp">/staff   0 2014-05-11 15:52 ./</span>usr<span class="regexp">/bin/</span>
+-rwxr-xr-x snakeninny<span class="regexp">/staff 197984 2014-05-11 15:52 ./</span>usr<span class="regexp">/bin/</span>rootdaemond
+</code></pre><p>可以看到，deb中的所有文件都是属于snakeninny:staff的。还记得在第一部分中提到，后台进程必须属于root用户吗？所以，这个后台进程所属的用户不对，当你运行时将会报错。</p>
+<p>这是为什么呢？因为这个deb文件是在OSX上打包的，所以它所属的用户就是snakeninny。为了将它的所属用户改为root:wheel，我们需要一个叫做<a href="https://github.com/DHowett/fauxsu" target="_blank" rel="external">fauxsu</a>的工具。下载这个工具，将解压得到的fauxsu和libfauxsu.dylib复制到<code>$THEOS/bin/</code> 目录下，然后运行<code>chmod a+x</code>。重新打包检查一次：</p>
+<pre><code>snakeninnys-<span class="string">MacBook:</span>rootdaemond snakeninny$ dpkg-deb -c <span class="regexp">/Users/</span>snakeninny<span class="regexp">/Code/</span>    rootdaemond/com.iosre.rootdaemond_1.0-<span class="number">2</span>_iphoneos-arm.deb 
+drwxr-xr-x root<span class="regexp">/wheel        0 2014-05-11 16:05 ./</span>
+drwxr-xr-x root<span class="regexp">/wheel        0 2014-05-11 14:45 ./</span>Library/
+drwxr-xr-x root<span class="regexp">/wheel        0 2014-05-11 15:48 ./</span>Library<span class="regexp">/LaunchDaemons/</span>
+-rwxr-xr-x root<span class="regexp">/wheel      367 2014-05-11 15:37 ./</span>Library<span class="regexp">/LaunchDaemons/</span>    com.iosre.rootdaemond.plist
+drwxr-xr-x root<span class="regexp">/wheel        0 2014-05-11 16:05 ./</span>usr/
+drwxr-xr-x root<span class="regexp">/wheel        0 2014-05-11 16:05 ./</span>usr<span class="regexp">/bin/</span>
+-rwxr-xr-x root<span class="regexp">/wheel   197984 2014-05-11 16:05 ./</span>usr<span class="regexp">/bin/</span>rootdaemond
+</code></pre><p>现在，文件所属用户是正确的了。执行<code>make install</code>来安装这个后台进程：</p>
+<pre><code>snakeninnys-MacBook:rootdaemond snakeninny$ make install
+install<span class="class">.exec</span> <span class="string">"cat &gt; /tmp/_theos_install.deb; dpkg -i /tmp/_theos_install.deb &amp;&amp; rm /tmp/    _theos_install.deb"</span> &lt; <span class="string">"./com.iosre.rootdaemond_1.0-2_iphoneos-arm.deb"</span>
+Selecting previously deselected package com<span class="class">.iosre</span><span class="class">.rootdaemond</span>.
+(Reading database ... <span class="number">2589</span> files and directories currently installed.)
+Unpacking com<span class="class">.iosre</span><span class="class">.rootdaemond</span> (from /tmp/_theos_install.deb) ...
+Setting up com<span class="class">.iosre</span><span class="class">.rootdaemond</span> (<span class="number">1.0</span>-<span class="number">2</span>) ...
+</code></pre><h2 id="第三部分_测试">第三部分 测试</h2><p>重启手机检查后台进程是否启动：</p>
+<pre><code><span class="constant">FunMaker</span>-<span class="number">5</span><span class="symbol">:~</span> root<span class="comment"># reboot</span>
+<span class="constant">FunMaker</span>-<span class="number">5</span><span class="symbol">:~</span> root<span class="comment"># Connection to 192.168.1.101 closed by remote host.</span>
+<span class="constant">Connection</span> to <span class="number">192.168</span>.<span class="number">1.101</span> closed.
+snakeninnys-<span class="constant">MacBook</span><span class="symbol">:Code</span> snakeninny<span class="variable">$ </span>ssh root<span class="variable">@192</span>.<span class="number">168.1</span>.<span class="number">101</span>
+<span class="constant">FunMaker</span>-<span class="number">5</span><span class="symbol">:~</span> root<span class="comment"># grep iOSRE /var/log/syslog</span>
+<span class="constant">May</span> <span class="number">11</span> <span class="number">16</span><span class="symbol">:</span><span class="number">14</span><span class="symbol">:</span><span class="number">01</span> <span class="constant">FunMaker</span>-<span class="number">5</span> rootdaemond[<span class="number">20</span>]<span class="symbol">:</span> <span class="symbol">iOSRE:</span> rootdaemond is launched!
+<span class="constant">FunMaker</span>-<span class="number">5</span><span class="symbol">:~</span> root<span class="comment"># ps -e | grep rootdaemond</span>
+   <span class="number">20</span> ??         <span class="number">0</span><span class="symbol">:</span><span class="number">00</span>.<span class="number">13</span> /usr/bin/rootdaemond
+  <span class="number">370</span> ttys00<span class="number">0</span>    <span class="number">0</span><span class="symbol">:</span><span class="number">00</span>.<span class="number">01</span> grep rootdaemond
+<span class="constant">FunMaker</span>-<span class="number">5</span><span class="symbol">:~</span> root<span class="comment">#</span>
+</code></pre><p>我们可以看到，rootdaemond开机自动启动，并且保持在后台运行。最后，我们检查一下它是否在像预期的那样运行：</p>
+<pre><code><span class="comment">// compile: clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -o iOSRERootDaemonTester -arch armv7 /Users/snakeninny/main.mm</span>
+
+<span class="preprocessor">#<span class="keyword">include</span> &lt;notify.h&gt;</span>
+
+<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> **argv)</span>
+</span>{
+        notify_post(<span class="string">"com.iosre.rootdaemon.reboot"</span>);
+        <span class="keyword">return</span> <span class="number">0</span>;
+}
+</code></pre><p>用scp命令将iOSRERootDaemonTester复制到iOS上，然后运行：</p>
+<pre><code>snakeninnys-<span class="constant">MacBook</span><span class="symbol">:~</span> snakeninny<span class="variable">$ </span>scp iOSRERootDaemonTester root<span class="variable">@192</span>.<span class="number">168.1</span>.<span class="number">101</span><span class="symbol">:/var/tmp/</span>
+iOSRERootDaemonTester                         <span class="number">100</span>%   <span class="number">48</span>KB  <span class="number">48.3</span>KB/s   <span class="number">00</span><span class="symbol">:</span><span class="number">00</span>    
+<span class="constant">FunMaker</span>-<span class="number">5</span><span class="symbol">:~</span> root<span class="comment"># /var/tmp/iOSRERootDaemonTester</span>
+<span class="constant">FunMaker</span>-<span class="number">5</span><span class="symbol">:~</span> root<span class="comment"># Connection to 192.168.1.101 closed by remote host.</span>
+<span class="constant">Connection</span> to <span class="number">192.168</span>.<span class="number">1.101</span> closed.
+snakeninnys-<span class="constant">MacBook</span><span class="symbol">:Code</span> snakeninny<span class="variable">$ </span>ssh root<span class="variable">@192</span>.<span class="number">168.1</span>.<span class="number">101</span>
+<span class="constant">FunMaker</span>-<span class="number">5</span><span class="symbol">:~</span> root<span class="comment"># grep iOSRE /var/log/syslog</span>
+<span class="constant">May</span> <span class="number">11</span> <span class="number">16</span><span class="symbol">:</span><span class="number">36</span><span class="symbol">:</span><span class="number">01</span> <span class="constant">FunMaker</span>-<span class="number">5</span> rootdaemond[<span class="number">20</span>]<span class="symbol">:</span> <span class="symbol">iOSRE:</span> reboot
+<span class="constant">May</span> <span class="number">11</span> <span class="number">16</span><span class="symbol">:</span><span class="number">36</span><span class="symbol">:</span><span class="number">58</span> <span class="constant">FunMaker</span>-<span class="number">5</span> rootdaemond[<span class="number">20</span>]<span class="symbol">:</span> <span class="symbol">iOSRE:</span> rootdaemond is launched!
+<span class="constant">FunMaker</span>-<span class="number">5</span><span class="symbol">:~</span> root<span class="comment">#</span>
+</code></pre><p>它神奇的运行了。</p>
+<h2 id="第四部分_结论">第四部分 结论</h2><p>事实上，在iOS或者OSX上，后台进程和代理程序远比这篇文章中描述的要复杂的多。我强烈建议大家看一下下面相关的文章。再次强调，后台进程是一个强大的工具，但它是一把双刃剑，在你决定使用它之前，你最好非常了解自己接下来将要做什么，然后小心的使用它。谢谢阅读。</p>
+<p>相关阅读：</p>
+<ol>
+<li><a href="http://en.wikipedia.org/wiki/Daemon_(computing" target="_blank" rel="external">http://en.wikipedia.org/wiki/Daemon_(computing</a>)</li>
+<li><a href="https://www.chrisalvares.com/blog/7/creating-an-iphone-daemon-part-1/" target="_blank" rel="external">https://www.chrisalvares.com/blog/7/creating-an-iphone-daemon-part-1/</a></li>
+<li><a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/launchctl.1.html" target="_blank" rel="external">https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/launchctl.1.html</a></li>
+<li><a href="https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html" target="_blank" rel="external">https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html</a></li>
+<li><a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/Manpages/man5/launchd.plist.5.html" target="_blank" rel="external">https://developer.apple.com/library/mac/documentation/Darwin/Reference/Manpages/man5/launchd.plist.5.html</a></li>
+</ol>
+<p>2014.5.22注：<br>com.iosre.rootdaemond.plist文件必须拥有644权限，否则示例后台进程将不会运行。</p>
+
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://cubernet.cn/blog/2014-08-06-rootdaemon/" data-id="ci935ulvw001ev943nhtil6ec" class="article-share-link">Share</a>
+      
+        <a href="http://cubernet.cn/blog/2014-08-06-rootdaemon/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/System-Security/">System Security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Theos/">Theos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/daemon/">daemon</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/iOS/">iOS</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="print-invisible">
+  
+    <a href="/blog/2014-08-21-overthewall/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          墙里墙外
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/2014-08-05-theos1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Theos介绍</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+<div class="print-invisible">
+  
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+</div>
+
+</section>
+      
+        <aside id="sidebar" class="print-invisible">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">recents</h3>
+    <div class="widget">
+      <ul id="recent-post" class="no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              
+              <p class="item-title"><a href="/blog/2015-04-25-optimization-2/" class="title">最优化方法(2)——线搜索技术</a></p>
+              <p class="item-category"><a class="article-category-link" href="/blog/categories/学术归档/">学术归档</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/学术归档/最优化方法/">最优化方法</a></p>
+              <p class="item-date"><time datetime="2015-04-24T16:39:16.000Z" itemprop="datePublished">2015-04-25</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-inner">
+              
+              <p class="item-title"><a href="/blog/2015-04-25-optimization-1/" class="title">最优化方法(1)——最优化问题的数学模型</a></p>
+              <p class="item-category"><a class="article-category-link" href="/blog/categories/学术归档/">学术归档</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/学术归档/最优化方法/">最优化方法</a></p>
+              <p class="item-date"><time datetime="2015-04-23T16:39:16.000Z" itemprop="datePublished">2015-04-24</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-inner">
+              
+              <p class="item-title"><a href="/blog/2015-04-21-pray4u/" class="title">你总以为人生会比这个多</a></p>
+              <p class="item-category"><a class="article-category-link" href="/blog/categories/生活归档/">生活归档</a></p>
+              <p class="item-date"><time datetime="2015-04-21T15:11:37.000Z" itemprop="datePublished">2015-04-21</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-inner">
+              
+              <p class="item-title"><a href="/blog/2015-02-28-newyear/" class="title">随便说点什么</a></p>
+              <p class="item-category"><a class="article-category-link" href="/blog/categories/生活归档/">生活归档</a></p>
+              <p class="item-date"><time datetime="2015-02-28T15:11:37.000Z" itemprop="datePublished">2015-02-28</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-inner">
+              
+              <p class="item-title"><a href="/blog/2014-10-23-readinglist/" class="title">博客新增阅读书单和观影列表子栏目</a></p>
+              <p class="item-category"><a class="article-category-link" href="/blog/categories/技术归档/">技术归档</a></p>
+              <p class="item-date"><time datetime="2014-10-22T16:39:16.000Z" itemprop="datePublished">2014-10-23</time></p>
+            </div>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/学术归档/">学术归档</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/学术归档/最优化方法/">最优化方法</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/技术归档/">技术归档</a><span class="category-list-count">26</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/生活归档/">生活归档</a><span class="category-list-count">9</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">tag cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/Django/" style="font-size: 10px;">Django</a><a href="/blog/tags/Hopper-Disassembler/" style="font-size: 10px;">Hopper Disassembler</a><a href="/blog/tags/Kali/" style="font-size: 10px;">Kali</a><a href="/blog/tags/LaTex/" style="font-size: 10px;">LaTex</a><a href="/blog/tags/Life/" style="font-size: 13.33px;">Life</a><a href="/blog/tags/Linux/" style="font-size: 10px;">Linux</a><a href="/blog/tags/Mac/" style="font-size: 10px;">Mac</a><a href="/blog/tags/Metasploit/" style="font-size: 13.33px;">Metasploit</a><a href="/blog/tags/PVM/" style="font-size: 10px;">PVM</a><a href="/blog/tags/Phishing/" style="font-size: 13.33px;">Phishing</a><a href="/blog/tags/Python/" style="font-size: 16.67px;">Python</a><a href="/blog/tags/System-Security/" style="font-size: 13.33px;">System Security</a><a href="/blog/tags/Theos/" style="font-size: 13.33px;">Theos</a><a href="/blog/tags/VPN/" style="font-size: 10px;">VPN</a><a href="/blog/tags/about-me/" style="font-size: 10px;">about me</a><a href="/blog/tags/clamav/" style="font-size: 10px;">clamav</a><a href="/blog/tags/code/" style="font-size: 10px;">code</a><a href="/blog/tags/daemon/" style="font-size: 10px;">daemon</a><a href="/blog/tags/iOS/" style="font-size: 13.33px;">iOS</a><a href="/blog/tags/iPhone/" style="font-size: 10px;">iPhone</a><a href="/blog/tags/iPhone4S/" style="font-size: 10px;">iPhone4S</a><a href="/blog/tags/ios7/" style="font-size: 10px;">ios7</a><a href="/blog/tags/jekyll/" style="font-size: 10px;">jekyll</a><a href="/blog/tags/life/" style="font-size: 20px;">life</a><a href="/blog/tags/static-search/" style="font-size: 10px;">static search</a><a href="/blog/tags/博客主题/" style="font-size: 13.33px;">博客主题</a><a href="/blog/tags/最优化方法/" style="font-size: 13.33px;">最优化方法</a><a href="/blog/tags/渗透/" style="font-size: 13.33px;">渗透</a><a href="/blog/tags/纪念日/" style="font-size: 10px;">纪念日</a><a href="/blog/tags/编码/" style="font-size: 10px;">编码</a><a href="/blog/tags/翻墙/" style="font-size: 10px;">翻墙</a><a href="/blog/tags/软件破解/" style="font-size: 10px;">软件破解</a><a href="/blog/tags/静态搜索/" style="font-size: 10px;">静态搜索</a>
+    </div>
+  </div>
+
+  
+    
+  
+  <div id="toTop" class="fa fa-chevron-up"></div>
+</aside>
+      
+    </div>
+    <footer id="footer" class="print-invisible">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Cubernet<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="https://github.com/JamesPan/hexo-theme-icarus">icarus</a>. 
+    </div>
+  </div>
+</footer>
+    
+
+<script>
+  var disqus_shortname = 'cubernet';
+  var disqus_identifier = '/2014-08-06-rootdaemon/';
+  var disqus_title = '【译】在iOS上以root身份运行守护进程';
+  var disqus_url = 'http://cubernet.cn/blog/2014-08-06-rootdaemon/';
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="http://cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script>
+<script src="/blog/js/jquery.githubRepoWidget.min.js"></script>
+
+
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/blog/js/script.js" type="text/javascript"></script>
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+  </div>
+</body>
+</html>
