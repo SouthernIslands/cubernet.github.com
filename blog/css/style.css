@@ -1598,6 +1598,7 @@ pre .javascript .function {
 @media screen and (max-width: 559px) {
   .widget-wrap {
     margin: 40px 20px;
+    margin-top: 20px;
   }
 }
 .widget-wrap-player {
@@ -1607,7 +1608,8 @@ pre .javascript .function {
 }
 @media screen and (max-width: 559px) {
   .widget-wrap-player {
-    margin: 40px 20px;
+    margin: 0px 0px;
+    margin-top: 20px;
   }
 }
 .widget-title-player {
