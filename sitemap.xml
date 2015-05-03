@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://cubernet.cn/blog/ganwu/</loc>
+    <lastmod>2015-05-03T12:10:16.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://cubernet.cn/blog/optimization-2/</loc>
     <lastmod>2015-04-29T19:44:36.000Z</lastmod>
   </url>
