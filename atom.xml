@@ -4,7 +4,7 @@
   
   <link href="/blog/../atom.xml" rel="self"/>
   <link href="http://cubernet.cn/blog/"/>
-  <updated>2015-05-03T12:10:16.000Z</updated>
+  <updated>2015-05-03T18:26:44.000Z</updated>
   <id>http://cubernet.cn/blog/</id>
   
   <author>
@@ -15,15 +15,20 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[ganwu]]></title>
+    <title><![CDATA[感悟]]></title>
     <link href="http://cubernet.cn/blog/ganwu/"/>
     <id>http://cubernet.cn/blog/ganwu/</id>
     <published>2015-05-03T12:10:16.000Z</published>
-    <updated>2015-05-03T12:10:16.000Z</updated>
-    <content type="html"><![CDATA[<img src="/images/" width="600" height="900">]]></content>
+    <updated>2015-05-03T18:26:44.000Z</updated>
+    <content type="html"></content>
     <summary type="html">
-    <![CDATA[<img src="/images/" width="600" height="900">]]>
+    <![CDATA[由姥爷去世所想]]>
+    
     </summary>
+    
+      <category term="life" scheme="http://cubernet.cn/blog/tags/life/"/>
+    
+      <category term="生活归档" scheme="http://cubernet.cn/blog/categories/%E7%94%9F%E6%B4%BB%E5%BD%92%E6%A1%A3/"/>
     
   </entry>
   
@@ -112,9 +117,10 @@ end
     <link href="http://cubernet.cn/blog/optimization-1/"/>
     <id>http://cubernet.cn/blog/optimization-1/</id>
     <published>2015-04-23T16:39:16.000Z</published>
-    <updated>2015-04-29T19:25:43.000Z</updated>
+    <updated>2015-05-03T18:27:38.000Z</updated>
     <content type="html"><![CDATA[<p>通俗的讲，最优化问题就是求一个多元函数在某个给定集合上的极值。几乎所有类型的最优化问题都可以用下面的数学模型来描述：</p>
 <p>$min\ \ f(x),\ \ \ s.t.\ \ \ x \in K$</p>
+<a id="more"></a>
 <p>其中，K 为某个给定的集合（称为可行集或可行域），$f(x)$为定义在集合K上的实值函数，x通常称为决策变量。</p>
 <p>通常按照可行集的性质将最优化问题分为以下几类：</p>
 <ol>
