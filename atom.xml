@@ -4,7 +4,7 @@
   
   <link href="/blog/../atom.xml" rel="self"/>
   <link href="http://cubernet.cn/blog/"/>
-  <updated>2015-05-03T19:25:10.000Z</updated>
+  <updated>2015-05-03T19:25:17.000Z</updated>
   <id>http://cubernet.cn/blog/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://cubernet.cn/blog/ganwu/"/>
     <id>http://cubernet.cn/blog/ganwu/</id>
     <published>2015-05-03T12:10:16.000Z</published>
-    <updated>2015-05-03T19:25:10.000Z</updated>
+    <updated>2015-05-03T19:25:17.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>谁都赢不了时间，</p>
 <p>总有些转身就是永别。</p>
@@ -105,7 +105,7 @@
     <link href="http://cubernet.cn/blog/optimization-2/"/>
     <id>http://cubernet.cn/blog/optimization-2/</id>
     <published>2015-04-24T16:39:16.000Z</published>
-    <updated>2015-05-03T19:29:32.000Z</updated>
+    <updated>2015-05-03T19:29:33.000Z</updated>
     <content type="html"><![CDATA[<p>在无约束优化问题的迭代算法中通常有如下迭代步骤：</p>
 <blockquote>
 <p>   通过某种搜索方式确定步长因子$\alpha{_k}$，使得$f(x{_k}+\alpha{_k}d{_k})&lt;f(x{_k})$</p>
