@@ -178,14 +178,43 @@ var _hmt = _hmt || [];
       
         <div id="toc" class="toc-article">
           <!-- # <strong class="toc-title">contents</strong> -->
-          
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简单值(Simple_Values)"><span class="toc-number">1.</span> <span class="toc-text">简单值(Simple Values)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#控制流(Control_Flow)"><span class="toc-number">2.</span> <span class="toc-text">控制流(Control Flow)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数和闭包(Functions_and_Closures)"><span class="toc-number">3.</span> <span class="toc-text">函数和闭包(Functions and Closures)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象和类(Objects_and_Classes)"><span class="toc-number">4.</span> <span class="toc-text">对象和类(Objects and Classes)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#枚举和结构体(Enumerations_and_Structures)"><span class="toc-number">5.</span> <span class="toc-text">枚举和结构体(Enumerations and Structures)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#协议和扩展(Protocols_and_Extensions)"><span class="toc-number">6.</span> <span class="toc-text">协议和扩展(Protocols and Extensions)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#泛型(Generics)"><span class="toc-number">7.</span> <span class="toc-text">泛型(Generics)</span></a></li></ol>
         </div>
       
         <blockquote>
 <p>Swift is an innovative new programming language for Cocoa and Cocoa Touch. Writing code is interactive and fun, the syntax is concise yet expressive, and apps run lightning-fast. Swift is ready for your next iOS and OS X project — or for addition into your current app — because Swift code works side-by-side with Objective-C.</p>
-<p>——developer.apple.com</p>
+<p>—— developer.apple.com</p>
 </blockquote>
 <a id="more"></a>
+<h2 id="简单值(Simple_Values)">简单值(Simple Values)</h2><p>在Swift中包含常量和变量两种类型的值。用let声明常量，用var声明变量。常量一旦赋值变不可改变。声明变量时，既可以显式的声明变量类型，也可以让编译器自己推断类型。</p>
+<pre><code>var <span class="variable">myVariable =</span><span class="number">42</span>
+<span class="variable">myVariable =</span> <span class="number">50</span>
+<span class="keyword">let</span> <span class="variable">myConstant =</span> <span class="number">42</span>
+<span class="keyword">let</span> <span class="variable">implicaitInteger =</span> <span class="number">70</span>
+<span class="keyword">let</span> explicitDouble: <span class="variable">Double =</span> <span class="number">70</span>
+</code></pre><p>使用方括号<code>[]</code>来创建数组和字典，并使用下表或者键来访问元素。同理，初始化数组或字典时，如果可以推断出数据类型，则无需显式声明类型。</p>
+<pre><code>var shoppingList = ["catfish","water","tulips","blue paint"]
+let emptyDictionary = [<span class="link_label">String: Float</span>](<span class="link_url"></span>)
+occupations = [:]
+</code></pre><h2 id="控制流(Control_Flow)">控制流(Control Flow)</h2><p>常用的控制流有<code>if</code>、<code>switch</code>、<code>for-in</code>、<code>while</code>、<code>do-while</code>等。</p>
+<p>其中，if语句的条件必须是一个布尔表达式；同时我们也可以通过一起使用if和let来处理值缺失的情况。有些变量的值是可选得，一个可选的值可能是一个具体的值或者是<code>nil</code>，表示值缺失。在类型后面加一个问号来标记这个变量的值是可选的。</p>
+<pre><code><span class="keyword">var</span> optionalName: <span class="built_in">String</span>? = <span class="string">"John Appleseed"</span>
+<span class="keyword">var</span> greeting = <span class="string">"Hello"</span>
+<span class="keyword">if</span> <span class="keyword">let</span> name = optionalName {
+    greeting = <span class="string">"hello,\(name)"</span>
+}
+</code></pre><p>如果变量的可选值是nil，条件会判断为false，大括号中的代码不会执行，如果不是nil，那么会将值赋给let后面的常量，这样代码块中就可以使用这个值了。</p>
+<p>在<code>switch</code>语句中，当某一个case匹配时，程序会自动退出switch语句，所以无需在每个case结尾都写break了。</p>
+<p>在循环中可以使用<code>..&lt;</code>来表示范围：</p>
+<pre><code><span class="keyword">var</span> firstForLoop = <span class="number">0</span>
+<span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span>..&lt;<span class="number">4</span> <span class="comment">{
+    firstForLoop += i
+}</span>
+</code></pre><p>其他的控制语句与常用方法类似。</p>
+<h2 id="函数和闭包(Functions_and_Closures)">函数和闭包(Functions and Closures)</h2><h2 id="对象和类(Objects_and_Classes)">对象和类(Objects and Classes)</h2><h2 id="枚举和结构体(Enumerations_and_Structures)">枚举和结构体(Enumerations and Structures)</h2><h2 id="协议和扩展(Protocols_and_Extensions)">协议和扩展(Protocols and Extensions)</h2><h2 id="泛型(Generics)">泛型(Generics)</h2><blockquote>
+<p>《The Swift Programming Language》阅读总结</p>
+</blockquote>
+
       
     </div>
     
