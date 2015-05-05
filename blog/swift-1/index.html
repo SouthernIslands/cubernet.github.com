@@ -217,25 +217,30 @@ occupations = [:]
 <li>函数可以带有可变个数的参数，这些参数在函数内表现为数组的形式</li>
 <li>函数可以被嵌套</li>
 <li><p>函数可以作为另一个函数的返回值</p>
-<p>  func makeIncrementer()-&gt;(Int-&gt;Int){</p>
-<pre><code>func addOne(<span class="keyword">number</span>:<span class="built_in">Int</span>)-&gt;<span class="built_in">Int</span>{
-    <span class="keyword">return</span> <span class="number">1</span> + <span class="keyword">number</span>
-}
-<span class="keyword">return</span> addOne
-</code></pre><p>  }<br>  var increment = makeIncrementer()<br>  increment(7)</p>
-</li>
-<li><p>函数也可以当做参数传入另一个函数</p>
-<p>  func hasAnyMatches(list:[Int],ocndition:Int-&gt;Bool)-&gt;Bool{</p>
-<pre><code><span class="keyword">for</span> <span class="property">item</span> <span class="keyword">in</span> <span class="type">list</span> {
-    <span class="keyword">if</span> condition(<span class="property">item</span>){
-<span class="command">        return</span> <span class="constant">true</span>
+<pre><code><span class="func"><span class="keyword">func</span> <span class="title">makeIncrementer</span><span class="params">()</span></span>-&gt;(<span class="type">Int</span>-&gt;<span class="type">Int</span>){
+    <span class="func"><span class="keyword">func</span> <span class="title">addOne</span><span class="params">(number:Int)</span></span>-&gt;<span class="type">Int</span>{
+        <span class="keyword">return</span> <span class="number">1</span> + number
     }
+    <span class="keyword">return</span> addOne
 }
-<span class="command">return</span> <span class="constant">false</span>
-</code></pre><p>  }<br>  func lessThanTen(number:Int)-&gt;Bool{</p>
-<pre><code><span class="command">return</span> <span class="type">number</span> &lt; <span class="number">10</span>
-</code></pre><p>  }<br>  var numbers = [20,19,7,12]<br>  hasAnyMatches(numbers,lessThanTen)</p>
-</li>
+<span class="keyword">var</span> increment = makeIncrementer()
+increment(<span class="number">7</span>)
+</code></pre></li>
+<li><p>函数也可以当做参数传入另一个函数</p>
+<pre><code><span class="func"><span class="keyword">func</span> <span class="title">hasAnyMatches</span><span class="params">(list:[Int],ocndition:Int-&gt;Bool)</span></span>-&gt;<span class="type">Bool</span>{
+    <span class="keyword">for</span> item <span class="keyword">in</span> list {
+        <span class="keyword">if</span> condition(item){
+            <span class="keyword">return</span> <span class="built_in">true</span>
+        }
+    }
+    <span class="keyword">return</span> <span class="built_in">false</span>
+}
+<span class="func"><span class="keyword">func</span> <span class="title">lessThanTen</span><span class="params">(number:Int)</span></span>-&gt;<span class="type">Bool</span>{
+    <span class="keyword">return</span> number &lt; <span class="number">10</span>
+}
+<span class="keyword">var</span> numbers = [<span class="number">20</span>,<span class="number">19</span>,<span class="number">7</span>,<span class="number">12</span>]
+hasAnyMatches(numbers,lessThanTen)
+</code></pre></li>
 </ul>
 <p>函数实际上是一种特殊的闭包，我们可以使用<code>{}</code>来创建一个匿名闭包。使用in将参数和返回值类型声明与闭包函数体进行分离。如果一个闭包的类型已知，可以忽略参数的类型和返回值。我们可以通过参数位置而不是参数名字来引用参数。</p>
 <p>下面的两段代码是等价的：</p>
@@ -269,7 +274,7 @@ numbers.map({ number <span class="keyword">in</span> <span class="number">3</spa
 }
 repeat(<span class="string">"knock"</span>,<span class="number">4</span>)
 </code></pre><blockquote>
-<p>《The Swift Programming Language》阅读总结</p>
+<p><a href="http://numbbbbb.gitbooks.io/-the-swift-programming-language-/content/" target="_blank" rel="external">《The Swift Programming Language》</a>阅读总结</p>
 </blockquote>
 
       
