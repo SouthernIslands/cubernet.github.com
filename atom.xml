@@ -4,7 +4,7 @@
   
   <link href="/blog/../atom.xml" rel="self"/>
   <link href="http://cubernet.cn/blog/"/>
-  <updated>2015-05-04T15:56:31.000Z</updated>
+  <updated>2015-05-05T16:27:02.000Z</updated>
   <id>http://cubernet.cn/blog/</id>
   
   <author>
@@ -19,14 +19,14 @@
     <link href="http://cubernet.cn/blog/swift-1/"/>
     <id>http://cubernet.cn/blog/swift-1/</id>
     <published>2015-05-04T14:34:15.000Z</published>
-    <updated>2015-05-04T15:56:31.000Z</updated>
+    <updated>2015-05-05T16:27:02.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>Swift is an innovative new programming language for Cocoa and Cocoa Touch. Writing code is interactive and fun, the syntax is concise yet expressive, and apps run lightning-fast. Swift is ready for your next iOS and OS X project — or for addition into your current app — because Swift code works side-by-side with Objective-C.</p>
 <p>—— developer.apple.com</p>
 </blockquote>
 <a id="more"></a>
 <h2 id="简单值(Simple_Values)">简单值(Simple Values)</h2><p>在Swift中包含常量和变量两种类型的值。用let声明常量，用var声明变量。常量一旦赋值变不可改变。声明变量时，既可以显式的声明变量类型，也可以让编译器自己推断类型。</p>
-<pre><code>var <span class="variable">myVariable =</span><span class="number">42</span>
+<pre><code>var <span class="variable">myVariable =</span> <span class="number">42</span>
 <span class="variable">myVariable =</span> <span class="number">50</span>
 <span class="keyword">let</span> <span class="variable">myConstant =</span> <span class="number">42</span>
 <span class="keyword">let</span> <span class="variable">implicaitInteger =</span> <span class="number">70</span>
@@ -50,7 +50,64 @@ occupations = [:]
     firstForLoop += i
 }</span>
 </code></pre><p>其他的控制语句与常用方法类似。</p>
-<h2 id="函数和闭包(Functions_and_Closures)">函数和闭包(Functions and Closures)</h2><h2 id="对象和类(Objects_and_Classes)">对象和类(Objects and Classes)</h2><h2 id="枚举和结构体(Enumerations_and_Structures)">枚举和结构体(Enumerations and Structures)</h2><h2 id="协议和扩展(Protocols_and_Extensions)">协议和扩展(Protocols and Extensions)</h2><h2 id="泛型(Generics)">泛型(Generics)</h2><blockquote>
+<h2 id="函数和闭包(Functions_and_Closures)">函数和闭包(Functions and Closures)</h2><p>在Swift中，使用func来声明一个函数。</p>
+<ul>
+<li>使用<code>-&gt;</code>来指定函数的返回值，一个函数可以有多个返回值，多个返回值需要放在一个元组中</li>
+<li>函数可以带有可变个数的参数，这些参数在函数内表现为数组的形式</li>
+<li>函数可以被嵌套</li>
+<li><p>函数可以作为另一个函数的返回值</p>
+<p>  func makeIncrementer()-&gt;(Int-&gt;Int){</p>
+<pre><code>func addOne(<span class="keyword">number</span>:<span class="built_in">Int</span>)-&gt;<span class="built_in">Int</span>{
+    <span class="keyword">return</span> <span class="number">1</span> + <span class="keyword">number</span>
+}
+<span class="keyword">return</span> addOne
+</code></pre><p>  }<br>  var increment = makeIncrementer()<br>  increment(7)</p>
+</li>
+<li><p>函数也可以当做参数传入另一个函数</p>
+<p>  func hasAnyMatches(list:[Int],ocndition:Int-&gt;Bool)-&gt;Bool{</p>
+<pre><code><span class="keyword">for</span> <span class="property">item</span> <span class="keyword">in</span> <span class="type">list</span> {
+    <span class="keyword">if</span> condition(<span class="property">item</span>){
+<span class="command">        return</span> <span class="constant">true</span>
+    }
+}
+<span class="command">return</span> <span class="constant">false</span>
+</code></pre><p>  }<br>  func lessThanTen(number:Int)-&gt;Bool{</p>
+<pre><code><span class="command">return</span> <span class="type">number</span> &lt; <span class="number">10</span>
+</code></pre><p>  }<br>  var numbers = [20,19,7,12]<br>  hasAnyMatches(numbers,lessThanTen)</p>
+</li>
+</ul>
+<p>函数实际上是一种特殊的闭包，我们可以使用<code>{}</code>来创建一个匿名闭包。使用in将参数和返回值类型声明与闭包函数体进行分离。如果一个闭包的类型已知，可以忽略参数的类型和返回值。我们可以通过参数位置而不是参数名字来引用参数。</p>
+<p>下面的两段代码是等价的：</p>
+<pre><code>numbers.map({
+    (number:<span class="type">Int</span>)-&gt;<span class="type">Int</span> <span class="keyword">in</span>
+    <span class="keyword">let</span> <span class="literal">result</span> = <span class="number">3</span> * number
+    <span class="keyword">return</span> <span class="literal">result</span>
+})
+
+numbers.map({ number <span class="keyword">in</span> <span class="number">3</span> * number })
+</code></pre><h2 id="对象和类(Objects_and_Classes)">对象和类(Objects and Classes)</h2><p>使用<code>class</code>和类名来创建一个类。要创建一个类的实例，在类名后面加上括号。使用<code>.</code>来访问实例的属性和方法。</p>
+<p>通过在类名后面加上父类的名字定义子类，用冒号分割。子类如果要重写父类的方法，需要用<code>override</code>标记。</p>
+<pre><code><span class="keyword">override</span> <span class="func"><span class="keyword">func</span> <span class="title">simpleDescription</span><span class="params">()</span></span>-&gt;<span class="type">String</span>}
+    ...
+}
+</code></pre><p>属性可以有getter和setter方法。也可以通过使用willSet和didSet来实现在设置一个新值之前或者之后运行代码。</p>
+<h2 id="枚举和结构体(Enumerations_and_Structures)">枚举和结构体(Enumerations and Structures)</h2><p>使用<code>enum</code>来创建一个枚举。枚举可以包含方法。</p>
+<p>使用<code>struct</code>来创建一个结构体。结构体和类之间最大的区别就是结构体是传值，类是传引用。</p>
+<h2 id="协议和扩展(Protocols_and_Extensions)">协议和扩展(Protocols and Extensions)</h2><p>使用<code>protocol</code>来声明一个协议。类、枚举和结构体都可以实现协议。</p>
+<pre><code><span class="class"><span class="keyword">protocol</span> <span class="title">ExampleProtocol</span></span>{
+    <span class="keyword">var</span> simpleDescription: <span class="type">String</span>{ <span class="keyword">get</span> }
+    <span class="keyword">mutating</span> <span class="func"><span class="keyword">func</span> <span class="title">adjust</span><span class="params">()</span></span>
+}
+</code></pre><h2 id="泛型(Generics)">泛型(Generics)</h2><p>在尖括号里写一个名字来创建一个泛型函数。</p>
+<pre><code>func repeat&lt;<span class="type">ItemType</span>&gt;(item: <span class="type">ItemType</span>, times: <span class="type">Int</span>) -&gt; [<span class="type">ItemType</span>] {
+    <span class="keyword">var</span> <span class="literal">result</span> = [<span class="type">ItemType</span>]()
+    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span>..&lt;times {
+        <span class="literal">result</span>.append(item)
+    }
+    <span class="keyword">return</span> <span class="literal">result</span>
+}
+repeat(<span class="string">"knock"</span>,<span class="number">4</span>)
+</code></pre><blockquote>
 <p>《The Swift Programming Language》阅读总结</p>
 </blockquote>
 ]]></content>
