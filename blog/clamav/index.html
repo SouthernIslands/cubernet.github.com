@@ -159,7 +159,7 @@ var _hmt = _hmt || [];
   
     <div class="article-category">
   	<i class="fa fa-eye"></i>
-  	<span id="busuanzi_value_page_pv"></span>次阅读
+  	<span id="busuanzi_value_page_pv">+∞</span>次阅读
   </div>
   
 
@@ -198,7 +198,7 @@ var _hmt = _hmt || [];
 <p>发现病毒的：<br><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-1-23-clamav-3.png-blogpic" alt="image"></p>
 <p>对应的日志文件：<br><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-1-23-clamav-4.png-blogpic" alt="image"></p>
 <hr>
-<h2 id="配置文件实例">配置文件实例</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">/etc/clamd<span class="class">.conf</span></span><br><span class="line">LogFile /var/log/clamd<span class="class">.log</span>   日志文件</span><br><span class="line">LogFileMaxSize <span class="number">0</span>    日志文件最大体积</span><br><span class="line">LogTime yes    是否在日志文件中记录时间</span><br><span class="line">LogVerbose yes    是否详细记录日志</span><br><span class="line">PidFile /var/run/clamav/clamd<span class="class">.pid</span>    进程文件</span><br><span class="line">TemporaryDirectory /var/tmp    扫描时的临时目录</span><br><span class="line">DatabaseDirectory /var/clamav    病毒库目录</span><br><span class="line">LocalSocket /var/run/clamav/clamd<span class="class">.sock</span>    本地通讯的socket文件</span><br><span class="line">TCPSocket <span class="number">3310</span>    TCPSocket端口（与LocalSocket不可并存）</span><br><span class="line">FixStaleSocket    yes</span><br><span class="line">User    clamav</span><br><span class="line">ScanOLE2    扫描office文档</span><br><span class="line">ScanMail    扫描邮件</span><br><span class="line">ScanArchive    扫描压缩包</span><br><span class="line">ScanRAR    扫描RAR压缩包</span><br><span class="line">ArchiveMaxFileSize <span class="number">10</span>M    最大扫描压缩包文件为<span class="number">10</span>兆</span><br><span class="line">ArchiveMaxRecursion <span class="number">9</span>    扫描压缩包<span class="number">9</span>层</span><br><span class="line">ArchiveMaxFiles <span class="number">1000</span>    最多扫描压缩包内<span class="number">1500</span>个文件</span><br><span class="line">/etc/freshclam<span class="class">.conf</span></span><br><span class="line">DatabaseDirectory /var/clamav    病毒库目录</span><br><span class="line">UpdateLogFile /var/log/freshclam<span class="class">.log</span>    更新日志</span><br><span class="line">LogVerbose yes    是否详细记录日志</span><br><span class="line">PidFile /var/run/clamav/freshclam<span class="class">.pid</span>    进程文件</span><br><span class="line">DatabaseOwner clamav    病毒库用户</span><br><span class="line">DatabaseMirror db<span class="class">.cn</span><span class="class">.clamav</span><span class="class">.net</span>    病毒库的镜像地址（可以多个）</span><br><span class="line">DatabaseMirror database<span class="class">.clamav</span><span class="class">.net</span></span><br></pre></td></tr></table></figure>
+<h2 id="配置文件实例">配置文件实例</h2><figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">/etc/clamd<span class="class">.conf</span></span><br><span class="line">LogFile /var/log/clamd<span class="class">.log</span>   日志文件</span><br><span class="line">LogFileMaxSize <span class="number">0</span>    日志文件最大体积</span><br><span class="line">LogTime yes    是否在日志文件中记录时间</span><br><span class="line">LogVerbose yes    是否详细记录日志</span><br><span class="line">PidFile /var/run/clamav/clamd<span class="class">.pid</span>    进程文件</span><br><span class="line">TemporaryDirectory /var/tmp    扫描时的临时目录</span><br><span class="line">DatabaseDirectory /var/clamav    病毒库目录</span><br><span class="line">LocalSocket /var/run/clamav/clamd<span class="class">.sock</span>    本地通讯的socket文件</span><br><span class="line">TCPSocket <span class="number">3310</span>    TCPSocket端口（与LocalSocket不可并存）</span><br><span class="line">FixStaleSocket    yes</span><br><span class="line">User    clamav</span><br><span class="line">ScanOLE2    扫描office文档</span><br><span class="line">ScanMail    扫描邮件</span><br><span class="line">ScanArchive    扫描压缩包</span><br><span class="line">ScanRAR    扫描RAR压缩包</span><br><span class="line">ArchiveMaxFileSize <span class="number">10</span>M    最大扫描压缩包文件为<span class="number">10</span>兆</span><br><span class="line">ArchiveMaxRecursion <span class="number">9</span>    扫描压缩包<span class="number">9</span>层</span><br><span class="line">ArchiveMaxFiles <span class="number">1000</span>    最多扫描压缩包内<span class="number">1500</span>个文件</span><br><span class="line">/etc/freshclam<span class="class">.conf</span></span><br><span class="line">DatabaseDirectory /var/clamav    病毒库目录</span><br><span class="line">UpdateLogFile /var/log/freshclam<span class="class">.log</span>    更新日志</span><br><span class="line">LogVerbose yes    是否详细记录日志</span><br><span class="line">PidFile /var/run/clamav/freshclam<span class="class">.pid</span>    进程文件</span><br><span class="line">DatabaseOwner clamav    病毒库用户</span><br><span class="line">DatabaseMirror db<span class="class">.cn</span><span class="class">.clamav</span><span class="class">.net</span>    病毒库的镜像地址（可以多个）</span><br><span class="line">DatabaseMirror database<span class="class">.clamav</span><span class="class">.net</span></span><br></pre></td></tr></table></figure>
 <hr>
 <p>除了调用clamscan等现有的工具，ClamAV还提供了一些更底层的API接口供那些有特殊需求的开发者使用，详细的介绍可以查看ClamAV官方文档的最后章节。</p>
 
@@ -351,7 +351,7 @@ var _hmt = _hmt || [];
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2015 Cubernet<br>您是本站第<span id="busuanzi_value_site_uv"></span>位访客<br>
+      &copy; 2015 Cubernet<br>您是本站第<span id="busuanzi_value_site_uv">+∞</span>位访客<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="https://github.com/JamesPan/hexo-theme-icarus">icarus</a>. 
     </div>
   </div>
@@ -382,7 +382,7 @@ var _hmt = _hmt || [];
 
 
 <script src="/blog/js/script.js" type="text/javascript"></script>
-<script src="//dn-lbstatics.qbox.me/lbservice/busuanzi/2.0/busuanzi.mini.js"/></script>
+<script async="true" src="//dn-lbstatics.qbox.me/lbservice/busuanzi/2.0/busuanzi.mini.js"/></script>
 
   </div>
 </body>
