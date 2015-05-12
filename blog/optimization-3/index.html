@@ -179,14 +179,16 @@ var _hmt = _hmt || [];
 <p>由泰勒展开式得，</p>
 <p>$f(x_k+\alpha d_k) = f(x_k) + \alpha g_k^T d_k + o(\alpha),\alpha &gt; 0$</p>
 <p>那么目标函数$f(x)$在$x_k$处沿方向$d_k$下降的变化率为</p>
-<p>$\lim_{\alpha \rightarrow 0}\frac{f(x_k+\alpha d_k)-f(x_k)}{\alpha}=\lim{\alpha \rightarrow 0}\frac{\alpha g_k^T d_k + o(\alpha)}{\alpha}=g_k^T d_k = \left| g_k \right|\left| d_k \right|\cos\vec{\theta_k}$</p>
+<p>$\lim_{\alpha \rightarrow 0}\frac{f(x_k+\alpha d_k)-f(x_k)}{\alpha}=\lim_{\alpha \rightarrow 0}\frac{\alpha g_k^T d_k + o(\alpha)}{\alpha}=g_k^T d_k = \left| g_k \right|\left| d_k \right|\cos\vec{\theta_k}$</p>
 <p>其中$\vec{\theta_k}$为$g_k$和$d_k$的夹角。要事变化率最小，只有$\cos\vec{\theta_k}=-1$，即当$\vec{\theta_k}=\pi$时才能达到，也即$d_k$应该取负梯度方向。</p>
 <h2 id="牛顿法">牛顿法</h2><p>牛顿法的基本思想是用迭代点$x_k$处的一阶导数和二阶导数对目标函数进行二次函数近似，然后把二次模型的极小点作为新的迭代点，并不断重复这一过程，直至求得满足精度的近似极小点。</p>
 <p>牛顿法的迭代公式为：$x_{k+1}=x_k-G_k^{-1}g_k$</p>
-<p>在迭代公式中，每步迭代都需要求矩阵的逆，在实际计算中，可通过先解$G<em>kd=-g_k$得$d_k$，然后令$x</em>{k+1}=x_k+d_k$来避免求逆。</p>
+<p>在迭代公式中，每步迭代都需要求矩阵的逆，在实际计算中，可通过先解</p>
+<p>$ G_{k}d = -g_{k}$</p>
+<p>得$d_k$，然后令$x_{k+1} = x_k + d_k$来避免求逆。</p>
 <p>这里借用维基百科的示意图展示下效果：</p>
 <p><img src="http://upload.wikimedia.org/wikipedia/commons/e/e0/NewtonIteration_Ani.gif" alt="蓝线表示方程f而红线表示切线. 可以看出$x_{n+1}$比$x_n$更靠近f所要求的根x."></p>
-<p><strong>定理：</strong>设函数$f(x)$有二阶连续偏导数，在局部极小点$x^<em>$处，$G(x^</em>)=\nabla ^2 f(x^<em>)$是正定的并且$G(x)$在$x^</em>$的一个领域内是连续的。如果初始点$x_0$充分靠近$x^<em>$，那么对一切k，牛顿迭代公式是使用的，当${x_k}$为无穷点列时，其极限为$x^</em>$且收敛阶至少是二阶的。</p>
+<p><strong>定理：</strong>设函数$f(x)$有二阶连续偏导数，在局部极小点$x^*$处，$G(x^*)=\nabla ^2 f(x^*)$是正定的并且$G(x)$在$x^*$的一个领域内是连续的。如果初始点$x_0$充分靠近$x^*$，那么对一切k，牛顿迭代公式是使用的，当${x_k}$为无穷点列时，其极限为$x^*$且收敛阶至少是二阶的。</p>
 <h2 id="修正牛顿法">修正牛顿法</h2><p>牛顿法具有不低于二阶的收敛速度，这是它的优点。但该算法要求目标函数的$G(x)=\nabla ^2f(x)$在每个迭代点$x_k$处是正定的。为了克服这一缺陷，可以将牛顿法和最速下降法结合起来。基本思想是：当$\nabla ^2f(x)$正定时，采用牛顿法；否则，若$\nabla ^2f(x)$奇异，或者虽然非奇异，但牛顿方向不是下降方向，则采用负梯度方向作为搜索方向。</p>
 
       
