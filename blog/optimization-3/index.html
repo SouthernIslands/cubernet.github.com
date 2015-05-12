@@ -179,8 +179,8 @@ var _hmt = _hmt || [];
 <p>由泰勒展开式得，</p>
 <p>$f(x_k+\alpha d_k) = f(x_k) + \alpha g_k^T d_k + o(\alpha),\alpha &gt; 0$</p>
 <p>那么目标函数$f(x)$在$x_k$处沿方向$d_k$下降的变化率为</p>
-<p>$\lim_{\alpha \rightarrow 0}\frac{f(x_k+\alpha d_k)-f(x_k)}{\alpha}=\lim{\alpha \rightarrow 0}\frac{\alpha g_k^T d_k + o(\alpha)}{\alpha}=g_k^T d_k = \left| g_k \right|\left| d_k \right|cos\vec{\theta_k}$</p>
-<p>其中$\vec{\theta_k}$为$g_k$和$d_k$的夹角。要事变化率最小，只有$cos\vec{\theta_k}=-1$，即当$\vec{\theta_k}=\pi$时才能达到，也即$d_k$应该取负梯度方向。</p>
+<p>$\lim_{\alpha \rightarrow 0}\frac{f(x_k+\alpha d_k)-f(x_k)}{\alpha}=\lim{\alpha \rightarrow 0}\frac{\alpha g_k^T d_k + o(\alpha)}{\alpha}=g_k^T d_k = \left| g_k \right|\left| d_k \right|\cos\vec{\theta_k}$</p>
+<p>其中$\vec{\theta_k}$为$g_k$和$d_k$的夹角。要事变化率最小，只有$\cos\vec{\theta_k}=-1$，即当$\vec{\theta_k}=\pi$时才能达到，也即$d_k$应该取负梯度方向。</p>
 <h2 id="牛顿法">牛顿法</h2><p>牛顿法的基本思想是用迭代点$x_k$处的一阶导数和二阶导数对目标函数进行二次函数近似，然后把二次模型的极小点作为新的迭代点，并不断重复这一过程，直至求得满足精度的近似极小点。</p>
 <p>牛顿法的迭代公式为：$x_{k+1}=x_k-G_k^{-1}g_k$</p>
 <p>在迭代公式中，每步迭代都需要求矩阵的逆，在实际计算中，可通过先解$G<em>kd=-g_k$得$d_k$，然后令$x</em>{k+1}=x_k+d_k$来避免求逆。</p>
