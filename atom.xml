@@ -4,7 +4,7 @@
   
   <link href="/blog/../atom.xml" rel="self"/>
   <link href="http://cubernet.cn/blog/"/>
-  <updated>2015-05-12T04:07:33.000Z</updated>
+  <updated>2015-05-12T04:25:36.000Z</updated>
   <id>http://cubernet.cn/blog/</id>
   
   <author>
@@ -19,16 +19,16 @@
     <link href="http://cubernet.cn/blog/optimization-3/"/>
     <id>http://cubernet.cn/blog/optimization-3/</id>
     <published>2015-05-11T15:09:17.000Z</published>
-    <updated>2015-05-12T04:07:33.000Z</updated>
+    <updated>2015-05-12T04:25:36.000Z</updated>
     <content type="html"><![CDATA[<p>最速下降法是求解无约束优化问题最简单和最古老的方法之一，虽然时至今日它不再具有实用性，但它确实研究其他无约束优化算法的基础。此外，牛顿法也是一种经典的无约束优化算法。</p>
 <a id="more"></a>
 <h2 id="最速下降方法">最速下降方法</h2><p>在解决无约束优化问题下降类算法时，用不同的方式确定步长和搜索方向，就会得到不同的算法。最速下降法使用<code>负梯度</code>方向作为搜索方向，因此最速下降法又称“梯度法”。虽然单独就这个算法来看，早已不再实用，但许多有效算法都是以它为基础通过改进或修正而得到。</p>
 <p><strong>结论：</strong>沿负梯度方向$d=-g_k$，函数值下降最快</p>
 <p><strong>证明：</strong>设$f(x)$在$x_k$附近连续可微，$d_k$为搜索方向向量，$g_k=\nabla f(x_k)$。</p>
 <p>由泰勒展开式得，</p>
-<p>$f(x_k+\alpha d_k) = f(x_k) + \alpha g_k^T d_k + o(\alpha),\alpha &gt; 0,$</p>
+<p>$f(x_k+\alpha d_k) = f(x_k) + \alpha g_k^T d_k + o(\alpha),\alpha &gt; 0$</p>
 <p>那么目标函数$f(x)$在$x_k$处沿方向$d_k$下降的变化率为</p>
-<p>$\lim <em>{\alpha \rightarrow 0}\frac{f(x_k+\alpha d_k)-f(x_k)}{\alpha}=\lim </em>{\alpha \rightarrow 0} \frac{\alpha g_k^T d_k + o(\alpha)}{\alpha}=g_k^T d_k = \left| g_k \right|\left| d_k \right|cos\vec{\theta_k}$</p>
+<p>$\lim_{\alpha \rightarrow 0}\frac{f(x_k+\alpha d_k)-f(x_k)}{\alpha}=\lim{\alpha \rightarrow 0}\frac{\alpha g_k^T d_k + o(\alpha)}{\alpha}=g_k^T d_k = \left| g_k \right|\left| d_k \right|cos\vec{\theta_k}$</p>
 <p>其中$\vec{\theta_k}$为$g_k$和$d_k$的夹角。要事变化率最小，只有$cos\vec{\theta_k}=-1$，即当$\vec{\theta_k}=\pi$时才能达到，也即$d_k$应该取负梯度方向。</p>
 <h2 id="牛顿法">牛顿法</h2><p>牛顿法的基本思想是用迭代点$x_k$处的一阶导数和二阶导数对目标函数进行二次函数近似，然后把二次模型的极小点作为新的迭代点，并不断重复这一过程，直至求得满足精度的近似极小点。</p>
 <p>牛顿法的迭代公式为：$x_{k+1}=x_k-G_k^{-1}g_k$</p>
