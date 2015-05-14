@@ -101,7 +101,9 @@
       $('#toTop').css('right', 20);
     }
   }).on('click', '#toTop', function () {
-    $(document).scrollTop(0);
+    $('html, body').animate({
+          scrollTop: 0
+        }, 800);
   });
 
 })(jQuery);
