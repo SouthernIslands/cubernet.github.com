@@ -207,6 +207,7 @@ a:visited {
 #comments,
 .archive-year-wrap,
 .archive-article-inner,
+.archive-list-year-wrap,
 #toTop {
   background: #fff;
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.05);
@@ -792,7 +793,7 @@ a:visited {
 }
 .article-title {
   text-decoration: none;
-  font-size: 1.6em;
+  font-size: 1.4em;
   color: #565a5f;
   line-height: 1.1em;
   -webkit-transition: color 0.2s;
@@ -1191,6 +1192,30 @@ a.article-title:hover {
   max-width: 100%;
   margin: 0 auto;
 }
+.article-simple {
+  padding-left: 20px;
+  padding-bottom: 5px;
+  background: #fff;
+  font-size: 15px;
+}
+.article-simple-header {
+  padding: 1px 1px;
+  white-space: nowrap;
+}
+.article-simple-title {
+  color: #000;
+}
+a.article-simple-title:visited {
+  color: #000;
+}
+a.article-simple-title:hover {
+  color: #38b7ea;
+}
+.article-simple-span {
+  color: #777;
+  font-size: 13px;
+  padding-right: 5px;
+}
 #comments {
   padding: 20px;
   margin: 40px 0;
@@ -1310,6 +1335,24 @@ a.article-title:hover {
 }
 #page-nav .space {
   color: #eceff2;
+}
+.archive-list-year-wrap {
+  padding: 15px 20px 5px 22px;
+  margin: 40px 0 0px 0;
+}
+@media screen and (max-width: 559px) {
+  .archive-list-year-wrap {
+    margin: 20px 0 0px 0;
+  }
+}
+.archive-list-year-wrap .fa {
+  margin-right: 3px;
+}
+.archive-list-year-wrap .archive-year {
+  color: #565a5f;
+}
+.archive-list-year-wrap .archive-year:hover {
+  color: #38b7ea;
 }
 #footer {
   padding: 20px 0;
