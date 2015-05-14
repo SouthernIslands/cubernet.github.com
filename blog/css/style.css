@@ -1840,3 +1840,7 @@ pre .javascript .function {
   border: none;
   display: inline;
 }
+span.MathJax {
+  padding-left: 5px;
+  padding-right: 3px;
+}
