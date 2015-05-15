@@ -746,7 +746,7 @@ a:visited {
   border-color: transparent transparent #dbdee1 transparent;
 }
 .article {
-  margin: 40px 0;
+  margin: 40px 0 0 0;
 }
 .article-inner {
   overflow: hidden;
@@ -1014,20 +1014,7 @@ a.article-title:hover {
 }
 @media screen and (min-width: 1200px) {
   #article-nav {
-    margin: 40px 0;
-  }
-  #article-nav:before {
-    width: 8px;
-    height: 8px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -4px;
-    margin-left: -4px;
-    content: "";
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    background: #787c81;
+    margin: 0 0;
   }
 }
 .article-nav-link-wrap {
@@ -1036,7 +1023,7 @@ a.article-title:hover {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  margin-top: 40px;
+  margin-top: 0;
   text-align: center;
   display: block;
 }
@@ -1045,20 +1032,19 @@ a.article-title:hover {
 }
 @media screen and (min-width: 1200px) {
   .article-nav-link-wrap {
-    width: 50%;
     margin-top: 0;
   }
 }
 @media screen and (min-width: 1200px) {
   #article-nav-newer {
-    float: left;
+    float: right;
     text-align: right;
     padding-right: 20px;
   }
 }
 @media screen and (min-width: 1200px) {
   #article-nav-older {
-    float: right;
+    float: left;
     text-align: left;
     padding-left: 20px;
   }
@@ -1216,9 +1202,40 @@ a.article-simple-title:hover {
   font-size: 13px;
   padding-right: 5px;
 }
+.article-nav-print {
+  background: #fff;
+  border-top: 1px solid #eceff2;
+  border-bottom: 1px solid #eceff2;
+}
+.article-nav-link-wrap-div-left {
+  margin-right: -1px;
+  border-right: 1px solid #eceff2;
+  width: 50%;
+  height: 50px;
+  float: left;
+  text-align: right;
+  display: inline-block;
+  padding: 20px 0;
+}
+.article-nav-link-wrap-div-left:hover {
+  -webkit-box-shadow: -3px 3px 8px #ddd;
+  box-shadow: -3px 3px 8px #ddd;
+}
+.article-nav-link-wrap-div-right {
+  width: 50%;
+  height: 50px;
+  float: left;
+  text-align: left;
+  display: inline-block;
+  padding: 20px 0;
+}
+.article-nav-link-wrap-div-right:hover {
+  -webkit-box-shadow: 3px 3px 8px #ddd;
+  box-shadow: 3px 3px 8px #ddd;
+}
 #comments {
   padding: 20px;
-  margin: 40px 0;
+  margin: 0 0 40px 0;
 }
 #comments a {
   color: #38b7ea;
