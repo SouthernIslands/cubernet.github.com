@@ -1648,8 +1648,7 @@ pre .javascript .function {
   margin-right: 5px;
 }
 .widget-wrap {
-  margin: 40px 10px;
-  margin-top: 20px;
+  margin: 20px 10px;
   border-bottom: 1px solid #eceff2;
 }
 @media screen and (max-width: 559px) {

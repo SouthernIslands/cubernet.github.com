@@ -4,7 +4,7 @@
   
   <link href="/blog/../atom.xml" rel="self"/>
   <link href="http://cubernet.cn/blog/"/>
-  <updated>2015-05-12T04:44:12.000Z</updated>
+  <updated>2015-05-26T18:25:07.000Z</updated>
   <id>http://cubernet.cn/blog/</id>
   
   <author>
@@ -13,6 +13,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[生活的意义]]></title>
+    <link href="http://cubernet.cn/blog/lifemeaning/"/>
+    <id>http://cubernet.cn/blog/lifemeaning/</id>
+    <published>2015-05-26T16:17:59.000Z</published>
+    <updated>2015-05-26T18:25:07.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>友情提示： 前方有高能流水账，请注意安全，自觉躲避，慎入，慎入。</p>
+</blockquote>
+<a id="more"></a>
+<p>很多人跟我说过，《士兵突击》是一部蕴藏着许多人生哲理的电视剧，所以我把它看了三遍，而且每次看的时候都会很认(zhuang)真(bi)地思考许三多说的一句话，“人活着就是要做许多有意义的事，而有意义的事就是好好的活着”。然而我发现，这并没什么卵用。</p>
+<p>直到有一天，当时间定格在凌晨一点，而屏幕上光标的位置依旧定格在两个小时前的时候，我的脑子里突然闪出这么一个念想：我要给寝室的家具换个布局。于是整个人立刻从呆坐了一天的状态切换到在一个十平见方的屋内移桌移柜移床的状态。凌晨三点，我重新躺在“新”寝室的床上时，心里一直思考的问题竟然是，生活的意义是什么。</p>
+<p>虽然之前对许三多名言思考的结果是这句话没什么用，但我也在不知不觉中陷入这样一种无厘头的逻辑中进而觉得这两句话相互佐证我竟无言以对。So，我冒着动静太大被楼下毒死的危险、冒着熬夜猝死的危险、冒着浪费发论文时间无法毕业的危险，大半夜去把几个木头疙瘩挪来挪去，这样的生活有意义吗？</p>
+<p>Maybe, but, who knows?</p>
+<p>最近重新恢复了微信公众账号的更新，也开始试图为自己的博客做些推广。可能是我自己的期待比较低，所以当博客在短期内达到周访问量突破2000时，我还是很惊喜的。当然，这期间也在网上结识了很多志同道合的朋友，我看着他们的朋友圈，刷着他们的微博，读着他们的文章，体验着没有自拍、没有自拍和没有鸡汤的网络环境，不，确切的说，是享受着。在他们的言行和文字中到处弥漫着新颖而有趣的想法，这也是我为什么很欣(ji)赏(du)他们。另一件让我高兴的事情是，看到很多同学直接引用了我个人网站的整套模板（我从后台的统计面板看到了部分调试信息），这也许算是对一个调css到深夜的处女座的最高赞赏。如果有更多人需要的话，我会抽时间将单独的模板代码整理出来供大家下载。那么问题来了，在这样一个工作量如此繁重的时期我竟每天花费大量时间去做这些不务正业的事情，这样的生活有意义吗？</p>
+<p>Maybe, I know?</p>
+<p>除了花费一大块时间打理这些文字，我还会在绝大多数时间内保持凌晨1到2点才离开教研室（那个每天中午十二点才来教研室的人不是我），这也导致了我一而再，再而三的丢车。前几天把电动车丢掉的时候，我甚至已经出离了愤怒，我竟然在替那些贼娃子思考，他们那样的生活有意义吗？最后思考的结果是，我真是闲的蛋疼才去想这些。</p>
+<p>当然我还同时做着许多奇奇怪怪的事情。之所以用奇怪这个词，是因为我觉得绝大多数同龄学生狗应该都不会去做这些事，而我做的原因，有些是为了利益，有些是出于兴趣，还有些属于稀里糊涂就上道的，比如前几天29所的面试。至于最近这一天半的培训课程，我觉得应该三者都有。用英语给另外一方以西班牙语为母语的人讲授10小时的网络攻防课程，包括理论基础和网络实战。我只能说多亏了在NSTL-Web小组时的积累和平时对渗透测试的关注，尽管有很多地方没有做到最好，但通过这段时间的准备，换一次独特的经历加一句“Good Work!”，我觉得也够了。当然，付出的代价是论文进度的严重拖慢和学位课的近乎裸考，这样的生活有意义吗？</p>
+<p>I know.</p>
+<p>就像那些看似加“偏”的技能点一样，虽然我暂时看不到它们的影响，但总有一天会在关键时刻发挥巨大作用。毕竟，所有的经历都是恩惠。</p>
+<p>或许，这就是有意义的生活。</p>
+<p>至少，这就是我生活的意义。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[算是反思，算是总结]]>
+    
+    </summary>
+    
+      <category term="Life" scheme="http://cubernet.cn/blog/tags/Life/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[最优化方法(3)——最速下降法和牛顿法]]></title>
@@ -1167,63 +1199,6 @@ tweak<span class="comment">--&gt;外挂程序</span>
     </summary>
     
       <category term="Python" scheme="http://cubernet.cn/blog/tags/Python/"/>
-    
-      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[谈编码]]></title>
-    <link href="http://cubernet.cn/blog/encode/"/>
-    <id>http://cubernet.cn/blog/encode/</id>
-    <published>2014-06-14T16:39:16.000Z</published>
-    <updated>2015-05-04T14:52:48.000Z</updated>
-    <content type="html"><![CDATA[<p>偶然获知阮一峰老师的博客文集上线了，十年（2004-2013）的思想漫游，100篇精华文章，20万字。一直很喜欢阮一峰老师的博客，也从他的博客中学到了很多东西。推荐大家有空去他的博客<a href="http://www.ruanyifeng.com" target="_blank" rel="external">阮一峰的网络日志</a>看看，更推荐大家购买一份电子版文集好好品读，<a href="http://www.ruanyifeng.com/blog/2014/05/my_blog_book.html" target="_blank" rel="external">文集介绍及购买地址</a>。</p>
-<a id="more"></a>
-<p>下面进入今天的正题，谈谈平时常见的几种编码。</p>
-<h2 id="URL编码">URL编码</h2><p>URL只允许使用US-ASCII字符集中的可打印字符。URL编码方案主要用于对扩展ASCII字符集中的任何有问题的字符进行编码，使其可通过HTTP安全传输。任何URL编码的字符都以%为前缀，其后是这个字符的两个十六进制ASCII代码。</p>
-<p>当攻击Web应用程序时，如果需要将以下字符当做数据插入HTTP请求中，渗透测试员必须对它们进行URL编码。</p>
-<blockquote>
-<p>空格  %  ？  &amp;  =  ；  +  #</p>
-</blockquote>
-<h2 id="Unicode编码">Unicode编码</h2><p>Unicode是一种为支持全世界所使用的各种编写系统而设计的字符编码标准，它采用各种编码方案，其中一些可用于表示Web应用程序中的不常见字符。</p>
-<p>16位Unicode编码的工作原理与URL编码类似。为通过HTTP进行传输，16位Unicode编码的字符以%u为前缀，其后是这个字符的十六进行Unicode码点。例如：</p>
-<ul>
-<li>%u2215代表/；</li>
-</ul>
-<p>UTF-8是一种长度可变的编码标准，它使用一个或几个字节表示每个字符。为通过HTTP进行传输，UTF-8编码的多字节字符以%为前缀，其后用十六进制表示每个字节。</p>
-<p>攻击Web应用程序时，之所以要用到Unicode编码，主要在于有时可用它来破坏输入确认机制。如果输入过滤阻止了某些恶意表达式，但随后处理输入的组件识别Unicode编码，就可以使用各种标准与畸形的Unicode编码避开过滤。</p>
-<h2 id="HTML编码">HTML编码</h2><p>HTML编码是一种用于表示问题字符以将其安全并入HTML文档的方案。有许多字符具有特殊的含义，并被用于定义文档结构而非其内容。为了安全使用这些字符，并将其用在文档内容中，就必须对其进行HTML编码。</p>
-<p>HTML编码定义了大量HTML实体来表示特殊的字面量字符，例如：</p>
-<blockquote>
-<ul>
-<li><code>&amp;quot;</code>代表<code>&quot;</code>;</li>
-<li><code>&amp;lt;</code>代表<code>&lt;</code>;</li>
-<li><code>&amp;gt;</code>代表<code>&gt;</code>。</li>
-</ul>
-</blockquote>
-<p>此外，任何字符都可以使用它的十进制ASCII码进行HTML编码，例如：</p>
-<blockquote>
-<p><code>&amp;#34;</code>代表<code>&quot;</code>；</p>
-</blockquote>
-<p>或者使用十六进制的ASCII码，例如：</p>
-<blockquote>
-<p><code>&amp;#x22;</code>代表<code>&quot;</code>；</p>
-</blockquote>
-<h2 id="Base64编码">Base64编码</h2><p>Base64编码仅用一个可打印的ASCII字符就可以安全转换任何二进制数据，它常用与对电子邮件附件进行编码，使其通过SMTP安全传输。它还可用于在基本HTTP验证机制中对用户证书进行编码。</p>
-<p>Base64编码将输入数据转换成3哥字节块。每个块被划分为4段，每段6个数据位。这6个数据位有64种不同的排列组合，因此每个段可使用一组64个字符表示。Base64编码使用以下字符集，其中只包含可打印的ASCII字符：</p>
-<blockquote>
-<p><strong>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/</strong></p>
-</blockquote>
-<p>如果最后的输入数据块不能构成3段输出数据，就用一个或者两个等号(=)不足输出。</p>
-<h2 id="十六进制编码">十六进制编码</h2><p>许多应用程序在传送二进制数据时直接使用十六进制编码，用ASCII字符表示十六进制数据块。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[谈一谈平时常见的几种编码]]>
-    
-    </summary>
-    
-      <category term="编码" scheme="http://cubernet.cn/blog/tags/%E7%BC%96%E7%A0%81/"/>
     
       <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
     
