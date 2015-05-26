@@ -4,7 +4,7 @@
   
   <link href="/blog/../atom.xml" rel="self"/>
   <link href="http://cubernet.cn/blog/"/>
-  <updated>2015-05-26T18:25:07.000Z</updated>
+  <updated>2015-05-26T18:58:00.000Z</updated>
   <id>http://cubernet.cn/blog/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://cubernet.cn/blog/lifemeaning/"/>
     <id>http://cubernet.cn/blog/lifemeaning/</id>
     <published>2015-05-26T16:17:59.000Z</published>
-    <updated>2015-05-26T18:25:07.000Z</updated>
+    <updated>2015-05-26T18:58:00.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>友情提示： 前方有高能流水账，请注意安全，自觉躲避，慎入，慎入。</p>
 </blockquote>
@@ -43,6 +43,8 @@
     </summary>
     
       <category term="Life" scheme="http://cubernet.cn/blog/tags/Life/"/>
+    
+      <category term="生活归档" scheme="http://cubernet.cn/blog/categories/%E7%94%9F%E6%B4%BB%E5%BD%92%E6%A1%A3/"/>
     
   </entry>
   

@@ -1177,6 +1177,8 @@ a.article-title:hover {
   display: block;
   max-width: 100%;
   margin: 0 auto;
+  width: 640;
+  height: 195;
 }
 .article-simple {
   padding-left: 20px;
