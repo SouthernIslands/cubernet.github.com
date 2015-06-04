@@ -320,7 +320,8 @@ a:visited {
   -moz-transition: 0.2s ease;
   -ms-transition: 0.2s ease;
   transition: 0.2s ease;
-  color: #565a5f;
+  color: #000;
+  font-weight: 500;
 }
 #header a:hover {
   color: #38b7ea;
