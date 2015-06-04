@@ -118,4 +118,8 @@
 
   });
 
+  $(window).load(function(){
+    $(".widget-wrap:last").css('border-bottom', 0);
+  });
+
 })(jQuery);
