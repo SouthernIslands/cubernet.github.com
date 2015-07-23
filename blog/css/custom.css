@@ -16,7 +16,10 @@
   float: right;
 }
 #toc .toc {
-  padding: 0;
+  border: 1px solid #dfdfdf;
+  background-color: #f7f7f7;
+  padding: 10px;
+  font-weight: bold;
 }
 #toc .toc li {
   list-style-type: none;

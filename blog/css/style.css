@@ -116,16 +116,16 @@ body,
   height: 100%;
 }
 body {
-  color: #565a5f;
-  font: 100% normal, "Avenir Next", Avenir, "Helvetica Neue", Helvetica, "Lantinghei SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, sans-serif;
+  color: #000;
+  font: 100% "微软雅黑", "Microsoft Yahei", "Droid Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
 }
 a {
-  color: #38b7ea;
+  color: #e32d40;
   text-decoration: none;
 }
 a:visited {
-  color: #38b7ea;
+  color: #e32d40;
 }
 .outer {
   max-width: 1320px;
@@ -213,11 +213,11 @@ a:visited {
 }
 .article-entry h1,
 .widget h1 {
-  font-size: 2em;
+  font-size: 1.6em;
 }
 .article-entry h2,
 .widget h2 {
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 .article-entry h3,
 .widget h3 {
@@ -324,7 +324,7 @@ a:visited {
   font-weight: 500;
 }
 #header a:hover {
-  color: #38b7ea;
+  color: #e32d40;
 }
 .header-inner #logo,
 #main-nav,
@@ -529,7 +529,7 @@ a:visited {
   background: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  color: #565a5f;
+  color: #000;
   -webkit-transition: 0.2s ease;
   -moz-transition: 0.2s ease;
   -ms-transition: 0.2s ease;
@@ -537,11 +537,11 @@ a:visited {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font: 100% normal, "Avenir Next", Avenir, "Helvetica Neue", Helvetica, "Lantinghei SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, sans-serif;
+  font: 100% "微软雅黑", "Microsoft Yahei", "Droid Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
   border: 1px solid #eceff2;
 }
 .search-form-input:focus {
-  border-color: #38b7ea;
+  border-color: #e32d40;
 }
 #main-nav-mobile {
   overflow-y: hidden;
@@ -594,7 +594,7 @@ a:visited {
   font-weight: 500;
 }
 .post-header-position a:hover {
-  color: #38b7ea;
+  color: #e32d40;
 }
 #post-logo {
   display: inline-block;
@@ -653,7 +653,7 @@ a:visited {
 #profile .inner .base-info #location {
   font-size: 98%;
   margin-top: 5px;
-  color: #9a9ea3;
+  color: #444;
 }
 #profile .inner .base-info #location .fa {
   margin-right: 5px;
@@ -724,10 +724,10 @@ a:visited {
   -moz-transition: 0.2s ease;
   -ms-transition: 0.2s ease;
   transition: 0.2s ease;
-  color: #898d92;
+  color: #333;
 }
 #profile .inner .contact-info .contact-list td a:hover {
-  color: #565a5f;
+  color: #000;
 }
 #profile .inner .contact-info .contact-list td a:hover:after {
   right: -50%;
@@ -807,13 +807,13 @@ a:visited {
 .article-meta .article-date,
 .article-meta .article-category {
   margin-right: 10px;
-  color: #565a5f;
+  color: #000;
 }
 .article-meta a {
-  color: #565a5f;
+  color: #000;
 }
 .article-meta a:hover {
-  color: #38b7ea;
+  color: #e32d40;
 }
 .article-date {
   float: left;
@@ -821,7 +821,7 @@ a:visited {
 .article-category {
   float: left;
   line-height: 1em;
-  color: #565a5f;
+  color: #000;
 }
 .article-category .fa-angle-right {
   margin: 0 5px;
@@ -836,7 +836,7 @@ a:visited {
 .article-title {
   text-decoration: none;
   font-size: 1.4em;
-  color: #565a5f;
+  color: #000;
   line-height: 1.1em;
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
@@ -844,13 +844,13 @@ a:visited {
   transition: color 0.2s;
 }
 a.article-title:visited {
-  color: #565a5f;
+  color: #000;
 }
 a.article-title:hover {
-  color: #38b7ea;
+  color: #e32d40;
 }
 .article-entry {
-  color: #565a5f;
+  color: #000;
   padding: 0 20px;
   line-height: 1.5em;
 }
@@ -885,7 +885,7 @@ a.article-title:hover {
   margin: 1.1em 0;
 }
 .article-entry a {
-  color: #38b7ea;
+  color: #e32d40;
   text-decoration: none;
 }
 .article-entry a:hover {
@@ -991,10 +991,10 @@ a.article-title:hover {
   text-decoration: none;
 }
 .article-more-link a:hover {
-  background: #38b7ea;
+  background: #e32d40;
   color: #fff;
   text-decoration: none;
-  text-shadow: 0 1px #169cd2;
+  text-shadow: 0 1px #c01a2b;
 }
 .article-footer {
   font-size: 0.85em;
@@ -1016,7 +1016,7 @@ a.article-title:hover {
   text-decoration: none;
 }
 .article-footer a:hover {
-  color: #565a5f;
+  color: #000;
 }
 .article-tag-list-item {
   float: left;
@@ -1070,7 +1070,7 @@ a.article-title:hover {
   display: block;
 }
 .article-nav-link-wrap:hover {
-  color: #565a5f;
+  color: #000;
 }
 @media screen and (min-width: 1200px) {
   .article-nav-link-wrap {
@@ -1095,7 +1095,7 @@ a.article-title:hover {
   letter-spacing: 2px;
   line-height: 1em;
   font-weight: bold;
-  color: #565a5f;
+  color: #000;
   text-transform: uppercase;
 }
 #article-nav-newer .article-nav-caption {
@@ -1127,9 +1127,9 @@ a.article-title:hover {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font: 14px normal, "Avenir Next", Avenir, "Helvetica Neue", Helvetica, "Lantinghei SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, sans-serif;
+  font: 14px "微软雅黑", "Microsoft Yahei", "Droid Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
   padding: 0 15px;
-  color: #565a5f;
+  color: #000;
   outline: none;
   border: 1px solid #eceff2;
   -webkit-border-radius: 3px 3px 0 0;
@@ -1239,7 +1239,7 @@ a.article-simple-title:visited {
   color: #000;
 }
 a.article-simple-title:hover {
-  color: #38b7ea;
+  color: #e32d40;
 }
 .article-simple-span {
   color: #777;
@@ -1283,7 +1283,7 @@ a.article-simple-title:hover {
   margin: 0 0 40px 0;
 }
 #comments a {
-  color: #38b7ea;
+  color: #e32d40;
 }
 .archives-wrap {
   margin: 40px 0;
@@ -1312,10 +1312,10 @@ a.article-simple-title:hover {
   margin-right: 3px;
 }
 .archive-year-wrap .archive-year {
-  color: #565a5f;
+  color: #000;
 }
 .archive-year-wrap .archive-year:hover {
-  color: #38b7ea;
+  color: #e32d40;
 }
 .archive-article {
   -webkit-column-break-inside: avoid;
@@ -1330,7 +1330,7 @@ a.article-simple-title:hover {
 .archive-article-title {
   text-decoration: none;
   font-weight: bold;
-  color: #565a5f;
+  color: #000;
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
   -ms-transition: color 0.2s;
@@ -1338,7 +1338,7 @@ a.article-simple-title:hover {
   line-height: 1.5em;
 }
 .archive-article-title:hover {
-  color: #38b7ea;
+  color: #e32d40;
 }
 .archive-article-footer {
   margin-top: 1em;
@@ -1381,7 +1381,7 @@ a.article-simple-title:hover {
 }
 #page-nav a:hover {
   color: #fff;
-  background: #38b7ea;
+  background: #e32d40;
 }
 #page-nav .page-number {
   display: inline-block;
@@ -1392,7 +1392,7 @@ a.article-simple-title:hover {
   }
 }
 #page-nav .current {
-  color: #565a5f;
+  color: #000;
   font-weight: bold;
 }
 #page-nav .space {
@@ -1411,15 +1411,15 @@ a.article-simple-title:hover {
   margin-right: 3px;
 }
 .archive-list-year-wrap .archive-year {
-  color: #565a5f;
+  color: #000;
 }
 .archive-list-year-wrap .archive-year:hover {
-  color: #38b7ea;
+  color: #e32d40;
 }
 #footer {
   padding: 20px 0;
   border-top: 1px solid #eceff2;
-  color: #565a5f;
+  color: #000;
   font-size: 102%;
   text-align: center;
 }
@@ -1427,7 +1427,7 @@ a.article-simple-title:hover {
   margin-bottom: 0;
 }
 #footer a {
-  color: #38b7ea;
+  color: #e32d40;
   text-decoration: none;
 }
 #footer a:hover {
@@ -1538,14 +1538,14 @@ a.article-simple-title:hover {
 .article-entry .gist .gist-file .gist-meta {
   background: #000;
   color: #969896;
-  font: 0.85em normal, "Avenir Next", Avenir, "Helvetica Neue", Helvetica, "Lantinghei SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, sans-serif;
+  font: 0.85em "微软雅黑", "Microsoft Yahei", "Droid Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
   text-shadow: 0 0;
   padding: 0;
   margin-top: 1em;
   margin-left: 20px;
 }
 .article-entry .gist .gist-file .gist-meta a {
-  color: #38b7ea;
+  color: #e32d40;
   font-weight: normal;
 }
 .article-entry .gist .gist-file .gist-meta a:hover {
@@ -1798,7 +1798,7 @@ pre .javascript .function {
   color: #fff;
   font-size: 18px;
   line-height: 38px;
-  background: #565a5f;
+  background: #000;
   -webkit-border-radius: 40px;
   border-radius: 40px;
 }
@@ -1877,7 +1877,7 @@ pre .javascript .function {
 }
 #recent-post li .item-inner a a,
 #recent-post li .item-inner .item-category a {
-  color: #38b7ea;
+  color: #e32d40;
 }
 #recent-post li .item-inner a a:hover,
 #recent-post li .item-inner .item-category a:hover {
@@ -1908,7 +1908,7 @@ pre .javascript .function {
   opacity: 0.8;
 }
 #recent-post li:hover .item-title a {
-  color: #38b7ea;
+  color: #e32d40;
 }
 .heimu {
   background-color: #252525 !important;
@@ -1928,7 +1928,10 @@ pre .javascript .function {
   float: right;
 }
 #toc .toc {
-  padding: 0;
+  border: 1px solid #dfdfdf;
+  background-color: #f7f7f7;
+  padding: 10px;
+  font-weight: bold;
 }
 #toc .toc li {
   list-style-type: none;
