@@ -163,7 +163,7 @@ a:visited {
   clear: both;
 }
 .logo {
-  background-image: url("images/logo.png");
+  background-image: url("http://7xikui.com1.z0.glb.clouddn.com/logo.png");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -221,11 +221,11 @@ a:visited {
 }
 .article-entry h3,
 .widget h3 {
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 .article-entry h4,
 .widget h4 {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 .article-entry h5,
 .widget h5 {
