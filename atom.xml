@@ -4,7 +4,7 @@
   
   <link href="/blog/../atom.xml" rel="self"/>
   <link href="http://cubernet.cn/blog/"/>
-  <updated>2015-07-26T08:14:31.000Z</updated>
+  <updated>2015-07-28T13:01:35.000Z</updated>
   <id>http://cubernet.cn/blog/</id>
   
   <author>
@@ -13,6 +13,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[无奈的一天]]></title>
+    <link href="http://cubernet.cn/blog/diary-3/"/>
+    <id>http://cubernet.cn/blog/diary-3/</id>
+    <published>2015-07-28T13:00:26.000Z</published>
+    <updated>2015-07-28T13:01:35.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>一个民族有一些仰望星空的人，他们才有希望。</p>
+<p>——黑格尔</p>
+</blockquote>
+<a id="more"></a>
+<p>老家那边的人习惯过农历生日，而生在城乡结合部的我，甚至在很长一段时间内不知道自己的公历生日。就连我的身份证上的生日也是出生那天农历的日期。</p>
+<p>于是每一年里至少有三个日子我可以宣称是在过生日。首先是公历的身份证上的那个日期，这个日期其实跟我一点关系都没有，所以发来祝福的一般都是各大银行以及各大注册平台。第二个是真正的公历生日，因为习惯过农历，而别人又无从得知这个日期，所以这一天基本过得跟往常一样，甚至连我的父母都不知道这个日期。最后一个是农历生日，这个生日一般一年一次（有一年闰月，过了两次，哈哈），身边的亲人朋友会送来祝福。</p>
+<p>昨天是今年里上述的第一个日子。也是第一次以工作人员的身份进入研究所。姑且认为是上天给我的生日礼物吧。</p>
+<p>三点半睡觉，六点半起床，办事拖拉的我，第一天上班不能迟到。</p>
+<p>至于第一天报到的流程我就不流水账记录了。大概过程就是，领取工作牌，申请计算机，找办公桌，办饭卡，发呆；最后一项占用了绝大部分时间。</p>
+<p>发呆的原因有两个，一是因为这个地方几乎连地上的蚂蚁都是涉密的，所以给我的电脑除了能扫雷以外什么都不能做，并且我也没有办法徒手让它变得可用；另外一个就是身处大功率干扰设备的辐射范围内，iPhone彻底退化为iTouch。</p>
+<p>太无聊的时候就要找点事情做。我首先想到的就是观察一下已经来这里工作了这么多年的前辈们在干什么。后来发现，他们当中的绝大部分人都处于一种聊天-休息-聊天-等下班的状态中，这也让我明白了为什么之前跟他们项目合作时，总是感觉他们进度缓慢。</p>
+<p>然后在一个废弃的桌子上找到一本讲现代战争的书。随手翻开一章是讲以色列的。分析到以色列的作战指南时有这么一句话，“以色列军人一致认为，别人战败了十次，还是别人；而以色列如果战败一次，那这个世界上就没有以色列了。“所以他们作战勇猛，喜欢先发制人。</p>
+<p>”输不起“，有时候不是一种脆弱的心态，而是你谋取胜利的最强原动力。</p>
+<p>于是我准备潜心研读下这本书。下一章讲国内的情况，结果笔者笔锋一转，立刻从一个严谨的战略家变身哈巴狗。凭我这点可怜的历史基础都觉得文字里漏洞百出。</p>
+<p>无奈，这个地方，这个地方里的人，这个地方里的书，都让人好无奈。</p>
+<p>今天看到总理提出科研领域也要简政放权。先是一阵欣喜，觉得有盼头了。紧接着是阵阵心酸，没想到这么个简单的事情也需要总理下令才能解决。</p>
+<p>这个领域确实该洗洗牌了。所谓的专家，大都是些善于‘内政外交’的政治家。有没有真正的专家，确切的说，有。但这些人目前大多还没那个”运气“评选上专家。</p>
+<p>晚上回来听说生日当天好伦哥免单，兴冲冲去了。结果忘带会员卡，无功而返。</p>
+<p>无奈的一天。</p>
+<p>以上，今日吐槽。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[入所第一天的无奈遭遇]]>
+    
+    </summary>
+    
+      <category term="日记" scheme="http://cubernet.cn/blog/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+      <category term="生活归档" scheme="http://cubernet.cn/blog/categories/%E7%94%9F%E6%B4%BB%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[时间的故事]]></title>
@@ -1143,45 +1182,6 @@ tweak<span class="comment">--&gt;外挂程序</span>
       <category term="Theos" scheme="http://cubernet.cn/blog/tags/Theos/"/>
     
       <category term="iOS" scheme="http://cubernet.cn/blog/tags/iOS/"/>
-    
-      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[博客再次更换主题]]></title>
-    <link href="http://cubernet.cn/blog/another-new-theme/"/>
-    <id>http://cubernet.cn/blog/another-new-theme/</id>
-    <published>2014-08-02T16:39:16.000Z</published>
-    <updated>2015-05-04T14:52:19.000Z</updated>
-    <content type="html"><![CDATA[<p>无意中看到<a href="http://esoftmobile.com" target="_blank" rel="external">esoftmobile</a>的博客，对他的博客主题有种一见钟情的感觉，可惜到github上一看源码才发现，原来esoftmobile是基于node.js来实现的那套主题。由于实在喜爱，虽夜已深，但决定模仿那个主题，自己操刀仿一个过来。</p>
-<a id="more"></a>
-<p>说干就干。由于之前自己亲手做过一个主题，所以对jekyll的这一套东西已经比较熟悉，噼里啪啦在键盘上乱敲了一顿之后，cmd+R，我看着屏幕笑了笑，已经达到我预期的效果了。</p>
-<p>这时再抬起头，发现不知道什么时候已然天亮。</p>
-<p>手上的bong开始震动，提醒我该起床了。=_=</p>
-<p>这套模板在模仿esoftmobile主题的基础上又做了些许的修改，如果有喜欢之前那套主题的同学(样式见这篇<a href="http://cubernet.github.io/new-theme/" target="_blank" rel="external">博文</a>的截图)可以从github上下载我博客源码，用_layout目录下标注<code>备份</code>的文件替换在用的文件即可。这个主题做的修改大概包括：</p>
-<ul>
-<li>在色调和布局上较之前做了很大改动；</li>
-<li>增加了首页<code>显示更多</code>功能；</li>
-<li>去掉了博文目录的悬浮导航；</li>
-<li>保留了背景音乐播放器，如果有背景音乐的文章，在文章题目下有背景音乐<code>PLAY</code>字样，点击可播放；</li>
-<li>增加了对<code>友言</code>评论插件的支持，在设置中可以切换选择使用’友言’或<code>多说</code>或<code>disqus</code>；</li>
-<li>去掉了<code>分享</code>按钮；</li>
-<li>访问统计由<code>百度统计</code>改为<code>gostats</code>(不过访问统计被清零了，好伤心T T)；</li>
-</ul>
-<hr>
-<p>8月7日更新：</p>
-<ul>
-<li>增加了洋葱头表情 <img src="http://cubernet.cn/assets/smilies/10.gif" id="smiley"></li>
-<li>to be continued…💪💪💪</li>
-</ul>
-]]></content>
-    <summary type="html">
-    <![CDATA[给自己的博客写了一个新主题]]>
-    
-    </summary>
-    
-      <category term="博客主题" scheme="http://cubernet.cn/blog/tags/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/"/>
     
       <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
     
