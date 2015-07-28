@@ -263,7 +263,10 @@ repeat(<span class="string">"knock"</span>,<span class="number">4</span>)
   
 <section id="comments">
   <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <button type="button" class="disqus_btn"> 
+    	<i class="fa fa-comments fa-lg"></i>
+      点击加载评论
+  	</button>
   </div>
 </section>
 
@@ -290,24 +293,7 @@ repeat(<span class="string">"knock"</span>,<span class="number">4</span>)
     </div>
   </div>
 </footer>
-    
-
-<script>
-  var disqus_shortname = 'cubernet';
-  var disqus_identifier = '/swift-1/';
-  var disqus_title = 'Swift基础(一)';
-  var disqus_url = 'http://cubernet.cn/blog/swift-1/';
-  (function(){
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-
-
-<script src="http://cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script>
 <script src="/blog/js/jquery.githubRepoWidget.min.js"></script>
 
 
@@ -317,6 +303,26 @@ repeat(<span class="string">"knock"</span>,<span class="number">4</span>)
 
 <script src="/blog/js/script.js" type="text/javascript"></script>
 <script async="true" src="//dn-lbstatics.qbox.me/lbservice/busuanzi/2.0/busuanzi.mini.js"/></script>
+
+
+<script>
+  $(document).ready(function() {
+    $('.disqus_btn').on('click', function(){
+      var disqus_shortname = 'cubernet';
+      var disqus_identifier = '/swift-1/';
+      var disqus_title = 'Swift基础(一)';
+      var disqus_url = 'http://cubernet.cn/blog/swift-1/';
+      (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    });
+  });
+</script>
+
 
   </div>
 </body>

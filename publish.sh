@@ -12,6 +12,5 @@ else
 fi
 git add .
 git commit -m "$comment"
-git push github origin master
-git push gitcafe master:gitcafe-pages
+git push
 exit 0

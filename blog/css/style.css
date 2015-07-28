@@ -172,7 +172,7 @@ a:visited {
   position: relative;
 }
 #container > .outer {
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 @media screen and (min-width: 1200px) {
   #main {
@@ -1280,10 +1280,38 @@ a.article-simple-title:hover {
 #comments {
   background: #fff;
   padding: 20px;
-  margin: 0 0 40px 0;
 }
 #comments a {
   color: #e32d40;
+}
+.disqus_btn {
+  width: 100%;
+  margin-bottom: 40px;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 1.1em;
+  line-height: 1.42857143;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.disqus_btn i {
+  color: #e32d40;
+}
+.disqus_btn:hover {
+  background-color: #e5e5e5;
+  border-color: #adadad;
+  color: #e32d40;
+}
+.disqus_btn:hover i {
+  color: #000;
 }
 .archives-wrap {
   margin: 40px 0;
@@ -1637,7 +1665,6 @@ pre .javascript .function {
     width: 21.5384615384615%;
     margin: 0 0.7692307692308%;
     background: #fff;
-    margin-top: 40px;
   }
 }
 @media screen and (min-width: 800px) and (max-width: 1199px) {
