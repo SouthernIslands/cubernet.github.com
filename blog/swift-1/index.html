@@ -306,13 +306,23 @@ repeat(<span class="string">"knock"</span>,<span class="number">4</span>)
 
 
 <script>
-  $(document).ready(function() {
-    $('.disqus_btn').on('click', function(){
-      var disqus_shortname = 'cubernet';
-      var disqus_identifier = '/swift-1/';
-      var disqus_title = 'Swift基础(一)';
-      var disqus_url = 'http://cubernet.cn/blog/swift-1/';
+    var disqus_shortname = 'cubernet';
+    var disqus_identifier = '/swift-1/';
+    var disqus_title = 'Swift基础(一)';
+    var disqus_url = 'http://cubernet.cn/blog/swift-1/';
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  $(document).ready(function() {    
+    $('.disqus_btn').on('click', function(){     
       (function(){
+        var disqus_shortname = 'cubernet';
+        var disqus_identifier = '/swift-1/';
+        var disqus_title = 'Swift基础(一)';
+        var disqus_url = 'http://cubernet.cn/blog/swift-1/';
+        var dsq = document.createElement('script');
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
         dsq.async = true;
@@ -320,6 +330,22 @@ repeat(<span class="string">"knock"</span>,<span class="number">4</span>)
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
       })();
     });
+  
+    $('.article-comment-link').on('click', function(){     
+      (function(){
+        var disqus_shortname = 'cubernet';
+        var disqus_identifier = '/swift-1/';
+        var disqus_title = 'Swift基础(一)';
+        var disqus_url = 'http://cubernet.cn/blog/swift-1/';
+        var dsq = document.createElement('script');
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    });
+
   });
 </script>
 

@@ -258,13 +258,23 @@ tweak<span class="comment">--&gt;外挂程序</span>
 
 
 <script>
-  $(document).ready(function() {
-    $('.disqus_btn').on('click', function(){
-      var disqus_shortname = 'cubernet';
-      var disqus_identifier = '/theos1/';
-      var disqus_title = 'Theos介绍';
-      var disqus_url = 'http://cubernet.cn/blog/theos1/';
+    var disqus_shortname = 'cubernet';
+    var disqus_identifier = '/theos1/';
+    var disqus_title = 'Theos介绍';
+    var disqus_url = 'http://cubernet.cn/blog/theos1/';
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  $(document).ready(function() {    
+    $('.disqus_btn').on('click', function(){     
       (function(){
+        var disqus_shortname = 'cubernet';
+        var disqus_identifier = '/theos1/';
+        var disqus_title = 'Theos介绍';
+        var disqus_url = 'http://cubernet.cn/blog/theos1/';
+        var dsq = document.createElement('script');
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
         dsq.async = true;
@@ -272,6 +282,22 @@ tweak<span class="comment">--&gt;外挂程序</span>
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
       })();
     });
+  
+    $('.article-comment-link').on('click', function(){     
+      (function(){
+        var disqus_shortname = 'cubernet';
+        var disqus_identifier = '/theos1/';
+        var disqus_title = 'Theos介绍';
+        var disqus_url = 'http://cubernet.cn/blog/theos1/';
+        var dsq = document.createElement('script');
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    });
+
   });
 </script>
 
