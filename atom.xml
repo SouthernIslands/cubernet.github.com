@@ -1187,4 +1187,1130 @@ tweak<span class="comment">--&gt;外挂程序</span>
     
   </entry>
   
+  <entry>
+    <title><![CDATA[博客再次更换主题]]></title>
+    <link href="http://cubernet.cn/blog/another-new-theme/"/>
+    <id>http://cubernet.cn/blog/another-new-theme/</id>
+    <published>2014-08-02T16:39:16.000Z</published>
+    <updated>2015-05-04T14:52:19.000Z</updated>
+    <content type="html"><![CDATA[<p>无意中看到<a href="http://esoftmobile.com" target="_blank" rel="external">esoftmobile</a>的博客，对他的博客主题有种一见钟情的感觉，可惜到github上一看源码才发现，原来esoftmobile是基于node.js来实现的那套主题。由于实在喜爱，虽夜已深，但决定模仿那个主题，自己操刀仿一个过来。</p>
+<a id="more"></a>
+<p>说干就干。由于之前自己亲手做过一个主题，所以对jekyll的这一套东西已经比较熟悉，噼里啪啦在键盘上乱敲了一顿之后，cmd+R，我看着屏幕笑了笑，已经达到我预期的效果了。</p>
+<p>这时再抬起头，发现不知道什么时候已然天亮。</p>
+<p>手上的bong开始震动，提醒我该起床了。=_=</p>
+<p>这套模板在模仿esoftmobile主题的基础上又做了些许的修改，如果有喜欢之前那套主题的同学(样式见这篇<a href="http://cubernet.github.io/new-theme/" target="_blank" rel="external">博文</a>的截图)可以从github上下载我博客源码，用_layout目录下标注<code>备份</code>的文件替换在用的文件即可。这个主题做的修改大概包括：</p>
+<ul>
+<li>在色调和布局上较之前做了很大改动；</li>
+<li>增加了首页<code>显示更多</code>功能；</li>
+<li>去掉了博文目录的悬浮导航；</li>
+<li>保留了背景音乐播放器，如果有背景音乐的文章，在文章题目下有背景音乐<code>PLAY</code>字样，点击可播放；</li>
+<li>增加了对<code>友言</code>评论插件的支持，在设置中可以切换选择使用’友言’或<code>多说</code>或<code>disqus</code>；</li>
+<li>去掉了<code>分享</code>按钮；</li>
+<li>访问统计由<code>百度统计</code>改为<code>gostats</code>(不过访问统计被清零了，好伤心T T)；</li>
+</ul>
+<hr>
+<p>8月7日更新：</p>
+<ul>
+<li>增加了洋葱头表情 <img src="http://cubernet.cn/assets/smilies/10.gif" id="smiley"></li>
+<li>to be continued…💪💪💪</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[给自己的博客写了一个新主题]]>
+    
+    </summary>
+    
+      <category term="博客主题" scheme="http://cubernet.cn/blog/tags/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/"/>
+    
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[时光不老，我们不散]]></title>
+    <link href="http://cubernet.cn/blog/bieli/"/>
+    <id>http://cubernet.cn/blog/bieli/</id>
+    <published>2014-07-27T16:39:16.000Z</published>
+    <updated>2015-05-04T14:52:41.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>人生浪急滩险<br>走来不易<br>最后值得珍重的<br>不过是你我的情义</p>
+<p>——祝小兔</p>
+</blockquote>
+<p>这篇文章本来是<a href="http://cubernet.github.io/libie" target="_blank" rel="external">离别</a>的姊妹篇，从url链接中也看的出来，原准备的名字叫<code>别离</code>。当初觉得，毕业了，有聚有散，有人离开，也有人归来。相同的两个字，次序不同，意义竟也不同。<a id="more"></a>    </p>
+<p>某人<img src="http://cubernet.cn/assets/smilies/14.gif" id="smiley">当时看了文章后问我，为什么没有提及她。其实，那些没有被提及的，不是因为在我本科的四年生活中毫无分量，而是因为，你们不在我离别的<code>队列</code>里。<img src="http://cubernet.cn/assets/smilies/32.gif" id="smiley">好吧，我承认程序猿的本质被我暴露了。</p>
+<p>后来想想，别离或许不能准确表达我内心的想法，所以将题目改成现在的这个。【背景音乐也非常的切题 :) 】</p>
+<hr>
+<p>这个暑假没有回家，于是也亲身经历了一把“辞旧迎新”的感觉。整个夏天校园里都时不时会有家长出现，最初是来参加孩子毕业典礼的家长，后来是带孩子提前来熟悉校园的家长。食堂一如既往的开始翻修。Oh，不，准确的说是食堂外围开始翻修，这样新生到来时，不至于输在第一印象上。那条黑色的狗依然每天在主楼前面乘凉，而我们的生活却一直没有止步。</p>
+<hr>
+<p>肉肉同学结束了一个月的博士楼生活，搬进了单位的职工宿舍。不舍的情绪就像空气一样弥漫在身边，但似乎又不容易那么被发现。刚搬走的那几天，只是突然的不想说话。晚上开门回去，总下意识地觉得进错了家。那声“你回来啦”，听不到了。</p>
+<p>不舍却也欣慰。</p>
+<p>因为我终于看到她在这片现在还既不属于我更不属于她的土地上，重新有了自己的朋友圈，有了自己的工作，有了自己的轨迹。在那些被爱情滋润不到的地方，这一次，重新被填满了。</p>
+<p>除了欣慰，更多的是感动。</p>
+<p>前几天在空间里看到羊蛋和小波快结婚了。很替他们高兴。我只想说，我想回去参加你们的婚礼。这样的婚姻是被祝福的。正如肉肉一无反顾的来到成都，对我来说，不仅仅是感动，更是一种钦佩，或者，更是一种责任。</p>
+<p>这种责任不是拿来在类似于父亲节给叔叔发的短信里一样用来口头承诺的。我更愿意用行动去证明。</p>
+<p>当然啦，平淡的生活总归需要一些小矛盾来调节一下。有时候双方实在找不到什么毛病，就会因为一些党派立场、民族大义的问题产生争执。这个时候，争执的内容和结果早已不重要，安心“享受”过程。<img src="http://cubernet.cn/assets/smilies/28.gif" id="smiley"></p>
+<p>哈哈，开玩笑啦。毕竟和谐社会，还是和谐点好。</p>
+<p>总之，很幸运能遇到一个愿意付出这么多也这么优秀的你，可能所有程序猿的共同特点的都是嘴笨心细，很多话很多事都一直呆呆的藏在心里。我们一起吃遍成都的大街小巷，一起体验生活中的各种点点滴滴。</p>
+<p>爷爷在短信里说，你们会很幸福。<img src="http://cubernet.cn/assets/smilies/1.gif" id="smiley"></p>
+<p>我也这么觉得。</p>
+<hr>
+<p>记得肉肉同学去参加同事聚会的那天晚上，无意打开微信刷新一下，看见阿姨十二点半还在更新状态。</p>
+<p>可怜天下父母心啊。</p>
+<p>因为今年暑假没回去，爸爸妈妈决定过来找我。</p>
+<p>想想我一年轻汉子在屋里吹空调，让两位长辈不远千里过来看我，心里还是有一种说不出来的滋味。</p>
+<p>不仅仅是激动和开心。</p>
+<p>不知出于何种目的<img src="http://cubernet.cn/assets/smilies/30.gif" id="smiley">，也不知是经过何种途径<img src="http://cubernet.cn/assets/smilies/23.gif" id="smiley">，更不知是因为哪次比赛<img src="http://cubernet.cn/assets/smilies/32.gif" id="smiley">，毕业之后，家里莫名收到学校发来祝贺我信安大赛获奖的喜报。</p>
+<p>当然，这里想说的重点是，爸爸在空间里发的一段话。</p>
+<p>也许还是在谈高考的事情？说实话我也就是在当时知道成绩的那几天郁闷了一下，很快就坦然了。感觉当年高中的成绩就好像现在的房价，虽然虚高不下，但终归有遭不住的一天，回归到本来的面目。电子科大是我很好的选择，这也是为什么四年后我再次选择它的原因。</p>
+<p>这里很适合我。</p>
+<p>我很喜欢这里。</p>
+<p>亦或是因为在我身上的期望太大了？那就待我负重远行一万里，让你们扬眉吐气。</p>
+<hr>
+<p>最近一直处于一种焦躁的忙碌中。所谓忙碌，是因为觉得自己有很多事情要做。而所谓焦躁，是因为自己不知道该不该去做。</p>
+<p>最终还是在没有任何老师或者学长的指导下，凭自己的判断和喜好定了博士期间的方向。定之前的那几天想了很多，经常一整个晚上一整个晚上的处于写代码、看书、思考的循环中，一不小心就天亮了，然后抱着地主头眯上一会儿，起来去实验室。我给自己选择了一个别人眼中最痛苦的方向，也不知道自己能不能坚持下去。跟很多人聊天，大家都说这个方向可能根本就没什么论文可发。</p>
+<p>但，这又怎样呢？</p>
+<p>我还是义无返顾的选择了。</p>
+<p>另外两位小伙伴的加入给了我信心，我也相信我自己可以坚持。</p>
+<p>今天中午碰巧和陈博士一起吃饭。</p>
+<p>路上我问，博士，你这么优秀的秘诀是什么？</p>
+<p>他说，找准一个方向，然后猛操，不要想太多。</p>
+<p>那一刻，觉得暗淡了这么久的天，</p>
+<p>晴了。</p>
+<p>我想，我等的，就是这么一句话。</p>
+<p>我想，等我的，也是这么一句话。</p>
+<p><img src="http://cubernet.cn/assets/smilies/12.gif" id="smiley"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[本科毕业前的感言]]>
+    
+    </summary>
+    
+      <category term="life" scheme="http://cubernet.cn/blog/tags/life/"/>
+    
+      <category term="生活归档" scheme="http://cubernet.cn/blog/categories/%E7%94%9F%E6%B4%BB%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[离别]]></title>
+    <link href="http://cubernet.cn/blog/libie/"/>
+    <id>http://cubernet.cn/blog/libie/</id>
+    <published>2014-06-27T16:39:16.000Z</published>
+    <updated>2015-05-04T14:50:58.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>华灯再上，离别的已是自己。 ——Cubernet</p>
+</blockquote>
+<p>一觉醒来就要去参加毕业典礼，心里有种莫名的感觉，总觉得这一切来的有点始料未及，呵，我就要毕业了。</p>
+<a id="more"></a>
+<p>其实一路走来，毕业早已不是第一次经历的事情。小学、初中、高中，每一个阶段都有毕业，或隆重或平常，它们都标志着一段旧生活的结束和另一段新生活的开始。</p>
+<p>只是人都是安于现状的。所以我们疯狂的留念，疯狂的纪念。其实，我们不是害怕忘记彼此，而是害怕失去自己曾经拥有的那些过去。</p>
+<p>我也是害怕离别的。</p>
+<p>因为离别当头，总是会有止不住的过往回忆。</p>
+<hr>
+<h2 id="回忆篇">回忆篇</h2><p>四年前，迎新的校车把我从火车站接到了学校，下车的第一眼看到的是学生活动中心，不知为何，当时给了我极差的第一印象。第一个晚上一个人睡在寝室里，满脑子想的都是要不回去补习吧，明年换个学校。。。不过后来一想，既来之则安之，时间久了说不定会慢慢发现它的好。果然现在觉得它其实还不错。是的，我现在觉得<code>电子科技大学</code>还不错，虽然它依旧听起来像个专科。</p>
+<p>可能天生不是做学生活动的料，从最初不愿参加任何学生会的面试，到最后勉强加入分团委，事后觉得，大一一年的学生工作给我带来的可能更多是教训和反思，也使我慢慢认识到，原来我对官场上那一套“做法”有多么的深恶痛绝，我不想让自己太早沾染上那些腔调，于是果断急流勇退。（PS，我觉得雷*在任时的分团委还是很温馨的，虽然他抱怨当时水，其实挺好的啦）</p>
+<p>当然，更多的时间是疯狂的加入各种社团，加入各种工作室、俱乐部，发传单、搞活动，每天生活充实到不行。如果现在要我用四个字来概括那个时候的话，那就是</p>
+<p><code>一事无成</code>。</p>
+<p>好在至少醒悟了一点，那就是，学长都是骗人的。</p>
+<p>同我一起考来成都的，还有刘靖跟宝铁。虽然不在同一个学校，好在离得不远，所以每隔一段时间就出来聚聚，聊聊伤心事，再吹吹牛皮。一不小心就这么四年过去了，刘靖要去香港，还真是有点舍不得。</p>
+<p>大三的时候王凯大鹏他们十几个人赶来成都过中秋，刚好又对上王凯生日。十几个人就那么在路边摊一直喝啊喝啊，一直到冰洁都喝成一滩烂泥了。那段回忆真是美好啊，不知道以后还有没有这样的机会了。</p>
+<p>其实我这四年几乎没怎么在成都玩过，也没吃过多少正宗的成都美食，可能是见的少，所以就只能对铁板烧烤铁板炒饭情有独钟。这方面，我相信逼哥跟我有同感。</p>
+<p>逼哥跟我军训时就站在一起，那个时候还不知道我俩是老乡，没想到后来竟在一间屋子里睡了三年，说了那么多交心交肺的话。当然，绝大多数都是在<code>旺角烧烤</code>。说好的走之前再去喝一顿呢，你趁我在北京竟然发只发了条微信就回山西了。不过我想到以后可能还要靠梁局长罩着，也只能默默的在心里骂句FUCK YOU。</p>
+<p>相比之下，铭铭和建行就不太喜欢那个烧烤。带他们去过一次，结果两个人都没吃high。可能是没有旺角烧烤存在的缘故，跟铭铭每天形影不离却一直都是三脚踢不出一个屁，我们两个四年对话的总和可能都没这篇流水账的字数多。但默契还是有的。铭铭走中，那种见死不救崩了怪队友的中；建行打野，那种20分钟裸出一把跳得打野；Peace上单，那种一头扎进对面野区半个小时不出来的上单；我跟路人走下，那种5分钟补5个刀的下。有句话好像是说，网吧五连坐，从来没赢过。我想说，赢不赢都很快乐。以后的日子里可能不再有时间一起dota，但dota已在心里，偶尔看看dota视频，也会想起你们。</p>
+<p>刘学不打dota，其实什么游戏都不打，只看电影，什么电影都看。刘学是我见过的最好的老好人，没有之一。突然想起前几天那么晚回去没带钥匙，打电话吵醒你帮我开门，真是抱歉。好人有好报，我一直觉得这话不假。</p>
+<p>相反，马哥和超哥真是两个坏透了的人，可劳资还就是喜欢跟你们打交道。毕业旅行和毕业聚餐你们两个各自错过了一场。不过我在不同的地点跟你们两个说了同样的话，不知道酒醒之后你们还记得不。我还是很期待能一起做点事。</p>
+<p>说起做点事，毕业旅行的时候跟刚哥喝到凌晨三点半，第一次觉得懂了他，那天说过的那些话，可能这辈子都不会再跟我说了，但我觉得说一次，就已经是朋友，是好朋友了，对不对。</p>
+<p>我觉得好朋友就是那种不必一起分享所有的开心，却可以随时陪你分担所有的难过的人。好朋友可能不经常联系，但随叫随到。</p>
+<p>可是，高中那一帮人，海龟、三儿、孙鹏、嘉琪、华仔、地主等等，你们他妈的也太久不联系了吧！</p>
+<p>对了，去杭州耍的照片我好像一直忘记给你了孙学霸，你以后成大器了，不会就因为这个就不帮我了吧。。。</p>
+<p>好像回忆的有些久远了，又好像都是最近的事，脑子乱了，就不去想它了。</p>
+<h2 id="感谢篇">感谢篇</h2><p>好像只有那些取得卓越成就的人才有资格说，感谢谁谁谁曾经对我的帮助，才使得我取得今天的成就。</p>
+<p>可是我想说，虽然我依旧像四年前一样一事无成，我还是想因一些事对一些人表达一些感谢。</p>
+<p>由近及远，最应该感谢的是志瑜兄。虽说直博是个大坑，但没有你，我还真没这个资格去享受这个大坑。我这个人不善于当面在口头上表达一些感谢，当时的一顿饭更不足以代表我的谢意，这么说吧，这个人情，一辈子去还。</p>
+<p>再有就是实验室了吧，大一大二在汤老师的实验室，以及后来张老师的实验室，里面的老师、师兄都在各方面给了我极大的帮助。</p>
+<p>感谢跟我室友过或者同学过的人，我是个喜欢懒床翘课毛病多的人，感谢你们帮我签到喊我上课替我考试代我买票，没有你们，我一个人走不到今天。</p>
+<h2 id="遗憾篇">遗憾篇</h2><p>任何一段时间中，总会有一些遗憾。</p>
+<p>比如还是没有完成从一个明显的胖子到不明显的胖子的转型。</p>
+<p>比如还是没有养成经常锻炼身体的习惯。</p>
+<p>比如没有趁学生价多去游玩几个景区。</p>
+<p>比如没有学会说四川话。</p>
+<p>比如。。。其实还有很多。</p>
+<p>我想说，最遗憾的是，没有遇到一个超级团结的集体，可能是实验班的同学都太过个性鲜明而难以互相融合。不过这不影响国软是<code>邦清班</code>，是一个超牛逼的集体的事实。过程已然如此，我只是希望未来的路上，每一颗星星在忙于闪耀的同时，能牵一牵彼此的手。</p>
+<p>当然，遗憾虽有，但不后悔。</p>
+<hr>
+<p>今天去领博士通知书，老师再三核对照片来确认是否来本人带领，边看边说，“怎么感觉你好小啊，是本人吗？”</p>
+<p>我在心中默念，我是还小啊，因为未来的路还长。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[本科毕业前的感言]]>
+    
+    </summary>
+    
+      <category term="life" scheme="http://cubernet.cn/blog/tags/life/"/>
+    
+      <category term="生活归档" scheme="http://cubernet.cn/blog/categories/%E7%94%9F%E6%B4%BB%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[落电台音乐批量下载]]></title>
+    <link href="http://cubernet.cn/blog/luo/"/>
+    <id>http://cubernet.cn/blog/luo/</id>
+    <published>2014-06-15T16:39:16.000Z</published>
+    <updated>2015-05-04T14:53:05.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="http://www.luoo.net" target="_blank" rel="external">落电台</a>是我很喜欢的一个电台，也曾经在日志中不止一次的推荐过这个电台。这个网站上的音乐、文字、图片，无一不让我陶醉。</p>
+<blockquote>
+<p>在本科四年中那段最奋斗最辛苦的日子，<code>落网</code>陪我一路走过。那些清早起来，听着电台开始一天编码的生活，是最充实最美丽的回忆。——感谢<code>落网</code></p>
+</blockquote>
+<p>可能是太过于喜欢，进而会变的依赖。在许多没有网的时候也希望能够有<code>落网</code>陪伴，于是萌生了将电台音乐下载到本地的想法（只是为了本地播放，希望大家也不要拿来商用）。</p>
+<a id="more"></a>
+<p>说干就干。</p>
+<p>简单看下<code>落网</code>的网站结构，会发现基本格式都是<code>主网址/music/期刊编号</code>，而每一期的歌曲地址则是通过js代码动态加载的。于是一个简单的办法就是，先遍历每一期，然后将js代码动态加载的歌曲地址筛选出来，然后批量下载。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#期刊页面链接生成方法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getUrl</span><span class="params">(num)</span>:</span></span><br><span class="line">    url = <span class="string">'http://www.luoo.net/music/'</span></span><br><span class="line">    <span class="keyword">return</span> url + getNum(num)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">readsrc</span><span class="params">(src)</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        url = urllib2.urlopen(src)</span><br><span class="line">        content = url.read()</span><br><span class="line">        <span class="keyword">return</span> content</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">print</span> <span class="string">'readsrc error'</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">None</span></span><br><span class="line"><span class="comment">#歌曲详情js代码提取方法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getSongs</span><span class="params">(content)</span>:</span></span><br><span class="line">    p = re.compile(<span class="string">r'"title":"(?P&lt;title&gt;.*?)","artist":"(?P&lt;artist&gt;.*?)","album":"(?P&lt;album&gt;.*?)","mp3":"(?P&lt;mp3&gt;.*?)"'</span>,re.M)</span><br><span class="line">    r = p.finditer(content)</span><br><span class="line">    <span class="keyword">if</span> r:</span><br><span class="line">        <span class="keyword">return</span> r</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">None</span></span><br></pre></td></tr></table></figure>
+<p>最后增加了提取期刊名并按照期刊号归类，并将其改为命令行工具，使用方法如下：</p>
+<pre><code>-------------------------------------------------------------------------------
+
+    This program downloads music from www.luo.net . 
+    Options include: 
+      --version : Prints the version number 
+      --help    : Display this help
+      --a       : Download all music from the first vol
+      -v<span class="annotation">[&lt;vol number&gt;]</span>      : Download the specified vol
+      -r<span class="annotation">[&lt;rank of music&gt;]</span>   : Download the specified music
+      -p<span class="annotation">[&lt;filepath&gt;]</span>        : The filepath where <span class="keyword">to</span> save music
+
+---------------------------------------------------------------------------------
+</code></pre><p>最终实现效果如下图：</p>
+<p><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-06-16-luo-2.png-blogpic" alt="image"></p>
+<p>完整源码地址：<a href="https://github.com/Cubernet/luoo" target="_blank" rel="external">点击下载</a>       </p>
+]]></content>
+    <summary type="html">
+    <![CDATA[批量下载落电台www.luoo.net的音乐]]>
+    
+    </summary>
+    
+      <category term="Python" scheme="http://cubernet.cn/blog/tags/Python/"/>
+    
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[谈编码]]></title>
+    <link href="http://cubernet.cn/blog/encode/"/>
+    <id>http://cubernet.cn/blog/encode/</id>
+    <published>2014-06-14T16:39:16.000Z</published>
+    <updated>2015-05-04T14:52:48.000Z</updated>
+    <content type="html"><![CDATA[<p>偶然获知阮一峰老师的博客文集上线了，十年（2004-2013）的思想漫游，100篇精华文章，20万字。一直很喜欢阮一峰老师的博客，也从他的博客中学到了很多东西。推荐大家有空去他的博客<a href="http://www.ruanyifeng.com" target="_blank" rel="external">阮一峰的网络日志</a>看看，更推荐大家购买一份电子版文集好好品读，<a href="http://www.ruanyifeng.com/blog/2014/05/my_blog_book.html" target="_blank" rel="external">文集介绍及购买地址</a>。</p>
+<a id="more"></a>
+<p>下面进入今天的正题，谈谈平时常见的几种编码。</p>
+<h2 id="URL编码">URL编码</h2><p>URL只允许使用US-ASCII字符集中的可打印字符。URL编码方案主要用于对扩展ASCII字符集中的任何有问题的字符进行编码，使其可通过HTTP安全传输。任何URL编码的字符都以%为前缀，其后是这个字符的两个十六进制ASCII代码。</p>
+<p>当攻击Web应用程序时，如果需要将以下字符当做数据插入HTTP请求中，渗透测试员必须对它们进行URL编码。</p>
+<blockquote>
+<p>空格  %  ？  &amp;  =  ；  +  #</p>
+</blockquote>
+<h2 id="Unicode编码">Unicode编码</h2><p>Unicode是一种为支持全世界所使用的各种编写系统而设计的字符编码标准，它采用各种编码方案，其中一些可用于表示Web应用程序中的不常见字符。</p>
+<p>16位Unicode编码的工作原理与URL编码类似。为通过HTTP进行传输，16位Unicode编码的字符以%u为前缀，其后是这个字符的十六进行Unicode码点。例如：</p>
+<ul>
+<li>%u2215代表/；</li>
+</ul>
+<p>UTF-8是一种长度可变的编码标准，它使用一个或几个字节表示每个字符。为通过HTTP进行传输，UTF-8编码的多字节字符以%为前缀，其后用十六进制表示每个字节。</p>
+<p>攻击Web应用程序时，之所以要用到Unicode编码，主要在于有时可用它来破坏输入确认机制。如果输入过滤阻止了某些恶意表达式，但随后处理输入的组件识别Unicode编码，就可以使用各种标准与畸形的Unicode编码避开过滤。</p>
+<h2 id="HTML编码">HTML编码</h2><p>HTML编码是一种用于表示问题字符以将其安全并入HTML文档的方案。有许多字符具有特殊的含义，并被用于定义文档结构而非其内容。为了安全使用这些字符，并将其用在文档内容中，就必须对其进行HTML编码。</p>
+<p>HTML编码定义了大量HTML实体来表示特殊的字面量字符，例如：</p>
+<blockquote>
+<ul>
+<li><code>&amp;quot;</code>代表<code>&quot;</code>;</li>
+<li><code>&amp;lt;</code>代表<code>&lt;</code>;</li>
+<li><code>&amp;gt;</code>代表<code>&gt;</code>。</li>
+</ul>
+</blockquote>
+<p>此外，任何字符都可以使用它的十进制ASCII码进行HTML编码，例如：</p>
+<blockquote>
+<p><code>&amp;#34;</code>代表<code>&quot;</code>；</p>
+</blockquote>
+<p>或者使用十六进制的ASCII码，例如：</p>
+<blockquote>
+<p><code>&amp;#x22;</code>代表<code>&quot;</code>；</p>
+</blockquote>
+<h2 id="Base64编码">Base64编码</h2><p>Base64编码仅用一个可打印的ASCII字符就可以安全转换任何二进制数据，它常用与对电子邮件附件进行编码，使其通过SMTP安全传输。它还可用于在基本HTTP验证机制中对用户证书进行编码。</p>
+<p>Base64编码将输入数据转换成3哥字节块。每个块被划分为4段，每段6个数据位。这6个数据位有64种不同的排列组合，因此每个段可使用一组64个字符表示。Base64编码使用以下字符集，其中只包含可打印的ASCII字符：</p>
+<blockquote>
+<p><strong>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/</strong></p>
+</blockquote>
+<p>如果最后的输入数据块不能构成3段输出数据，就用一个或者两个等号(=)不足输出。</p>
+<h2 id="十六进制编码">十六进制编码</h2><p>许多应用程序在传送二进制数据时直接使用十六进制编码，用ASCII字符表示十六进制数据块。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[谈一谈平时常见的几种编码]]>
+    
+    </summary>
+    
+      <category term="编码" scheme="http://cubernet.cn/blog/tags/%E7%BC%96%E7%A0%81/"/>
+    
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[给博客添加了自己的主题]]></title>
+    <link href="http://cubernet.cn/blog/new-theme/"/>
+    <id>http://cubernet.cn/blog/new-theme/</id>
+    <published>2014-06-08T16:39:16.000Z</published>
+    <updated>2015-04-29T17:57:10.000Z</updated>
+    <content type="html"><![CDATA[<p>之前一直使用WP搭建博客，后来觉得WP实在过于庞大，那些高大上的功能对我这样一个<code>手残</code>来说实在是没有用武之地，所以投靠到了Github。</p>
+<a id="more"></a>
+<p>刚来的时候，花了很长时间在网上寻找博客主题，筛选的条件只有一个，简洁。于是就有了之前的那个主题，那个模板修改自 <a href="http://yonsm.net/" target="_blank" rel="external">Yonsm</a> 的博客，在这里再次表示感谢。 看久之后，总觉得之前的模板更多的只是符合我对简洁的要求，并没有达到简洁美，于是在欢度六一之后，决定亲自写一套模板，只有这样才能最大程度的达到预期的样式效果。</p>
+<p>总结一下，这套模板在之前的基础上大概做了以下修改：</p>
+<ul>
+<li>首先是色调和对比度的修改，增加了黑色元素及背景色深浅过度；</li>
+<li>将左侧导航栏修改为浮动，在header中增加了固定的导航栏；</li>
+<li>在右侧增加了博文目录的悬浮导航，如果文章较短没有分块，则不显示目录导航；</li>
+<li>去掉了之前丑陋的背景音乐播放器，如果有背景音乐的文章，在文章题目下有背景音乐<code>PLAY</code>字样，点击可播放；</li>
+<li>增加了对disqus评论插件的支持，在设置中可以切换选择使用<code>多说</code>或<code>disqus</code>；</li>
+<li>增加了<code>分享</code>按钮，可以将感兴趣的或觉得好的博文、图片或部分文字（鼠标划选想分享的文字，自动弹出分享按钮）分享到常见社区；</li>
+<li>一些CSS效果细节上的修改，如对超链接a、h3、span等元素的自定义样式</li>
+<li>to be continued…💪💪💪</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[给自己的博客写了一个新主题]]>
+    
+    </summary>
+    
+      <category term="博客主题" scheme="http://cubernet.cn/blog/tags/%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/"/>
+    
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[让4S重新飞速运行起来]]></title>
+    <link href="http://cubernet.cn/blog/iPhoneSpeedUp/"/>
+    <id>http://cubernet.cn/blog/iPhoneSpeedUp/</id>
+    <published>2014-04-24T16:39:16.000Z</published>
+    <updated>2015-05-04T14:53:00.000Z</updated>
+    <content type="html"><![CDATA[<p>作为一名奋战在第一线的程序猿，如果跟开发无关，那么对新系统的抵抗力几乎为0，所以当初毫不犹豫的升级了iOS7。年初越狱工具放出之后，也在第一时间进行了越狱。倒不是对破解的免费软件有什么需求，说白了就是三个字，爱折腾。</p>
+<p>不过在用了一段时间之后，不得不承认iOS7在增加了许多功能改进和提高用户UI体验的同时，对系统内存和电池续航都提出了更大的需求。就我自己的4S而言，电池续航方面，保持正常频率的电话短信微信微博，基本半天就得充电。流畅度方面<br><a id="more"></a>更是糟糕，闪退现象极其严重，如果想运行一个稍微大一点的游戏，就需要将后台的其他应用全部关闭。</p>
+<p>忍无可忍却又换不起5S的屌丝只好自己动手丰衣足食了。</p>
+<p>仔细分析一下，升级手机或者降级系统这两个最easy的途径都行不通。那么还有什么别的因素影响续航和流畅度呢？</p>
+<p>下面是我想到的一些：</p>
+<hr>
+<h2 id="卸载360">卸载360</h2><p>当初为了省事，越狱后直接安装了360，一些常用的功能都已经集成。但说实话，其实很多功能我都没有用，那么当我内存吃紧的时候，当然要吧这些无用的插件删除了。不过360不提供定制功能，只好把它整个卸载。【这里没有黑360的意思，360的垃圾短信过滤还是做得很不错的，我至今也没有找到一款在这方面可以相媲美的插件，如果你们知道，欢迎告诉我：）】</p>
+<h4 id="深度清理系统垃圾">深度清理系统垃圾</h4><p>手机用久了，就会产生很多的系统垃圾，包括很多缓存文件、日志文件等。隔一段时间清理一下，就当是给系统洗洗澡啦。</p>
+<h2 id="把系统语言设置为英文">把系统语言设置为英文</h2><p>把系统语言设置为英文后，打开AppStore和Cydia的速度简直快的让人不敢相信。当然，打开很多其他系统应用的速度都有明显改善。</p>
+<p>其次，从字体显示的角度来说，切换成英文后，看起来还是美观了不少，毕竟iOS设计时肯定是从英文开始的。</p>
+<p>这里对于我们中文用户来说，有一个问题就是，切换成英文后，通讯录联系人无法按照拼音首字母排序查询了，比较的不方便。</p>
+<p>常见的有两种解决办法。</p>
+<ul>
+<li>一是在保存每个联系人的姓名时，同时保存中文和拼音，即每个联系人添加汉语拼音发音，这样就可以正常显示了；如果你觉得手动一个一个添加工作量太大，那么这里有一个批量添加的程序或许可以帮到你 <a href="https://github.com/lexrus/PhoneticContacts" target="_blank" rel="external">PhoneticContacts</a>。</li>
+<li>另外一种就是先将iPhone 切换为中文，找到/System/Library/Frameworks/AddressBook.framework 将zh<em>CN.lproj目录下的 ABContactSections.plist 文件替换到English.lproj目录和其他两个zh</em>文件夹下，再切换其他语言；当然这种方法的前提是你的手机已经越狱。</li>
+</ul>
+<p>当然，如果你觉得自己无法适应一个英文版的操作系统。那。。。那你一定是土豪，恩。土豪直接换手机就好啦。</p>
+<h2 id="安装一款电池保护软件">安装一款电池保护软件</h2><p>现在有很多电池保护软件，个人感觉差别都不是很大，选择一款你喜欢的安装。推荐安装这类软件的理由是，它可以帮你或多或少的养成良好的充电习惯，对电池的保养肯定是有好处的。</p>
+<h2 id="最后推荐几款我在用的插件">最后推荐几款我在用的插件</h2><ul>
+<li><strong>CCMeters</strong>    一款在通知中心显示当前手机运行参数的插件，包括cpu使用率，网速，内存等</li>
+<li><strong>CCQuick</strong>    一款控制中心快捷设置的插件</li>
+<li><strong>Chinese Calendar</strong>    一款在通知中心显示日历的插件，包括农历和节日，个人感觉还是很实用的</li>
+<li><strong>FakeCarrier</strong>    一款修改运营商名称的插件</li>
+<li><strong>Kuaidial</strong>    一款电话增强软件，包括接通震动，响一声来电过滤等</li>
+<li><strong>OSLite7</strong>    一款一键清理应用程序产生的缓存与临时文件的插件</li>
+</ul>
+<p>以上插件都有对应的iOS7版本，亲测iOS7.0.4可用，如果你下载的版本不能兼容，请耐心寻找最新版本。</p>
+<hr>
+<p>折腾了一番之后，感觉系统流畅了许多，续航基本可以保证一天一充，更重要的是之前常用的功能现在还有，甚至多了一些新的功能，如果你跟我有同样的问题，不妨也按照我的方法试一试。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[给运行ios7的iPhone4S加速]]>
+    
+    </summary>
+    
+      <category term="iPhone4S" scheme="http://cubernet.cn/blog/tags/iPhone4S/"/>
+    
+      <category term="ios7" scheme="http://cubernet.cn/blog/tags/ios7/"/>
+    
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[牵着手，一起走]]></title>
+    <link href="http://cubernet.cn/blog/oneyear/"/>
+    <id>http://cubernet.cn/blog/oneyear/</id>
+    <published>2014-04-22T16:39:16.000Z</published>
+    <updated>2015-05-04T14:56:09.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-04-23-oneyear.JPG-blogpic" style="width:220px"></p>
+<a id="more"></a>
+<div style="text-align:center"><br><br><p>一年很长</p><br><br><p>我们了解，磨合，争吵，置气</p><br><br><p>一年很短</p><br><br><p>我们拥抱，热恋，旅行，玩耍</p><br><br><p>你总说</p><br><br><p>我是你最好的遇见</p><br><br><p>而我说</p><br><br><p>我遇见了最好的你</p><br><br><p>这一年中的快乐或不开心都超越过去的总和</p><br><br><p>这一年承载了我们彼此生命中最重要的决定</p><br><br><p>当岁月一年又一年褪去爱情华丽的外表</p><br><br><p>我相信剩下的</p><br><br><p>是绝对的信任和满满的爱</p><br><br><p>2014.04.23#一周年快乐，宝贝#</p><br><br>##GIFT<br><br>一份来自程序员的礼物。<a href="http://cubernet.cn/anniversary/" target="_blank" rel="external">点击查看</a><br><br></div>
+
+
+
+
+
+]]></content>
+    <summary type="html">
+    <![CDATA[和宝贝老婆在一起一周年纪念日]]>
+    
+    </summary>
+    
+      <category term="纪念日" scheme="http://cubernet.cn/blog/tags/%E7%BA%AA%E5%BF%B5%E6%97%A5/"/>
+    
+      <category term="生活归档" scheme="http://cubernet.cn/blog/categories/%E7%94%9F%E6%B4%BB%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[给jekyll添加静态搜索]]></title>
+    <link href="http://cubernet.cn/blog/staticsearch/"/>
+    <id>http://cubernet.cn/blog/staticsearch/</id>
+    <published>2014-04-17T16:39:16.000Z</published>
+    <updated>2015-04-29T17:58:05.000Z</updated>
+    <content type="html"><![CDATA[<p>使用jekyll在github上搭建博客之后，无论是从写作的舒适度还是维护的方便程度上来讲都比之前有了很大的提升，不过一直觉得美中不足的是缺少一个搜索功能。由于整个博客都是静态的，因此很难做到像WordPress那种使用数据库来提供强大的搜索功能。不过退而求其次，给jekyll添加静态搜索，实现基本的功能还是有可能的。</p>
+<a id="more"></a>
+<p>通过在Google搜索一番之后，发现了<a href="https://github.com/slashdotdash/jekyll-lunr-js-search" target="_blank" rel="external">jekyll-lun-js-search</a>这个插件，可以实现jekyll的静态搜索。话不多说，按照说明文件中的步骤开始动手配置。</p>
+<p>配置完成，满怀期待在搜索框输入了一个单词，结果。。。是的，没有任何反应。</p>
+<p>重新检查确认配置无误之后继续在网上寻找是不是有人也遇到类似的问题。果然有一个教程里提到这个插件有一些bug。窃喜，一一修改。结果。。。是的，依旧没有任何反应。</p>
+<p>无耐操刀自己上，在又修改了几处代码中的bug之后还是未能配置成功。此时距当初发现这个插件已经过去了六七个小时。</p>
+<p>这时只好修改思路，通过去找一些添加了搜索功能的jekyll博客，然后查看他的代码实现。果然发现了另外一个，而且这个插件使用非常简单，也无需配置那么多的文件，即<a href="https://github.com/christian-fei/Simple-Jekyll-Search" target="_blank" rel="external">Simple-Jekyll-Search</a></p>
+<hr>
+<p>由于两个插件都提供了很详细的配置说明，我这里就不再重复。</p>
+<p>从实现的角度来说，静态搜索的大概思路都是提取文章html页面的关键内容，保存在一个文件中，然后通过遍历这个文件来返回搜索结果。但这两个插件在具体实现时还有所不同。jekyll-lun-js-search这款插件是通过一段ruby代码来生成保存有文章页面关键内容的文件。由于是通过ruby代码提取，因此这个文件的内容比较丰富，可以包含博客文章的正文，也就是说实现了全文搜索。但是Simple-Jekyll-Search这款插件是通过简单的jekyll语法来提取内容，因此在这个文件中无法包含文章正文，因为通过jekyll语法提取的博客正文会包含html代码。所以简单配置的背后，带来的是对全文搜索的舍弃。</p>
+<p>另外，在调试第一个插件的过程时，虽然最后仍旧没有解决这个问题，而且我自己也不知道原因所在，但还是对jekyll的工作细节有了更多的了解，也知道了config文件中【<strong>安全</strong>】选项所代表的具体含义，第一次接触并修改了ruby代码。。等等。感觉收获还是很大的。</p>
+<hr>
+<p>额。。。好吧，我成功的把一篇技术文写成了流水账。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[jekyll 静态搜索]]>
+    
+    </summary>
+    
+      <category term="jekyll" scheme="http://cubernet.cn/blog/tags/jekyll/"/>
+    
+      <category term="static search" scheme="http://cubernet.cn/blog/tags/static-search/"/>
+    
+      <category term="静态搜索" scheme="http://cubernet.cn/blog/tags/%E9%9D%99%E6%80%81%E6%90%9C%E7%B4%A2/"/>
+    
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[虾米音乐app破解]]></title>
+    <link href="http://cubernet.cn/blog/xiami/"/>
+    <id>http://cubernet.cn/blog/xiami/</id>
+    <published>2014-03-30T16:39:16.000Z</published>
+    <updated>2015-05-04T14:57:15.000Z</updated>
+    <content type="html"><![CDATA[<p>前几天登录虾米音乐，首页赫然提醒，建议用户将虾米账号迁移到淘宝上，以后用淘宝账号登录虾米。说实在的，当时心瞬间就凉了。就像当初排斥多看阅读迁移到小米账号上一样，我讨厌把自己在互联网上辛苦打造出来的一小片净土和BAT挂上勾。</p>
+<p>说到这里，想起个“笑话”。</p>
+<a id="more"></a>
+<p><code>有人在逛淘宝搜索宝贝时，不小心输入错误，搜成了“棺材”。本以为只是一次手误，删了重来就可以。结果没想到的是，从此以后他每次再登录淘宝时，首页到处都是向他推荐棺材的。更过分的是，他的微博等各种社交空间上也到处都是推荐棺材的。欲哭无泪。</code></p>
+<p>这就是天下账号大一统的后果，当然也是BAT希望看到的效果。</p>
+<hr>
+<p>言归正传。今天在看雪上注意到Hopper Disassembler这么一款软件，据说是mac平台上反编译神器，所以下下来体验一下。碰巧又在52上看到一个破解虾米音乐的例子，想到那让我心凉的虾米音乐，于是决定就对它下手了。</p>
+<p>这次的任务是破解mac系统的虾米音乐app，使普通用户也可以享用VIP服务。</p>
+<p>首先来一张破解之前的截图，未付费用户是无法享受高品质的。</p>
+<p><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-03-31-xiami-1.png-blogpic" alt="image"></p>
+<p>然后打开HD，选择<code>Read Executable</code>-&gt;<code>应用程序</code>-&gt;<code>虾米音乐</code>-&gt;<code>Contents</code>-&gt;<code>MacOS</code>-&gt;<code>Xiami</code></p>
+<p><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-03-31-xiami-2.png-blogpic" alt="image"></p>
+<p>等待几秒钟，待完全载入分析完成后，可以看到如下界面：</p>
+<p><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-03-31-xiami-3.png-blogpic" alt="image"></p>
+<p>左边一栏列出了该程序中包含的函数，迅速浏览一遍，发现了一个<code>isVIP</code>的函数，从名字上猜测，这个函数是用来判断用户是不是VIP的（也可再搜索栏中直接搜isVip），点击左侧函数名，右侧便会显示出该函数对应的汇编指令。【这一步的截图丢失了，所以下面这张图是从52上搬过来的，可能稍微有点模糊】</p>
+<p><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-03-31-xiami-4.png-blogpic" alt="image"></p>
+<p>从平时使用这款app的经验上可以得知，这款虾米客户端的功能比较简单，稍微复杂的操作都需要跳转到网页版进行，所以猜想客户端的逻辑验证也比较简单。</p>
+<p>从<code>isVIP</code>这个函数中我们可以看到，首先对rbp压栈，然后做了几次赋值操作后，将rbp出栈返回。那么这个函数的实际工作过程有没有可能是：给用户一个是否为VIP的标识，然后通过向服务器查询，将返回值赋值给这个标识并返回。为了验证这个猜想，我们只需将rbp归零再加1，使其值为true，最后返回，如下图：</p>
+<p><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-03-31-xiami-5.png-blogpic" alt="image"></p>
+<p>最后通过<code>File</code>-&gt;<code>Produce New Executable</code>来生成新的Xiami文件，替换原来的，双击运行，看到如下效果图：</p>
+<p><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-03-31-xiami-6.png-blogpic" alt="image"></p>
+<p><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-03-31-xiami-7.png-blogpic" alt="image"></p>
+<p>看来我们猜测的没有错，现在已经可以享受高品质的音乐了。Have fun :)</p>
+<hr>
+<p>PS：由于是第一次在Mac上做相关的工作，所以觉得很新鲜很有趣，便记录下来，大神勿喷。</p>
+<p>在此过程中，感谢52的xiaobai和NSTL卓博的大力帮助。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[破解mac版的虾米音乐app]]>
+    
+    </summary>
+    
+      <category term="Hopper Disassembler" scheme="http://cubernet.cn/blog/tags/Hopper-Disassembler/"/>
+    
+      <category term="软件破解" scheme="http://cubernet.cn/blog/tags/%E8%BD%AF%E4%BB%B6%E7%A0%B4%E8%A7%A3/"/>
+    
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[不想写诗的程序员不是好农民]]></title>
+    <link href="http://cubernet.cn/blog/essay/"/>
+    <id>http://cubernet.cn/blog/essay/</id>
+    <published>2014-03-25T16:39:16.000Z</published>
+    <updated>2015-05-04T14:52:51.000Z</updated>
+    <content type="html"><![CDATA[<p>其实这篇本应该是2013的年终总结的，结果没想到拖到14年都过了四分之一，还是没有把这个坑补上。过了这么久，当初那份想写一点什么东西的心情早就没有了。简单的说，这一年算得上人生中另一个充满转折点的年份吧。爱情学业双丰收。但今年不会那么轻松，对我，对我的她，可能都是。我们都要好好努力。</p>
+<p>最近发生了好多事情，有好有坏，细说无趣，不如随便说点感悟。</p>
+<a id="more"></a>
+<h2 id="关于父母">关于父母</h2><p>父母给予我们最大的财富，不在于从小的锦衣玉食，更多的是对自己人格品质上的沉淀和别人那里的良好口碑。</p>
+<h2 id="关于师长">关于师长</h2><p>予渔非鱼乃为上，亦师亦友乃为上。翻译成大白话，“这个方向是好的，这个做法是错的，这杯酒干了”。</p>
+<h2 id="关于爱情">关于爱情</h2><p>爱情好比是一种化合物，通过<code>付出+欣赏+真心→爱情</code>这个反应在时间的催化下得到爱情。不同的人会用不同的系数配平这个方程式。不同的系数孕育着不同种类的爱情。</p>
+<h2 id="关于朋友">关于朋友</h2><p>本人生性胆小，自然不会让朋友两肋插棍棒刀枪去惹是生非。朋友间但求真心处、不两面，滴水恩必当涌泉报。</p>
+<h2 id="关于读博">关于读博</h2><p>读博好比农民种田。勤劳的农民经过自己辛苦耕耘用收获的粮食盖房娶妻生子，懒惰的农民颗粒无收，荒废数年，仅得一“农民”称号。</p>
+<h2 id="关于未来">关于未来</h2><p>秀才解字，“自食其果”，自己吃自己种下的果子。对我而言，虽不知未来何处得果，但相信必定会有幸福的果。</p>
+<h2 id="关于自己">关于自己</h2><p>黑、胖、丑、呆，自以为现实世界也如二进制般非0即1。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[苦逼程序员的随笔总结]]>
+    
+    </summary>
+    
+      <category term="life" scheme="http://cubernet.cn/blog/tags/life/"/>
+    
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[无损修复白苹果]]></title>
+    <link href="http://cubernet.cn/blog/iPhoneJailbreak/"/>
+    <id>http://cubernet.cn/blog/iPhoneJailbreak/</id>
+    <published>2014-01-31T16:39:16.000Z</published>
+    <updated>2015-05-04T14:52:58.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>人生需要两次冲动，一次没事找事的刷机和一次奋不顾身的越狱。——Cubernet</p>
+</blockquote>
+<p>作为一名自认为生命不息，折腾不止的技术宅来说，刷机和越狱实乃消磨时间没事找事的最佳选择。由于技术水平有限加上刷机工具的不稳定，爱机变“砖”真的是经常遇见。</p>
+<p>其实变“砖”不可怕，可怕的是重新刷了系统以后，之前手机里的照片、短信之类的资料都不见了。</p>
+<a id="more"></a>
+<p>由于Android系统可以比较轻松的以USB模式备份SD卡的数据，所以重刷系统之后恢复数据也是比较容易的。</p>
+<p>但是iPhone在未越狱时只能通过iTunes来备份资料，而那个备份速度又慢的令人发指，所以对于我这个暴脾气来说，几乎每次越狱之前都没有做备份。曾经先后从windows或者MacOs上给iPhone4、iPhone4s、iPhone5越狱ios6和7。俗话说，就在江边走，哪有不湿鞋。我终究还是在这个喜气洋洋的春节中把老婆的爱机越成了白苹果。</p>
+<p>想到几百张照片几千条短信瞬间荡然无存心头便是一阵疼啊。好在从网上找到了这个解决办法。</p>
+<hr>
+<p>其实方法很简单，首先从网上下载这个工具，<a href="http://download.csdn.net/detail/cubernet/6898403" target="_blank" rel="external">下载链接</a> <a href="http://download.csdn.net/detail/cubernet/6898403；" target="_blank" rel="external">http://download.csdn.net/detail/cubernet/6898403；</a></p>
+<p>然后将你重新刷机需要的固件拖到这个工具的图标上；</p>
+<p>几分钟后会在同目录下生成一个以UPG开头的固件；</p>
+<p>最后，把iPhone调至调试模式，打开iTunes，然后刷那个UPG开头的固件即可。这样你之前的照片、应用程序等资料都还会保留。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[保留数据的iPhone苹果手机刷机]]>
+    
+    </summary>
+    
+      <category term="iPhone" scheme="http://cubernet.cn/blog/tags/iPhone/"/>
+    
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[ClamAV相关]]></title>
+    <link href="http://cubernet.cn/blog/clamav/"/>
+    <id>http://cubernet.cn/blog/clamav/</id>
+    <published>2014-01-22T16:39:16.000Z</published>
+    <updated>2015-05-04T14:52:42.000Z</updated>
+    <content type="html"><![CDATA[<p>填写这篇博文的日期时发现时间已经是2014年了，占坑留了好久的新年博文终究没有写，新年的第一篇文章就留给clamav吧。:)</p>
+<p>本以为寒假回家可以轻松过个年，没想到项目加急，于是掀开了在家办公的序幕。这个项目和ClamAV相关，目前项目暂时告一段落，在这里做个简单记录。</p>
+<blockquote>
+<p>Clam AntiVirus（ClamAV）是免费而且开放源代码的杀毒软件，软件与病毒码的更新皆由社区免费发布。目前ClamAV主要是使用在由Linux、FreeBSD等Unix-like系统架设的邮件服务器上，提供电子邮件的病毒扫描服务。ClamAV本身是在文字接口下运作<br><a id="more"></a>，但也有许多图形接口的前端工具（GUI front-end）可用，另外由于其开放源代码的特性，在Windows与Mac OS X平台都有其移植版。——维基百科</p>
+</blockquote>
+<p>从维基百科中可以看到，最初的ClamAV是用来提供电子邮件病毒扫描服务的工具。不过现在ClamAV的功能已经远不止此，它可以扫描包括电子邮件在内的各种文件格式，并且它的病毒库也在实时更新。</p>
+<hr>
+<h2 id="安装及配置">安装及配置</h2><p>ClamAV是一套开源的杀毒软件，所以你可以从它的官网上下载到它的源码，按照自己的意愿对其修改之后，即可编译生成可执行文件。我在windows和Linux上均测试编译成功。</p>
+<p>下面以Windows上的配置为例：</p>
+<p><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-1-23-clamav-1.png-blogpic" alt="image"></p>
+<p>安装完成后将出现上面这些exe。其中常用到的只有三个，分别是clamscan.exe、freshclam.exe和sigtool.exe。</p>
+<ul>
+<li>Clamscan.exe是用来扫描文件或者目录的（支持递归以及压缩文件等）</li>
+<li>Freshclam.exe是用来更新病毒库的</li>
+<li>Sigtool.exe是用来新增病毒的。</li>
+</ul>
+<p>在安装完成后，首先需要从conf_example中将配置文件拷贝出来，然后将配置文件中的example字段注释掉。根据当前环境修改配置文件中的参数，如日志文件保存地址等。</p>
+<p>正确配置以后，先执行freshclam来下载最新的病毒库。然后就可以扫描文件了。</p>
+<p>扫描命令： clamscan –r [需要递归扫描的路径] –l [日志文件保存的路径]</p>
+<p>扫描结果：</p>
+<p>没有发现病毒的：<br><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-1-23-clamav-2.png-blogpic" alt="image"></p>
+<p>发现病毒的：<br><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-1-23-clamav-3.png-blogpic" alt="image"></p>
+<p>对应的日志文件：<br><img src="http://7xikui.com1.z0.glb.clouddn.com/2014-1-23-clamav-4.png-blogpic" alt="image"></p>
+<hr>
+<h2 id="配置文件实例">配置文件实例</h2><figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">/etc/clamd<span class="class">.conf</span></span><br><span class="line">LogFile /var/log/clamd<span class="class">.log</span>   日志文件</span><br><span class="line">LogFileMaxSize <span class="number">0</span>    日志文件最大体积</span><br><span class="line">LogTime yes    是否在日志文件中记录时间</span><br><span class="line">LogVerbose yes    是否详细记录日志</span><br><span class="line">PidFile /var/run/clamav/clamd<span class="class">.pid</span>    进程文件</span><br><span class="line">TemporaryDirectory /var/tmp    扫描时的临时目录</span><br><span class="line">DatabaseDirectory /var/clamav    病毒库目录</span><br><span class="line">LocalSocket /var/run/clamav/clamd<span class="class">.sock</span>    本地通讯的socket文件</span><br><span class="line">TCPSocket <span class="number">3310</span>    TCPSocket端口（与LocalSocket不可并存）</span><br><span class="line">FixStaleSocket    yes</span><br><span class="line">User    clamav</span><br><span class="line">ScanOLE2    扫描office文档</span><br><span class="line">ScanMail    扫描邮件</span><br><span class="line">ScanArchive    扫描压缩包</span><br><span class="line">ScanRAR    扫描RAR压缩包</span><br><span class="line">ArchiveMaxFileSize <span class="number">10</span>M    最大扫描压缩包文件为<span class="number">10</span>兆</span><br><span class="line">ArchiveMaxRecursion <span class="number">9</span>    扫描压缩包<span class="number">9</span>层</span><br><span class="line">ArchiveMaxFiles <span class="number">1000</span>    最多扫描压缩包内<span class="number">1500</span>个文件</span><br><span class="line">/etc/freshclam<span class="class">.conf</span></span><br><span class="line">DatabaseDirectory /var/clamav    病毒库目录</span><br><span class="line">UpdateLogFile /var/log/freshclam<span class="class">.log</span>    更新日志</span><br><span class="line">LogVerbose yes    是否详细记录日志</span><br><span class="line">PidFile /var/run/clamav/freshclam<span class="class">.pid</span>    进程文件</span><br><span class="line">DatabaseOwner clamav    病毒库用户</span><br><span class="line">DatabaseMirror db<span class="class">.cn</span><span class="class">.clamav</span><span class="class">.net</span>    病毒库的镜像地址（可以多个）</span><br><span class="line">DatabaseMirror database<span class="class">.clamav</span><span class="class">.net</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p>除了调用clamscan等现有的工具，ClamAV还提供了一些更底层的API接口供那些有特殊需求的开发者使用，详细的介绍可以查看ClamAV官方文档的最后章节。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[ClamAV的简单介绍]]>
+    
+    </summary>
+    
+      <category term="clamav" scheme="http://cubernet.cn/blog/tags/clamav/"/>
+    
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Metasploit渗透测试相关——社会工程学]]></title>
+    <link href="http://cubernet.cn/blog/Metasploit-6/"/>
+    <id>http://cubernet.cn/blog/Metasploit-6/</id>
+    <published>2013-12-30T16:39:16.000Z</published>
+    <updated>2015-04-29T17:59:08.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>在计算机科学中，社会工程学指的是通过与他人的合法地交流，来使其心理受到影响，做出某些动作或者是透露一些机密信息的方式。这通常被认为是一种欺诈他人以收集信息、行骗和入侵计算机系统的行为。——维基百科</p>
+</blockquote>
+<p>从维基百科给出的定义可以看到，社会工程学实际上更多的应该属于社会学。所有的社会工程学攻击都是建立在使人决断产生认知偏差的基础上。<a id="more"></a></p>
+<p>说到社会工程学，不得不提的就是美国前头号黑客凯文·米特尼克，他被公认为是社会工程学的大师和开山鼻祖，著有安全著作<code>《欺骗的艺术(art of deception)》</code>。</p>
+<blockquote>
+<p>安全，通常情况下仅仅是个幻想，由其是轻信、好奇和无知存在的时候。二十世纪最受尊敬的科学家爱因斯坦这样说道：“只有两种事物是无穷尽的――宇宙和人类的愚蠢。但对于前者,我不敢确定。”最终,社会工程学的攻击,成功于人们的愚蠢或更为普遍的对信息安全实践上的无知。——《欺骗的艺术》</p>
+</blockquote>
+<p>对社会工程学感兴趣的朋友可以去阅读一下，相信读过之后你会变的更机智。:)</p>
+<hr>
+<p>下面进入我们关注的部分，Metasploit相关的社会工程学。</p>
+<p>Social-Engineer网站总结的社会工程学技术框架将社会工程学的基本过程分为：信息搜集、诱导、托辞与心理影响四个环节。</p>
+<p>Back Track 5 中提供了功能强大的社会工程学攻击工具包(SET)，可以与Metasploit渗透测试平台框架进行协作使用，进行社会工程学攻击。</p>
+<p>SET是一个综合性的工具集，涵盖了社会工程学攻击的完整流程，包括：针对性邮件钓鱼攻击、网站钓鱼攻击、群发邮件攻击、还有伪造短信攻击等。</p>
+<p>这里我们只对网站钓鱼攻击做一个简单的介绍。</p>
+<p>那么如何制作一个钓鱼网站呢。</p>
+<p>首先在BT5中运行SET：</p>
+<pre><code>root<span class="variable">@bt</span><span class="symbol">:~</span><span class="comment"># cd /pentest/exploits/set/</span>
+root<span class="variable">@bt</span><span class="symbol">:/pentest/exploits/set</span> <span class="comment">#</span>
+root<span class="variable">@bt</span><span class="symbol">:/pentest/exploits/set</span> <span class="comment"># ./set</span>
+</code></pre><p>然后选择Social-Engineering Attacks，之后选择Website Attack Vectors，接下来进入的页面包含了多种网站攻击的功能，我们可以通过页面上的介绍文字对各个功能有一个简单的了解。</p>
+<p>选择了其中一种功能后，就会出现选择搭建钓鱼网站方法的选项：</p>
+<blockquote>
+<p>使用预定义的网站模板；</p>
+<p>克隆网站；</p>
+<p>定制导入。</p>
+</blockquote>
+<p>最简单的方法就是克隆一个网站。输入要克隆的URL，确认后即可得到一个克隆好的网站，并且在你本地的80端口监听等待数据。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[Metasploit]]>
+    
+    </summary>
+    
+      <category term="Metasploit" scheme="http://cubernet.cn/blog/tags/Metasploit/"/>
+    
+      <category term="渗透" scheme="http://cubernet.cn/blog/tags/%E6%B8%97%E9%80%8F/"/>
+    
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Metasploit渗透测试相关——Metasploit相关]]></title>
+    <link href="http://cubernet.cn/blog/Metasploit-2/"/>
+    <id>http://cubernet.cn/blog/Metasploit-2/</id>
+    <published>2013-12-27T16:39:16.000Z</published>
+    <updated>2015-05-04T14:55:02.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>Metasploit项目（Metasploit Project）是一个旨在提供安全漏洞信息（Vulnerability Information）计算机安全项目，可以协助安全工程师进行渗透测试（penetration testing）及入侵检测系统签名开发。</p>
+<p>Metasploit项目最为知名的子项目是开源的Metasploit框架（Metasploit Framework），一套针对远程主机进行开发和执行“exploit代码（exploit code）”的工具。其他重要的子项目包括Opcode数据库、shellcode档案、安全研究等内容。<a id="more"></a></p>
+<p>Metasploit项目知名的功能还包括反取证（anti-forensic）与规避工具（evasion tools），其中的某些工具已经内置在Metasploit Framework里面。</p>
+<p>——维基百科</p>
+</blockquote>
+<!-- more -->
+<p>这一节的内容多为从<code>《Metasploit用户指南》</code>中摘取出来的，感兴趣的朋友可以去阅读完整版。</p>
+<hr>
+<h2 id="在windows上的安装">在windows上的安装</h2><p>1、访问<a href="http://www.metasploit.com/download/下载Windows的安装文件。" target="_blank" rel="external">http://www.metasploit.com/download/下载Windows的安装文件。</a></p>
+<p>2、找到下载好的安装文件并双击安装程序的图标。此时可能会出现安全警告。在安全警告界面上点击“运行（Run）”。当安装欢迎界面出现之后，点击“下一步（Next）”来继续。在Windows 7上，在出现最初安装界面之前可能需要10分钟时间。</p>
+<p>3、接受许可协议书。</p>
+<p>4、在你已经阅读并接受许可协议之后点击“下一步（Next）”继续。</p>
+<p>5、选择一个安装Metasploit Framework的文件夹。在接下来的界面中，你可以选择安装在默认的文件夹下面或者单击文件夹图标来选择一个不同的目录或者硬盘驱动器。注意选择的目录必须是空目录。</p>
+<p>6、点击“下一步（Next）”。</p>
+<p>7、输入SSL端口号。</p>
+<p>8、输入网络服务器名称来得到一个SSL证书，以使得浏览器运行来匹配其信息。</p>
+<p>9、在“有效的天数（Days of validity）”区域中输入证书的有效期的天数。</p>
+<p>10、点击“下一步（next）”以继续。此时可能出现一个防火墙的警告，接受其警告以继续。</p>
+<p>11、此时会出现一个提醒你已经准备好安装Metasploit Framework的对话框。点击“下一步（Next）”以安装Metasploit Framework及其依赖文件。下个界面会运行接下来的安装程序。安装对话框显示着安装的进度。</p>
+<p>12、当安装完成之后，点击“完成（Finish）”按钮。</p>
+<h2 id="在linux上的安装">在linux上的安装</h2><p>1、访问<a href="http://www.metasploit.com/download/下载Linux" target="_blank" rel="external">http://www.metasploit.com/download/下载Linux</a> 32 bit或者64 bit安装包。保存安装文件到一个位置，比如可以放到桌面上。</p>
+<p>2、打开一个终端。</p>
+<p>3、改变执行安装包的模式。可以由以下命令实现：</p>
+<pre><code>对于<span class="number">64</span>位的系统：
+     chmod +x desktop/metasploit-latest-linux-x64-installer.<span class="command">run</span>
+对于<span class="number">32</span>位的系统：
+     chmod +x desktop/metasploit-latest-linux-x32-installer.<span class="command">run</span>
+</code></pre><p>4、运行安装包。可以由以下命令实现：</p>
+<pre><code>对于<span class="number">64</span>位系统：
+    sudo desktop/metasploit-latest-linux-x64-installer.<span class="command">run</span>
+对于<span class="number">32</span>位系统：
+    sudo desktop/metasploit-latest-linux-x32-installer.<span class="command">run</span>
+</code></pre><p>5、如果提示输入密码，请输入你的sudo密码。</p>
+<p>6、安装界面出现之后，点击Forward开始安装。</p>
+<p>7、接受协议并点击Forward。</p>
+<p>8、选择一个安装文件夹然后点击Forward。</p>
+<p>9、选择Yes注册Metasploit服务（推荐）。然后点击Forward。</p>
+<p>10、输入Metasploit服务使用的端口号。默认的端口号是3790。点击Forward继续。</p>
+<p>11、输入用来生成SSL证书的服务器名称。</p>
+<p>12、输入希望SSL证书保持有效的天数。点击Forward继续。</p>
+<p>13、输入thin服务器的端口号。默认为3000。点击Forward继续。</p>
+<p>14、如果想要自动更新开发快照，选择Yes。点击Forward继续。</p>
+<p>15、Ready to Install窗口出现。点击Forward开始安装进程。</p>
+<hr>
+]]></content>
+    <summary type="html">
+    <![CDATA[Metasploit]]>
+    
+    </summary>
+    
+      <category term="Metasploit" scheme="http://cubernet.cn/blog/tags/Metasploit/"/>
+    
+      <category term="渗透" scheme="http://cubernet.cn/blog/tags/%E6%B8%97%E9%80%8F/"/>
+    
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Python框架のDjango]]></title>
+    <link href="http://cubernet.cn/blog/Django/"/>
+    <id>http://cubernet.cn/blog/Django/</id>
+    <published>2013-12-26T16:39:16.000Z</published>
+    <updated>2015-05-04T14:52:44.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>Django是一个开放源代码的Web应用框架，由Python写成。采用了MVC的软件设计模式，即模型M，视图V和控制器C。它最初是被开发来用于管理劳伦斯出版集团旗下的一些以新闻内容为主的网站的。并于2005年7月在BSD许可证下发布。这套框架是以比利时的吉普赛爵士吉他手Django Reinhardt来命名的。——维基百科</p>
+</blockquote>
+<hr>
+<h2 id="组件">组件</h2><p>Django框架的核心包括：一个面向对象的映射器，用作数据模型（以Python类的形<a id="more"></a>式定义）和关联性数据库间的媒介；一个基于正则表达式的URL分发器；一个视图系统，用于处理请求；以及一个模板系统。</p>
+<p>核心框架中还包括：</p>
+<ul>
+<li>一个轻量级的、独立的Web服务器，用于开发和测试。</li>
+<li>一个表单序列化及验证系统，用于HTML表单和适于数据库存储的数据之间的转换。</li>
+<li>一个缓存框架，并有几种缓存方式可供选择。</li>
+<li>中间件支持，允许对请求处理的各个阶段进行干涉。</li>
+<li>内置的分发系统允许应用程序中的组件采用预定义的信号进行相互间的通信。</li>
+<li>一个序列化系统，能够生成或读取采用XML或JSON表示的Django模型实例。</li>
+<li>一个用于扩展模板引擎的能力的系统。</li>
+</ul>
+<hr>
+<h2 id="内置应用">内置应用</h2><p>Django 包含了很多应用在它的”contrib”包中，这些包括：</p>
+<ul>
+<li>一个可扩展的认证系统</li>
+<li>动态站点管理页面</li>
+<li>一组产生RSS和Atom的工具</li>
+<li>一个灵活的评论系统</li>
+<li>产生Google站点地图（Google Sitemaps）的工具</li>
+<li>防止跨站请求伪造（cross-site request forgery）的工具</li>
+<li>一套支持轻量级标记语言（Textile和Markdown）的模板库</li>
+<li>一套协助创建地理信息系统（GIS）的基础框架</li>
+</ul>
+<hr>
+<h2 id="服务的部署">服务的部署</h2><p>Django可以运行在启用了mod python的Apache 2上，或是任何WSGI兼容的Web服务器。Django也有启动FastCGI服务的能力，因此能够应用于任何支持FastCGI的机器上。</p>
+<p>下列数据库引擎被Django官方支持：</p>
+<ul>
+<li>PostgreSQL</li>
+<li>MySQL</li>
+<li>SQLite</li>
+<li>Oracle</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[Python框架Django的简单介绍]]>
+    
+    </summary>
+    
+      <category term="Django" scheme="http://cubernet.cn/blog/tags/Django/"/>
+    
+      <category term="Python" scheme="http://cubernet.cn/blog/tags/Python/"/>
+    
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Mac相关]]></title>
+    <link href="http://cubernet.cn/blog/Mac/"/>
+    <id>http://cubernet.cn/blog/Mac/</id>
+    <published>2013-12-25T16:39:16.000Z</published>
+    <updated>2015-05-04T14:53:07.000Z</updated>
+    <content type="html"><![CDATA[<p>不知不觉入手MacBook Pro也有一段时间了，从当初对OS X一无所知到现在用的得心应手，中间还是经历了很多曲折。索性记录下来，希望可以帮助到需要的朋友。</p>
+<hr>
+<p>在这个过程中要特别感谢池建强老师，从他的公众微信中学到了很多OS X上面的技巧，这里也推荐大家都去关注一下，微信号：<strong>MacTalk By 池建强</strong><a id="more"></a></p>
+<hr>
+<p>作为一名还处在读书期间的程序猿，拥有一台自己的Pro真的是最大的心愿。倒不是因为它可以装逼，而是OS X的一些浑然天成的特性使得你在这台机器上的编码变成了一种巨大的享受。</p>
+<p>想用好OS X，必须要掌握一些基本的快捷键，然后再给你的系统装上一些好用的Mac平台的工具，分分中你就会对它爱不释手。</p>
+<h2 id="非常常用的快捷键">非常常用的快捷键</h2><pre><code>Command+<span class="keyword">Tab</span>    切换应用程序
+Command+~    同一应用程序多窗口之间切换
+Command+<span class="keyword">Delete</span>    把选中的资源移动到废纸篓
+Shift+Command+<span class="keyword">Delete</span>    倾倒相关程序的废纸篓
+Command+<span class="keyword">C</span>/V    复制/粘贴
+Command+Q    退出应用程序
+Command+W    关闭程序但并没有完全退出，下次可快速打开
+Command+<span class="keyword">Space</span>    切换输入法
+<span class="keyword">Control</span>+<span class="keyword">Space</span>    呼出Spotlight
+</code></pre><h2 id="我喜欢用的工具">我喜欢用的工具</h2><ul>
+<li><p>Spotlight——强大的搜索工具，谁用谁知道</p>
+<p>有了Spotlight以后，很多文件都不用怎么去整理，当你需要它的时候，直接在这里搜索就可以了。</p>
+</li>
+<li><p>Toggle Alfred</p>
+<p>  Spotlight是搜索文本的神器，这款是搜索应用app的神器，有了这两大神器以后，不管找文件还是打开应用，都不再是头疼的事。</p>
+</li>
+</ul>
+<ul>
+<li><p>iWork</p>
+<p>  现在iWork已经可以从iTunes免费下载，习惯了以后你会发现它比Office强大的多。</p>
+</li>
+<li><p>文本编辑器</p>
+<ul>
+<li><p>VIM</p>
+<p>  作为一名码农，我对VIM有着天生的喜爱。即便你可以说出一万条它的不好，我还是会无条件的喜欢它。还是那句话，谁用谁知道。</p>
+</li>
+<li><p>Mou</p>
+<p>  这款是一款可以实时预览MarkDown格式文本的编辑器，这个博客里的所有文章都是在这款编辑器里面完成的。简洁、高效、免费。MarkDown文本编辑的不二选择。</p>
+</li>
+</ul>
+</li>
+<li><p>XtraFinder</p>
+<p>  Finder插件，完全的自由和免费，让你的Finder支持tab、多窗口、剪切等实用的功能，非常好用。</p>
+</li>
+<li><p>输入法</p>
+<p>  说实在的，现在系统自带的输入法已经非常的好用了，唯一让我觉得不舒服的地方是如果翻页的话，需要按方向键↓而不是+，也就是因为这一小点，我转到了搜狗输入法的阵营（对不起我就是这么吹毛求疵o(╯□╰)o处女座伤不起啊）搜狗输入法不用多讲了吧，大家都很熟悉。</p>
+</li>
+<li><p>EverNote &amp; Kindle for Mac</p>
+<p>  一个是优秀的笔记软件，一个是优秀的阅读软件，足矣。</p>
+</li>
+</ul>
+<hr>
+<h2 id="编程">编程</h2><p>Mac系统自带PHP和Python，所以写起脚本来非常方便。</p>
+<p>当然，不管是写C、JAVA还是脚本，不管是在VIM中、在Eclipse中还是Xcode中，所有的编程工作都变成了一种享受。你能感觉到自己写下的每一个代码都和这个系统和谐的融合在一起。</p>
+<p>设置了一些自启动项目后，可以达到开机即可访问到自己本地的论坛（其中保存着许多规整好的资料），非常方便。</p>
+<p>Mac系统独特的字体显示和界面风格使得在电脑上阅读电子书和项目文档不再是一件令人头痛的事情。</p>
+<p>但是不得不承认，在一些Linux原生应用软件的安装上偶尔还是会有一点小曲折。比如在Mac上安装Metasploit时耗费了我很多的时间，好在安装好了以后使用起来的效果还是要比在Windows上好的多。</p>
+<p>还有一个好处就在于，你可以随时随地的合上盖子说走就走，也可以随时停下来打开盖子写上几行代码，强大的续航能力加上Mac对当前状态的记忆效果使得我经常是几周才关一次机。</p>
+<hr>
+<p>总之，在我看来Mac系统是把Linux系统编程的便利性高效性和Windows系统的易用性美观性做到了最好的结合。</p>
+<p>当然我们也无需评判出哪个更好，选择最适合自己的，just have fun。：）</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[Macbook Pro的一些使用心得]]>
+    
+    </summary>
+    
+      <category term="Life" scheme="http://cubernet.cn/blog/tags/Life/"/>
+    
+      <category term="Mac" scheme="http://cubernet.cn/blog/tags/Mac/"/>
+    
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Python应用の简单的爬虫]]></title>
+    <link href="http://cubernet.cn/blog/python-spider/"/>
+    <id>http://cubernet.cn/blog/python-spider/</id>
+    <published>2013-12-25T16:39:16.000Z</published>
+    <updated>2015-05-04T14:56:43.000Z</updated>
+    <content type="html"><![CDATA[<p>如果想实现一个简单的爬虫，我想Python一定是最容易上手的。这里就介绍一下如何用Python实现一个简单的爬虫。</p>
+<p>爬虫最主要的处理对象就是url，其通常的工作流程就是通过给定的入口url爬取网页内容，然后从得到的网页中寻找下一级的url，接着继续重复以上的工作，直到达到包含所需内容的页面，提取到我们关心的数据。</p>
+<blockquote>
+<p>网络蜘蛛（Web spider）也叫网络爬虫（Web crawler），指的是“自动化浏览网络”的程序，是网络机器人的一种。这样的电脑程序是为了自动从网络截取特定的数据，或<a id="more"></a>为了组织网络上的数据，所设计的“‘自动浏览网络’的程序”。——维基百科</p>
+</blockquote>
+<p>所以，我们需要用到哪些知识就很显而易见了。</p>
+<hr>
+<h2 id="首先，我们要知道如何使用Python获取特定url对应的网页内容。">首先，我们要知道如何使用Python获取特定url对应的网页内容。</h2><p>最简单的，向特定url发送get请求，获取网页内容：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> urllib2</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">readsrc</span><span class="params">(src)</span>:</span></span><br><span class="line"><span class="comment">#获取src网址对应的html代码</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        content = urllib2.urlopen(src).read()</span><br><span class="line">        <span class="keyword">return</span> content</span><br><span class="line">    <span class="keyword">except</span> URLError,e:</span><br><span class="line">        <span class="keyword">print</span> e.code</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">None</span></span><br></pre></td></tr></table></figure>
+<p>有时候服务器会通过http报文的header来判断你是不是一个真正的‘human’，所以需要给你的发送的报文添加一个浏览器标示，来简单的迷惑服务器。同时，很多情况下我们需要通过发送post请求来传递更多的数据，那么可以这么写：</p>
+<figure class="highlight gradle"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">from</span> urllib <span class="keyword">import</span> urlopen</span><br><span class="line"><span class="keyword">import</span> urllib2</span><br><span class="line"></span><br><span class="line">user_agent = <span class="string">'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'</span> </span><br><span class="line">headers = &#123; <span class="string">'User-Agent'</span> : user_agent, <span class="string">'Accept-Language'</span>: <span class="string">':zh-CN,zh;q=0.8,en;q=0.6'</span> &#125; </span><br><span class="line">data = <span class="string">''</span> </span><br><span class="line">	</span><br><span class="line">req = urllib2.Request(geturl2, data, headers)    </span><br><span class="line">response = urllib2.urlopen(req)    </span><br><span class="line">web_page = response.<span class="keyword">read</span>()</span><br></pre></td></tr></table></figure>
+<p>如果你的爬虫想爬取的网站需要先登录才可以继续浏览，这个时候你就需要通过处理cookies等字段来维持爬虫保持<code>登录</code>状态。</p>
+<figure class="highlight nimrod"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> urllib    </span><br><span class="line"><span class="keyword">import</span> urllib2  </span><br><span class="line"><span class="keyword">import</span> cookielib  </span><br><span class="line">  </span><br><span class="line">cookie = cookielib.<span class="type">CookieJar</span>()    </span><br><span class="line">opener = urllib2.build_opener(urllib2.<span class="type">HTTPCookieProcessor</span>(cookie))  </span><br><span class="line">  </span><br><span class="line"><span class="comment">#需要POST的数据#  </span></span><br><span class="line">postdata=urllib.urlencode(&#123;    </span><br><span class="line">'name':'<span class="type">Cubernet</span>',    </span><br><span class="line">'pwd':'<span class="type">Oppos</span>...'    </span><br><span class="line">&#125;)  </span><br><span class="line">	  </span><br><span class="line"><span class="comment">#自定义一个请求#  </span></span><br><span class="line">req = urllib2.<span class="type">Request</span>(    </span><br><span class="line">url = 'http://cubernet.me/login.php',    </span><br><span class="line">data = postdata  </span><br><span class="line">) </span><br><span class="line">	   </span><br><span class="line"><span class="comment">#访问该链接#  </span></span><br><span class="line"><span class="literal">result</span> = opener.open(req）</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="Http异常处理">Http异常处理</h2><p>服务器上每一个HTTP的应答对象response都包含一个数字”状态码”。上面例1中的代码如果出现异常，则会把http异常的状态码答应出来，常见的404等。</p>
+<p>HTTP状态码通常分为5种类型，分别以1～5五个数字开头，由3位整数组成：</p>
+<pre><code><span class="number">200</span>：请求成功      处理方式：获得响应的内容，进行处理 
+<span class="number">201</span>：请求完成，结果是创建了新资源。新创建资源的URI可在响应的实体中得到        处理方式：爬虫中不会遇到 
+<span class="number">202</span>：请求被接受，但处理尚未完成    处理方式：阻塞等待 
+<span class="number">204</span>：服务器端已经实现了请求，但是没有返回新的信 息。如果客户是用户代理，则无须为此更新自身的文档视图。    处理方式：丢弃
+<span class="number">300</span>：该状态码不被HTTP/<span class="number">1.0</span>的应用程序直接使用， 只是作为<span class="number">3</span>XX类型回应的默认解释。存在多个可用的被请求资源。    处理方式：若程序中能够处理，则进行进一步处理，如果程序中不能处理，则丢弃
+<span class="number">301</span>：请求到的资源都会分配一个永久的<span class="built_in">URL</span>，这样就可以在将来通过该<span class="built_in">URL</span>来访问此资源    处理方式：重定向到分配的<span class="built_in">URL</span>
+<span class="number">302</span>：请求到的资源在一个不同的<span class="built_in">URL</span>处临时保存     处理方式：重定向到临时的<span class="built_in">URL</span> 
+<span class="number">304</span> 请求的资源未更新     处理方式：丢弃 
+<span class="number">400</span> 非法请求     处理方式：丢弃 
+<span class="number">401</span> 未授权     处理方式：丢弃 
+<span class="number">403</span> 禁止     处理方式：丢弃 
+<span class="number">404</span> 没有找到     处理方式：丢弃 
+<span class="number">5</span>XX 回应代码以“<span class="number">5</span>”开头的状态码表示服务器端发现自己出现错误，不能继续执行请求    处理方式：丢弃
+</code></pre><hr>
+<h2 id="知道了如何获取网页内容，接下来需要做的工作就是如何从爬取到的网页代码中找到自己需要的下级url。">知道了如何获取网页内容，接下来需要做的工作就是如何从爬取到的网页代码中找到自己需要的下级url。</h2><p>很显然，这里我们需要用到<code>正则表达式</code>这个神奇的工具。</p>
+<p>很多时候我们可能觉得正则很鸡肋，学起来知识点比较琐碎，但又没有很明显的用武之地。网上对正则有一个很形象的比喻，“匕首”。所谓匕首，即它不像十八般武器那么炫酷，但是在关键时刻却能起到意想不到的效果。</p>
+<p>这里只介绍Python正则表达式中最常用最简单的一种，想更进一步了解的同学可以查阅一下资料，网上有很多总结的不错，我这里就不赘述啦：）</p>
+<p><code>re.compile(strPattern[, flag]):</code></p>
+<p>这个方法是Pattern类的工厂方法，用于将字符串形式的正则表达式编译为Pattern对象。</p>
+<p>第二个参数flag是匹配模式，取值可以使用按位或运算符’|’表示同时生效，比如re.I | re.M。</p>
+<p>另外，也可以在regex字符串中指定模式。比如<code>re.compile(&#39;pattern&#39;, re.I | re.M)</code>与<code>re.compile(&#39;(?im)pattern&#39;)</code>是等价的。可选值有：</p>
+<pre><code>re.<span class="function"><span class="title">I</span><span class="params">(IGNORECASE)</span></span>        忽略大小写
+re.<span class="function"><span class="title">M</span><span class="params">(MULTILINE)</span></span>            多行模式
+re.<span class="function"><span class="title">S</span><span class="params">(DOTALL)</span></span>            点任意匹配模式
+re.<span class="function"><span class="title">L</span><span class="params">(LOCALE)</span></span>            使预定字符类 \w \W \<span class="tag">b</span> \B \s \S 取决于当前区域设定
+re.<span class="function"><span class="title">U</span><span class="params">(UNICODE)</span></span>            使预定字符类 \w \W \<span class="tag">b</span> \B \s \S \d \D 取决于unicode定义的字符属性
+re.<span class="function"><span class="title">X</span><span class="params">(VERBOSE)</span></span>            详细模式。这个模式下正则表达式可以是多行，忽略空白字符，并可以加入注释。
+</code></pre><hr>
+<p>最后，想要让你的爬虫足够机智，你必须赋予它灵活的逻辑判断和高效的正则表达式。个人认为赋予爬虫什么样的逻辑才是一个写爬虫真正的精华和难点所在。而这些又是只能依靠个人经验去提升和摸索的。所以还是要多写多练手。</p>
+<p>当然，你可以通过增加代理、设置超时、伪装浏览器、反“盗链”等多种手段来提升爬虫的战斗力，但，逻辑依然是它的灵魂所在。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[用Python实现的一个简单爬虫]]>
+    
+    </summary>
+    
+      <category term="Python" scheme="http://cubernet.cn/blog/tags/Python/"/>
+    
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Phishing——愿者上钩]]></title>
+    <link href="http://cubernet.cn/blog/Phishing/"/>
+    <id>http://cubernet.cn/blog/Phishing/</id>
+    <published>2013-12-25T16:39:16.000Z</published>
+    <updated>2015-04-29T17:59:42.000Z</updated>
+    <content type="html"><![CDATA[<p>最近在做一个和防钓鱼相关的项目，开始之前，也是阅读了大量的资料和论文，在此做一个简单的总结。</p>
+<blockquote>
+<p>钓鱼式攻击（Phishing，与钓鱼的英语fishing发音一样，又名“网钓法”或“网络网钓”）是一种企图从电子通信中，通过伪装成信誉卓著的法人媒体以获得如用户名、密码和信用卡明细等个人敏感信息的犯罪诈骗过程。这些通信都声称（自己）来自于风行的社交网站、拍卖网站、网络银行、电子支付网站、或网络管理者（雅虎、互联网服务提供商、公司机关），以此来诱骗受害人的轻信。——维基百科</p>
+</blockquote>
+<hr>
+<h2 id="常见的Phishing使用的攻击方法：">常见的Phishing使用的攻击方法：</h2><a id="more"></a>
+<ol>
+<li>伪装电子邮件发件人地址</li>
+<li>利用IE允许“URL伪装”的安全漏洞</li>
+<li>利用网络重定向技术</li>
+<li>跨站钓鱼</li>
+<li>搜索入侵</li>
+<li>修改HOSTS文件</li>
+<li>与系统升级补丁或应用程序捆绑</li>
+<li>利用短信息和即时通信实现网络仿冒攻击</li>
+</ol>
+<hr>
+<h2 id="当前存在的防御措施：">当前存在的防御措施：</h2><ol>
+<li><p>商务网站和网上银行加强自身安全防御</p>
+<p>积极分析自己的网站访问日志，以及确保网站没有被拷贝成赝品网站。公司要定期对DNS进行扫描，以检查是否存在一个与公司已注册的相类似域名。</p>
+</li>
+<li>网页及垃圾邮件过滤<ol>
+<li>通过不断搜集各种不同仿冒式欺诈攻击电子邮件，并提取数据组成规则库，集成在邮件防火墙中。</li>
+<li>阻止用户被引导到名声不好的Web站点上，对网络仿冒进行阻断。当客户收到垃圾邮件，那么包含在这封垃圾邮件中的链接都将被添加到一个受阻站点列表中。（可能有误操作）</li>
+</ol>
+</li>
+<li>电子邮件发件人认证</li>
+<li>强身份认证</li>
+<li>网络侦测</li>
+<li>注册并启用中文域名</li>
+</ol>
+<hr>
+<h2 id="基于Zooko三角形理论的浏览器插件的设计">基于Zooko三角形理论的浏览器插件的设计</h2><p> 根据Zooko的三角形理论，网上名字不可能同时具有通用性、可记忆性、安全唯一性。在Zooko的三角形模型的基础上构建一个Phishing防御系统框架。每个网站都有三个属性构成：</p>
+<ol>
+<li><p>URL/IP  具有通用性和安全唯一性，但是不具备可记忆性；</p>
+</li>
+<li><p>Public Name 具有通用性和可记忆性，但是不具有安全唯一性；</p>
+</li>
+<li><p>Private Name 具有安全唯一性和可记忆性，但是是私有的，不具有通用性。</p>
+</li>
+</ol>
+<p>Public Name是当进入一个网站的时候的默认名字，它不是唯一的，不具有安全性，但是可以用来记住URL/IP，帮助选择Private Name。Public Name通常是公司网站选择的，期望把这些名字作为URL/IP的参考帮助用户记忆，当然用户也能对其进行修改，浏览器收藏夹就是一个例子。Public Name和URL/IP是一对多的关系，它是可选的，不是必须的。</p>
+<p>Private Name是用户私有的，和URL/IP是一对一的关系。在计算机规则里，对一个特定的用户访问的特定网站，Private Name是唯一的，每个Private Name精确的对应一个URL/IP，而每个URL/IP精确的被一个Private Name所代表。在浏览器中，当连接到指定URL/IP的时候，Private Name将会显示。在用户界面中对URL/IP的所有引用都将会被Private Name所代替。</p>
+<p>我们只需要在客户端设计一个浏览器插件，而不需要对服务器进行任何设置。插件以显眼的方式显示在浏览器的上方，当用户第一次登录网站的时候，要求用户输入Private Name。当用户下一次通过链接或直接输入URL访问网站的时候，Private Name便会显示出来，并显示为绿色标志。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[网络钓鱼相关介绍]]>
+    
+    </summary>
+    
+      <category term="Phishing" scheme="http://cubernet.cn/blog/tags/Phishing/"/>
+    
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[电子科技大学一键评教]]></title>
+    <link href="http://cubernet.cn/blog/easy-evaluation/"/>
+    <id>http://cubernet.cn/blog/easy-evaluation/</id>
+    <published>2013-12-25T16:39:16.000Z</published>
+    <updated>2015-05-04T14:52:46.000Z</updated>
+    <content type="html"><![CDATA[<p>这个是电子科技大学本科一键评教的js脚本，很久之前了，貌似当时是在网上看到的【原作者看见了请联系我:)】，于是存了下来，现在整理代码看到，顺便贴出来，有兴趣的同学可以把它完善一下，整个研究生版的，或者增加选课的功能。<br><a href="https://github.com/Cubernet/EasyEvaluation" target="_blank" rel="external">github链接</a></p>
+<a id="more"></a>
+<figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">function</span><span class="list">()</span><span class="collection">&#123;</span><br><span class="line">   	var done = <span class="literal">false</span><span class="comment">;</span></span><br><span class="line">   	var zdframe = document.getElementById<span class="list">(<span class="string">"iframeautoheight"</span>)</span><span class="comment">;</span></span><br><span class="line">   	var num = zdframe.contentWindow.document.getElementById<span class="list">(<span class="string">"pjkc"</span>)</span>.getElementsByTagName<span class="list">(<span class="string">"option"</span>)</span>.num;</span><br><span class="line">   	var count = <span class="number">0</span><span class="comment">;</span></span><br><span class="line">   	try<span class="collection">&#123;</span><br><span class="line">       	var setAll = function<span class="list">()</span><span class="collection">&#123;</span><br><span class="line">        	   var selects = zdframe.contentWindow.document.getElementsByClassName<span class="list">(<span class="string">"datelist"</span>)</span><span class="collection">[<span class="number">0</span>]</span>.getElementsByTagName<span class="list">(<span class="string">"select"</span>)</span><span class="comment">;</span></span><br><span class="line">           	for<span class="list">(<span class="keyword"><span class="built_in">var</span></span> i =0; i &lt; selects.num;i++)</span><span class="collection">&#123;</span><br><span class="line">               	selects<span class="collection">[i]</span>.value=<span class="string">"优秀"</span><span class="comment">;</span></span><br><span class="line">           	&#125;</span><span class="comment">;</span></span><br><span class="line">       	&#125;</span><span class="comment">;</span></span><br><span class="line">       	var submitData = function<span class="list">()</span><span class="collection">&#123;</span><br><span class="line">           	if<span class="list">(<span class="keyword">done</span>)</span> return;</span><br><span class="line">           	if<span class="list">(<span class="keyword"><span class="built_in">count</span></span> &gt;= num)</span> <span class="collection">&#123;</span><br><span class="line">               	done = <span class="literal">true</span><span class="comment">;</span></span><br><span class="line">               	zdframe.contentWindow.document.getElementById<span class="list">(<span class="string">"Button2"</span>)</span>.click<span class="list">()</span><span class="comment">;</span></span><br><span class="line">               	alert<span class="list">(<span class="string">"Congratulations! You've fucked this fucking system!"</span>)</span><span class="comment">;</span></span><br><span class="line">               	return;</span><br><span class="line">           	&#125;</span></span><br><span class="line">           	count ++;</span><br><span class="line">           	zdframe.contentWindow.document.getElementById<span class="list">(<span class="string">"Button1"</span>)</span>.click<span class="list">()</span><span class="comment">;</span></span><br><span class="line">       	&#125;</span><span class="comment">;</span></span><br><span class="line">       	zdframe.addEventListener<span class="list">(<span class="string">"load"</span>, function<span class="list">()</span><span class="collection">&#123;</span><br><span class="line">           	setAll<span class="list">()</span><span class="comment">;</span></span><br><span class="line">           	submitData<span class="list">()</span><span class="comment">;</span></span><br><span class="line">      	 &#125;</span>)</span><span class="comment">;</span></span><br><span class="line">       	setAll<span class="list">()</span><span class="comment">;</span></span><br><span class="line">       	submitData<span class="list">()</span><span class="comment">;</span></span><br><span class="line">   	&#125;</span></span><br><span class="line">   	catch<span class="list">(<span class="keyword">e</span>)</span><span class="collection">&#123;</span><br><span class="line">       	done = <span class="literal">true</span><span class="comment">;</span></span><br><span class="line">       	console.log<span class="list">(<span class="string">"Ooops...There's something wrong!"</span>)</span><span class="comment">;</span></span><br><span class="line">   	&#125;</span></span><br><span class="line">&#125;</span>)</span><span class="list">()</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>]]></content>
+    <summary type="html">
+    <![CDATA[电子科技大学一键评教]]>
+    
+    </summary>
+    
+      <category term="code" scheme="http://cubernet.cn/blog/tags/code/"/>
+    
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[重新回归github]]></title>
+    <link href="http://cubernet.cn/blog/first-post/"/>
+    <id>http://cubernet.cn/blog/first-post/</id>
+    <published>2013-12-24T16:39:16.000Z</published>
+    <updated>2015-05-04T14:52:53.000Z</updated>
+    <content type="html"><![CDATA[<p>这是我第二次折腾借用Github来制作自己的博客。</p>
+<p>上一次是去年圣诞的时候，当时水平所限，很多地方没有搞清楚，所以最终的博客也是惨不忍睹。自认为这一次比之前进步了许多，当然，这里要感谢一下pengx17和Codepiano提供主题模板。</p>
+<a id="more"></a>
+<p>其实在我的那个用Wordpress搭建的博客已经用了很久，之所以一直对Github念念不忘是因为我想在这里发一些自己写的小工具，如果有感兴趣的朋友看到了，可以联系我，我们一起完善他们。</p>
+<blockquote>
+<p>“The quieter you become, the more you are able to hear…”</p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[关于我]]>
+    
+    </summary>
+    
+      <category term="about me" scheme="http://cubernet.cn/blog/tags/about-me/"/>
+    
+      <category term="生活归档" scheme="http://cubernet.cn/blog/categories/%E7%94%9F%E6%B4%BB%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[超好用的iceweasel插件]]></title>
+    <link href="http://cubernet.cn/blog/iceweasel/"/>
+    <id>http://cubernet.cn/blog/iceweasel/</id>
+    <published>2013-08-07T16:39:16.000Z</published>
+    <updated>2015-05-04T14:52:56.000Z</updated>
+    <content type="html"><![CDATA[<p>首先感谢rootoorotor大神，从他的博客里学到了很多东西，这几天更新的文章也都是从他的博客里挑选出来的一些我对我个人比较适用的部分，再加上一点我自己的理解而写出来的。博客链接：<a href="http://www.rootoorotor.org/" target="_blank" rel="external">rootoorotor‘Blog</a></p>
+<p>Kali自带的浏览器是iceweasel，而iceweasel其实就是Debian下的Firefox。话说为何改头换面用了全新的名字，其实中间有一段小故事，感兴趣的同学可以自己百度一下。</p>
+<p>如果你习惯了windows下的各种其他千奇百怪的浏览器而觉得iceweasel的功能设计过于不人性化时，不妨试试下面的这些插件，它们会将你的iceweasel打造成一款web入口神器。<a id="more"></a></p>
+<h2>1.Adblock Plus 广告过滤神器</h2>
+
+<hr>
+
+<p>厌烦了网页上接连不断的广告弹框？Adblock 还你纯净页面。</p>
+<p><a title="https://addons.mozilla.org/zh-cn/firefox/addon/adblock-plus/?src=cb-dl-users" href="https://addons.mozilla.org/zh-cn/firefox/addon/adblock-plus/?src=cb-dl-users" target="_blank" rel="external">https://addons.mozilla.org/zh-cn/firefox/addon/adblock-plus/?src=cb-dl-users</a></p>
+<hr>
+
+<h2>2.Add to Search Bar 添加至搜索栏</h2>
+
+<hr>
+
+<p>个人觉得一款超好用的插件，只需在你想添加的搜索栏上右键，选择Add to Search Bar，就可以将任意网站的搜索栏添加到浏览器的搜索框，这个功能简直太赞了。</p>
+<p>当你把知乎、天猫等各类网站的搜索栏都添加进去后，以后不管你想搜索什么东西，都只需要将关键词托到浏览器搜索框就ok了，是不是非常方便。</p>
+<p><a title="https://addons.mozilla.org/zh-CN/firefox/addon/add-to-search-bar/" href="https://addons.mozilla.org/zh-CN/firefox/addon/add-to-search-bar/" target="_blank" rel="external">https://addons.mozilla.org/zh-CN/firefox/addon/add-to-search-bar/</a></p>
+<hr>
+
+<h2>3.将地址栏和搜索栏合并</h2>
+
+<hr>
+
+<p>瞬间拥有超大的搜索输入空间，直接在地址栏直接输入关键词的时候，再也不用看到那脑残的错误页面了。</p>
+<p><a title="https://addons.mozilla.org/zh-CN/firefox/addon/omnibar/?src=search" href="https://addons.mozilla.org/zh-CN/firefox/addon/omnibar/?src=search" target="_blank" rel="external">https://addons.mozilla.org/zh-CN/firefox/addon/omnibar/?src=search</a></p>
+<hr>
+
+<h2>4.QuickDrag拖拽搜索</h2>
+
+<hr>
+
+<p>将2、3、4这三个插件配合起来使用，那体验真是欲仙欲死有木有！</p>
+<p><a title="https://addons.mozilla.org/zh-CN/firefox/addon/quickdrag/?src=search" href="https://addons.mozilla.org/zh-CN/firefox/addon/quickdrag/?src=search" target="_blank" rel="external">https://addons.mozilla.org/zh-CN/firefox/addon/quickdrag/?src=search</a></p>
+<hr>
+
+<h2>5.Firebug</h2>
+
+<hr>
+
+<p>如果你之前不晓得F12的作用的话，这个插件请自动无视。</p>
+<p><a title="https://addons.mozilla.org/zh-CN/firefox/addon/firebug/?src=search" href="https://addons.mozilla.org/zh-CN/firefox/addon/firebug/?src=search" target="_blank" rel="external">https://addons.mozilla.org/zh-CN/firefox/addon/firebug/?src=search</a></p>
+<hr>
+
+<h2>6.HTTPS Everywhere</h2>
+
+<hr>
+
+<p>在墙内上google等一些国外网站的时候，总是会突然断开，其实只要通过https访问就没有问题了。而这款插件可以当访问提供SSL服务的网站时，自动采用https连接。</p>
+<p><a title="https://www.eff.org/https-everywhere" href="https://www.eff.org/https-everywhere" target="_blank" rel="external">https://www.eff.org/https-everywhere</a></p>
+<hr>
+
+<h2>7.HackBar</h2>
+
+<hr>
+
+<p>Firefox最好用的渗透测试扩展之一，包含一些常用的工具比如SQL注入，XSS等等…手工党必备</p>
+<p><a title="https://addons.mozilla.org/zh-CN/firefox/addon/hackbar/?src=search" href="https://addons.mozilla.org/zh-CN/firefox/addon/hackbar/?src=search" target="_blank" rel="external">https://addons.mozilla.org/zh-CN/firefox/addon/hackbar/?src=search</a></p>
+<hr>
+
+<p>&nbsp;</p>
+<p>我觉得在安装了这些插件以后，iceweasel已经可以胜任你Web日常浏览任务了，用不着的插件不要装太多，不然会很卡。当然还有很多优秀的插件，如果你喜欢的我没有列出来，可以留言给我，我将非常感激，也推荐大家去rootoorotor大神的博客，那里有更详细的介绍和描述。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[超好用的iceweasel插件]]>
+    
+    </summary>
+    
+      <category term="Kali" scheme="http://cubernet.cn/blog/tags/Kali/"/>
+    
+      <category term="Linux" scheme="http://cubernet.cn/blog/tags/Linux/"/>
+    
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[100天]]></title>
+    <link href="http://cubernet.cn/blog/100days/"/>
+    <id>http://cubernet.cn/blog/100days/</id>
+    <published>2013-07-17T16:39:16.000Z</published>
+    <updated>2015-05-04T14:55:11.000Z</updated>
+    <content type="html"><![CDATA[<p>不知不觉肉了个呆的已经100天啦，写个小页面记录一下，送给亲爱的老婆。:)</p>
+<a id="more"></a>
+<p><a href="http://cubernet.ok8.in/100days/iloveyou.html" target="_blank" rel="external">页面传送门：</a><a href="http://cubernet.ok8.in/100days/iloveyou.html" target="_blank" rel="external">http://cubernet.ok8.in/100days/iloveyou.html</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[跟老婆在一起的100天纪念日]]>
+    
+    </summary>
+    
+      <category term="life" scheme="http://cubernet.cn/blog/tags/life/"/>
+    
+      <category term="生活归档" scheme="http://cubernet.cn/blog/categories/%E7%94%9F%E6%B4%BB%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[临时邮箱地址获取脚本]]></title>
+    <link href="http://cubernet.cn/blog/mail/"/>
+    <id>http://cubernet.cn/blog/mail/</id>
+    <published>2013-05-22T16:39:16.000Z</published>
+    <updated>2015-05-04T14:53:08.000Z</updated>
+    <content type="html"><![CDATA[<p>临时邮箱——注册非重要资源专用<br>现在注册各种论坛、网站的时候都要填邮箱地址，注册完之后经常会发现不久之后垃圾邮件就塞满了你的邮箱。如何摆脱垃圾邮件的骚扰？找一个临时邮箱或一次性邮箱不失为一个很不错的方法。</p>
+<p>另外，当你需要注册许多马甲账号的时候，还需要马上获取到许多临时邮箱地址，下面这段python脚本帮你实现。</p>
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> urllib2</span><br><span class="line"><span class="keyword">import</span> urllib</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> cookielib</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getRandomMail</span><span class="params">()</span>:</span></span><br><span class="line">posturl = <span class="string">"http://mail.bccto.me/renew.php"</span></span><br><span class="line">data = &#123;&#125;</span><br><span class="line">req = urllib2.Request(posturl)</span><br><span class="line">data = urllib.urlencode(data)</span><br><span class="line"><span class="comment">#enable cookie</span></span><br><span class="line">opener = urllib2.build_opener(urllib2.HTTPCookieProcessor())</span><br><span class="line">response = opener.open(req, data)</span><br><span class="line"><span class="keyword">return</span>  json.loads(response.read())[<span class="string">'mail'</span>]</span><br></pre></td></tr></table></figure>
+]]></content>
+    <summary type="html">
+    <![CDATA[临时邮箱地址获取脚本]]>
+    
+    </summary>
+    
+      <category term="Python" scheme="http://cubernet.cn/blog/tags/Python/"/>
+    
+      <category term="技术归档" scheme="http://cubernet.cn/blog/categories/%E6%8A%80%E6%9C%AF%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[你是我最好的遇见]]></title>
+    <link href="http://cubernet.cn/blog/bestmeet/"/>
+    <id>http://cubernet.cn/blog/bestmeet/</id>
+    <published>2013-04-22T16:39:16.000Z</published>
+    <updated>2015-05-04T14:52:21.000Z</updated>
+    <content type="html"><![CDATA[<p>于千万人中遇见你所要遇见的人，于千万年之中，时间的无涯的荒野里，没有早一步，也没有晚一步，刚巧赶上了，那也没有别的话可说，唯有轻轻问一句：“哦，你也在这里么？”</p>
+<p>Among thousands of people, you meet those you’ve met. Through thousands of years, with the boundlessness of time, you happen to meet them, neither earlier nor a bit too late.</p>
+<p>张爱玲如是描述遇见。</p>
+<a id="more"></a>
+<p>在很长一段时间里，我整个人都是迷茫的，因为想不通许多事情的结局为什么会是那样，直到遇见你。 没错，上一次我也同样相信可以走到最后，但，我更相信这一次不同。 如果说恋爱是一门学问，那之前的我一定是个成绩差到不行的小男孩。在无数次的犯错再犯错之后，终于从中学到了些什么，明白了些什么。 种种收获，不如愿意付出来的实在。 付出，是一个从小就被经常提及的事情，不知别人，至少对我来讲，是刚刚学会。 其实很多时候事情不会像我们想象的那么完美，一个人是没可能占据所有美好的东西。你想要得到，你就必须愿意付出，愿意舍弃其他的东西。 我曾经空喊着爱爱爱，却没有付出任何的实际行动，没有勇气放弃任何其他的东西。 陈孝正的青春里是有爱情的，但那爱情是无果的。辛夷坞给出了一个很完美的解释：因为他爱自己，胜过爱爱情。</p>
+<p>so，谈一场真正爱爱情的爱情吧。</p>
+<p>说到爱情，必然是两个人的事。 如果说口头上的深情款款比不过现实的残酷，那切实的行动一定可以击败掉那些四起的流言。 我向来是个吝啬眼泪吝啬感动的人，但你成功在短短的时间里不止一次的直接戳击到最内心的感动。那种感觉是无法用我苍白的文字来描述的，但我会做给你看，让你明白，我看到了你的付出，我愿更多的付出。</p>
+<p>妈妈说，“你要好好对待怡然，不要辜负了她。” 我想，就让我用行动来回答，让时间来见证吧。 You are my best meet.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[你是我最好的遇见]]>
+    
+    </summary>
+    
+      <category term="life" scheme="http://cubernet.cn/blog/tags/life/"/>
+    
+      <category term="生活归档" scheme="http://cubernet.cn/blog/categories/%E7%94%9F%E6%B4%BB%E5%BD%92%E6%A1%A3/"/>
+    
+  </entry>
+  
 </feed>
